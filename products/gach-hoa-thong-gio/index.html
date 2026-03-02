@@ -12,14 +12,14 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap');
   </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/main-CUsjut-R.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-CzSvjQ2b.css">
+  <script type="module" crossorigin src="/assets/main-BO1zaEWA.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-B32BntdP.css">
 </head>
 <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
   <header id="site-header" class="bg-primary sticky top-0 text-white h-[94px] z-50 transition-all duration-300">
-    <div class="w-[95%] lg:w-[84%] px-6 lg:px-0 mx-auto h-full">
+    <div class="w-full max-w-[1320px] px-6 lg:px-0 mx-auto h-full">
       <nav class="flex items-center justify-between h-full">
         <!-- Logo -->
         <div class="flex-shrink-0 mr-[8%]">
@@ -29,7 +29,7 @@
         </div>
         
         <!-- Desktop Navigation -->
-        <div class="hidden xl:flex items-center 2xl:gap-8 xl:gap-4 gap-6 flex-1 justify-end mr-8" id="desktop-menu">
+        <div class="hidden xl:flex items-center 2xl:gap-10 xl:gap-6 gap-6 flex-1 justify-end mr-8" id="desktop-menu">
           <a href="/" class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors" data-path="/">trang chủ</a>
           <a href="/about/" class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors" data-path="/about/">về chúng tôi</a>
           <div class="relative group">
@@ -226,40 +226,44 @@
   <main class="flex-grow bg-background-secondary overflow-hidden">
         <section class="relative w-full overflow-visible pt-24 mb-12" data-aos="fade-up">
             <!-- Background Fissures -->
-            <div class="absolute inset-0 -top-8 md:top-36 lg:top-80 z-[1] flex flex-col items-center justify-center pointer-events-none overflow-hidden">
-                <img src="/assets/fissure-01-BhohklEz.svg" class="w-full object-contain opacity-100 mb-0 lg:-mb-1" alt="">
-                <img src="/assets/fissure-02-Bw2i-wJF.svg" class="w-full object-contain opacity-100" alt="">
+            <div class="absolute inset-0 -top-40 md:top-36 lg:top-80 z-[1] flex flex-col items-center justify-center pointer-events-none overflow-hidden">
+                <div class="relative w-full flex flex-col items-center">
+                    <img src="/assets/fissure-01-BhohklEz.svg" class="w-full object-contain opacity-100" alt="">
+                    <img src="/assets/fissure-02-Bw2i-wJF.svg" class="w-full object-contain opacity-100 -mt-[1px]" alt="">
+                    <!-- Text Overlay -->
+                    <p class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-charm text-xl md:text-[32px] lg:text-[42px] text-gray-800 pointer-events-auto z-10 whitespace-nowrap">
+                        Gốm sứ Thanh Hải
+                    </p>
+                </div>
             </div>
 
             <!-- Left and Right Decorations -->
-            <div class="absolute z-[2] left-[-40%] md:left-[-30%] lg:left-[-34%] top-[55%] lg:top-[75%] w-[65%] md:w-[55%] lg:w-[65%] pointer-events-none" data-aos="fade-up-right">
+            <div class="absolute z-[2] left-[-40%] md:left-[-30%] lg:left-[-33%] top-[40%] md:top-[50%] lg:top-[60%] xl:top-[70%] w-[65%] md:w-[55%] lg:w-[63%] pointer-events-none" data-aos="fade-up-right" data-aos-anchor-placement="top-bottom">
                 <img src="/assets/gach-hoa-decorate-CEeRigKD.png" alt="" class="w-full origin-center -translate-y-1/2 rotate-[-45deg] md:opacity-100 opacity-50 drop-shadow-sm">
             </div>
-            <div class="absolute z-[2] right-[-40%] md:right-[-30%] lg:right-[-34%] top-[55%] lg:top-[75%] w-[65%] md:w-[55%] lg:w-[65%] pointer-events-none" data-aos="fade-up-left">
+            <div class="absolute z-[2] right-[-40%] md:right-[-30%] lg:right-[-33%] top-[40%] md:top-[50%] lg:top-[60%] xl:top-[70%] w-[65%] md:w-[55%] lg:w-[63%] pointer-events-none" data-aos="fade-up-left" data-aos-anchor-placement="top-bottom">
                 <img src="/assets/gach-hoa-decorate-CEeRigKD.png" alt="" class="w-full origin-center -translate-y-1/2 rotate-[45deg] scale-x-[-1] md:opacity-100 opacity-50 drop-shadow-sm">
             </div>
 
             <!-- Content -->
-            <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-12 max-w-6xl mx-auto">
-                <h1 class="font-archivo text-[4rem] md:text-[8rem] xl:text-[11rem] font-bold text-secondary tracking-normal leading-tight uppercase drop-shadow-sm mb-12 md:mb-24" style="text-shadow: 1px 1px 0px rgba(255,255,255,0.5);">
+            <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-12 w-[85%] max-w-[1320px] mx-auto">
+                <h1 class="font-archivo text-[3rem] md:text-[5rem] lg:text-[8rem] xl:text-[11rem] font-bold text-secondary tracking-normal leading-tight uppercase drop-shadow-sm mb-48 md:mb-60 lg:mb-[450px]" style="text-shadow: 1px 1px 0px rgba(255,255,255,0.5);">
                     Gạch Hoa<br>Thông Gió
                 </h1>
                 
-                <p class="font-charm text-2xl md:text-[42px] text-gray-800 mb-20 md:mb-40 py-20 lg:py-40">Gốm sứ Thanh Hải</p>
-                
-                <p class="font-italianno text-3xl md:text-5xl text-gray-600 leading-relaxed max-w-6xl mx-auto tracking-wide" style="text-shadow: 0px 1px 0px #fff;">
+                <p class="font-italianno text-3xl md:text-5xl text-gray-600 leading-relaxed max-w-6xl mx-auto tracking-wide md:mt-24 lg:mt-0" style="text-shadow: 0px 1px 0px #fff;">
                     Kết tinh từ cốt gốm đanh thép, tôi luyện giữa lò nung nghìn độ, Thanh Hải phục dựng tinh hoa gạch thông gió cổ qua những nét chạm thủ công và sắc men độc bản, mở ra không gian tràn đầy sinh khí và dấu ấn nghệ thuật trường tồn.
                 </p>
             </div>
         </section>
 
         <!-- Product Collage Carousel -->
-        <section class="relative w-full py-16">
+        <section class="relative w-full py-16 max-w-[1920px] mx-auto">
             <!-- Background Decoration (Right/Left corner extending down) -->
-            <div class="absolute z-[0] right-[-35%] md:right-[-25%] lg:right-[-48%] top-[50%] md:top-[55%] w-[70%] md:w-[70%] lg:w-[80%] pointer-events-none" data-aos="fade-up-left">
-                <img src="/assets/gach-hoa-decorate-CEeRigKD.png" alt="" class="w-full origin-center rotate-[-55deg] scale-x-[-1] opacity-20 drop-shadow-sm">
+            <div class="absolute z-[0] right-[-35%] md:right-[-25%] lg:right-[-50%] top-[50%] md:top-[55%] w-[70%] md:w-[70%] lg:w-[85%] pointer-events-none" data-aos="fade-up-left">
+                <img src="/assets/gach-hoa-decorate-CEeRigKD.png" alt="" class="w-full origin-center rotate-[-65deg] scale-x-[-1] opacity-20 drop-shadow-sm">
             </div>
-            <div class="absolute z-[0] left-[-35%] md:left-[-25%] lg:left-[-35%] -bottom-[200%] md:-bottom-[200%] w-[70%] md:w-[70%] lg:w-[80%] pointer-events-none" data-aos="fade-up-right">
+            <div class="absolute z-[0] left-[-35%] md:left-[-25%] lg:left-[-30%] -bottom-[200%] md:-bottom-[230%] w-[70%] md:w-[70%] lg:w-[82%] pointer-events-none" data-aos="fade-up-right">
                 <img src="/assets/gach-hoa-decorate-CEeRigKD.png" alt="" class="w-full origin-center rotate-[-55deg] scale-x-[-1] opacity-20 drop-shadow-sm">
             </div>
 
@@ -339,7 +343,7 @@
                 </div>
                 
                 <!-- Swiper Navigation -->
-                <div class="w-[85%] lg:w-[75%] flex items-center justify-between z-20 text-textPrimary font-bold text-[17px]">
+                <div class="w-full max-w-[1320px] mx-auto flex items-center justify-between z-20 text-textPrimary font-bold text-[17px]">
                     <div class="collage-button-prev shrink-0 w-10 h-10 border-2 border-black/20 rounded-full flex items-center justify-center text-black/40 hover:border-black hover:text-black transition-all cursor-pointer">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
@@ -358,14 +362,14 @@
         </section>
 
         <!-- Breadcrumb -->
-        <div class="w-[85%] mx-auto pb-6 pt-16 relative z-10">
-            <p class="font-bold tracking-[0.15em] text-primary/60 uppercase">
-                <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-extrabold border-primary">Gạch Hòa Thông Gió</span>
+        <div class="w-[85%] max-w-[1320px] mx-auto pb-6 pt-16 relative z-10">
+            <p class="font-bold tracking-[0.15em] text-primary/60 uppercase text-xs md:text-base">
+                <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a> <span class="mx-1">/</span> <span class="text-primary font-extrabold border-primary">Gạch Hoa Thông Gió</span>
             </p>
         </div>
 
         <!-- Product Grid Section -->
-            <section class="w-[85%] mx-auto pb-24 animate-fade-in-up">
+            <section class="w-[85%] max-w-[1320px] mx-auto pb-24 animate-fade-in-up">
                 <!-- Divider -->
                 <hr class="border-t border-black/10 mb-8 w-full">
                 
@@ -605,31 +609,31 @@
             </section>
 
         <!-- Video Section -->
-        <section class="w-full mx-auto pb-16 animate-fade-in-up">
+        <section class="w-full max-w-[1920px] mx-auto pb-16 animate-fade-in-up">
             <!-- Section Title -->
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-2xl md:text-3xl font-bold text-secondary uppercase tracking-wide">Hành trình chế tác</h2>
             </div>
             <div class="flex">
-                <div class="w-1/2 pl-[7.5%] py-[5%] pr-[2.5%] lg:pr-[5%]" data-aos="fade-right">
+                <div class="w-1/2 pl-[12%] py-[5%] pr-[2.5%] lg:pr-[5%]" data-aos="fade-right">
                     <img src="/assets/gach-hoa-value-Bu9ZF-C7.png" alt="Video placeholder" class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300">
                 </div>
-            <div class="relative w-full aspect-[4/3] overflow-hidden cursor-pointer group" data-aos="fade-left" data-aos-delay="200">
-                <img src="/assets/video-placeholder-02-D9z7x8jj.png" alt="Video placeholder" class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300">
-                <!-- Play Button -->
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300">
-                        <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"></path>
-                        </svg>
+                <div class="relative w-full aspect-[4/3] overflow-hidden cursor-pointer group" data-aos="fade-left" data-aos-delay="200">
+                    <img src="/assets/video-placeholder-02-D9z7x8jj.png" alt="Video placeholder" class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300">
+                    <!-- Play Button -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300">
+                            <svg class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"></path>
+                            </svg>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
 
         <!-- Giá trị vượt trội Section -->
-        <section class="w-[85%] mx-auto pb-16 pt-12">
+        <section class="w-[85%] max-w-[1320px] mx-auto pb-20 pt-12">
             <!-- Section Title -->
             <div class="text-center mb-16 md:mb-20" data-aos="fade-up">
                 <h2 class="text-2xl md:text-3xl font-bold text-secondary uppercase tracking-wide">GIÁ TRỊ VƯỢT TRỘI</h2>
@@ -701,19 +705,19 @@
         </section>
 
         <!-- FAQ Section -->
-        <section class="w-full relative pb-20 bg-[#F4EFE9] overflow-hidden" data-aos="fade-up">
+        <section class="w-full relative pb-20 bg-background-secondary overflow-visible" data-aos="fade-up">
             <!-- Background Decoration -->
-            <div class="absolute z-[2] left-[-40%] md:left-[-30%] lg:left-[-24%] top-[55%] w-[65%] md:w-[55%] lg:w-[45%] pointer-events-none" data-aos="fade-up-right">
+            <div class="absolute z-[2] left-[-40%] md:left-[-30%] lg:left-[-24%] top-[45%] w-[65%] md:w-[55%] lg:w-[45%] pointer-events-none" data-aos="fade-up-right">
                 <img src="/assets/gach-hoa-decorate-CEeRigKD.png" alt="" class="w-full origin-center -translate-y-1/2 rotate-[-45deg] md:opacity-60 opacity-50 drop-shadow-sm">
             </div>
-            <div class="absolute z-[2] right-[-40%] md:right-[-30%] lg:right-[-24%] top-[55%] w-[65%] md:w-[55%] lg:w-[45%] pointer-events-none" data-aos="fade-up-left">
+            <div class="absolute z-[2] right-[-40%] md:right-[-30%] lg:right-[-24%] top-[45%] w-[65%] md:w-[55%] lg:w-[45%] pointer-events-none" data-aos="fade-up-left">
                 <img src="/assets/gach-hoa-decorate-CEeRigKD.png" alt="" class="w-full origin-center -translate-y-1/2 rotate-[45deg] scale-x-[-1] md:opacity-60 opacity-50 drop-shadow-sm">
             </div>
 
                 <!-- FAQ Content -->
                 <div class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto">
                   <!-- Section Title -->
-                  <div class="text-center mb-10" data-aos="fade-up">
+                  <div class="w-[85%] max-w-[1320px] mx-auto text-center mb-10" data-aos="fade-up">
                     <h2 class="text-2xl md:text-3xl font-bold text-secondary uppercase tracking-wide">Câu hỏi thường gặp</h2>
                   </div>
             
@@ -796,15 +800,22 @@
     <!-- Newsletter Section -->
     <div class="relative overflow-hidden">
       <img src="/assets/background-decorate-DPlMqioe.png" alt="" class="block absolute top-[15%] left-[55%] lg:left-[50%] transform lg:-translate-x-1/2 w-[300px] h-[300px] lg:w-[560px] lg:h-[700px] opacity-80 lg:opacity-60 pointer-events-none">
-      
-      <div class="w-full lg:w-full pt-16 lg:pt-0 relative flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
-        <div class="w-full lg:w-1/2 flex justify-start">
-          <div class="w-full max-w-[536px] lg:ml-[25%] px-[7.5%] lg:px-0 pt-[7.5%] lg:pt-0 pb-[12.5%] lg:pb-0">
+  
+      <!-- Desktop: image full-bleed on right half -->
+      <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
+        <img src="/assets/footer-image-RZCiJnXo.png" alt="" class="w-full h-full object-cover">
+      </div>
+  
+      <!-- Content row constrained to 1320px -->
+      <div class="relative w-full max-w-[1320px] px-6 lg:px-0 mx-auto flex flex-col lg:flex-row">
+        <!-- Text column: left half -->
+        <div class="w-full lg:w-1/2 pt-[7.5%] pb-[12.5%] lg:pt-[72px] lg:pb-[72px] lg:pr-16">
+          <div class="w-full max-w-[536px]">
             <h2 class="text-neutral-1 text-[28px] lg:text-[32px] font-semibold leading-tight lg:leading-[44px] mb-20 lg:mb-[72px]">
               Hãy nói với chúng tôi<br>
               những mong muốn của bạn
             </h2>
-            
+  
             <div class="flex flex-col gap-2">
               <div class="flex items-center justify-between">
                 <input type="email" placeholder="Nhập thông tin email của bạn" class="bg-transparent text-[#909090] text-sm font-light outline-none flex-1">
@@ -818,17 +829,21 @@
             </div>
           </div>
         </div>
-        
-        <div class="w-full lg:w-1/2">
-          <img src="/assets/footer-image-RZCiJnXo.png" alt="" class="w-full h-full object-cover">
-        </div>
+  
+        <!-- Spacer for right half on desktop (image is absolute) -->
+        <div class="hidden lg:block lg:w-1/2 lg:min-h-[541px]"></div>
+      </div>
+  
+      <!-- Mobile: image in normal flow -->
+      <div class="lg:hidden w-full">
+        <img src="/assets/footer-image-RZCiJnXo.png" alt="" class="w-full h-full object-cover max-h-[541px]">
       </div>
     </div>
     
     <!-- Main Footer -->
     <div class="relative bg-[#262723] overflow-hidden">
       <img src="/assets/footer-image-2-COXRLjh4.png" alt="" class="hidden lg:block absolute inset-0 w-full h-full object-cover">
-      <div class="relative w-full px-6 lg:px-0 lg:w-[85%] mx-auto pt-12 lg:pt-[132px] pb-[60px]">
+        <div class="relative w-full max-w-[1320px] px-6 lg:px-0 mx-auto pt-12 lg:pt-[132px] pb-[60px]">
         <!-- Footer Content -->
         <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-x-5 gap-y-10 lg:gap-[100px]">
           <!-- Logo & Info -->
@@ -909,7 +924,7 @@
       
       <!-- Bottom Bar -->
       <div class="relative border-t border-white/20 w-full">
-        <div class="w-full px-6 lg:px-0 lg:w-[85%] mx-auto py-6">
+          <div class="w-full max-w-[1320px] px-6 lg:px-0 mx-auto py-6">
           <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-4">
             <p class="text-[#909090] text-sm leading-[26px]">Copyright © 2026 . All rights reserved</p>
             <p class="text-[#909090] text-sm leading-[26px]">
