@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trạng thái đơn hàng - Dịch vụ khách hàng - Thanh Hải Ceramics</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/logo-D_OTyGYs.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/main-BQ5d9uaJ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-Yb9S9GFy.css">
+</head>
+
+<body data-page="customer-service" class="bg-white">
+  <header id="site-header" class="bg-primary sticky top-0 text-white h-[94px] z-50 transition-all duration-300">
+    <div class="w-[85%] 2xl:w-full max-w-[1320px] mx-auto h-full">
+      <nav class="flex items-center justify-between h-full">
+        <!-- Logo -->
+        <div class="flex-shrink-0 mr-[8%]">
+          <a href="/" class="block">
+            <img src="/assets/logo-D_OTyGYs.svg" alt="Logo" class="h-[69px] w-[69px]">
+          </a>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden xl:flex items-center 2xl:gap-10 xl:gap-6 gap-6 flex-1 justify-end mr-8" id="desktop-menu">
+          <a href="/" class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors" data-path="/">trang chủ</a>
+          <a href="/about/" class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors" data-path="/about/">về chúng tôi</a>
+          <div class="relative group">
+            <a href="/products/ngoi-am-duong/" class="nav-link flex items-center gap-[5px] text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors" data-path="/products/">
+              <span>sản phẩm</span>
+              <svg class="w-[7px] h-[7px]" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z" fill="currentColor"/>
+              </svg>
+            </a>
+            <!-- Desktop Dropdown -->
+            <div class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary">
+               <ul class="py-2 flex flex-col">
+                  <li><a href="/products/ngoi-am-duong/" class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/ngoi-am-duong/">Ngói Âm Dương</a></li>
+                  <li><a href="/products/ngoi-hai-van-mieu/" class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/ngoi-hai-van-mieu/">Ngói Hài Văn Miếu</a></li>
+                  <li><a href="/products/gach-hoa-thong-gio/" class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/gach-hoa-thong-gio/">Gạch Hoa Thông Gió</a></li>
+                  <li><a href="/products/phu-kien-ngoi/" class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/phu-kien-ngoi/">Phụ Kiện Ngói</a></li>
+                  <li><a href="/products/gach-trang-tri/" class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/gach-trang-tri/">Gạch Trang Trí</a></li>
+                  <li><a href="/products/lan-can-gom-su/" class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/lan-can-gom-su/">Lan Can Gốm Sứ</a></li>
+                  <li><a href="/products/gach-co-bat-trang/" class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/gach-co-bat-trang/">Gạch Cổ Bát Tràng</a></li>
+                  <li><a href="/products/linh-vat-phong-thuy/" class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/linh-vat-phong-thuy/">Linh Vật Phong Thủy</a></li>
+                  <li><a href="/products/den-gom-su/" class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/den-gom-su/">Đèn Gốm Sứ</a></li>
+               </ul>
+            </div>
+          </div>
+  
+          <div class="relative group">
+            <a href="#" class="nav-link flex items-center gap-[5px] text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors">
+              <span>SPCT</span>
+              <svg class="w-[7px] h-[7px]" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z" fill="currentColor"/>
+              </svg>
+            </a>
+            <!-- Quick access detail pages dropdown -->
+            <div class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary overflow-y-auto max-h-[60vh]">
+               <ul class="py-2 flex flex-col">
+                  <li><a href="/products/ngoi-am-duong/detail.html" class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/ngoi-am-duong/detail.html">Ngói Âm Dương</a></li>
+                  <li><a href="/products/gach-co-bat-trang/detail-200x200x50.html" class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/gach-co-bat-trang/detail-200x200x50.html">Gạch Bát 200x200x50</a></li>
+                  <li><a href="/products/gach-co-bat-trang/detail-220x110x60.html" class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/gach-co-bat-trang/detail-220x110x60.html">Gạch Bát 220x110x60</a></li>
+                  <li><a href="/products/gach-co-bat-trang/detail-300x100x30.html" class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/gach-co-bat-trang/detail-300x100x30.html">Gạch Bát 300x100x30</a></li>
+                  <li><a href="/products/gach-co-bat-trang/detail-300x150x60.html" class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/gach-co-bat-trang/detail-300x150x60.html">Gạch Bát 300x150x60</a></li>
+                  <li><a href="/products/gach-co-bat-trang/detail-300x300x50.html" class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/gach-co-bat-trang/detail-300x300x50.html">Gạch Bát 300x300x50</a></li>
+                  <li><a href="/products/gach-hoa-thong-gio/detail.html" class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/gach-hoa-thong-gio/detail.html">Gạch hoa thông gió</a></li>
+                  <li><a href="/products/gach-trang-tri/detail.html" class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/gach-trang-tri/detail.html">Gạch trang trí</a></li>
+                  <li><a href="/products/linh-vat-phong-thuy/detail.html" class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/linh-vat-phong-thuy/detail.html">Linh vật phong thủy</a></li>
+                  <li><a href="/products/ngoi-hai-van-mieu/ngoi-hai-co-nau-den.html" class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/ngoi-hai-van-mieu/ngoi-hai-co-nau-den.html">Ngói Hài Cổ Nâu Đen</a></li>
+                  <li><a href="/products/ngoi-hai-van-mieu/ngoi-van-mieu-ghi-anh-kim.html" class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/ngoi-hai-van-mieu/ngoi-van-mieu-ghi-anh-kim.html">Ngói Văn Miếu Ghi Ánh Kim</a></li>
+                  <li><a href="/products/phu-kien-ngoi/bo-noc-chu-van.html" class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/phu-kien-ngoi/bo-noc-chu-van.html">Bộ Nóc Chữ Vạn</a></li>
+                  <li><a href="/products/phu-kien-ngoi/ngoi-bo-noc.html" class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0" data-path="/products/phu-kien-ngoi/ngoi-bo-noc.html">Ngói Bó Nóc</a></li>
+               </ul>
+            </div>
+          </div>
+          <a href="/projects/" class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors" data-path="/projects/">Dự án</a>
+          <a href="/factory/" class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors" data-path="/factory/">Xưởng sản xuất</a>
+          <a href="/news/" class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors" data-path="/news/">Tin tức</a>
+          <a href="/contact/" class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors" data-path="/contact/">liên hệ</a>
+        </div>
+        
+        <!-- Icons & Mobile Menu -->
+        <div class="flex items-center gap-5">
+          <button class="hover:text-secondary transition-colors" aria-label="Search">
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-4 h-4">
+          </button>
+          <a href="/gio-hang.html" class="hover:text-secondary transition-colors" aria-label="Cart">
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-4 h-4">
+          </a>
+          <a href="/dich-vu-khach-hang/" class="hover:text-secondary transition-colors" aria-label="User">
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-4 h-4">
+          </a>
+          
+          <!-- Mobile menu button -->
+          <button class="xl:hidden text-white" id="mobile-menu-button" aria-label="Toggle menu">
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%2014H15C15.552%2014%2016%2013.552%2016%2013C16%2012.448%2015.552%2012%2015%2012H8C7.448%2012%207%2012.448%207%2013C7%2013.552%207.448%2014%208%2014Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%204H15C15.552%204%2016%203.552%2016%203C16%202.448%2015.552%202%2015%202H1C0.448%202%200%202.448%200%203C0%203.552%200.448%204%201%204Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%209H15C15.552%209%2016%208.552%2016%208C16%207.448%2015.552%207%2015%207H1C0.448%207%200%207.448%200%208C0%208.552%200.448%209%201%209Z'%20fill='%23F7F7F7'/%3e%3c/svg%3e" alt="menu" class="w-4 h-4">
+          </button>
+        </div>
+      </nav>
+    </div>
+    
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-primary z-50 overflow-y-auto">
+      <div class="container mx-auto px-6 py-4 relative min-h-full flex flex-col">
+        <div class="flex justify-between items-center mb-8 shrink-0">
+          <a href="/" class="block">
+            <img src="/assets/logo-D_OTyGYs.svg" alt="Logo" class="h-[69px] w-[69px]">
+          </a>
+        <div class="flex items-center gap-5">
+          <button class="hover:text-secondary transition-colors" aria-label="Search">
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-4 h-4">
+          </button>
+          <a href="/gio-hang.html" class="hover:text-secondary transition-colors" aria-label="Cart">
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-4 h-4">
+          </a>
+          <a href="/dich-vu-khach-hang/" class="hover:text-secondary transition-colors" aria-label="User">
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-4 h-4">
+          </a>
+          <button id="close-menu-button" class="text-white hover:text-secondary transition-colors">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-6 flex-grow">
+          <a href="/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary" data-path="/">trang chủ</a>
+          <a href="/about/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary" data-path="/about/">về chúng tôi</a>
+          <div class="flex flex-col">
+            <button id="mobile-products-toggle" class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left" data-path="/products/">
+              <span>sản phẩm</span>
+              <svg class="w-[10px] h-[10px] transition-transform duration-300 transform" id="mobile-products-icon" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z" fill="currentColor"/>
+              </svg>
+            </button>
+            <div id="mobile-products-submenu" class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2">
+               <a href="/products/ngoi-am-duong/" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/ngoi-am-duong/">Ngói Âm Dương</a>
+               <a href="/products/ngoi-hai-van-mieu/" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/ngoi-hai-van-mieu/">Ngói Hài Văn Miếu</a>
+               <a href="/products/gach-hoa-thong-gio/" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/gach-hoa-thong-gio/">Gạch Hoa Thông Gió</a>
+               <a href="/products/phu-kien-ngoi/" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/phu-kien-ngoi/">Phụ Kiện Ngói</a>
+               <a href="/products/gach-trang-tri/" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/gach-trang-tri/">Gạch Trang Trí</a>
+               <a href="/products/lan-can-gom-su/" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/lan-can-gom-su/">Lan Can Gốm Sứ</a>
+               <a href="/products/gach-co-bat-trang/" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/gach-co-bat-trang/">Gạch Cổ Bát Tràng</a>
+               <a href="/products/linh-vat-phong-thuy/" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/linh-vat-phong-thuy/">Linh vật Phong Thủy</a>
+               <a href="/products/den-gom-su/" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/den-gom-su/">Đèn Gốm Sứ</a>
+            </div>
+          </div>
+  
+          <div class="flex flex-col">
+            <button id="mobile-spct-toggle" class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left">
+              <span>SPCT</span>
+              <svg class="w-[10px] h-[10px] transition-transform duration-300 transform" id="mobile-spct-icon" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z" fill="currentColor"/>
+              </svg>
+            </button>
+            <div id="mobile-spct-submenu" class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2">
+               <a href="/products/ngoi-am-duong/detail.html" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/ngoi-am-duong/detail.html">Ngói Âm Dương</a>
+               <a href="/products/gach-co-bat-trang/detail-200x200x50.html" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/gach-co-bat-trang/detail-200x200x50.html">Gạch Bát 200x200x50</a>
+               <a href="/products/gach-co-bat-trang/detail-220x110x60.html" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/gach-co-bat-trang/detail-220x110x60.html">Gạch Bát 220x110x60</a>
+               <a href="/products/gach-co-bat-trang/detail-300x100x30.html" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/gach-co-bat-trang/detail-300x100x30.html">Gạch Bát 300x100x30</a>
+               <a href="/products/gach-co-bat-trang/detail-300x150x60.html" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/gach-co-bat-trang/detail-300x150x60.html">Gạch Bát 300x150x60</a>
+               <a href="/products/gach-co-bat-trang/detail-300x300x50.html" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/gach-co-bat-trang/detail-300x300x50.html">Gạch Bát 300x300x50</a>
+               <a href="/products/gach-hoa-thong-gio/detail.html" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/gach-hoa-thong-gio/detail.html">Gạch hoa thông gió</a>
+               <a href="/products/gach-trang-tri/detail.html" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/gach-trang-tri/detail.html">Gạch trang trí</a>
+               <a href="/products/linh-vat-phong-thuy/detail.html" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/linh-vat-phong-thuy/detail.html">Linh vật phong thủy</a>
+               <a href="/products/ngoi-hai-van-mieu/ngoi-hai-co-nau-den.html" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/ngoi-hai-van-mieu/ngoi-hai-co-nau-den.html">Ngói Hài Cổ Nâu Đen</a>
+               <a href="/products/ngoi-hai-van-mieu/ngoi-van-mieu-ghi-anh-kim.html" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/ngoi-hai-van-mieu/ngoi-van-mieu-ghi-anh-kim.html">Ngói Văn Miếu Ghi Ánh Kim</a>
+               <a href="/products/phu-kien-ngoi/bo-noc-chu-van.html" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/phu-kien-ngoi/bo-noc-chu-van.html">Bộ Nóc Chữ Vạn</a>
+               <a href="/products/phu-kien-ngoi/ngoi-bo-noc.html" class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary" data-path="/products/phu-kien-ngoi/ngoi-bo-noc.html">Ngói Bó Nóc</a>
+            </div>
+          </div>
+          <a href="/projects/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary" data-path="/projects/">Dự án</a>
+          <a href="/factory/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary" data-path="/factory/">Xưởng sản xuất</a>
+          <a href="/news/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary" data-path="/news/">Tin tức</a>
+          <a href="/contact/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary" data-path="/contact/">liên hệ</a>
+        </div>
+        <img src="/assets/background-decorate-BngfSex1.svg" alt="background-decorate" class="fixed -bottom-32 -right-52 w-[480px] h-[480px] pointer-events-none opacity-100">
+      </div>
+    </div>
+  </header>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 0. Sticky header scroll effect (home page only)
+      const siteHeader = document.getElementById('site-header');
+      if (siteHeader && siteHeader.classList.contains('fixed')) {
+        const onScroll = () => {
+          if (window.scrollY > 20) {
+            siteHeader.classList.remove('bg-opacity-60');
+            siteHeader.classList.add('bg-opacity-100', 'shadow-md');
+          } else {
+            siteHeader.classList.add('bg-opacity-60');
+            siteHeader.classList.remove('bg-opacity-100', 'shadow-md');
+          }
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      }
+  
+      // 1. Highlight Active Link
+      const currentPath = window.location.pathname;
+      
+      // Normalize path (ensure trailing slash for comparison if needed, or matched exactly)
+      // Simple matching:
+      const desktopLinks = document.querySelectorAll('.nav-link');
+      const desktopDropdownLinks = document.querySelectorAll('.desktop-dropdown-link');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+      const mobileProductsToggle = document.getElementById('mobile-products-toggle');
+  
+      const setActive = (link) => {
+        if (link.classList.contains('nav-link')) {
+          // Desktop: Remove default light text and add underline
+          link.classList.remove('text-[#FFFAF3]');
+          link.classList.add('underline', 'underline-offset-8', 'decoration-2');
+        } else if (link.classList.contains('mobile-nav-link') || link.classList.contains('mobile-nav-toggle')) {
+          // Mobile: Remove default white text
+          link.classList.remove('text-white', 'text-white/90');
+        } else if (link.classList.contains('desktop-dropdown-link')) {
+          // Desktop Dropdown: Remove hover text color if any, but specifically remove black text
+          link.classList.remove('text-[#212121]');
+        }
+  
+        // Add Active styling - Orange text
+        link.classList.add('text-secondary');
+      };
+  
+      // Find matching link
+      // Priority: Exact match -> Parent match (e.g. /products/detail -> /products/)
+      let activeLinkFound = false;
+  
+      [...desktopLinks, ...desktopDropdownLinks, ...mobileLinks, mobileProductsToggle].filter(Boolean).forEach(link => {
+         const linkPath = link.getAttribute('data-path');
+         if (currentPath === linkPath || (currentPath === '/index.html' && linkPath === '/') || (linkPath !== '/' && currentPath.startsWith(linkPath))) {
+            setActive(link);
+         }
+      });
+  
+      // 2. Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobile-menu-button');
+      const closeMenuBtn = document.getElementById('close-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+  
+      const toggleMenu = () => {
+        mobileMenu.classList.toggle('hidden');
+        // Prevent body scroll when menu is open
+        if (!mobileMenu.classList.contains('hidden')) {
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = '';
+        }
+      };
+  
+      mobileMenuBtn?.addEventListener('click', toggleMenu);
+      closeMenuBtn?.addEventListener('click', toggleMenu);
+      
+      // Close menu when clicking a link
+      mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+               if (!mobileMenu.classList.contains('hidden')) toggleMenu();
+          });
+      });
+  
+      // 3. Mobile Products Submenu Toggle
+      if (mobileProductsToggle) {
+          mobileProductsToggle.addEventListener('click', (e) => {
+              e.preventDefault();
+              const submenu = document.getElementById('mobile-products-submenu');
+              const icon = document.getElementById('mobile-products-icon');
+              if (submenu.classList.contains('hidden')) {
+                  submenu.classList.remove('hidden');
+                  submenu.classList.add('flex');
+                  if(icon) icon.classList.add('rotate-180');
+              } else {
+                  submenu.classList.add('hidden');
+                  submenu.classList.remove('flex');
+                  if(icon) icon.classList.remove('rotate-180');
+              }
+          });
+      }
+  
+      // 4. Mobile SPCT Submenu Toggle
+      const mobileSpctToggle = document.getElementById('mobile-spct-toggle');
+      if (mobileSpctToggle) {
+          mobileSpctToggle.addEventListener('click', (e) => {
+              e.preventDefault();
+              const submenu = document.getElementById('mobile-spct-submenu');
+              const icon = document.getElementById('mobile-spct-icon');
+              if (submenu.classList.contains('hidden')) {
+                  submenu.classList.remove('hidden');
+                  submenu.classList.add('flex');
+                  if(icon) icon.classList.add('rotate-180');
+              } else {
+                  submenu.classList.add('hidden');
+                  submenu.classList.remove('flex');
+                  if(icon) icon.classList.remove('rotate-180');
+              }
+          });
+      }
+    });
+  </script>
+
+  <main class="bg-background-secondary min-h-screen">
+    <div class="w-[85%] max-w-[1320px] mx-auto">
+      <div class="py-12">
+        <nav class="flex text-sm text-primary gap-4 items-center">
+          <a href="/" class="hover:text-secondary transition-colors font-medium">Trang chủ</a>
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <a href="/dich-vu-khach-hang/" class="hover:text-secondary transition-colors font-medium">Dịch vụ khách hàng</a>
+          <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="text-primary">Trạng thái đơn hàng</span>
+        </nav>
+      </div>
+      
+      <div class="flex flex-col lg:flex-row gap-12 mb-6 lg:mb-12">
+        <!-- Sidebar -->
+        <aside class="w-full lg:w-[320px] shrink-0">
+          <h2 class="text-lg lg:text-xl mb-8 text-primary">Dịch vụ khách hàng</h2>
+          <nav class="flex flex-col border-t border-gray-300 text-sm">
+            <a href="/dich-vu-khach-hang/" 
+               class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary decoration-primary underline underline-offset-4">
+               Trạng thái đơn hàng
+            </a>
+            <a href="/dich-vu-khach-hang/tai-khoan-cua-toi.html" 
+               class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+               Tài khoản của tôi
+            </a>
+            <a href="/dich-vu-khach-hang/tai-catalog.html" 
+               class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+               Tải Catalog
+            </a>
+            <a href="/dich-vu-khach-hang/quy-trinh-dat-hang.html" 
+               class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+               Quy trình đặt hàng
+            </a>
+            <a href="/dich-vu-khach-hang/huong-dan-thi-cong.html" 
+               class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+               Hướng dẫn thi công
+            </a>
+            <a href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html" 
+               class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+               Chính sách vận chuyển
+            </a>
+            <a href="/dich-vu-khach-hang/chinh-sach-doi-tra.html" 
+               class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+               Chính sách đổi trả
+            </a>
+            <a href="/dich-vu-khach-hang/bao-mat-thong-tin.html" 
+               class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+               Bảo mật thông tin
+            </a>
+            <a href="/faq/" 
+               class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+               FAQ
+            </a>
+          </nav>
+        </aside>
+        
+        <!-- Content Area -->
+        <div class="flex-1 lg:pl-12">
+          <h1 class="text-3xl lg:text-[36px] font-arima font-medium text-primary mb-10 mt-[-6px]">Trạng thái đơn hàng</h1>
+          
+          <div class="mb-8">
+            <h3 class="text-base font-bold text-primary mb-6">Đơn hàng của tôi</h3>
+            
+            <!-- Tab Menu -->
+            <div class="w-full justify-between flex border-b border-gray-200 overflow-x-auto scrollbar-hide text-primary font-bold">
+              <button class="px-6 py-2 text-base border-b-2 border-secondary whitespace-nowrap">
+                <div class="text-base mb-1">10</div>
+                Tất cả
+              </button>
+              <button class="px-6 py-2 text-base border-b-2 border-transparent hover:text-secondary whitespace-nowrap transition-colors">
+                <div class="text-base mb-1">0</div>
+                Chờ thanh toán
+              </button>
+              <button class="px-6 py-2 text-base border-b-2 border-transparent hover:text-secondary whitespace-nowrap transition-colors">
+                <div class="text-base mb-1">1</div>
+                Đang xử lý
+              </button>
+              <button class="px-6 py-2 text-base border-b-2 border-transparent hover:text-secondary whitespace-nowrap transition-colors">
+                <div class="text-base mb-1">1</div>
+                Đang giao
+              </button>
+              <button class="px-6 py-2 text-base border-b-2 border-transparent hover:text-secondary whitespace-nowrap transition-colors">
+                <div class="text-base mb-1">1</div>
+                Hoàn tất
+              </button>
+              <button class="px-6 py-2 text-base border-b-2 border-transparent hover:text-secondary whitespace-nowrap transition-colors">
+                <div class="text-base mb-1">1</div>
+                Bị hủy
+              </button>
+              <button class="px-6 py-2 text-base border-b-2 border-transparent hover:text-secondary whitespace-nowrap transition-colors">
+                <div class="text-base mb-1">0</div>
+                Đổi trả
+              </button>
+            </div>
+          </div>
+        
+          <!-- Order Cards Container -->
+          <div class="space-y-10">
+            <!-- Card 1: Đang xử lý -->
+            <div class="bg-[#FEF9F5] border border-gray-300 rounded-md shadow-lg p-6 lg:p-8">
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-gray-300">
+                <div class="flex items-center gap-3">
+                  <span class="text-secondary font-bold text-sm lg:text-base">#000000000</span>
+                  <span class="bg-[#CAE5FF] text-[#2F80ED] text-[10px] lg:text-xs font-bold px-3 py-1 rounded-full uppercase">Đang xử lý</span>
+                </div>
+                <div class="text-primary/60 text-[12px] lg:text-sm font-semibold">11/03/2026 - 12:55</div>
+              </div>
+              
+              <div class="space-y-6">
+                <div class="flex gap-4 lg:gap-6">
+                  <div class="w-20 h-20 lg:w-28 lg:h-28 border border-gray-300 rounded-md overflow-hidden flex-shrink-0 bg-white p-2">
+                    <img src="/assets/ngoi-van-mieu-detail-2-NjIA4_2Y.png" alt="Ngói âm dương nâu đen" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-1 flex justify-between items-end py-1">
+                    <div class="space-y-1">
+                      <h4 class="text-sm lg:text-xl font-bold text-primary">Ngói âm dương nâu đen</h4>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40 uppercase">MSP: 46345</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">Phân loại: Nâu đen</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">x100</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-[10px] lg:text-[13px] text-primary/40 line-through">20,000,000.00 đ</span>
+                        <p class="text-xs lg:text-[14px] text-primary">20,000,000.00 đ</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 lg:gap-6">
+                  <div class="w-20 h-20 lg:w-28 lg:h-28 border border-gray-300 rounded-md overflow-hidden flex-shrink-0 bg-white p-2">
+                    <img src="/assets/ngoi-van-mieu-detail-C5NJKU7O.png" alt="Ngói âm dương nâu đen" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-1 flex justify-between items-end py-1">
+                    <div class="space-y-1">
+                      <h4 class="text-sm lg:text-xl font-bold text-primary">Ngói âm dương nâu đen</h4>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40 uppercase">MSP: 46345</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">Phân loại: Nâu đen</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">x100</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-[10px] lg:text-[13px] text-primary/40 line-through">20,000,000.00 đ</span>
+                        <p class="text-xs lg:text-[14px] text-primary">20,000,000.00 đ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="mt-4 pt-4 border-t border-gray-300">
+                <div class="flex justify-end mb-4">
+                    <p class="text-sm lg:text-base font-bold font-archivo text-primary">
+                        <span class="text-secondary font-archivo font-medium">Tổng tiền:</span> 40,000,000.00 đ
+                    </p>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <span class="text-sm lg:text-base text-primary font-bold">Số lượng: 200</span>
+                    <div class="flex items-center gap-2 lg:gap-4">
+                        <button class="w-1/2 lg:w-48 py-2 border border-secondary text-secondary text-sm lg:text-base font-bold rounded-md hover:bg-secondary/5 transition-colors">
+                            Hủy đơn hàng
+                        </button>
+                        <button class="w-1/2 lg:w-48 py-2 bg-secondary text-white text-sm lg:text-base font-bold rounded-md hover:opacity-90 transition-opacity">
+                            Liên hệ
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 2: Đang giao -->
+            <div class="bg-[#FEF9F5] border border-gray-300 rounded-md shadow-lg p-6 lg:p-8">
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-gray-300">
+                <div class="flex items-center gap-3">
+                  <span class="text-secondary font-bold text-sm lg:text-base">#000000000</span>
+                  <span class="bg-[#E2FBE9] text-[#27AE60] text-[10px] lg:text-xs font-bold px-3 py-1 rounded-full uppercase">Đang giao</span>
+                </div>
+                <div class="text-primary/60 text-[12px] lg:text-sm font-semibold">11/03/2026 - 12:55</div>
+              </div>
+              
+              <div class="space-y-6">
+                <div class="flex gap-4 lg:gap-6">
+                  <div class="w-20 h-20 lg:w-28 lg:h-28 border border-gray-300 rounded-md overflow-hidden flex-shrink-0 bg-white p-2">
+                    <img src="/assets/ngoi-van-mieu-detail-2-NjIA4_2Y.png" alt="Ngói âm dương nâu đen" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-1 flex justify-between items-end py-1">
+                    <div class="space-y-1">
+                      <h4 class="text-sm lg:text-xl font-bold text-primary">Ngói âm dương nâu đen</h4>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40 uppercase">MSP: 46345</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">Phân loại: Nâu đen</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">x100</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-[10px] lg:text-[13px] text-primary/40 line-through">20,000,000.00 đ</span>
+                        <p class="text-xs lg:text-[14px] text-primary">20,000,000.00 đ</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Thêm một sản phẩm cho Đang giao -->
+                <div class="flex gap-4 lg:gap-6">
+                  <div class="w-20 h-20 lg:w-28 lg:h-28 border border-gray-300 rounded-md overflow-hidden flex-shrink-0 bg-white p-2">
+                    <img src="/assets/ngoi-van-mieu-detail-C5NJKU7O.png" alt="Ngói âm dương nâu đen" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-1 flex justify-between items-end py-1">
+                    <div class="space-y-1">
+                      <h4 class="text-sm lg:text-xl font-bold text-primary">Ngói âm dương nâu đen</h4>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40 uppercase">MSP: 46345</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">Phân loại: Nâu đen</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">x100</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-[10px] lg:text-[13px] text-primary/40 line-through">20,000,000.00 đ</span>
+                        <p class="text-xs lg:text-[14px] text-primary">20,000,000.00 đ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="mt-4 pt-4 border-t border-gray-300">
+                <div class="flex justify-end mb-4">
+                    <p class="text-sm lg:text-base font-bold font-archivo text-primary">
+                        <span class="text-secondary font-archivo font-medium">Tổng tiền:</span> 40,000,000.00 đ
+                    </p>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <span class="text-sm lg:text-base text-primary font-bold">Số lượng: 200</span>
+                    <div class="flex items-center gap-2 lg:gap-4">
+                        <button class="w-1/2 lg:w-48 py-2 border border-secondary text-secondary text-sm lg:text-base font-bold rounded-md hover:bg-secondary/5 transition-colors">
+                            Xem chi tiết
+                        </button>
+                        <button class="w-1/2 lg:w-48 py-2 bg-secondary text-white text-sm lg:text-base font-bold rounded-md hover:opacity-90 transition-opacity">
+                            Liên hệ
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 3: Hoàn tất -->
+            <div class="bg-[#FEF9F5] border border-gray-300 rounded-md shadow-lg p-6 lg:p-8">
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-gray-300">
+                <div class="flex items-center gap-3">
+                  <span class="text-secondary font-bold text-sm lg:text-base">#000000000</span>
+                  <span class="bg-[#FDEEDC] text-[#E67E22] text-[10px] lg:text-xs font-bold px-3 py-1 rounded-full uppercase">Hoàn tất</span>
+                </div>
+                <div class="text-primary/60 text-[12px] lg:text-sm font-semibold">11/03/2026 - 12:55</div>
+              </div>
+              
+              <div class="space-y-6">
+                <div class="flex gap-4 lg:gap-6">
+                  <div class="w-20 h-20 lg:w-28 lg:h-28 border border-gray-300 rounded-md overflow-hidden flex-shrink-0 bg-white p-2">
+                    <img src="/assets/ngoi-van-mieu-detail-2-NjIA4_2Y.png" alt="Ngói âm dương nâu đen" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-1 flex justify-between items-end py-1">
+                    <div class="space-y-1">
+                      <h4 class="text-sm lg:text-xl font-bold text-primary">Ngói âm dương nâu đen</h4>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40 uppercase">MSP: 46345</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">Phân loại: Nâu đen</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">x100</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-[10px] lg:text-[13px] text-primary/40 line-through">20,000,000.00 đ</span>
+                        <p class="text-xs lg:text-[14px] text-primary">20,000,000.00 đ</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 lg:gap-6">
+                  <div class="w-20 h-20 lg:w-28 lg:h-28 border border-gray-300 rounded-md overflow-hidden flex-shrink-0 bg-white p-2">
+                    <img src="/assets/ngoi-van-mieu-detail-C5NJKU7O.png" alt="Ngói âm dương nâu đen" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-1 flex justify-between items-end py-1">
+                    <div class="space-y-1">
+                      <h4 class="text-sm lg:text-xl font-bold text-primary">Ngói âm dương nâu đen</h4>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40 uppercase">MSP: 46345</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">Phân loại: Nâu đen</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">x100</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-[10px] lg:text-[13px] text-primary/40 line-through">20,000,000.00 đ</span>
+                        <p class="text-xs lg:text-[14px] text-primary">20,000,000.00 đ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="mt-4 pt-4 border-t border-gray-300">
+                <div class="flex justify-end mb-4">
+                    <p class="text-sm lg:text-base font-bold font-archivo text-primary">
+                        <span class="text-secondary font-archivo font-medium">Tổng tiền:</span> 40,000,000.00 đ
+                    </p>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <span class="text-sm lg:text-base text-primary font-bold">Số lượng: 00</span>
+                    <div class="flex items-center gap-2 lg:gap-4">
+                        <button class="w-1/2 lg:w-48 py-2 border border-secondary text-secondary text-sm lg:text-base font-bold rounded-md hover:bg-secondary/5 transition-colors">
+                            Trả hàng
+                        </button>
+                        <button class="w-1/2 lg:w-48 py-2 bg-secondary text-white text-sm lg:text-base font-bold rounded-md hover:opacity-90 transition-opacity">
+                            Mua lại
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 4: Bị hủy -->
+            <div class="bg-[#FEF9F5] border border-gray-300 rounded-md shadow-lg p-6 lg:p-8">
+              <div class="flex justify-between items-center mb-4 pb-4 border-b border-gray-300">
+                <div class="flex items-center gap-3">
+                  <span class="text-secondary font-bold text-sm lg:text-base">#000000000</span>
+                  <span class="bg-[#FBCFCF] text-[#EB5757] text-[10px] lg:text-xs font-bold px-3 py-1 rounded-full uppercase">Bị hủy</span>
+                </div>
+                <div class="text-primary/60 text-[12px] lg:text-sm font-semibold">11/03/2026 - 12:55</div>
+              </div>
+              
+              <div class="space-y-6">
+                <div class="flex gap-4 lg:gap-6">
+                  <div class="w-20 h-20 lg:w-28 lg:h-28 border border-gray-300 rounded-md overflow-hidden flex-shrink-0 bg-white p-2">
+                    <img src="/assets/ngoi-hai-detail-B35TJlZV.png" alt="Ngói âm dương nâu đen" class="w-full h-full object-contain">
+                  </div>
+                  <div class="flex-1 flex justify-between items-end py-1">
+                    <div class="space-y-1">
+                      <h4 class="text-sm lg:text-xl font-bold text-primary">Ngói âm dương nâu đen</h4>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40 uppercase">MSP: 46345</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">Phân loại: Nâu đen</p>
+                      <p class="text-[10px] lg:text-[13px] text-primary/40">x100</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-[10px] lg:text-[13px] text-primary/40 line-through">20,000,000.00 đ</span>
+                        <p class="text-xs lg:text-[14px] text-primary">20,000,000.00 đ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="mt-4 pt-4 border-t border-gray-300">
+                <div class="flex justify-end mb-4">
+                    <p class="text-sm lg:text-base font-bold font-archivo text-primary">
+                        <span class="text-secondary font-archivo font-medium">Tổng tiền:</span> 40,000,000.00 đ
+                    </p>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                    <span class="text-sm lg:text-base text-primary font-bold">Số lượng: 00</span>
+                    <div class="flex items-center gap-2 lg:gap-4">
+                        <button class="w-1/2 lg:w-48 py-2 border border-secondary text-secondary text-sm lg:text-base font-bold rounded-md hover:bg-secondary/5 transition-colors">
+                            Xem chi tiết
+                        </button>
+                        <button class="w-1/2 lg:w-48 py-2 bg-secondary text-white text-sm lg:text-base font-bold rounded-md hover:opacity-90 transition-opacity">
+                            Mua lại
+                        </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Pagination -->
+          <div class="mt-12 flex items-center justify-between gap-8">
+            <button class="text-primary hover:text-secondary transition-colors" aria-label="Previous page">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            
+            <div class="flex items-center gap-6 text-base font-bold">
+              <a href="#" class="text-secondary border-b-2 border-secondary pb-0.5">1</a>
+              <a href="#" class="text-primary/40 hover:text-secondary transition-colors">2</a>
+              <a href="#" class="text-primary/40 hover:text-secondary transition-colors">3</a>
+            </div>
+        
+            <button class="text-secondary hover:opacity-80 transition-opacity" aria-label="Next page">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Contact Section Partial -->
+      <section class="pt-16 lg:pt-24 pb-32 lg:pb-48 bg-background-secondary overflow-hidden">
+        <div class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-5 gap-12 lg:gap-24 items-center">
+          
+          <!-- Image -->
+          <a href="/contact/" class="block w-full aspect-square md:aspect-auto md:h-[434px] md:col-span-2" data-aos="fade-right">
+            <img src="/assets/faq-contact-B0av6hYF.png" alt="FAQ Contact" class="w-full h-full object-cover shadow-xl group">
+          </a>
+      
+          <!-- Content -->
+          <div class="flex flex-col gap-6 md:col-span-3" data-aos="fade-left">
+            <div>
+              <p class="text-xs md:text-base font-bold text-primary uppercase mb-8">
+                Bạn còn câu hỏi?
+              </p>
+              <h2 class="text-3xl md:text-[40px] font-arima text-primary leading-tight tracking-wider mb-8">
+                Chúng tôi sẵn sàng hỗ trợ
+              </h2>
+            </div>
+      
+            <div class="space-y-4 text-sm md:text-base text-primary/80">
+              <p class="font-medium text-primary mb-6">Thứ 2 - Chủ nhật | 9AM - 5PM</p>
+              
+              <div class="flex items-center gap-4 group">
+                <div class="text-secondary">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                </div>
+                <a href="tel:0966558808" class="hover:text-secondary transition-colors text-primary">0966 55 8808</a>
+              </div>
+      
+              <div class="flex items-center gap-4 group">
+                <div class="text-secondary">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                </div>
+                <a href="mailto:gshaithanh@gmail.com" class="hover:text-secondary transition-colors text-primary">gshaithanh@gmail.com</a>
+              </div>
+      
+              <div class="flex items-start gap-4 group">
+                <div class="text-secondary mt-1">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <div class="text-primary leading-relaxed">
+                  <p class="text-sm md:text-base text-primary">Tại <a href="https://maps.app.goo.gl/5HRZ796Qq714sPcCA" target="_blank" class="text-secondary underline font-bold">Gốm sứ Thanh Hải</a></p>
+                  <p class="text-sm md:text-base text-primary">18 Giang Cao, Bát Tràng, Gia Lâm, Hà Nội</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="mt-8">
+              <a href="/contact/" class="inline-block px-12 py-3 border border-black/20 text-primary font-bold text-xs md:text-sm tracking-widest hover:bg-secondary hover:text-white hover:border-secondary transition-all uppercase">
+                Liên hệ
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="bg-[#262723] text-white">
+    <!-- Newsletter Section -->
+    <div class="relative overflow-hidden">
+      <img
+        src="/assets/background-decorate-DPlMqioe.png"
+        alt=""
+        class="block absolute top-[15%] left-[55%] lg:left-[50%] transform lg:-translate-x-1/2 w-[300px] h-[300px] lg:w-[560px] lg:h-[700px] opacity-80 lg:opacity-60 pointer-events-none"
+      />
+  
+      <!-- Desktop: image full-bleed on right half -->
+      <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
+        <img
+          src="/assets/footer-image-RZCiJnXo.png"
+          alt=""
+          class="w-full h-full object-cover"
+        />
+      </div>
+  
+      <!-- Content row constrained to 1320px -->
+      <div class="relative w-full max-w-[1320px] px-6 lg:px-0 mx-auto flex flex-col lg:flex-row">
+        <!-- Text column: left half -->
+        <div class="w-full lg:w-1/2 pt-[7.5%] pb-[12.5%] lg:pt-[72px] lg:pb-[72px] lg:pr-16">
+          <div class="w-full max-w-[536px]">
+            <h2 class="text-neutral-1 text-[28px] lg:text-[32px] font-semibold leading-tight lg:leading-[44px] mb-20 lg:mb-[72px]">
+              Hãy nói với chúng tôi<br />
+              những mong muốn của bạn
+            </h2>
+  
+            <div class="flex flex-col gap-2">
+              <div class="flex items-center justify-between">
+                <input
+                  type="email"
+                  placeholder="Nhập thông tin email của bạn"
+                  class="bg-transparent text-[#909090] text-sm font-light outline-none flex-1"
+                />
+                <button
+                  class="hover:opacity-80 transition-opacity"
+                  aria-label="Subscribe"
+                >
+                  <svg
+                    class="w-6 h-6"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.707 19.707L22.707 12.707C22.8945 12.5195 22.9998 12.2652 22.9998 12C22.9998 11.7348 22.8945 11.4805 22.707 11.293L15.707 4.29298C15.5184 4.11082 15.2658 4.01003 15.0036 4.01231C14.7414 4.01458 14.4906 4.11975 14.3052 4.30516C14.1198 4.49057 14.0146 4.74138 14.0123 5.00358C14.01 5.26578 14.1108 5.51838 14.293 5.70698L19.586 11H2C1.73478 11 1.48043 11.1053 1.29289 11.2929C1.10536 11.4804 1 11.7348 1 12C1 12.2652 1.10536 12.5196 1.29289 12.7071C1.48043 12.8946 1.73478 13 2 13H19.586L14.293 18.293C14.1108 18.4816 14.01 18.7342 14.0123 18.9964C14.0146 19.2586 14.1198 19.5094 14.3052 19.6948C14.4906 19.8802 14.7414 19.9854 15.0036 19.9877C15.2658 19.9899 15.5184 19.8891 15.707 19.707Z"
+                      fill="#BB7847"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="h-px bg-[#FFFAF3]"></div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Spacer for right half on desktop (image is absolute) -->
+        <div class="hidden lg:block lg:w-1/2 lg:min-h-[541px]"></div>
+      </div>
+  
+      <!-- Mobile: image in normal flow -->
+      <div class="lg:hidden w-full">
+        <img
+          src="/assets/footer-image-RZCiJnXo.png"
+          alt=""
+          class="w-full h-full object-cover max-h-[541px]"
+        />
+      </div>
+    </div>
+  
+    <!-- Main Footer -->
+    <div class="relative bg-[#262723] overflow-hidden">
+      <img
+        src="/assets/footer-image-2-COXRLjh4.png"
+        alt=""
+        class="hidden lg:block absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="relative w-[85%] 2xl:w-full max-w-[1320px] mx-auto pt-12 lg:pt-[132px] pb-[60px]">
+        <!-- Footer Content -->
+        <!-- Footer grid: Logo col | Info col | Tổng quan | Sản phẩm (2 sub-cols) | Dịch vụ -->
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-0">
+          <!-- LEFT BLOCK: Logo trên, Bộ công thương + Download dưới -->
+          <div class="flex flex-col justify-between gap-6 lg:w-[130px] xl:w-[150px] shrink-0 lg:mr-8 xl:mr-12">
+            <!-- Logo -->
+            <div>
+              <img
+                src="/assets/logo-D_OTyGYs.svg"
+                alt="Logo"
+                class="w-[88px] h-[88px]"
+              />
+            </div>
+            <!-- Bộ Công Thương -->
+            <div class="mt-auto xl:pt-28">
+              <a
+                href="#"
+                class="inline-block"
+                aria-label="Đã thông báo Bộ Công Thương"
+              >
+                <img
+                  src="/assets/bo-cong-thuong-4M6Fa8-t.png"
+                  alt="Đã thông báo Bộ Công Thương"
+                  class="h-[52px] w-auto"
+                />
+              </a>
+            </div>
+          </div>
+  
+          <!-- INFO BLOCK: Tên cty, địa chỉ, social, download -->
+          <div class="lg:w-[260px] xl:w-[300px] shrink-0 lg:mr-10 xl:mr-14">
+            <div class="text-white text-[15px] font-medium leading-[26px] mb-6">
+              <p class="font-bold uppercase">CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI THANH HẢI</p>
+              <p>18 Phố Gốm – Giang Cao, Bát Tràng, Gia Lâm, Hà Nội</p>
+              <p>0966 55 8808</p>
+              <p>gshaithanh@gmail.com</p>
+            </div>
+  
+            <!-- Social Icons -->
+            <div class="flex items-center gap-[20px] mb-8">
+              <a
+                href="#"
+                aria-label="Facebook"
+              >
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='18'%20height='19'%20viewBox='0%200%2018%2019'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.25%200H0.75C0.335786%200%200%200.335996%200%200.750469V17.2608C0%2017.6753%200.335786%2018.0113%200.75%2018.0113H8.61436C9.16664%2018.0113%209.61436%2017.5635%209.61436%2017.0113V12.0364C9.61436%2011.4841%209.16664%2011.0364%208.61436%2011.0364H8.26863C7.71634%2011.0364%207.26862%2010.5886%207.26862%2010.0364V9.3181C7.26862%208.76581%207.71634%208.3181%208.26863%208.3181H8.61436C9.16664%208.3181%209.61436%207.87038%209.61436%207.3181V6.31346C9.61436%203.98709%2011.0343%202.72034%2013.1083%202.72034C13.5595%202.72034%2013.9819%202.73561%2014.332%202.75538C14.8325%202.78365%2015.2044%203.20194%2015.2044%203.70329V4.25908C15.2044%204.81119%2014.757%205.25883%2014.2049%205.25908L13.766%205.25928C12.6381%205.25928%2012.4197%205.7956%2012.4197%206.58261V7.3181C12.4197%207.87038%2012.8674%208.3181%2013.4197%208.3181H13.9726C14.5756%208.3181%2015.0415%208.84782%2014.9644%209.44589L14.8719%2010.1642C14.8076%2010.6629%2014.3829%2011.0364%2013.8801%2011.0364H13.4197C12.8674%2011.0364%2012.4197%2011.4841%2012.4197%2012.0364V17.0113C12.4197%2017.5635%2012.8674%2018.0113%2013.4197%2018.0113H17.25C17.6642%2018.0113%2018%2017.6753%2018%2017.2608V0.750469C18%200.335996%2017.6642%200%2017.25%200Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e"
+                  alt="Facebook"
+                  class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
+                />
+              </a>
+              <a
+                href="#"
+                aria-label="YouTube"
+              >
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='26'%20height='18'%20viewBox='0%200%2026%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.4%2012.8571L17.147%209L10.4%205.14286V12.8571ZM25.428%202.79C25.597%203.39429%2025.714%204.20429%2025.792%205.23286C25.883%206.26143%2025.922%207.14857%2025.922%207.92L26%209C26%2011.8157%2025.792%2013.8857%2025.428%2015.21C25.103%2016.3671%2024.349%2017.1129%2023.179%2017.4343C22.568%2017.6014%2021.45%2017.7171%2019.734%2017.7943C18.044%2017.8843%2016.497%2017.9229%2015.067%2017.9229L13%2018C7.553%2018%204.16%2017.7943%202.821%2017.4343C1.651%2017.1129%200.897%2016.3671%200.572%2015.21C0.403%2014.6057%200.286%2013.7957%200.208%2012.7671C0.117%2011.7386%200.0779999%2010.8514%200.0779999%2010.08L0%209C0%206.18429%200.208%204.11429%200.572%202.79C0.897%201.63286%201.651%200.887143%202.821%200.565714C3.432%200.398572%204.55%200.282857%206.266%200.205714C7.956%200.115714%209.503%200.0771428%2010.933%200.0771428L13%200C18.447%200%2021.84%200.205714%2023.179%200.565714C24.349%200.887143%2025.103%201.63286%2025.428%202.79Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e"
+                  alt="YouTube"
+                  class="w-[24px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
+                />
+              </a>
+              <a
+                href="#"
+                aria-label="Pinterest"
+              >
+                <img
+                  src="data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.336%2017.586C7.2%2017.847%208.073%2018%209%2018C11.3869%2018%2013.6761%2017.0518%2015.364%2015.364C17.0518%2013.6761%2018%2011.3869%2018%209C18%207.8181%2017.7672%206.64778%2017.3149%205.55585C16.8626%204.46392%2016.1997%203.47177%2015.364%202.63604C14.5282%201.80031%2013.5361%201.13738%2012.4442%200.685084C11.3522%200.232792%2010.1819%200%209%200C7.8181%200%206.64778%200.232792%205.55585%200.685084C4.46392%201.13738%203.47177%201.80031%202.63604%202.63604C0.948211%204.32387%200%206.61305%200%209C0%2012.825%202.403%2016.11%205.796%2017.406C5.715%2016.704%205.634%2015.543%205.796%2014.742L6.831%2010.296C6.831%2010.296%206.57%209.774%206.57%208.946C6.57%207.704%207.344%206.777%208.226%206.777C9%206.777%209.36%207.344%209.36%208.073C9.36%208.847%208.847%209.954%208.586%2011.016C8.433%2011.898%209.054%2012.672%209.954%2012.672C11.556%2012.672%2012.798%2010.962%2012.798%208.55C12.798%206.39%2011.25%204.914%209.027%204.914C6.489%204.914%204.995%206.804%204.995%208.793C4.995%209.567%205.247%2010.35%205.661%2010.863C5.742%2010.917%205.742%2010.989%205.715%2011.124L5.454%2012.105C5.454%2012.258%205.355%2012.312%205.202%2012.204C4.05%2011.7%203.384%2010.062%203.384%208.739C3.384%205.895%205.4%203.312%209.288%203.312C12.384%203.312%2014.796%205.535%2014.796%208.487C14.796%2011.583%2012.879%2014.067%2010.134%2014.067C9.261%2014.067%208.406%2013.599%208.1%2013.05L7.497%2015.183C7.29%2015.957%206.723%2016.992%206.336%2017.613V17.586Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e"
+                  alt="Pinterest"
+                  class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
+                />
+              </a>
+            </div>
+  
+            <!-- Download Button -->
+            <a
+              href="#"
+              class="inline-flex items-center gap-[6px] bg-[#AB6520] rounded px-6 py-3 hover:bg-opacity-90 transition-opacity"
+            >
+              <svg
+                class="w-4 h-4 shrink-0"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14 1H12C11.7348 1 11.4804 1.10536 11.2929 1.29289C11.1054 1.48043 11 1.73478 11 2C11 2.26522 11.1054 2.51957 11.2929 2.70711C11.4804 2.89464 11.7348 3 12 3H14V13H2V3H4C4.26522 3 4.51957 2.89464 4.70711 2.70711C4.89464 2.51957 5 2.26522 5 2C5 1.73478 4.89464 1.48043 4.70711 1.29289C4.51957 1.10536 4.26522 1 4 1H2C1.46957 1 0.960859 1.21071 0.585786 1.58579C0.210714 1.96086 0 2.46957 0 3L0 13C0 13.5304 0.210714 14.0391 0.585786 14.4142C0.960859 14.7893 1.46957 15 2 15H14C14.5304 15 15.0391 14.7893 15.4142 14.4142C15.7893 14.0391 16 13.5304 16 13V3C16 2.46957 15.7893 1.96086 15.4142 1.58579C15.0391 1.21071 14.5304 1 14 1Z"
+                  fill="white"
+                />
+                <path
+                  d="M4.49992 6C4.4009 5.99982 4.30405 6.02905 4.22167 6.08398C4.13928 6.13891 4.07505 6.21706 4.03713 6.30854C3.99922 6.40001 3.98931 6.50068 4.00868 6.59779C4.02805 6.6949 4.07581 6.78407 4.14592 6.854L7.64592 10.354C7.69236 10.4006 7.74754 10.4375 7.80828 10.4627C7.86903 10.4879 7.93415 10.5009 7.99992 10.5009C8.06569 10.5009 8.13081 10.4879 8.19155 10.4627C8.2523 10.4375 8.30747 10.4006 8.35392 10.354L11.8539 6.854C11.924 6.78407 11.9718 6.6949 11.9912 6.59779C12.0105 6.50068 12.0006 6.40001 11.9627 6.30854C11.9248 6.21706 11.8606 6.13891 11.7782 6.08398C11.6958 6.02905 11.5989 5.99982 11.4999 6H8.99992V2C8.99992 1.73478 8.89456 1.48043 8.70702 1.29289C8.51949 1.10536 8.26513 1 7.99992 1C7.7347 1 7.48035 1.10536 7.29281 1.29289C7.10528 1.48043 6.99992 1.73478 6.99992 2V6H4.49992Z"
+                  fill="white"
+                />
+              </svg>
+              <span class="text-white text-[11px] font-medium uppercase leading-[10px] whitespace-nowrap">download catalog</span>
+            </a>
+          </div>
+  
+          <!-- NAV COLUMNS: grow to fill remaining space -->
+          <div class="flex-1 grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-8 min-w-0">
+            <!-- Overview -->
+            <div class="min-w-0">
+              <h3 class="text-white text-base font-semibold leading-[26px] mb-5 whitespace-nowrap">TỔNG QUAN</h3>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="/about/"
+                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                    >Về chúng tôi</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/showroom/"
+                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                    >Showroom</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/factory/"
+                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                    >Nhà xưởng</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/contact/"
+                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                    >Liên hệ</a
+                  >
+                </li>
+              </ul>
+            </div>
+  
+            <!-- Products: col-span-2, heading centered above both lists -->
+            <div class="col-span-2 min-w-0">
+              <h3 class="text-white text-base font-semibold leading-[26px] mb-5 text-start lg:text-center mr-12">SẢN PHẨM</h3>
+              <div class="flex gap-20">
+                <ul class="space-y-4">
+                  <li>
+                    <a
+                      href="/products/ngoi-am-duong/"
+                      class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                      >Ngói âm dương</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/ngoi-hai-van-mieu/"
+                      class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                      >Ngói hài văn miếu</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/phu-kien-ngoi/"
+                      class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                      >Phụ kiện mái</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/linh-vat-phong-thuy/"
+                      class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                      >Linh vật phong thủy</a
+                    >
+                  </li>
+                </ul>
+                <ul class="space-y-4">
+                  <li>
+                    <a
+                      href="/products/gach-hoa-thong-gio/"
+                      class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                      >Gạch thông gió</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/gach-trang-tri/"
+                      class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                      >Gạch trang trí</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/lan-can-gom-su/"
+                      class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                      >Lan can gốm sứ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/den-gom-su/"
+                      class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                      >Đèn vườn gốm sứ</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+  
+            <!-- Customer Service -->
+            <div class="min-w-0">
+              <h3 class="text-white text-base font-semibold leading-[26px] mb-5 whitespace-nowrap">DỊCH VỤ KHÁCH HÀNG</h3>
+              <ul class="space-y-4">
+                <li>
+                  <a
+                    href="/dich-vu-khach-hang/tai-khoan-cua-toi.html"
+                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                    >Tài khoản</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/dich-vu-khach-hang/quy-trinh-dat-hang.html"
+                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                    >Quy trình đặt hàng</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/dich-vu-khach-hang/huong-dan-thi-cong.html"
+                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                    >Hướng dẫn thi công</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/faq/"
+                    class="text-white text-sm xl:text-base font-normal leading-[40px] hover:text-secondary transition-colors"
+                    >FAQ</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Bottom Bar -->
+      <div class="relative border-t border-white/20 w-full">
+        <div class="w-full max-w-[1320px] px-6 lg:px-0 mx-auto py-6">
+          <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-4">
+            <p class="text-[#909090] text-sm leading-[26px]">Copyright © 2022 . All rights reserved</p>
+            <div class="text-[#909090] text-sm leading-[26px]">
+              <a href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html" class="hover:text-secondary transition-colors">Chính sách vận chuyển</a> | 
+              <a href="/dich-vu-khach-hang/chinh-sach-doi-tra.html" class="hover:text-secondary transition-colors">Chính sách đổi trả</a> | 
+              <a href="/dich-vu-khach-hang/bao-mat-thong-tin.html" class="hover:text-secondary transition-colors">Bảo mật thông tin</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100,
+    });
+  </script>
+</body>
+
+</html>
