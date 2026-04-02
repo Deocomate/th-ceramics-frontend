@@ -15,13 +15,27 @@
         <script src="https://cdn.tailwindcss.com"></script>
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+
+        .glightbox-container .gslide-image {
+        min-width: 30vw !important;
+        max-width: 95vw !important;
+        }
+
+        .glightbox-container .gslide-image img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 90vh !important;
+        -o-object-fit: contain !important;
+           object-fit: contain !important;
+        }
         </style>
         <link
             href="https://unpkg.com/aos@2.3.1/dist/aos.css"
             rel="stylesheet"
         />
-      <script type="module" crossorigin src="/assets/main-BQ5d9uaJ.js"></script>
-      <link rel="stylesheet" crossorigin href="/assets/main-Yb9S9GFy.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+      <script type="module" crossorigin src="/assets/main-DyRiBu8C.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/main-1y7qCk2w.css">
     </head>
     <body
         data-page="products"
@@ -315,27 +329,31 @@
             }
           });
         </script>
+    <!-- Catalog Sticky Button -->
+    <a href="#" id="catalog-sticky-btn" class="fixed right-0 top-[124px] z-[45] hover:opacity-90 transition-all duration-300 group">
+        <img src="/assets/catalog-DyBj9Cbk.svg" alt="Catalog" class="h-auto w-[28px] md:w-[36px] drop-shadow-lg">
+    </a>
 
         <main class="flex-grow bg-background-secondary overflow-hidden">
             <!-- Banner Section -->
             <section class="relative w-full">
-                <div class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-[2.5/1] max-h-[720px]">
+                <div class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]">
                     <img
                         src="/assets/pk-banner-DiQcgQTY.png"
                         alt="Phụ Kiện Ngói"
                         class="w-full h-full object-cover"
                     />
                     <div
-                        class="absolute inset-0 flex flex-col items-center pt-[5%] md:pt-[5%] lg:pt-[2%]"
+                        class="absolute inset-0 flex flex-col items-center pt-[5%] md:pt-[5%] lg:pt-[5%]"
                         data-aos="fade-up"
                         data-aos-delay="100"
                     >
                         <div class="text-center text-white px-4 w-[85%] max-w-[1320px] mx-auto">
-                            <h1 class="font-sans text-[26px] md:text-3xl lg:text-[40px] font-bold uppercase tracking-wider mb-2 md:mb-5 drop-shadow-md">PHỤ KIỆN NGÓI</h1>
-                            <p class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-tight tracking-wide drop-shadow-sm text-white/95">
+                            <h1 class="font-sans text-[26px] md:text-4xl lg:text-[44px] font-bold uppercase mb-2 md:mb-6 drop-shadow-md">PHỤ KIỆN NGÓI</h1>
+                            <p class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-none tracking-wide drop-shadow-sm text-white/95">
                                 Nâng niu nét chạm trổ, sắt son cùng thời gian
                             </p>
-                            <p class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-tight tracking-wide drop-shadow-sm text-white/95">
+                            <p class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-none tracking-wide drop-shadow-sm text-white/95">
                                 Phụ kiện Thanh Hải: Điểm nhấn tâm linh, hoàn thiện dáng hình kiến trúc Việt
                             </p>
                         </div>
@@ -347,19 +365,19 @@
             <section class="w-full pb-16 pt-8">
                 <!-- Section Title -->
                 <div
-                    class="flex items-center justify-center gap-4 md:gap-8 mb-8"
+                    class="flex items-center justify-center gap-4 md:gap-5 mb-10"
                     data-aos="fade-up"
                 >
                     <img
-                        src="data:image/svg+xml,%3csvg%20width='97'%20height='106'%20viewBox='0%200%2097%20106'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M50.9618%2092.6037C59.2585%2099.5673%2069.377%20107.425%2080.7528%20104.64C87.8581%20102.901%2093.4487%2097.5124%2095.7984%2090.7197C98.3396%2083.3715%2093.0494%2075.4577%2086.3763%2071.9035C81.624%2069.3719%2076.2117%2070.7627%2072.9148%2074.925C70.2449%2078.2951%2069.5882%2082.9013%2072.1756%2086.4193C73.4494%2088.152%2076.809%2089.066%2077.908%2086.9486L80.6802%2081.5927C81.7098%2083.6641%2081.0498%2085.2126%2080.6868%2087.067C80.2974%2089.0594%2078.9443%2090.5389%2076.7232%2090.6112C73.2679%2090.723%2070.0898%2088.6747%2068.7961%2085.4559C66.5718%2079.9192%2068.4265%2073.9058%2073.4131%2070.4799L69.7631%2065.4068L65.3705%2068.2245L57.9319%2072.8471C57.4368%2073.1562%2056.3742%2073.0477%2055.4237%2072.5644C58.8229%2068.0798%2063.2254%2064.9597%2068.5486%2063.5196L65.8689%2057.3089L56.3544%2059.7485C54.13%2060.3173%2044.2129%2062.7141%2042.9324%2061.8428C42.6552%2061.6554%2043.1535%2060.7052%2043.4802%2060.5474C50.1896%2057.2695%2057.6018%2055.6124%2065.2022%2055.4513C65.4431%2053.5016%2065.4497%2051.7558%2065.2319%2049.839C57.6414%2049.382%2050.6285%2048.0899%2043.8631%2044.8415C43.5594%2044.6935%2043.0116%2044.1149%2042.84%2043.8486C42.6255%2043.5165%2043.8499%2042.7866%2044.2624%2042.8754L56.12%2045.3906L65.8326%2047.8794L68.5717%2041.6622C65.2913%2041.5044%2055.031%2034.6526%2055.8791%2032.3116C56.0045%2031.9664%2057.1332%2031.9237%2057.5259%2032.1604L63.826%2035.9742L69.6872%2039.798L73.4197%2034.7315C67.7071%2030.8485%2065.8722%2022.9348%2070.268%2017.4079C72.3472%2014.7908%2077.0731%2013.3245%2079.4228%2015.8002C81.2049%2017.6775%2081.6405%2020.9193%2080.7429%2023.4477C79.6076%2021.909%2079.0235%2020.367%2078.3337%2018.8151C77.4757%2016.8918%2075.2711%2016.5169%2073.5022%2017.5986C69.3638%2020.1302%2069.3572%2027.8994%2074.918%2032.2623C77.7628%2034.4947%2081.5382%2035.2016%2085.0134%2033.8602C92.8679%2030.8255%2099.4716%2020.9752%2094.815%2011.983C91.9933%206.53183%2087.2344%202.22808%2081.195%200.669652C68.7433%20-2.54584%2058.2751%206.4595%2049.2193%2014.0346L21.9365%2036.8488C15.2074%2042.4776%207.9634%2047.8203%200%2052.5514C8.85446%2057.7396%2016.8839%2063.9996%2024.4215%2070.3287L50.9618%2092.6102V92.6037Z'%20fill='%23EAC5B5'/%3e%3c/svg%3e"
+                        src="/assets/title-left-vs-UCM8M.svg"
                         alt=""
-                        class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-60"
+                        class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-25"
                     />
-                    <h2 class="text-2xl md:text-3xl font-bold text-[#C47526] uppercase tracking-wider">Danh Mục Sản Phẩm</h2>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-[#C47526] uppercase">Danh Mục Sản Phẩm</h2>
                     <img
-                        src="data:image/svg+xml,%3csvg%20width='97'%20height='106'%20viewBox='0%200%2097%20106'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M45.0738%2012.2478C40.8429%208.71342%2036.6847%205.59657%2031.8862%202.98275C20.5566%20-3.18848%207.61974%200.408391%201.64306%2011.9947C-3.09603%2021.1841%203.85091%2031.1725%2011.7549%2033.9803C15.1574%2035.1902%2018.7282%2034.4505%2021.5334%2032.2772C26.8171%2028.1872%2027.2262%2020.6351%2023.233%2017.7944C21.6159%2016.6437%2019.2431%2016.6667%2018.2992%2018.5539C17.5039%2020.1485%2016.8933%2021.7726%2015.7415%2023.4692C14.7812%2020.8784%2015.2762%2017.4031%2017.2134%2015.6376C19.6721%2013.3986%2024.167%2014.8945%2026.1801%2017.4261C30.4671%2022.805%2028.9358%2030.6563%2023.0845%2034.7004L26.7345%2039.8491L31.6023%2036.6369L38.6813%2032.2904C39.1169%2032.0241%2040.2654%2031.9616%2040.5459%2032.3068C40.8264%2032.652%2040.404%2033.6811%2040.0509%2034.0461C36.5923%2037.6265%2032.665%2040.5297%2027.883%2041.6804L30.6222%2047.8845L40.3545%2045.3923L52.2022%2042.9067C52.5388%2042.8344%2053.3309%2043.2257%2053.5256%2043.4788C53.7236%2043.732%2053.1626%2044.5737%2052.8689%2044.7183C46.0572%2048.0456%2038.8826%2049.4101%2031.2492%2049.8375C30.9687%2051.8693%2030.9687%2053.7434%2031.3416%2055.509C38.9948%2055.578%2046.4995%2057.4192%2052.9118%2060.5492C53.2352%2060.707%2053.5421%2061.2692%2053.6312%2061.5059C53.75%2061.8249%2052.5487%2062.3608%2052.0702%2062.2621L40.4271%2059.8489L30.6321%2057.2975L27.9292%2063.4819C33.0643%2065.0765%2037.4965%2067.8284%2040.7802%2072.3525C41.1333%2072.8391%2039.2126%2073.273%2038.7176%2072.9673L31.3614%2068.4137L26.7114%2065.4316L23.0548%2070.4061C28.2163%2074.1246%2030.2988%2080.8909%2027.0547%2086.6413C25.596%2089.2288%2022.6522%2090.7051%2019.7348%2090.6393C15.4016%2090.5374%2014.636%2084.2511%2015.6986%2081.6537L18.7084%2087.1871C19.8338%2089.2551%2023.2726%2087.9795%2024.4541%2086.204C26.9557%2082.4428%2026.0514%2077.7774%2023.1307%2074.46C19.7777%2070.6527%2014.6095%2069.5019%2010.0685%2071.9185C3.53405%2075.397%20-1.76936%2083.1924%200.557283%2090.4125C2.91693%2097.7344%209.14112%20103.485%2016.8042%20104.895C27.9259%20106.944%2037.6021%2099.2172%2045.7305%2092.4246L74.9604%2068.0027C81.5509%2062.4956%2088.752%2057.0772%2096.5372%2052.6288C88.8741%2048.0982%2081.7688%2042.8903%2075.2377%2037.4358L45.0672%2012.2445L45.0738%2012.2478Z'%20fill='%23EAC5B5'/%3e%3c/svg%3e"
+                        src="/assets/title-right-QvQt4tNd.svg"
                         alt=""
-                        class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-60"
+                        class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-25"
                     />
                 </div>
 
@@ -378,7 +396,7 @@
                             <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
                                 <!-- Product Card 1 -->
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'">
-                                    <div class="product-card relative w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                                    <div class="product-card relative w-full aspect-square bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="https://placehold.co/400/white/white"
                                             alt=""
@@ -396,7 +414,7 @@
 
                                 <!-- Product Card 2 -->
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'">
-                                    <div class="product-card relative w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                                    <div class="product-card relative w-full aspect-square bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="https://placehold.co/400/white/white"
                                             alt=""
@@ -414,7 +432,7 @@
 
                                 <!-- Product Card 3 -->
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'">
-                                    <div class="product-card relative w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                                    <div class="product-card relative w-full aspect-square bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="https://placehold.co/400/white/white"
                                             alt=""
@@ -432,7 +450,7 @@
 
                                 <!-- Product Card 4 -->
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'">
-                                    <div class="product-card relative w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                                    <div class="product-card relative w-full aspect-square bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="https://placehold.co/400/white/white"
                                             alt=""
@@ -450,37 +468,15 @@
                             </div>
 
                             <!-- Pagination -->
-                            <div class="flex items-center justify-center gap-4 mt-auto">
-                                <button
-                                    class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all"
-                                >
-                                    <svg
-                                        class="w-4 h-4 font-light"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.2"
-                                            d="M15 19l-7-7 7-7"
-                                        ></path>
+                            <div class="flex items-center justify-center gap-5 mt-10 lg:mt-auto">
+                                <button class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                                     </svg>
                                 </button>
-                                <button class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all">
-                                    <svg
-                                        class="w-4 h-4 font-light"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.2"
-                                            d="M9 5l7 7-7 7"
-                                        ></path>
+                                <button class="w-[40px] h-[40px] rounded-full bg-secondary flex items-center justify-center text-white hover:opacity-90 transition-all duration-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                     </svg>
                                 </button>
                             </div>
@@ -488,7 +484,7 @@
 
                         <!-- Right Column: Featured Image & Brush Title -->
                         <div class="w-full lg:w-[45%] mr-0 lg:mr-[10%] flex flex-col justify-stretch">
-                            <div class="w-full flex-grow relative shadow-xl overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px] border border-black/10">
+                            <div class="w-full flex-grow relative shadow-lg overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px]">
                                 <img
                                     src="/assets/bo-noc-CO3d9piq.png"
                                     alt=""
@@ -496,12 +492,12 @@
                                 />
 
                                 <!-- Brush Title Overlay inside image container -->
-                                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300">
+                                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300">
                                     <div class="relative w-full flex items-center justify-center">
                                         <img
                                             src="/assets/brush-BWCxA0A9.svg"
                                             alt=""
-                                            class="w-full drop-shadow-xl opacity-90"
+                                            class="w-full drop-shadow-xl"
                                         />
                                         <span
                                             class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
@@ -530,7 +526,7 @@
                     <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 max-w-[1320px] ml-auto">
                         <!-- Left Column: Featured Image & Brush Title -->
                         <div class="w-full lg:w-[45%] ml-0 lg:ml-[10%] flex flex-col justify-stretch">
-                            <div class="w-full flex-grow relative shadow-xl overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px] border border-black/10">
+                            <div class="w-full flex-grow relative shadow-lg overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px]">
                                 <img
                                     src="/assets/dao-kim-ByEQqlFw.png"
                                     alt=""
@@ -538,12 +534,12 @@
                                 />
 
                                 <!-- Brush Title Overlay inside image container -->
-                                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300">
+                                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300">
                                     <div class="relative w-full flex items-center justify-center">
                                         <img
                                             src="/assets/brush-BWCxA0A9.svg"
                                             alt=""
-                                            class="w-full drop-shadow-xl opacity-90"
+                                            class="w-full drop-shadow-xl"
                                         />
                                         <span
                                             class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
@@ -561,7 +557,7 @@
                             <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
                                 <!-- Product Card 1 -->
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'">
-                                    <div class="product-card relative w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                                    <div class="product-card relative w-full aspect-square bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="https://placehold.co/400/white/white"
                                             alt=""
@@ -579,7 +575,7 @@
 
                                 <!-- Product Card 2 -->
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'">
-                                    <div class="product-card relative w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                                    <div class="product-card relative w-full aspect-square bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="https://placehold.co/400/white/white"
                                             alt=""
@@ -597,7 +593,7 @@
 
                                 <!-- Product Card 3 -->
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'">
-                                    <div class="product-card relative w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                                    <div class="product-card relative w-full aspect-square bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="https://placehold.co/400/white/white"
                                             alt=""
@@ -615,7 +611,7 @@
 
                                 <!-- Product Card 4 -->
                                 <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'">
-                                    <div class="product-card relative w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                                    <div class="product-card relative w-full aspect-square bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                         <img
                                             src="https://placehold.co/400/white/white"
                                             alt=""
@@ -633,37 +629,15 @@
                             </div>
 
                             <!-- Pagination -->
-                            <div class="flex items-center justify-center gap-4 mt-auto">
-                                <button
-                                    class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all"
-                                >
-                                    <svg
-                                        class="w-4 h-4 font-light"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.2"
-                                            d="M15 19l-7-7 7-7"
-                                        ></path>
+                            <div class="flex items-center justify-center gap-5 mt-10 lg:mt-auto">
+                                <button class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                                     </svg>
                                 </button>
-                                <button class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all">
-                                    <svg
-                                        class="w-4 h-4 font-light"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.2"
-                                            d="M9 5l7 7-7 7"
-                                        ></path>
+                                <button class="w-[40px] h-[40px] rounded-full bg-secondary flex items-center justify-center text-white hover:opacity-90 transition-all duration-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                     </svg>
                                 </button>
                             </div>
@@ -698,7 +672,7 @@
                     >
                         <!-- Product 1 -->
                         <div class="flex flex-col col-span-2 lg:col-start-2 lg:col-span-3 group cursor-pointer" onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'">
-                            <div class="product-card relative w-full aspect-[2/1] lg:aspect-[2.8/1] shadow mb-4 lg:mb-6 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                            <div class="product-card relative w-full aspect-square shadow mb-4 lg:mb-6 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                 <img
                                     src="/assets/pk-01-DzMiD3MG.png"
                                     alt="Riềm Âm Dương Sen Bầu"
@@ -721,7 +695,7 @@
                             data-aos-delay="100"
                             onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'"
                         >
-                            <div class="product-card relative w-full aspect-[2/1] md:aspect-[18.8/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                            <div class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                 <img
                                     src="/assets/pk-02--KhAvQYD.png"
                                     alt="Riềm Âm Dương Sen Bầu"
@@ -743,7 +717,7 @@
                             data-aos-delay="200"
                             onclick="window.location.href = '/products/phu-kien-ngoi/bo-noc-chu-van.html'"
                         >
-                            <div class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                            <div class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                 <img
                                     src="/assets/pk-03-BmtqkIa5.png"
                                     alt="Riềm Âm Dương Sen Bầu"
@@ -765,7 +739,7 @@
                             data-aos-delay="300"
                             onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'"
                         >
-                            <div class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                            <div class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                 <img
                                     src="/assets/pk-04-DD6bip5L.png"
                                     alt="Riềm Âm Dương Sen Bầu"
@@ -787,7 +761,7 @@
                             data-aos-delay="400"
                             onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'"
                         >
-                            <div class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                            <div class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                 <img
                                     src="/assets/pk-05-DttqP4i9.png"
                                     alt="Riềm Âm Dương Sen Bầu"
@@ -809,7 +783,7 @@
                             data-aos-delay="500"
                             onclick="window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'"
                         >
-                            <div class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                            <div class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
                                 <img
                                     src="/assets/pk-06-BaMb4-Hx.png"
                                     alt="Riềm Âm Dương Sen Bầu"
@@ -830,13 +804,13 @@
 
             <!-- Dấu Ấn Công Trình Section -->
             <section class="relative w-full pb-10 lg:pb-16 overflow-hidden">
-                <div class="relative z-10 w-[85%] max-w-[1320px] mx-auto">
+                <div class="relative z-10 w-[85%] max-w-[1320px] mx-auto mt-1">
                     <!-- Title -->
                     <div
                         class="text-center mb-8 lg:mb-16"
                         data-aos="fade-up"
                     >
-                        <h2 class="text-2xl lg:text-3xl font-bold text-[#C47526] uppercase tracking-wider">Dấu Ấn Trên Những Công Trình</h2>
+                        <h2 class="text-2xl lg:text-3xl font-semibold text-[#C47526] uppercase">Dấu Ấn Trên Những Công Trình</h2>
                     </div>
 
                     <!-- Grid Container for Images (6 place folders) -->
@@ -849,13 +823,13 @@
                                 data-aos="fade-up"
                                 data-aos-delay="0"
                             >
-                                <div class="w-full aspect-[1.1/1] shadow overflow-hidden relative group">
+                                <a href="/src/assets/images/pk-07.png" class="glightbox w-full aspect-[1.1/1] shadow overflow-hidden relative group block">
                                     <img
                                         src="/assets/pk-07-BQ7Ajoy9.png"
                                         alt=""
                                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
-                                </div>
+                                </a>
                             </div>
                             <!-- Brown Block 1 -->
                             <div
@@ -871,13 +845,13 @@
                                 data-aos="fade-up"
                                 data-aos-delay="200"
                             >
-                                <div class="w-full aspect-[11/5] shadow overflow-hidden relative group">
+                                <a href="/src/assets/images/pk-08.png" class="glightbox w-full aspect-[11/5] shadow overflow-hidden relative group block">
                                     <img
                                         src="/assets/pk-08-rq9fjb6W.png"
                                         alt=""
                                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -888,13 +862,13 @@
                             data-aos-delay="200"
                         >
                             <div class="col-span-1">
-                                <div class="w-full aspect-[22/10] shadow overflow-hidden relative group">
+                                <a href="/src/assets/images/pk-08.png" class="glightbox w-full aspect-[22/10] shadow overflow-hidden relative group block">
                                     <img
                                         src="/assets/pk-08-rq9fjb6W.png"
                                         alt=""
                                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
-                                </div>
+                                </a>
                             </div>
                         </div>
 
@@ -906,18 +880,19 @@
                                 data-aos="fade-up"
                                 data-aos-delay="0"
                             >
-                                <div class="w-full aspect-[8/10] shadow overflow-hidden relative group">
+                                <a href="/src/assets/images/pk-03.png" class="glightbox w-full aspect-[8/10] shadow overflow-hidden relative group block">
                                     <img
                                         src="/assets/pk-03-BmtqkIa5.png"
                                         alt=""
                                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
-                                </div>
+                                </a>
                             </div>
                             <!-- Image 4 + Brown Block 2 -->
                             <div class="col-span-1 flex flex-col gap-2 md:gap-4">
-                                <div
-                                    class="w-full aspect-[8/10] shadow overflow-hidden relative group"
+                                <a
+                                    href="/src/assets/images/gach-hoa-02.png"
+                                    class="glightbox w-full aspect-[8/10] shadow overflow-hidden relative group block"
                                     data-aos="fade-up"
                                     data-aos-delay="100"
                                 >
@@ -926,7 +901,7 @@
                                         alt=""
                                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
-                                </div>
+                                </a>
                                 <div
                                     class="w-full aspect-[19/10] bg-[#BD724F] shadow"
                                     data-aos="fade-up"
@@ -939,13 +914,13 @@
                                 data-aos="fade-up"
                                 data-aos-delay="200"
                             >
-                                <div class="w-full aspect-[8/10] shadow overflow-hidden relative group">
+                                <a href="/src/assets/images/dao-kim.png" class="glightbox w-full aspect-[8/10] shadow overflow-hidden relative group block">
                                     <img
                                         src="/assets/dao-kim-ByEQqlFw.png"
                                         alt=""
                                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
-                                </div>
+                                </a>
                             </div>
                             <!-- Image 6 -->
                             <div
@@ -953,13 +928,13 @@
                                 data-aos="fade-up"
                                 data-aos-delay="300"
                             >
-                                <div class="w-full aspect-[8/10] shadow overflow-hidden relative group">
+                                <a href="/src/assets/images/pk-04.png" class="glightbox w-full aspect-[8/10] shadow overflow-hidden relative group block">
                                     <img
                                         src="/assets/pk-04-DD6bip5L.png"
                                         alt=""
                                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                                     />
-                                </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -973,93 +948,93 @@
             >
                 <!-- Background Decoration -->
                 <div
-                    class="absolute z-[2] lg:-top-[23%] lg:left-[18%] -left-[10%] w-[120%] lg:w-[65%] pointer-events-none"
+                    class="absolute z-[2] lg:-top-[23%] lg:left-[11.5%] -left-[10%] w-[120%] lg:w-[77%] pointer-events-none"
                     data-aos="fade-up-right"
                 >
                     <img
                         src="/assets/pk-decorate-RiPF3Voc.svg"
                         alt=""
-                        class="w-full origin-center md:opacity-70 opacity-60 drop-shadow-sm"
+                        class="w-full origin-center md:opacity-80 opacity-60 drop-shadow-sm"
                     />
                 </div>
 
                     <!-- FAQ Content -->
                     <div class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto">
                       <!-- Section Title -->
-                      <div class="w-[85%] max-w-[1320px] mx-auto text-center mb-10" data-aos="fade-up">
-                        <h2 class="text-2xl md:text-3xl font-bold text-secondary uppercase tracking-wide">Câu hỏi thường gặp</h2>
+                      <div class="w-[85%] max-w-[1320px] mx-auto text-center mb-16" data-aos="fade-up">
+                        <h2 class="text-2xl md:text-3xl font-bold text-secondary uppercase">Câu hỏi thường gặp</h2>
                       </div>
                 
                       <!-- FAQ Card -->
                       <div class="bg-white px-6 md:px-10 py-8 shadow-lg relative" data-aos="fade-up" data-aos-delay="200">
                         <!-- FAQ Item 1 -->
-                        <div class="faq-item border-b border-gray-200 pb-5 mb-5">
+                        <div class="faq-item border-b border-gray-200 pb-10 mb-2">
                           <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                            <span class="text-[15px] pr-4">Showroom của Gốm sứ Thanh Hải ở đâu?</span>
+                            <span class="text-[16px] md:text-[20px] pr-4">Showroom của Gốm sứ Thanh Hải ở đâu?</span>
                             <span class="faq-icon w-6 h-6 flex-shrink-0 bg-textPrimary rounded-full flex items-center justify-center text-white transition-all duration-300">
                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                             </span>
                           </button>
-                          <div class="faq-content mt-4 text-gray-600 text-[14px] leading-relaxed block overflow-hidden transition-all duration-300">
+                          <div class="faq-content mt-4 text-gray-600 text-[16px] md:text-[20px] leading-relaxed block overflow-hidden transition-all duration-300">
                             <p class="mb-2"><span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi chỉ có duy nhất 1 showroom tại địa chỉ: Số 18 Phố Gốm - Giang Cao - Bát Tràng, Gia Lâm, Hà Nội. Ngoài địa chỉ này, chúng tôi không có bất kỳ đại lý đại diện nào khác tại các tỉnh thành trên cả nước.</p>
-                            <a href="#" class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[13px]">Xem map tại đây</a>
+                            <a href="#" class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[16px] md:text-[20px]">Xem map tại đây</a>
                           </div>
                         </div>
                 
                         <!-- FAQ Item 2 -->
-                        <div class="faq-item border-b border-gray-200 pb-5 mb-5">
+                        <div class="faq-item border-b border-gray-200 pb-10 mb-2">
                           <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                            <span class="text-[15px] pr-4">Tôi có thể đặt màu sắc và mẫu mã theo yêu cầu riêng không?</span>
+                            <span class="text-[16px] md:text-[20px] pr-4">Tôi có thể đặt màu sắc và mẫu mã theo yêu cầu riêng không?</span>
                             <span class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180">
                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                             </span>
                           </button>
-                          <div class="faq-content mt-4 text-gray-600 text-[14px] leading-relaxed hidden overflow-hidden transition-all duration-300">
+                          <div class="faq-content mt-4 text-gray-600 text-[16px] md:text-[20px] leading-relaxed hidden overflow-hidden transition-all duration-300">
                             <p><span class="font-bold text-textPrimary">Trả lời:</span> Vui lòng liên hệ với chúng tôi để biết thêm chi tiết về việc đặt màu sắc và mẫu mã theo yêu cầu riêng.</p>
                           </div>
                         </div>
                 
                         <!-- FAQ Item 3 -->
-                        <div class="faq-item border-b border-gray-200 pb-5 mb-5">
+                        <div class="faq-item border-b border-gray-200 pb-10 mb-2">
                           <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                            <span class="text-[15px] pr-4">Tôi có thể tham quan xưởng sản xuất hay không?</span>
+                            <span class="text-[16px] md:text-[20px] pr-4">Tôi có thể tham quan xưởng sản xuất hay không?</span>
                             <span class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180">
                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                             </span>
                           </button>
-                          <div class="faq-content mt-4 text-gray-600 text-[14px] leading-relaxed hidden overflow-hidden transition-all duration-300">
+                          <div class="faq-content mt-4 text-gray-600 text-[16px] md:text-[20px] leading-relaxed hidden overflow-hidden transition-all duration-300">
                             <p><span class="font-bold text-textPrimary">Trả lời:</span> Quý khách hoàn toàn có thể tham quan xưởng sản xuất của chúng tôi. Vui lòng liên hệ trước để được sắp xếp đón tiếp chu đáo nhất.</p>
                           </div>
                         </div>
                 
                         <!-- FAQ Item 4 -->
-                        <div class="faq-item border-b border-gray-200 pb-5 mb-5">
+                        <div class="faq-item border-b border-gray-200 pb-10 mb-2">
                           <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                            <span class="text-[15px] pr-4">Chi phí vận chuyển và phạm vi giao hàng như thế nào?</span>
+                            <span class="text-[16px] md:text-[20px] pr-4">Chi phí vận chuyển và phạm vi giao hàng như thế nào?</span>
                             <span class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180">
                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                             </span>
                           </button>
-                          <div class="faq-content mt-4 text-gray-600 text-[14px] leading-relaxed hidden overflow-hidden transition-all duration-300">
+                          <div class="faq-content mt-4 text-gray-600 text-[16px] md:text-[20px] leading-relaxed hidden overflow-hidden transition-all duration-300">
                             <p><span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi giao hàng toàn quốc. Chi phí vận chuyển sẽ phụ thuộc vào khối lượng đơn hàng và khoảng cách địa lý.</p>
                           </div>
                         </div>
                 
                         <!-- FAQ Item 5 -->
-                        <div class="faq-item border-b border-gray-200 pb-5 mb-2">
+                        <div class="faq-item mb-8">
                           <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                            <span class="text-[15px] pr-4">Đặc tính thủ công của ngói âm dương cần lưu ý gì?</span>
+                            <span class="text-[16px] md:text-[20px] pr-4">Đặc tính thủ công của ngói âm dương cần lưu ý gì?</span>
                             <span class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180">
                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                             </span>
                           </button>
-                          <div class="faq-content mt-4 text-gray-600 text-[14px] leading-relaxed hidden overflow-hidden transition-all duration-300">
+                          <div class="faq-content mt-4 text-gray-600 text-[16px] md:text-[20px] leading-relaxed hidden overflow-hidden transition-all duration-300">
                             <p><span class="font-bold text-textPrimary">Trả lời:</span> Ngói thủ công mang vẻ đẹp độc bản, màu sắc có độ chuyển tự nhiên do nhiệt độ lò, không viên nào giống viên nào 100%.</p>
                           </div>
                         </div>
                         
                         <div class="mt-8 text-right">
-                            <a href="#" class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[13px]">Xem thêm</a>
+                            <a href="#" class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[16px] md:text-[20px]">Xem thêm</a>
                         </div>
                       </div>
                     </div>            </section>
@@ -1399,8 +1374,20 @@
         </footer>
 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
         <script>
             AOS.init({ duration: 800, once: true, offset: 100 });
+            
+            // Initialize GLightbox
+            const lightbox = GLightbox({
+                selector: '.glightbox',
+                touchNavigation: true,
+                loop: true,
+                zoomable: true,
+                draggable: true,
+                width: 'auto',
+                height: 'auto'
+            });
         </script>
     </body>
 </html>
