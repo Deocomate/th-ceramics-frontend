@@ -26,7 +26,7 @@
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/assets/main-DyRiBu8C.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-DllRV6lB.css">
+    <link rel="stylesheet" crossorigin href="/assets/main-BbBOyKOJ.css">
   </head>
   <body
     data-page="products"
@@ -880,33 +880,42 @@
 
         <!-- Extras -->
         <div class="space-y-6">
-          <div class="flex items-center gap-2">
-            <input
-              type="checkbox"
-              id="extra-loss"
-              class="w-5 h-5 border border-black/20 rounded-none bg-transparent checked:bg-secondary checked:border-secondary appearance-none cursor-pointer transition-all"
-            />
-            <label
-              for="extra-loss"
-              class="text-[15px] font-medium text-primary/80 cursor-pointer"
-            >
-              Cộng thêm hao hụt
-            </label>
-            <div class="group relative inline-block ml-1">
-              <div
-                class="w-5 h-5 rounded-full text-primary border-primary border flex items-center justify-center text-[12px] font-bold cursor-pointer"
+          <input
+            type="checkbox"
+            id="extra-loss-weight"
+            class="peer sr-only"
+          />
+          <label
+            for="extra-loss-weight"
+            class="w-fit flex items-center gap-2 cursor-pointer select-none peer-checked:[&_.loss-checkbox-box]:border-secondary peer-checked:[&_.loss-checkbox-box]:bg-secondary peer-checked:[&_.loss-checkbox-icon]:opacity-100 peer-focus-visible:[&_.loss-checkbox-box]:ring-2 peer-focus-visible:[&_.loss-checkbox-box]:ring-secondary/40 peer-focus-visible:[&_.loss-checkbox-box]:ring-offset-1"
+          >
+            <span class="loss-checkbox-box relative flex h-5 w-5 items-center justify-center border border-black/20 rounded-none bg-transparent transition-all">
+              <svg
+                class="loss-checkbox-icon h-3 w-3 text-white opacity-0 transition-opacity"
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M4 10.5L8 14.5L16 6.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+            <span class="text-[15px] font-medium text-primary/80">Cộng thêm hao hụt</span>
+            <span class="group relative inline-block ml-1">
+              <span
+                class="w-5 h-5 rounded-full text-primary border-primary border flex items-center justify-center text-[12px] font-bold"
               >
                 ?
-              </div>
-              <div
+              </span>
+              <span
                 class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-primary text-white text-[12px] rounded-sm opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity shadow-lg z-10 leading-relaxed"
               >
                 Tính toán dựa trên độ dốc mái thực tế và hao hụt vận chuyển/thi công.
-              </div>
-            </div>
-          </div>
+              </span>
+            </span>
+          </label>
 
-          <div class="pl-7 space-y-4">
+          <div class="pl-7 space-y-4 hidden peer-checked:block">
             <label class="flex items-center gap-3 cursor-pointer group">
               <div class="relative flex items-center justify-center">
                 <input
@@ -1285,6 +1294,37 @@
   class="w-full bg-background-secondary pb-16 relative overflow-visible animate-fade-in-up xl:min-h-[760px]"
   data-aos="fade-up"
 >
+  <style>
+    /* BÍ QUYẾT ĐỂ SLIDE CHUYỂN ĐỘNG CỰC KỲ MƯỢT MÀ */
+    /* 1. Ép Swiper dùng chung hàm gia tốc siêu mượt (ease-out-quart) thay vì linear/ease mặc định */
+    .product-works-swiper .swiper-wrapper {
+      transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+    
+    /* 2. Slide width và opacity phải khớp chuẩn xác 100% thời gian (1200ms) với speed của JS */
+    .product-works-swiper .swiper-slide {
+      transition: width 1200ms cubic-bezier(0.25, 1, 0.5, 1),
+                  opacity 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+    
+    /* 3. Phóng to ảnh nhẹ ở slide phụ (1.1) và trở về (1) khi là main slide tạo cảm giác mở rộng */
+    .product-works-swiper .swiper-slide img {
+      transform: translateZ(0) scale(1.1) !important; 
+      transition: transform 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+    .product-works-swiper .swiper-slide-active img {
+      transform: translateZ(0) scale(1) !important;
+    }
+    
+    /* 4. Class dành riêng cho hiệu ứng chữ (chuyển đổi mượt 400ms) */
+    .slide-text-transition {
+      transition-property: opacity, transform !important;
+      transition-duration: 400ms !important;
+      transition-timing-function: ease-in-out !important;
+      will-change: opacity, transform;
+    }
+  </style>
+
   <!-- Section Title -->
   <div class="text-center mb-10 md:mb-16">
     <h2 class="text-2xl md:text-3xl font-semibold text-secondary uppercase drop-shadow-sm">Dấu ấn trên những công trình</h2>
@@ -1406,56 +1446,22 @@
     </div>
 
     <!-- Text Block (Relative on mobile, Absolute on desktop) (Order 2 for mobile) -->
-    <div class="max-w-[1920px] mx-auto w-full px-4 relative xl:absolute xl:inset-x-0 xl:top-0 xl:pointer-events-none z-10 order-2">
+    <div class="w-full px-4 relative xl:absolute xl:inset-x-0 xl:top-0 xl:pointer-events-none z-10 order-2">
       <div
-        class="xl:absolute xl:top-0 xl:right-4 2xl:right-[calc(68.5%-1920px/2)] w-full xl:max-w-[400px] bg-transparent pt-8 pointer-events-auto"
+        class="xl:absolute xl:top-0 xl:right-[max(1rem,calc(60%-808px))] w-full xl:max-w-[400px] bg-transparent pt-8 pointer-events-auto"
       >
         <div class="flex justify-between items-start pb-4 border-b border-black/10 xl:border-none">
           <h3
             id="slide-title"
-            class="text-base font-bold uppercase tracking-wide transition-all duration-300"
-            style="transition-property: opacity, transform"
+            class="text-base font-bold uppercase tracking-wide slide-text-transition"
           >
             CHÙA BÁI ĐÍNH
           </h3>
-          <div class="flex gap-4 text-black shrink-0">
-            <button class="custom-prev hover:text-secondary transition-colors">
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                ></path>
-              </svg>
-            </button>
-            <button class="custom-next hover:text-secondary transition-colors">
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                ></path>
-              </svg>
-            </button>
-          </div>
         </div>
 
         <div
-          class="space-y-3 text-[15px] my-8 md:mb-12 transition-all duration-300"
+          class="space-y-3 text-[15px] my-8 md:mb-12 slide-text-transition"
           id="slide-meta"
-          style="transition-property: opacity, transform"
         >
           <p><span class="font-bold">Địa điểm:</span> <span id="slide-location">Ninh Bình</span></p>
           <p><span class="font-bold">Sản phẩm:</span> <span id="slide-product">Ngói âm dương nâu đen</span></p>
@@ -1464,8 +1470,7 @@
         <a
           href="#"
           id="slide-link"
-          class="font-bold text-black border-b-[1.5px] border-black inline-block hover:text-secondary hover:border-secondary tracking-[0.05em] text-[13px] transition-all duration-300"
-          style="transition-property: opacity, transform"
+          class="font-bold text-black border-b-[1.5px] border-black inline-block hover:text-secondary hover:border-secondary tracking-[0.05em] text-[13px] slide-text-transition"
           >See more</a
         >
       </div>
@@ -1478,7 +1483,7 @@
     var swiperEl = document.querySelector(".product-works-swiper");
     if (!swiperEl) return;
 
-    var slideData = [
+    var slideData =[
       { title: "CHÙA BÁI ĐÍNH", location: "Ninh Bình", product: "Ngói âm dương nâu đen", link: "#baidinh" },
       { title: "THIỀN VIỆN TRÚC LÂM", location: "Sapa", product: "Ngói âm dương tráng men", link: "#truclam" },
       { title: "ĐỀN TRẦN", location: "Nam Định", product: "Ngói âm dương cổ", link: "#dentran" },
@@ -1498,73 +1503,76 @@
     var productEl = document.getElementById("slide-product");
     var linkEl = document.getElementById("slide-link");
     var metaEl = document.getElementById("slide-meta");
-    var textTimeout;
+    var textRevealTimeout;
 
     var productWorksSwiper = new Swiper(".product-works-swiper", {
       slidesPerView: "auto",
       centeredSlides: true,
+      slideToClickedSlide: true,
+      watchSlidesProgress: true,
       spaceBetween: 32,
-      speed: 300,
-      observer: true,
-      observeParents: true,
-      navigation: {
-        nextEl: ".custom-next",
-        prevEl: ".custom-prev",
-      },
+      // Tăng thời gian chuyển slide lên 1.2 giây để chuyển động thật êm ái
+      speed: 1200,
       autoplay: {
         delay: 5000,
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
     });
 
+    // Hàm thiết lập hiệu ứng mờ/hiện và trượt chữ
+    function setTextVisibility(isVisible) {
+      var opacity = isVisible ? "1" : "0";
+      var transform = isVisible ? "translateY(0)" : "translateY(12px)";
+      
+      if (titleEl) {
+        titleEl.style.opacity = opacity;
+        titleEl.style.transform = transform;
+      }
+      if (metaEl) {
+        metaEl.style.opacity = opacity;
+        metaEl.style.transform = transform;
+      }
+      if (linkEl) {
+        linkEl.style.opacity = opacity;
+        linkEl.style.transform = transform;
+      }
+    }
+
+    // Hàm load dữ liệu mới vào Text
     function updateTextBlock(index) {
       var currentData = slideData[index];
       if (!currentData) return;
 
-      if (textTimeout) clearTimeout(textTimeout);
-
-      if (titleEl) {
-        titleEl.style.opacity = "0";
-        titleEl.style.transform = "translateY(6px)";
-      }
-      if (metaEl) {
-        metaEl.style.opacity = "0";
-        metaEl.style.transform = "translateY(6px)";
-      }
-      if (linkEl) {
-        linkEl.style.opacity = "0";
-        linkEl.style.transform = "translateY(6px)";
-      }
-
-      var delay = window.innerWidth > 1280 ? 150 : 0;
-
-      textTimeout = setTimeout(function () {
-        if (titleEl) titleEl.textContent = currentData.title;
-        if (locationEl) locationEl.textContent = currentData.location;
-        if (productEl) productEl.textContent = currentData.product;
-        if (linkEl) linkEl.href = currentData.link;
-
-        if (titleEl) {
-          titleEl.style.opacity = "1";
-          titleEl.style.transform = "translateY(0)";
-        }
-        if (metaEl) {
-          metaEl.style.opacity = "1";
-          metaEl.style.transform = "translateY(0)";
-        }
-        if (linkEl) {
-          linkEl.style.opacity = "1";
-          linkEl.style.transform = "translateY(0)";
-        }
-      }, delay);
+      if (titleEl) titleEl.textContent = currentData.title;
+      if (locationEl) locationEl.textContent = currentData.location;
+      if (productEl) productEl.textContent = currentData.product;
+      if (linkEl) linkEl.href = currentData.link;
     }
 
-    productWorksSwiper.on("slideChange", function () {
-      updateTextBlock(this.realIndex);
+    // Setup Text đầu tiên khi mới vô
+    updateTextBlock(productWorksSwiper.realIndex);
+    setTextVisibility(true);
+
+    // Event Swiper mượt mà được tinh gọn hoàn toàn
+    productWorksSwiper.on("slideChange", function (swiper) {
+      // 1. Cho text mờ dần đi ngay lập tức
+      setTextVisibility(false);
+
+      // 2. Clear timeout cũ (Phòng trường hợp khách dùng tay vuốt lướt qua nhiều ảnh 1 lúc)
+      if (textRevealTimeout) clearTimeout(textRevealTimeout);
+
+      // 3. Chờ text cũ mờ đi (400ms khớp với CSS class .slide-text-transition) rồi load data mới lên
+      textRevealTimeout = setTimeout(function () {
+        updateTextBlock(swiper.realIndex);
+        
+        requestAnimationFrame(function () {
+          setTextVisibility(true);
+        });
+      }, 400);
     });
   });
-</script>
- <section class="w-full pb-12 md:pb-16 bg-background-secondary relative " data-aos="fade-up">
+</script> <section class="w-full pb-12 md:pb-16 bg-background-secondary relative " data-aos="fade-up">
 
     <div class="max-w-[1320px] w-[85%] mx-auto relative z-10">
         <h2 class="text-2xl md:text-3xl font-semibold text-secondary text-center uppercase mb-16">CÓ THỂ BẠN QUAN TÂM</h2>
