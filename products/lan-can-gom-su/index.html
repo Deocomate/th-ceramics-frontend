@@ -11,8 +11,8 @@
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/main-BQ5d9uaJ.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-Yb9S9GFy.css">
+  <script type="module" crossorigin src="/assets/main-Bj6-pxsG.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-BnPtEY7f.css">
 </head>
 <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
   <header id="site-header" class="bg-primary sticky top-0 text-white h-[94px] z-50 transition-all duration-300">
@@ -303,6 +303,10 @@
       }
     });
   </script>
+  <!-- Catalog Sticky Button -->
+  <a href="#" id="catalog-sticky-btn" class="fixed right-0 top-[124px] z-[45] hover:opacity-90 transition-all duration-300 group">
+      <img src="/assets/catalog-DyBj9Cbk.svg" alt="Catalog" class="h-auto w-[28px] md:w-[36px] drop-shadow-lg">
+  </a>
   
   <main class="flex-grow">
             <!-- Banner Section -->
@@ -324,8 +328,8 @@
                     data-aos="fade-up"
                     data-aos-duration="1000"
                 >
-                    <h1 class="text-xl md:text-2xl font-bold mb-4 uppercase tracking-widest text-white/90">GỐM SỨ THANH HẢI</h1>
-                    <h2 class="text-3xl md:text-6xl font-bold uppercase leading-tight max-w-4xl drop-shadow-lg">
+                    <h1 class="text-xl md:text-2xl font-semibold mb-4 uppercase text-white/90">GỐM SỨ THANH HẢI</h1>
+                    <h2 class="text-3xl md:text-5xl font-extrabold uppercase leading-tight drop-shadow-lg">
                         LAN CAN GỐM SỨ
                     </h2>
                 </div>
@@ -337,7 +341,7 @@
                     class="flex items-center justify-center mt-8 mb-16"
                     data-aos="fade-up"
                 >
-                    <h2 class="text-2xl md:text-3xl font-bold text-[#C47526] uppercase tracking-wider">Danh Mục Sản Phẩm</h2>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-secondary uppercase">Danh Mục Sản Phẩm</h2>
                 </div>
 
                 <!-- Main Container -->
@@ -354,94 +358,88 @@
                             <!-- Products Grid -->
                             <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
                                 <!-- Product Card 1 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/assets/lan-can-01-D2ZYk9ka.png"
+                                            src="/assets/lan-can-01-BbkfNgzV.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
 
                                 <!-- Product Card 2 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/assets/lan-can-02-DDGw8RZt.png"
+                                            src="/assets/lan-can-02-B2UxPt7p.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
 
                                 <!-- Product Card 3 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/assets/lan-can-03-CasC_dfW.png"
+                                            src="/assets/lan-can-03-B4a60EQ5.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
 
                                 <!-- Product Card 4 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/assets/lan-can-01-D2ZYk9ka.png"
+                                            src="/assets/lan-can-01-BbkfNgzV.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
                             </div>
 
                             <!-- Pagination -->
-                            <div class="flex items-center justify-center gap-4 mt-auto">
-                                <button
-                                    class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all"
-                                >
-                                    <svg
-                                        class="w-4 h-4 font-light"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.2"
-                                            d="M15 19l-7-7 7-7"
-                                        ></path>
+                            <div class="flex items-center justify-center gap-5 mt-10 lg:mt-auto">
+                                <button class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                                     </svg>
                                 </button>
-                                <button class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all">
-                                    <svg
-                                        class="w-4 h-4 font-light"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.2"
-                                            d="M9 5l7 7-7 7"
-                                        ></path>
+                                <button class="w-[40px] h-[40px] rounded-full bg-secondary flex items-center justify-center text-white hover:opacity-90 transition-all duration-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                     </svg>
                                 </button>
                             </div>
@@ -521,94 +519,88 @@
                             <!-- Products Grid -->
                             <div class="grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10">
                                 <!-- Product Card 1 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/assets/lan-can-02-DDGw8RZt.png"
+                                            src="/assets/lan-can-02-B2UxPt7p.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
 
                                 <!-- Product Card 2 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/assets/lan-can-04-Bmtvzimr.png"
+                                            src="/assets/lan-can-04-zuxKhk1Z.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
 
                                 <!-- Product Card 3 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/assets/lan-can-05-DcmLgY5D.png"
+                                            src="/assets/lan-can-05-TdBOYYUg.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
 
                                 <!-- Product Card 4 -->
-                                <div class="flex flex-col">
-                                    <div class="w-full aspect-[1.1/1] bg-[#F7F7F7] shadow mb-4 border border-black/5 flex items-center justify-center overflow-hidden">
+                                <div class="flex flex-col group cursor-pointer" onclick="window.location.href = '#'">
+                                    <div class="product-card relative w-full aspect-square mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                         <img
-                                            src="/assets/lan-can-06-lTMZy81g.png"
+                                            src="/assets/lan-can-06-CqSU6qGB.jpg"
                                             alt=""
                                             class="w-full h-full object-cover"
                                         />
+                                        <div class="product-overlay">
+                                            <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search">
+                                            <span>Xem chi tiết</span>
+                                        </div>
                                     </div>
-                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                                    <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Riềm Âm Dương Sen Bầu</h3>
                                     <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                                     <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                                 </div>
                             </div>
 
                             <!-- Pagination -->
-                            <div class="flex items-center justify-center gap-4 mt-auto">
-                                <button
-                                    class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all"
-                                >
-                                    <svg
-                                        class="w-4 h-4 font-light"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.2"
-                                            d="M15 19l-7-7 7-7"
-                                        ></path>
+                            <div class="flex items-center justify-center gap-5 mt-10 lg:mt-auto">
+                                <button class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                                     </svg>
                                 </button>
-                                <button class="w-[36px] h-[36px] rounded-full border border-[#D48227]/50 flex items-center justify-center text-[#D48227] hover:bg-[#D48227] hover:text-white transition-all">
-                                    <svg
-                                        class="w-4 h-4 font-light"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="1.2"
-                                            d="M9 5l7 7-7 7"
-                                        ></path>
+                                <button class="w-[40px] h-[40px] rounded-full bg-secondary flex items-center justify-center text-white hover:opacity-90 transition-all duration-300">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                     </svg>
                                 </button>
                             </div>
@@ -624,53 +616,68 @@
                         class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-8 gap-y-4 lg:gap-y-6"
                         data-aos="fade-up"
                     >
-                    <div
-                            class="flex flex-col col-span-2 lg:col-span-2"
+                        <div
+                            class="flex flex-col col-span-2 lg:col-span-2 group cursor-pointer"
                             data-aos="fade-up"
                             data-aos-delay="100"
+                            onclick="window.location.href = '#'"
                         >
-                            <div class="w-full aspect-[2/1] md:aspect-[18.8/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                            <div class="product-card relative w-full aspect-[2/1] md:aspect-[19/10] mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                 <img
                                     src="/assets/lan-can-giot-le-DEbbKKnI.jpg"
-                                    alt="Riềm Âm Dương Sen Bầu"
+                                    alt="Lan Can Giọt Lệ"
                                     class="w-full h-full object-cover"
                                 />
+                                <div class="product-overlay">
+                                    <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search">
+                                    <span>Xem chi tiết</span>
+                                </div>
                             </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Lan Can Giọt Lệ</h3>
                             <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                             <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                         </div>
                         <!-- Product 3 -->
                         <div
-                            class="flex flex-col"
+                            class="flex flex-col group cursor-pointer"
                             data-aos="fade-up"
                             data-aos-delay="200"
+                            onclick="window.location.href = '#'"
                         >
-                            <div class="w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                            <div class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                 <img
                                     src="/assets/lan-can-07-CR8e2hiZ.jpg"
-                                    alt="Riềm Âm Dương Sen Bầu"
+                                    alt="Lan Can Bầu"
                                     class="w-full h-full object-cover"
                                 />
+                                <div class="product-overlay">
+                                    <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search">
+                                    <span>Xem chi tiết</span>
+                                </div>
                             </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Lan Can Bầu</h3>
                             <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                             <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                         </div>
                         <!-- Product 4 -->
                         <div
-                            class="flex flex-col"
+                            class="flex flex-col group cursor-pointer"
                             data-aos="fade-up"
                             data-aos-delay="300"
+                            onclick="window.location.href = '#'"
                         >
-                            <div class="w-full aspect-[1.1/1] md:aspect-[9/10] shadow mb-4 flex items-center justify-center overflow-hidden">
+                            <div class="product-card relative w-full aspect-[1.1/1] md:aspect-[9/10] mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1 shadow-md">
                                 <img
                                     src="/assets/lan-can-08-C77FZq1l.jpg"
-                                    alt="Riềm Âm Dương Sen Bầu"
+                                    alt="Lan Can Chữ Thọ"
                                     class="w-full h-full object-cover"
                                 />
+                                <div class="product-overlay">
+                                    <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search">
+                                    <span>Xem chi tiết</span>
+                                </div>
                             </div>
-                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide">Riềm Âm Dương Sen Bầu</h3>
+                            <h3 class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary">Lan Can Chữ Thọ</h3>
                             <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">MSP: 1234RDS</p>
                             <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">Giá: 675.000 đ/m2</p>
                         </div>
@@ -679,10 +686,10 @@
             </section>
 
               <!-- Value Section -->
-              <section class="w-full relative pb-16" data-aos="fade-up">
+              <section class="w-full relative pb-12 md:pb-16" data-aos="fade-up">
                 <!-- Section Title -->
                 <div class="text-center mb-12">
-                  <h2 class="text-2xl md:text-3xl font-bold text-secondary uppercase tracking-wide">Giá trị vượt trội</h2>
+                  <h2 class="text-2xl md:text-3xl font-semibold text-secondary uppercase">Giá trị vượt trội</h2>
                 </div>
             
                 <!-- Background Image Container -->
@@ -691,9 +698,9 @@
                   <img src="/assets/gia-tri-vuot-troi-BLN75NT1.png" alt="Giá trị vượt trội nền" class="absolute inset-0 w-full h-full object-cover z-0">
             
                   <!-- Text Content -->
-                  <div class="relative z-10 container mx-auto px-6 lg:px-[140px] flex-grow flex flex-col items-end justify-center text-end text-white py-16">
-                     <h3 id="value-title" class="text-2xl md:text-3xl font-bold mb-10 tracking-wide drop-shadow-md transition-all duration-500">CỐT ĐẤT LUYỆN LỬA</h3>
-                     <p id="value-description" class="font-charm text-2xl md:text-3xl leading-relaxed max-w-4xl drop-shadow-md transition-all duration-500">
+                  <div class="relative z-10 container mx-auto px-6 lg:px-[140px] flex-grow flex flex-col items-end justify-center text-end text-white pt-32">
+                     <h3 id="value-title" class="text-2xl md:text-3xl font-semibold mb-10 tracking-wide drop-shadow-md transition-all duration-500">CỐT ĐẤT LUYỆN LỬA</h3>
+                     <p id="value-description" class="font-charm text-[22px]/relaxed md:text-[32px]/relaxed max-w-5xl tracking-wider drop-shadow-md transition-all duration-500">
                         Được tôi luyện ở nhiệt độ 1300°C tạo nên cốt gốm đanh chắc, thách thức mọi khắc nghiệt từ sương muối đến bão giông. Đây là sự đầu tư một lần cho giá trị truyền đời, chẳng ngại dấu vết thời gian
                      </p>
                   </div>
@@ -730,7 +737,7 @@
               <section class="w-full mx-auto pb-16 max-w-[1920px]">
                 <!-- Section Title -->
                 <div class="text-center mb-16" data-aos="fade-up">
-                  <h2 class="text-2xl md:text-3xl font-bold text-secondary uppercase tracking-wide">Hành trình chế tác</h2>
+                  <h2 class="text-2xl md:text-3xl font-semibold text-secondary uppercase">Hành trình chế tác</h2>
                 </div>
               <div class="relative w-full aspect-video overflow-hidden cursor-pointer group" data-aos="fade-up" data-aos-delay="200">
                   <img src="/assets/video-placeholder-02-D9z7x8jj.png" alt="Video placeholder" class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300">
@@ -750,9 +757,40 @@
               class="w-full bg-background-secondary pb-16 relative overflow-visible animate-fade-in-up xl:min-h-[760px]"
               data-aos="fade-up"
             >
+              <style>
+                /* BÍ QUYẾT ĐỂ SLIDE CHUYỂN ĐỘNG CỰC KỲ MƯỢT MÀ */
+                /* 1. Ép Swiper dùng chung hàm gia tốc siêu mượt (ease-out-quart) thay vì linear/ease mặc định */
+                .product-works-swiper .swiper-wrapper {
+                  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1) !important;
+                }
+                
+                /* 2. Slide width và opacity phải khớp chuẩn xác 100% thời gian (1200ms) với speed của JS */
+                .product-works-swiper .swiper-slide {
+                  transition: width 1200ms cubic-bezier(0.25, 1, 0.5, 1),
+                              opacity 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+                }
+                
+                /* 3. Phóng to ảnh nhẹ ở slide phụ (1.1) và trở về (1) khi là main slide tạo cảm giác mở rộng */
+                .product-works-swiper .swiper-slide img {
+                  transform: translateZ(0) scale(1.1) !important; 
+                  transition: transform 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+                }
+                .product-works-swiper .swiper-slide-active img {
+                  transform: translateZ(0) scale(1) !important;
+                }
+                
+                /* 4. Class dành riêng cho hiệu ứng chữ (chuyển đổi mượt 400ms) */
+                .slide-text-transition {
+                  transition-property: opacity, transform !important;
+                  transition-duration: 400ms !important;
+                  transition-timing-function: ease-in-out !important;
+                  will-change: opacity, transform;
+                }
+              </style>
+            
               <!-- Section Title -->
               <div class="text-center mb-10 md:mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-secondary uppercase tracking-wide drop-shadow-sm">Dấu ấn trên những công trình</h2>
+                <h2 class="text-2xl md:text-3xl font-semibold text-secondary uppercase drop-shadow-sm">Dấu ấn trên những công trình</h2>
               </div>
             
               <!-- Main Content Area: Swiper + Text Block -->
@@ -871,56 +909,22 @@
                 </div>
             
                 <!-- Text Block (Relative on mobile, Absolute on desktop) (Order 2 for mobile) -->
-                <div class="max-w-[1920px] mx-auto w-full px-4 relative xl:absolute xl:inset-x-0 xl:top-0 xl:pointer-events-none z-10 order-2">
+                <div class="w-full px-4 relative xl:absolute xl:inset-x-0 xl:top-0 xl:pointer-events-none z-10 order-2">
                   <div
-                    class="xl:absolute xl:top-0 xl:right-4 2xl:right-[calc(68.5%-1920px/2)] w-full xl:max-w-[400px] bg-transparent pt-8 pointer-events-auto"
+                    class="xl:absolute xl:top-0 xl:right-[max(1rem,calc(60%-808px))] w-full xl:max-w-[400px] bg-transparent pt-8 pointer-events-auto"
                   >
                     <div class="flex justify-between items-start pb-4 border-b border-black/10 xl:border-none">
                       <h3
                         id="slide-title"
-                        class="text-base font-bold uppercase tracking-wide transition-all duration-300"
-                        style="transition-property: opacity, transform"
+                        class="text-base font-bold uppercase tracking-wide slide-text-transition"
                       >
                         CHÙA BÁI ĐÍNH
                       </h3>
-                      <div class="flex gap-4 text-black shrink-0">
-                        <button class="custom-prev hover:text-secondary transition-colors">
-                          <svg
-                            class="w-6 h-6"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                            ></path>
-                          </svg>
-                        </button>
-                        <button class="custom-next hover:text-secondary transition-colors">
-                          <svg
-                            class="w-6 h-6"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2"
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            ></path>
-                          </svg>
-                        </button>
-                      </div>
                     </div>
             
                     <div
-                      class="space-y-3 text-[15px] my-8 md:mb-12 transition-all duration-300"
+                      class="space-y-3 text-[15px] my-8 md:mb-12 slide-text-transition"
                       id="slide-meta"
-                      style="transition-property: opacity, transform"
                     >
                       <p><span class="font-bold">Địa điểm:</span> <span id="slide-location">Ninh Bình</span></p>
                       <p><span class="font-bold">Sản phẩm:</span> <span id="slide-product">Ngói âm dương nâu đen</span></p>
@@ -929,8 +933,7 @@
                     <a
                       href="#"
                       id="slide-link"
-                      class="font-bold text-black border-b-[1.5px] border-black inline-block hover:text-secondary hover:border-secondary tracking-[0.05em] text-[13px] transition-all duration-300"
-                      style="transition-property: opacity, transform"
+                      class="font-bold text-black border-b-[1.5px] border-black inline-block hover:text-secondary hover:border-secondary tracking-[0.05em] text-[13px] slide-text-transition"
                       >See more</a
                     >
                   </div>
@@ -943,7 +946,7 @@
                 var swiperEl = document.querySelector(".product-works-swiper");
                 if (!swiperEl) return;
             
-                var slideData = [
+                var slideData =[
                   { title: "CHÙA BÁI ĐÍNH", location: "Ninh Bình", product: "Ngói âm dương nâu đen", link: "#baidinh" },
                   { title: "THIỀN VIỆN TRÚC LÂM", location: "Sapa", product: "Ngói âm dương tráng men", link: "#truclam" },
                   { title: "ĐỀN TRẦN", location: "Nam Định", product: "Ngói âm dương cổ", link: "#dentran" },
@@ -963,73 +966,76 @@
                 var productEl = document.getElementById("slide-product");
                 var linkEl = document.getElementById("slide-link");
                 var metaEl = document.getElementById("slide-meta");
-                var textTimeout;
+                var textRevealTimeout;
             
                 var productWorksSwiper = new Swiper(".product-works-swiper", {
                   slidesPerView: "auto",
                   centeredSlides: true,
+                  slideToClickedSlide: true,
+                  watchSlidesProgress: true,
                   spaceBetween: 32,
-                  speed: 300,
-                  observer: true,
-                  observeParents: true,
-                  navigation: {
-                    nextEl: ".custom-next",
-                    prevEl: ".custom-prev",
-                  },
+                  // Tăng thời gian chuyển slide lên 1.2 giây để chuyển động thật êm ái
+                  speed: 1200,
                   autoplay: {
                     delay: 5000,
                     disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
                   },
                 });
             
+                // Hàm thiết lập hiệu ứng mờ/hiện và trượt chữ
+                function setTextVisibility(isVisible) {
+                  var opacity = isVisible ? "1" : "0";
+                  var transform = isVisible ? "translateY(0)" : "translateY(12px)";
+                  
+                  if (titleEl) {
+                    titleEl.style.opacity = opacity;
+                    titleEl.style.transform = transform;
+                  }
+                  if (metaEl) {
+                    metaEl.style.opacity = opacity;
+                    metaEl.style.transform = transform;
+                  }
+                  if (linkEl) {
+                    linkEl.style.opacity = opacity;
+                    linkEl.style.transform = transform;
+                  }
+                }
+            
+                // Hàm load dữ liệu mới vào Text
                 function updateTextBlock(index) {
                   var currentData = slideData[index];
                   if (!currentData) return;
             
-                  if (textTimeout) clearTimeout(textTimeout);
-            
-                  if (titleEl) {
-                    titleEl.style.opacity = "0";
-                    titleEl.style.transform = "translateY(6px)";
-                  }
-                  if (metaEl) {
-                    metaEl.style.opacity = "0";
-                    metaEl.style.transform = "translateY(6px)";
-                  }
-                  if (linkEl) {
-                    linkEl.style.opacity = "0";
-                    linkEl.style.transform = "translateY(6px)";
-                  }
-            
-                  var delay = window.innerWidth > 1280 ? 150 : 0;
-            
-                  textTimeout = setTimeout(function () {
-                    if (titleEl) titleEl.textContent = currentData.title;
-                    if (locationEl) locationEl.textContent = currentData.location;
-                    if (productEl) productEl.textContent = currentData.product;
-                    if (linkEl) linkEl.href = currentData.link;
-            
-                    if (titleEl) {
-                      titleEl.style.opacity = "1";
-                      titleEl.style.transform = "translateY(0)";
-                    }
-                    if (metaEl) {
-                      metaEl.style.opacity = "1";
-                      metaEl.style.transform = "translateY(0)";
-                    }
-                    if (linkEl) {
-                      linkEl.style.opacity = "1";
-                      linkEl.style.transform = "translateY(0)";
-                    }
-                  }, delay);
+                  if (titleEl) titleEl.textContent = currentData.title;
+                  if (locationEl) locationEl.textContent = currentData.location;
+                  if (productEl) productEl.textContent = currentData.product;
+                  if (linkEl) linkEl.href = currentData.link;
                 }
             
-                productWorksSwiper.on("slideChange", function () {
-                  updateTextBlock(this.realIndex);
+                // Setup Text đầu tiên khi mới vô
+                updateTextBlock(productWorksSwiper.realIndex);
+                setTextVisibility(true);
+            
+                // Event Swiper mượt mà được tinh gọn hoàn toàn
+                productWorksSwiper.on("slideChange", function (swiper) {
+                  // 1. Cho text mờ dần đi ngay lập tức
+                  setTextVisibility(false);
+            
+                  // 2. Clear timeout cũ (Phòng trường hợp khách dùng tay vuốt lướt qua nhiều ảnh 1 lúc)
+                  if (textRevealTimeout) clearTimeout(textRevealTimeout);
+            
+                  // 3. Chờ text cũ mờ đi (400ms khớp với CSS class .slide-text-transition) rồi load data mới lên
+                  textRevealTimeout = setTimeout(function () {
+                    updateTextBlock(swiper.realIndex);
+                    
+                    requestAnimationFrame(function () {
+                      setTextVisibility(true);
+                    });
+                  }, 400);
                 });
               });
             </script>
-
             <!-- FAQ Section -->
             <section
                 class="w-full relative pb-16 bg-background-secondary overflow-visible"
@@ -1039,80 +1045,80 @@
                     <!-- FAQ Content -->
                     <div class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto">
                       <!-- Section Title -->
-                      <div class="w-[85%] max-w-[1320px] mx-auto text-center mb-10" data-aos="fade-up">
-                        <h2 class="text-2xl md:text-3xl font-bold text-secondary uppercase tracking-wide">Câu hỏi thường gặp</h2>
+                      <div class="w-[85%] max-w-[1320px] mx-auto text-center mb-16" data-aos="fade-up">
+                        <h2 class="text-2xl md:text-3xl font-bold text-secondary uppercase">Câu hỏi thường gặp</h2>
                       </div>
                 
                       <!-- FAQ Card -->
                       <div class="bg-white px-6 md:px-10 py-8 shadow-lg relative" data-aos="fade-up" data-aos-delay="200">
                         <!-- FAQ Item 1 -->
-                        <div class="faq-item border-b border-gray-200 pb-5 mb-5">
+                        <div class="faq-item border-b border-gray-200 pb-10 mb-2">
                           <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                            <span class="text-[15px] pr-4">Showroom của Gốm sứ Thanh Hải ở đâu?</span>
+                            <span class="text-[16px] md:text-[20px] pr-4">Showroom của Gốm sứ Thanh Hải ở đâu?</span>
                             <span class="faq-icon w-6 h-6 flex-shrink-0 bg-textPrimary rounded-full flex items-center justify-center text-white transition-all duration-300">
                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                             </span>
                           </button>
-                          <div class="faq-content mt-4 text-gray-600 text-[14px] leading-relaxed block overflow-hidden transition-all duration-300">
+                          <div class="faq-content mt-4 text-gray-600 text-[16px] md:text-[20px] leading-relaxed block overflow-hidden transition-all duration-300">
                             <p class="mb-2"><span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi chỉ có duy nhất 1 showroom tại địa chỉ: Số 18 Phố Gốm - Giang Cao - Bát Tràng, Gia Lâm, Hà Nội. Ngoài địa chỉ này, chúng tôi không có bất kỳ đại lý đại diện nào khác tại các tỉnh thành trên cả nước.</p>
-                            <a href="#" class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[13px]">Xem map tại đây</a>
+                            <a href="#" class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[16px] md:text-[20px]">Xem map tại đây</a>
                           </div>
                         </div>
                 
                         <!-- FAQ Item 2 -->
-                        <div class="faq-item border-b border-gray-200 pb-5 mb-5">
+                        <div class="faq-item border-b border-gray-200 pb-10 mb-2">
                           <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                            <span class="text-[15px] pr-4">Tôi có thể đặt màu sắc và mẫu mã theo yêu cầu riêng không?</span>
+                            <span class="text-[16px] md:text-[20px] pr-4">Tôi có thể đặt màu sắc và mẫu mã theo yêu cầu riêng không?</span>
                             <span class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180">
                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                             </span>
                           </button>
-                          <div class="faq-content mt-4 text-gray-600 text-[14px] leading-relaxed hidden overflow-hidden transition-all duration-300">
+                          <div class="faq-content mt-4 text-gray-600 text-[16px] md:text-[20px] leading-relaxed hidden overflow-hidden transition-all duration-300">
                             <p><span class="font-bold text-textPrimary">Trả lời:</span> Vui lòng liên hệ với chúng tôi để biết thêm chi tiết về việc đặt màu sắc và mẫu mã theo yêu cầu riêng.</p>
                           </div>
                         </div>
                 
                         <!-- FAQ Item 3 -->
-                        <div class="faq-item border-b border-gray-200 pb-5 mb-5">
+                        <div class="faq-item border-b border-gray-200 pb-10 mb-2">
                           <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                            <span class="text-[15px] pr-4">Tôi có thể tham quan xưởng sản xuất hay không?</span>
+                            <span class="text-[16px] md:text-[20px] pr-4">Tôi có thể tham quan xưởng sản xuất hay không?</span>
                             <span class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180">
                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                             </span>
                           </button>
-                          <div class="faq-content mt-4 text-gray-600 text-[14px] leading-relaxed hidden overflow-hidden transition-all duration-300">
+                          <div class="faq-content mt-4 text-gray-600 text-[16px] md:text-[20px] leading-relaxed hidden overflow-hidden transition-all duration-300">
                             <p><span class="font-bold text-textPrimary">Trả lời:</span> Quý khách hoàn toàn có thể tham quan xưởng sản xuất của chúng tôi. Vui lòng liên hệ trước để được sắp xếp đón tiếp chu đáo nhất.</p>
                           </div>
                         </div>
                 
                         <!-- FAQ Item 4 -->
-                        <div class="faq-item border-b border-gray-200 pb-5 mb-5">
+                        <div class="faq-item border-b border-gray-200 pb-10 mb-2">
                           <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                            <span class="text-[15px] pr-4">Chi phí vận chuyển và phạm vi giao hàng như thế nào?</span>
+                            <span class="text-[16px] md:text-[20px] pr-4">Chi phí vận chuyển và phạm vi giao hàng như thế nào?</span>
                             <span class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180">
                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                             </span>
                           </button>
-                          <div class="faq-content mt-4 text-gray-600 text-[14px] leading-relaxed hidden overflow-hidden transition-all duration-300">
+                          <div class="faq-content mt-4 text-gray-600 text-[16px] md:text-[20px] leading-relaxed hidden overflow-hidden transition-all duration-300">
                             <p><span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi giao hàng toàn quốc. Chi phí vận chuyển sẽ phụ thuộc vào khối lượng đơn hàng và khoảng cách địa lý.</p>
                           </div>
                         </div>
                 
                         <!-- FAQ Item 5 -->
-                        <div class="faq-item border-b border-gray-200 pb-5 mb-2">
+                        <div class="faq-item mb-8">
                           <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                            <span class="text-[15px] pr-4">Đặc tính thủ công của ngói âm dương cần lưu ý gì?</span>
+                            <span class="text-[16px] md:text-[20px] pr-4">Đặc tính thủ công của ngói âm dương cần lưu ý gì?</span>
                             <span class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180">
                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
                             </span>
                           </button>
-                          <div class="faq-content mt-4 text-gray-600 text-[14px] leading-relaxed hidden overflow-hidden transition-all duration-300">
+                          <div class="faq-content mt-4 text-gray-600 text-[16px] md:text-[20px] leading-relaxed hidden overflow-hidden transition-all duration-300">
                             <p><span class="font-bold text-textPrimary">Trả lời:</span> Ngói thủ công mang vẻ đẹp độc bản, màu sắc có độ chuyển tự nhiên do nhiệt độ lò, không viên nào giống viên nào 100%.</p>
                           </div>
                         </div>
                         
                         <div class="mt-8 text-right">
-                            <a href="#" class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[13px]">Xem thêm</a>
+                            <a href="#" class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[16px] md:text-[20px]">Xem thêm</a>
                         </div>
                       </div>
                     </div>            </section>
