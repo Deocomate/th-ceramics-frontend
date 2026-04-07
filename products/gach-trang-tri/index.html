@@ -1255,6 +1255,10 @@
             width: var(--project-center-width) !important;
           }
 
+          .project-showcase-swiper:not(.swiper-initialized) .swiper-slide:first-child {
+            width: var(--project-center-width) !important;
+          }
+
           .project-showcase-swiper .project-overlay {
             opacity: 0;
             transition: opacity 0.7s ease;
@@ -1274,6 +1278,16 @@
           }
 
           .project-showcase-swiper .swiper-slide-active .project-content {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+          }
+
+          .project-showcase-swiper:not(.swiper-initialized) .swiper-slide:first-child .project-overlay {
+            opacity: 1;
+          }
+
+          .project-showcase-swiper:not(.swiper-initialized) .swiper-slide:first-child .project-content {
             opacity: 1;
             transform: translateY(0);
             pointer-events: auto;
@@ -1741,7 +1755,7 @@
         return;
       }
 
-      var originalSlides = Array.from(wrapperEl.querySelectorAll(":scope > .swiper-slide"));
+      var originalSlides = Array.from(wrapperEl.children);
       var targetSlideCount = 10;
 
       if (originalSlides.length > 0 && originalSlides.length < targetSlideCount) {
@@ -1755,7 +1769,7 @@
         }
       }
 
-      var finalSlideCount = wrapperEl.querySelectorAll(":scope > .swiper-slide").length;
+      var finalSlideCount = wrapperEl.children.length;
       var initialSlide = finalSlideCount > 2 ? 2 : 0;
 
       new Swiper(projectShowcaseEl, {
@@ -1763,7 +1777,7 @@
         slidesPerGroup: 1,
         centeredSlides: true,
         initialSlide: initialSlide,
-        slideToClickedSlide: false,
+        slideToClickedSlide: true,
         grabCursor: true,
         watchSlidesProgress: true,
         speed: 520,
@@ -1796,7 +1810,9 @@
             projectShowcaseEl.classList.add("is-dragging");
           },
           touchEnd: function () {
-            projectShowcaseEl.classList.remove("is-dragging");
+            window.setTimeout(function () {
+              projectShowcaseEl.classList.remove("is-dragging");
+            }, 80);
           },
           transitionEnd: function () {
             projectShowcaseEl.classList.remove("is-dragging");
