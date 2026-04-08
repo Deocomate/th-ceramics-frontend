@@ -1,1 +1,0 @@
-function n(){console.log("Index page initialized"),document.querySelectorAll('a[href*="services"], a[href*="contact"]').forEach(e=>{e.addEventListener("click",c=>{console.log("CTA clicked:",e.textContent)})})}export{n as init};
