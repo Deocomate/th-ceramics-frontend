@@ -1242,28 +1242,58 @@
   data-aos="fade-up"
 >
   <style>
-    /* BÍ QUYẾT ĐỂ SLIDE CHUYỂN ĐỘNG CỰC KỲ MƯỢT MÀ */
-    /* 1. Ép Swiper dùng chung hàm gia tốc siêu mượt (ease-out-quart) thay vì linear/ease mặc định */
     .product-works-swiper .swiper-wrapper {
+      display: flex;
+      align-items: flex-end;
       transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1) !important;
+      will-change: transform;
     }
-    
-    /* 2. Slide width và opacity phải khớp chuẩn xác 100% thời gian (1200ms) với speed của JS */
+
     .product-works-swiper .swiper-slide {
+      width: 85vw;
+      aspect-ratio: 4 / 3;
+      opacity: 0.55;
+      overflow: hidden;
+      flex-shrink: 0;
+      cursor: pointer;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      will-change: width, opacity;
+      contain: layout paint;
       transition: width 1200ms cubic-bezier(0.25, 1, 0.5, 1),
                   opacity 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
     }
-    
-    /* 3. Phóng to ảnh nhẹ ở slide phụ (1.1) và trở về (1) khi là main slide tạo cảm giác mở rộng */
+
+    @media (min-width: 1280px) {
+      .product-works-swiper .swiper-slide {
+        opacity: 1;
+        width: 360px;
+      }
+    }
+
+    .product-works-swiper .swiper-slide-active {
+      width: 85vw;
+      opacity: 1;
+      z-index: 2;
+    }
+
+    @media (min-width: 1280px) {
+      .product-works-swiper .swiper-slide-active {
+        width: 720px;
+      }
+    }
+
     .product-works-swiper .swiper-slide img {
       transform: translateZ(0) scale(1.1) !important; 
       transition: transform 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+      backface-visibility: hidden;
+      will-change: transform;
     }
+
     .product-works-swiper .swiper-slide-active img {
       transform: translateZ(0) scale(1) !important;
     }
-    
-    /* 4. Class dành riêng cho hiệu ứng chữ (chuyển đổi mượt 400ms) */
+
     .slide-text-transition {
       transition-property: opacity, transform !important;
       transition-duration: 400ms !important;
@@ -1539,7 +1569,7 @@
         />
 
             <!-- FAQ Content -->
-            <div class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto">
+            <div class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto" data-faq-component>
               <!-- Section Title -->
               <div class="w-[85%] max-w-[1320px] mx-auto text-center mb-16" data-aos="fade-up">
                 <h2 class="font-archivo text-[24px] md:text-[32px] font-semibold text-secondary uppercase leading-[36px] md:leading-[45px]">Câu hỏi thường gặp</h2>
@@ -1617,7 +1647,58 @@
                   <a href="/faq/index.html" class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] md:text-[18px]">Xem thêm</a>
                 </div>
               </div>
-            </div>      </section>
+            </div>
+        
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const faqComponents = document.querySelectorAll("[data-faq-component]");
+        
+            faqComponents.forEach((component) => {
+              const faqItems = component.querySelectorAll(".faq-item");
+        
+              faqItems.forEach((item) => {
+                const button = item.querySelector(".faq-button");
+                const content = item.querySelector(".faq-content");
+                const icon = item.querySelector(".faq-icon");
+        
+                if (!button || !content || !icon) return;
+        
+                button.addEventListener("click", () => {
+                  const isOpen = !content.classList.contains("hidden");
+        
+                  faqItems.forEach((otherItem) => {
+                    if (otherItem === item) return;
+        
+                    const otherContent = otherItem.querySelector(".faq-content");
+                    const otherIcon = otherItem.querySelector(".faq-icon");
+        
+                    if (otherContent) {
+                      otherContent.classList.add("hidden");
+                    }
+        
+                    if (otherIcon) {
+                      otherIcon.classList.add("rotate-180");
+                      otherIcon.classList.replace("bg-textPrimary", "bg-gray-200");
+                      otherIcon.classList.replace("text-white", "text-gray-500");
+                    }
+                  });
+        
+                  if (isOpen) {
+                    content.classList.add("hidden");
+                    icon.classList.add("rotate-180");
+                    icon.classList.replace("bg-textPrimary", "bg-gray-200");
+                    icon.classList.replace("text-white", "text-gray-500");
+                  } else {
+                    content.classList.remove("hidden");
+                    icon.classList.remove("rotate-180");
+                    icon.classList.replace("bg-gray-200", "bg-textPrimary");
+                    icon.classList.replace("text-gray-500", "text-white");
+                  }
+                });
+              });
+            });
+          });
+        </script>      </section>
     </main>
 
     <footer class="bg-[#262723] text-white">
