@@ -3175,10 +3175,6 @@ body {
   padding: 2rem;
 }
 
-.p-\[14px\]{
-  padding: 14px;
-}
-
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
@@ -3192,11 +3188,6 @@ body {
 .px-12{
   padding-left: 3rem;
   padding-right: 3rem;
-}
-
-.px-16{
-  padding-left: 4rem;
-  padding-right: 4rem;
 }
 
 .px-2{
@@ -3784,10 +3775,6 @@ body {
 
 .leading-\[1\.8\]{
   line-height: 1.8;
-}
-
-.leading-\[10px\]{
-  line-height: 10px;
 }
 
 .leading-\[18px\]{
@@ -4378,10 +4365,11 @@ body {
     font-style: normal;
     font-weight: 800;
     line-height: 10px;
-    letter-spacing: 0.1em;
     text-transform: uppercase;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
+    display: block;
+    white-space: nowrap;
+    transform-origin: center;
+    transform: rotate(-90deg);
   }
 
 .\[-ms-overflow-style\:none\]{
@@ -5222,10 +5210,6 @@ body {
 
   .md\:w-\[30\%\]{
     width: 30%;
-  }
-
-  .md\:w-\[36px\]{
-    width: 36px;
   }
 
   .md\:w-\[38\%\]{
