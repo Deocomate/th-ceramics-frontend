@@ -1138,6 +1138,10 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.mb-7{
+  margin-bottom: 1.75rem;
+}
+
 .mb-8{
   margin-bottom: 2rem;
 }
@@ -1998,6 +2002,10 @@ body {
 
 .max-w-\[280px\]{
   max-width: 280px;
+}
+
+.max-w-\[285px\]{
+  max-width: 285px;
 }
 
 .max-w-\[290px\]{
@@ -3165,6 +3173,10 @@ body {
 
 .p-8{
   padding: 2rem;
+}
+
+.p-\[14px\]{
+  padding: 14px;
 }
 
 .px-1{
@@ -4356,6 +4368,20 @@ body {
 .scrollbar-hide {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
+
+.catalog-text-vertical {
+    color: #fff;
+    text-align: center;
+    font-family: "Archivo", sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
   }
 
 .\[-ms-overflow-style\:none\]{
