@@ -14,15 +14,105 @@
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+      .value-image-item {
+         transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+         cursor: pointer;
+         position: relative;
+         overflow: hidden;
+      }
+
+      .value-image-item img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         transition: transform 0.6s ease;
+      }
+
+      .value-image-item:hover,
+      .value-image-item.active {
+         z-index: 20;
+         width: 110px !important;
+      }
+
+      @media (min-width: 768px) {
+         .value-image-item:hover,
+         .value-image-item.active {
+            width: 240px !important;
+         }
+      }
+   </style>
+
+<style>
+    .product-works-swiper .swiper-wrapper {
+      display: flex;
+      align-items: flex-end;
+      transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1) !important;
+      will-change: transform;
+    }
+
+    .product-works-swiper .swiper-slide {
+      width: 85vw;
+      aspect-ratio: 4 / 3;
+      opacity: 0.55;
+      overflow: hidden;
+      flex-shrink: 0;
+      cursor: pointer;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      will-change: width, opacity;
+      contain: layout paint;
+      transition: width 1200ms cubic-bezier(0.25, 1, 0.5, 1),
+                  opacity 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+
+    @media (min-width: 1280px) {
+      .product-works-swiper .swiper-slide {
+        opacity: 1;
+        width: 360px;
+      }
+    }
+
+    .product-works-swiper .swiper-slide-active {
+      width: 85vw;
+      opacity: 1;
+      z-index: 2;
+    }
+
+    @media (min-width: 1280px) {
+      .product-works-swiper .swiper-slide-active {
+        width: 720px;
+      }
+    }
+
+    .product-works-swiper .swiper-slide img {
+      transform: translateZ(0) scale(1.1) !important; 
+      transition: transform 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+      backface-visibility: hidden;
+      will-change: transform;
+    }
+
+    .product-works-swiper .swiper-slide-active img {
+      transform: translateZ(0) scale(1) !important;
+    }
+
+    .slide-text-transition {
+      transition-property: opacity, transform !important;
+      transition-duration: 400ms !important;
+      transition-timing-function: ease-in-out !important;
+      will-change: opacity, transform;
+    }
+  </style>
+
   <script type="module" crossorigin src="/assets/js/main.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/css/main.css">
 </head>
 <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
   <header
     id="site-header"
-    class="bg-primary sticky top-0 text-white h-[94px] z-50 transition-all duration-300"
+    class="bg-primary sticky top-0 text-white h-[49px] xl:h-[94px] z-50 transition-all duration-300"
   >
-    <div class="w-[85%] max-w-[1320px] mx-auto h-full">
+    <div class="hidden xl:block w-[85%] max-w-[1320px] mx-auto h-full">
       <nav class="flex items-center justify-between h-full">
         <!-- Logo -->
         <div class="flex-shrink-0 mr-[8%]">
@@ -308,41 +398,74 @@
           >
         </div>
   
-        <!-- Icons & Mobile Menu -->
-        <div class="flex items-center gap-5">
+        <!-- Desktop Icons -->
+        <div class="hidden xl:flex items-center gap-5">
           <button
             class="hover:text-secondary transition-colors"
             aria-label="Search"
           >
-            <img
-              src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
-              alt="search"
-              class="w-4 h-4"
-            />
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-4 h-4" />
           </button>
           <a
-            href="/gio-hang.html"
+            href="/cart/gio-hang.html"
             class="hover:text-secondary transition-colors"
             aria-label="Cart"
           >
             <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-4 h-4" />
           </a>
           <a
-            href="/dich-vu-khach-hang/"
+            href="/dich-vu-khach-hang/trang-thai-don-hang.html"
             class="hover:text-secondary transition-colors"
             aria-label="User"
           >
             <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-4 h-4" />
           </a>
+        </div>
+      </nav>
+    </div>
   
-          <!-- Mobile menu button -->
+    <!-- Mobile Header -->
+    <div
+      class="xl:hidden h-full bg-[linear-gradient(90deg,_#2F302C_0%,_#262720_100%)]"
+    >
+      <nav class="relative flex items-center justify-center h-full">
+        <button
+          id="mobile-menu-button"
+          class="absolute left-[23px] text-white hover:text-secondary transition-colors"
+          aria-label="Toggle menu"
+        >
+          <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%2014H15C15.552%2014%2016%2013.552%2016%2013C16%2012.448%2015.552%2012%2015%2012H8C7.448%2012%207%2012.448%207%2013C7%2013.552%207.448%2014%208%2014Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%204H15C15.552%204%2016%203.552%2016%203C16%202.448%2015.552%202%2015%202H1C0.448%202%200%202.448%200%203C0%203.552%200.448%204%201%204Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%209H15C15.552%209%2016%208.552%2016%208C16%207.448%2015.552%207%2015%207H1C0.448%207%200%207.448%200%208C0%208.552%200.448%209%201%209Z'%20fill='%23F7F7F7'/%3e%3c/svg%3e" alt="menu" class="w-4 h-4" />
+        </button>
+  
+        <a href="/" class="block">
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKQAAACkCAYAAAAZtYVBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAADP5JREFUeAHtnf150zwXxk/fi/+fMAFmAsoENRNQJmiYgDBBwgQtEzRMQJkgZgLKBDETNM8EenWq4yeqKjv+DMfO/bsuXYltWZat2/qydHRmLASADtb/IwAUAUECVUCQQBUvIvsW1t0TAMNzY925vyMmyPuzs7OfBMDA2Pb0LtyHIhuoAoIEqoAggSogSKAKCBKoAoIEqoAggSogSKAKCBKoAoIEqoAggSogSKAKCBKoAoIEqoAggSogSKAKCBKoAoIEqoAggSpekAKMMTzRZ0bt4XlAO+oZGy+O0zl1Y5C4TRUVgrRcW5dSexLrhkj0S+tuqRsJDRO3SYIiG6gCggSqgCCBKiBIoAoIEqgCggSqgCCBKiBIoAoIEqgCggSqgCCBKo76LVsGK3QZRDF57DNK5G/xy9/B81MZoHHswRU8cmZD/ZP3vLrJygrgCw2MN5roPbnBJQmVvLBibfZe3A8bv4wmiJbRPieFFVdKToRzql9isL9U3MKGkdvfzLovVpw5TQTUIY8IC9E6LiHY8eICXaovCTlBb22Yt15RP2ogyCPARTOLhpwQU+qfOU1EmBDk8KTW/SInmqGZW7eRKsEogSCHZ037FvMxSMiJckUjBIKcLssxihKCnDajEyUEOX1YlFc0EiDI0+BmLK1vCPI04P7OrtN5jwIEeTpwp/yClANBnhZL+X6uFgjytGAxfiLFTGVwxY76NVcy5aFePDDjq9bhbEcVpAyZOgv3m+5jxxY27G8E6sC5JHcDfSWFYPjZ3yWz7s66nNw4x4KX1v1DbqwkG7xKqV84TAgS/Meaqscx/pHfn9Z9lT7EJfU3QINb3K/s9f+QMtCoOS5cb0utED42GVTLfvkc+/cD9Ve/vSSFQJDHg4X01grrJ7XEnsvF+zvqR5QQ5Imz6GOqgQ2D65p9zPfpahl4ECDI47DusxfAhnVDTxtBbZiJKW1VQJDHYYgZjGvqzhtSBgQ5PHcDzQrsI8dFDnmC3NEAyJeWzsU2KQOCHJ7fNBxdBakOCHJ4HgjUBoIEqoAggSogSKAKCBKoAoIEqoAggSogSKAKCBKoAoIEqoAggSogSKAKCBKoAoKs5hWBo6JFkDl1Y6hxfQl1RONUU81oEWTXcX0JDUNK3TiJ1bf6RIsgM+pG71M6ZSWDhLoxuQG0Q6NFkF1HVScDLIXRhxnkjEAjVAhSjFB1Ld6W1BNW3HPqx2xJRqARmlrZXSdDpX2sOCBzla+pO7suVipOFU2C7GNaZ6dlMMTkMS//1kerfZDZhlNHjSB7KrYZFuWvJnVKb1FMzhn76kJaE2iMNnN8bCJkRd15XJdblvDllm5m3b+BH7bakJDr2um7HzNHcd0ObYJkI5pdl+31ScQd29LXikArVH06FGsMNzRucpiXbo+6b9k2MdkwU07jZUWgNVoHV3ykcbJG7tgNlYKUFvdnGhc5DWN276RQO/xMjHKOKbf5MJDZvZNC+3hIbnGPYYDCQkwtg46oFqS0utnIu+bEXtl4qlzzZYyoHzHOorTuLenrDuKXZS69AqAnRrNwkk34z/bLC4tgRX+fnFydEcV0z4xqTo3kRq/p7/ZTck79FmIchtFN8pJVrViU3FeZ0/HIyK3C9VnrSqpTYLSzDq0o1p4wMxqOjJwQ32HAxPCMfvFNFqb9WcsClTztgAdSdFnuoljdgMczfkNueFwmsxqsdEpzHfOLFSePFrogJ0x2ibhwFBGfUwiwcL8hwr/HJJcnFkH9EPcEXpbX/vw7EdHxl6yM2qNuzvjJrZc9pYn78s1/UsCUClAFBAlUAUECVUCQQBUQJFAFBAlUAUECVUCQQBUQJFAFBAlUcXKfDqeG/TbPBrL80U0/7SfFFY0UCHL8sBhTbzunEYMiG6gCggSqQJE9fnhQ8trbHvXwus6ClNHZPG2AB74mtB+B/bOJaREJ54r2I7tzCSM7cF4a7CpmA3Kc3sj/3LofdeMjdsYvaD/CnEeR38mxhJ4uF7LzZyDKuf7IdJ6Ulks831PFvQXPoIj37wPPYHdgmyLX6JReci+FwdeZF8/uZqzNcy5qnjdje97WPZhybiUBq8LhJT02FWFsy+yGy7khV3JOWXxmFXE5r4jL1rj7XQb7N0EY2+D48kCYfA/8LG9MOY/+SuK8CfzeUvv0+m4q0sseWxw4f2sa2HiPxj0S6EFBGvcQt6YefAOXJeGcm+ob9NmYQEwmLshD/DIRUdp985rnh/E9JMhDbCVOda57TnUSdYD0Mk7MdbmlGsTi3rhRY9wbxImQ1DyFE/82fJheOLOa4aQcDnWH4/GJnsYlbRB23fjWJaF6syT5upyDNbp+H+klz6fJOkD8ci+oBW1a2RyxJLI/I2fmZE3P+8L4JsO1X2JizMhZPJuXhHNpSnLbkvisKd4vtwgSNibGnRdGRt3JaoZ1X+EvIVe3bUIf6fUpcj7XFxfi1iXXbU4ku72o8JuUZPEXEX/biN9UjseKx2XJ9cJwNjXiE+bG1w3jsjVBXcq4+lOMOkV2mCMvS8JaBv7OI35uAz+bsuOmv/T6VXXP3vPZBC6hCkzXOqQ99ini/6rELz/MZeDOSyKyqbhmGrnmK+9Bmmc39TyMWcTfJzn2PXIsKYnLMuL3kCA3JWGF/rYl/jZV/ky1ILumV1rxjDYSPqdPq2qMicS9abdPGmyXrjggXSH3VC+cR9FRs3iUWdfN6HlcdsZZTvMf3MwLy+euovujzbIlecX+pIa/jNovk5wG27uW6cUmZC4jYafFhjzfjNzza235uKkgY5YfGmEOZOMt41GHdXDe75KwyhKlEHZO3Uy1HJPa91YFm9c2rnS7OnAtFi3X81f2991ZCxPXY/1S01iQbLWM+mFHJ4h9flzXzsg1cA69kAm5ldTeNrUQ0lSQebDdOKeQrxZh8ZlTs9y26/raFFw78bZTql5NYSy5I5MH253iHhj24i81Ke27rZLAO29zjtrI3HVTQYZZPjcWFrJiwhMkiw+7C37I5yUOJ/X2c130HUWQcMIHmVF/cFwSb5vrs0msuJGiqFUF/i/RJL0Set5V80PCCIvqbzaMJ7aTJJ3CrrzmL0Ck9VTVyuYbCr9UPIQtN1PejVC0st9Hjq0i14t9ydkG1wm5ogaYeCt+a/rr9in7lLepCsfztwzjdiAcv5XdOb1MvIeCu4GSIIzYtSrXHTddW9lSqee3a+Xt5jeCs/E57Yu/NHJ6VgxC4LfLuPqI728pD4pz0B0FrTiPFfUID1yw1+V4+W9zYt1W4khybEw54yN9pVckrfh5FM8nlzBT6qMRFVH/xQH/M1Pv26vPQ+SNavJ9teBXJIyQRjmkhNPkm3qI2hxSjndOL9Pu+WxrPPdNcE7zb9nSavpA9dXP/p91Acg21xvzmuFk4r93JCfgsOu0CHMaEX2klzyfj1S/hyGnlmnVasS4GJ7ntWOqDM9z5Lm4eH1WsmKBJ8qbA+EsxMb3YF0uEke+p3WJl5xcwq5pZDRMr+gKE9IYrXo+RRgrCSOnNnHlfDLYlzY17m5cY4U/5/FvTvsBm40EZFx1ISFXF9lJGPcHznkV7OpsHdfsuzWKOtFvrz7F+/7x/ftGUOvG51A4df1Fjh+8/67pJdcsBugm1DLNjaumpN6udeM6JAB90UsdEoAhgSCBKiBIoAoIEqgCggSqgCCBKiBIoAoIEqgCggSqgCCBKiBIoAoIEqgCggSqgCCBKiBIoAoIEqgCggSqgCCBKiYrSONsdhdTN69l36XM4yj+b41n6dU4O5LX3jb7KaaQPnjhXMu5hSubwprK+efevsQbur8Njm3kOv/tN/vpwoXrw4qwWiYpSOOs7PL8bJ4l95qcOTmGJyclwf+l2c9Bnol7NGRqf76Tm2X3kp5Ok2U/hTkYdvNIHBZyfkJPJ2GxoHgS/hk5owi3XpzZhMtLuaZv1iTxrrWiCROzXHFnnDGosbAQOzM+RfwvxFZhXnIu7y9EEc4jZkGv7fmFsaR7ej63+Sy4nk8mYYe5Z+KFw3FbeGHMzN6WURjmnCrscTL2XL7eGxoPs3DHixJPMxoPz+Iq5lFu7N+VcTaDvlUsSMmWzrbmue3yhJygykhpLzb29zmIQzFtNjyPBV7YW7z0rpGTEyG/HHxs7p1zI8f4fuZlhrnI5cQJjZjJ1iFton2xjotrFsDSlJgdlnnELCYWgu8np+rEZUuxr8XVtj0plscWcq1z2guZLcVlMqG/MJ5QTPL/LDk1709pwky1DpmYp8tS5FUT2MXuIedofi7JOSdbPFtIeKk0ZgrRzmTfo6MGSBWDr7UKLDwk3u9O7mVu9pbh+JycJgwX2XMaNzErGyyaK2kV57RvCDzQPkH9/wybGeEi+FEIUuzzPs65rmX/yrNXntLT5UReU5w83CENJrb37RtG5Rzw1rgy/tF8jOzPyK1Pw40cfmk+UDnhuodj48//AZ37KimtBoDgAAAAAElFTkSuQmCC"
+            alt="Logo"
+            class="h-[29px] w-[29px]"
+          />
+        </a>
+  
+        <div class="absolute right-[23px] flex items-center gap-[14px]">
           <button
-            class="xl:hidden text-white"
-            id="mobile-menu-button"
-            aria-label="Toggle menu"
+            class="hover:text-secondary transition-colors"
+            aria-label="Search"
           >
-            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%2014H15C15.552%2014%2016%2013.552%2016%2013C16%2012.448%2015.552%2012%2015%2012H8C7.448%2012%207%2012.448%207%2013C7%2013.552%207.448%2014%208%2014Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%204H15C15.552%204%2016%203.552%2016%203C16%202.448%2015.552%202%2015%202H1C0.448%202%200%202.448%200%203C0%203.552%200.448%204%201%204Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%209H15C15.552%209%2016%208.552%2016%208C16%207.448%2015.552%207%2015%207H1C0.448%207%200%207.448%200%208C0%208.552%200.448%209%201%209Z'%20fill='%23F7F7F7'/%3e%3c/svg%3e" alt="menu" class="w-4 h-4" />
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-4 h-4" />
           </button>
+          <a
+            href="/cart/gio-hang.html"
+            class="hover:text-secondary transition-colors"
+            aria-label="Cart"
+          >
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-4 h-4" />
+          </a>
+          <a
+            href="/dich-vu-khach-hang/trang-thai-don-hang.html"
+            class="hover:text-secondary transition-colors"
+            aria-label="User"
+          >
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-4 h-4" />
+          </a>
         </div>
       </nav>
     </div>
@@ -352,7 +475,9 @@
       id="mobile-menu"
       class="hidden fixed inset-0 bg-primary z-50 overflow-y-auto"
     >
-      <div class="w-[85%] max-w-[1320px] mx-auto py-4 relative min-h-full flex flex-col">
+      <div
+        class="w-[85%] max-w-[1320px] mx-auto py-4 relative min-h-full flex flex-col"
+      >
         <div class="flex justify-between items-center mb-8 shrink-0">
           <a href="/" class="block">
             <img
@@ -366,25 +491,17 @@
               class="hover:text-secondary transition-colors"
               aria-label="Search"
             >
-              <img
-                src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
-                alt="search"
-                class="w-4 h-4"
-              />
+              <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-4 h-4" />
             </button>
             <a
-              href="/gio-hang.html"
+              href="/cart/gio-hang.html"
               class="hover:text-secondary transition-colors"
               aria-label="Cart"
             >
-              <img
-                src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e"
-                alt="cart"
-                class="w-4 h-4"
-              />
+              <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-4 h-4" />
             </a>
             <a
-              href="/dich-vu-khach-hang/"
+              href="/dich-vu-khach-hang/trang-thai-don-hang.html"
               class="hover:text-secondary transition-colors"
               aria-label="User"
             >
@@ -635,150 +752,13 @@
         <img
           src="/assets/background-decorate.svg"
           alt="background-decorate"
-          class="fixed -bottom-32 -right-52 w-[480px] h-[480px] pointer-events-none opacity-100"
+          class="fixed top-[395px] left-[124px] w-[480px] h-[480px] pointer-events-none opacity-100"
         />
       </div>
     </div>
   </header>
   
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // 0. Sticky header scroll effect (home page only)
-      const siteHeader = document.getElementById("site-header");
-      if (siteHeader && siteHeader.classList.contains("fixed")) {
-        const onScroll = () => {
-          if (window.scrollY > 20) {
-            siteHeader.classList.remove("bg-opacity-60");
-            siteHeader.classList.add("bg-opacity-100", "shadow-md");
-          } else {
-            siteHeader.classList.add("bg-opacity-60");
-            siteHeader.classList.remove("bg-opacity-100", "shadow-md");
-          }
-        };
-        window.addEventListener("scroll", onScroll, { passive: true });
-        onScroll();
-      }
-  
-      // 1. Highlight Active Link
-      const currentPath = window.location.pathname;
-  
-      // Normalize path (ensure trailing slash for comparison if needed, or matched exactly)
-      // Simple matching:
-      const desktopLinks = document.querySelectorAll(".nav-link");
-      const desktopDropdownLinks = document.querySelectorAll(
-        ".desktop-dropdown-link",
-      );
-      const mobileLinks = document.querySelectorAll(".mobile-nav-link");
-      const mobileProductsToggle = document.getElementById(
-        "mobile-products-toggle",
-      );
-  
-      const setActive = (link) => {
-        if (link.classList.contains("nav-link")) {
-          // Desktop: Remove default light text and add underline
-          link.classList.remove("text-[#FFFAF3]");
-          link.classList.add("underline", "underline-offset-8", "decoration-2");
-        } else if (
-          link.classList.contains("mobile-nav-link") ||
-          link.classList.contains("mobile-nav-toggle")
-        ) {
-          // Mobile: Remove default white text
-          link.classList.remove("text-white", "text-white/90");
-        } else if (link.classList.contains("desktop-dropdown-link")) {
-          // Desktop Dropdown: Remove hover text color if any, but specifically remove black text
-          link.classList.remove("text-[#212121]");
-        }
-  
-        // Add Active styling - Orange text
-        link.classList.add("text-secondary");
-      };
-  
-      // Find matching link
-      // Priority: Exact match -> Parent match (e.g. /products/detail -> /products/)
-      let activeLinkFound = false;
-  
-      [
-        ...desktopLinks,
-        ...desktopDropdownLinks,
-        ...mobileLinks,
-        mobileProductsToggle,
-      ]
-        .filter(Boolean)
-        .forEach((link) => {
-          const linkPath = link.getAttribute("data-path");
-          if (
-            currentPath === linkPath ||
-            (currentPath === "/index.html" && linkPath === "/") ||
-            (linkPath !== "/" && currentPath.startsWith(linkPath))
-          ) {
-            setActive(link);
-          }
-        });
-  
-      // 2. Mobile Menu Toggle
-      const mobileMenuBtn = document.getElementById("mobile-menu-button");
-      const closeMenuBtn = document.getElementById("close-menu-button");
-      const mobileMenu = document.getElementById("mobile-menu");
-  
-      const toggleMenu = () => {
-        mobileMenu.classList.toggle("hidden");
-        // Prevent body scroll when menu is open
-        if (!mobileMenu.classList.contains("hidden")) {
-          document.body.style.overflow = "hidden";
-        } else {
-          document.body.style.overflow = "";
-        }
-      };
-  
-      mobileMenuBtn?.addEventListener("click", toggleMenu);
-      closeMenuBtn?.addEventListener("click", toggleMenu);
-  
-      // Close menu when clicking a link
-      mobileLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          if (!mobileMenu.classList.contains("hidden")) toggleMenu();
-        });
-      });
-  
-      // 3. Mobile Products Submenu Toggle
-      if (mobileProductsToggle) {
-        mobileProductsToggle.addEventListener("click", (e) => {
-          e.preventDefault();
-          const submenu = document.getElementById("mobile-products-submenu");
-          const icon = document.getElementById("mobile-products-icon");
-          if (submenu.classList.contains("hidden")) {
-            submenu.classList.remove("hidden");
-            submenu.classList.add("flex");
-            if (icon) icon.classList.add("rotate-180");
-          } else {
-            submenu.classList.add("hidden");
-            submenu.classList.remove("flex");
-            if (icon) icon.classList.remove("rotate-180");
-          }
-        });
-      }
-  
-      // 4. Mobile SPCT Submenu Toggle
-      const mobileSpctToggle = document.getElementById("mobile-spct-toggle");
-      if (mobileSpctToggle) {
-        mobileSpctToggle.addEventListener("click", (e) => {
-          e.preventDefault();
-          const submenu = document.getElementById("mobile-spct-submenu");
-          const icon = document.getElementById("mobile-spct-icon");
-          if (submenu.classList.contains("hidden")) {
-            submenu.classList.remove("hidden");
-            submenu.classList.add("flex");
-            if (icon) icon.classList.add("rotate-180");
-          } else {
-            submenu.classList.add("hidden");
-            submenu.classList.remove("flex");
-            if (icon) icon.classList.remove("rotate-180");
-          }
-        });
-      }
-    });
-  </script>
-  <!-- Catalog Sticky Button -->
+    <!-- Catalog Sticky Button -->
   <a href="#" id="catalog-sticky-btn" class="fixed right-0 top-[124px] z-[45] hover:opacity-90 transition-all duration-300 bg-[#AB6520] w-[28px] h-[90px] flex items-center justify-center">
       <span class="catalog-text-vertical">CATALOG</span>
   </a>
@@ -1147,83 +1127,8 @@
       </div>
     </section>
   
-     <style>
-        .value-image-item {
-           transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-           cursor: pointer;
-           position: relative;
-           overflow: hidden;
-        }
   
-        .value-image-item img {
-           width: 100%;
-           height: 100%;
-           -o-object-fit: cover;
-              object-fit: cover;
-           transition: transform 0.6s ease;
-        }
   
-        .value-image-item:hover,
-        .value-image-item.active {
-           z-index: 20;
-           width: 110px !important;
-        }
-  
-        @media (min-width: 768px) {
-           .value-image-item:hover,
-           .value-image-item.active {
-              width: 240px !important;
-           }
-        }
-     </style>
-  
-     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-           const valueSection = document.querySelector("#value-title")?.closest("section");
-           if (!valueSection) return;
-  
-           const valueImages = Array.from(valueSection.querySelectorAll(".value-image-item"));
-           const valueTitle = valueSection.querySelector("#value-title");
-           const valueDescription = valueSection.querySelector("#value-description");
-  
-           if (!valueImages.length || !valueTitle || !valueDescription) return;
-  
-           const updateValueSection = (img) => {
-              if (img.classList.contains("active")) return;
-  
-              valueImages.forEach((item) => item.classList.remove("active"));
-              img.classList.add("active");
-  
-              valueTitle.style.opacity = "0";
-              valueDescription.style.opacity = "0";
-              valueTitle.style.transform = "translateY(10px)";
-              valueDescription.style.transform = "translateY(10px)";
-  
-              window.setTimeout(() => {
-                 valueTitle.textContent = img.dataset.title || "";
-                 valueDescription.textContent = img.dataset.description || "";
-  
-                 valueTitle.style.opacity = "1";
-                 valueDescription.style.opacity = "1";
-                 valueTitle.style.transform = "translateY(0)";
-                 valueDescription.style.transform = "translateY(0)";
-              }, 300);
-           };
-  
-           valueImages.forEach((img) => {
-              img.addEventListener("mouseenter", () => {
-                 if (window.innerWidth >= 1024) {
-                    updateValueSection(img);
-                 }
-              });
-  
-              img.addEventListener("click", () => {
-                 updateValueSection(img);
-              });
-           });
-        });
-     </script>
-
   <!-- Video Section -->
     <section class="w-full mx-auto pb-16 max-w-[1920px]">
       <!-- Section Title -->
@@ -1248,66 +1153,6 @@
     class="w-full bg-background-secondary pb-16 relative overflow-visible animate-fade-in-up xl:min-h-[760px]"
     data-aos="fade-up"
   >
-    <style>
-      .product-works-swiper .swiper-wrapper {
-        display: flex;
-        align-items: flex-end;
-        transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1) !important;
-        will-change: transform;
-      }
-  
-      .product-works-swiper .swiper-slide {
-        width: 85vw;
-        aspect-ratio: 4 / 3;
-        opacity: 0.55;
-        overflow: hidden;
-        flex-shrink: 0;
-        cursor: pointer;
-        transform: translateZ(0);
-        backface-visibility: hidden;
-        will-change: width, opacity;
-        contain: layout paint;
-        transition: width 1200ms cubic-bezier(0.25, 1, 0.5, 1),
-                    opacity 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
-      }
-  
-      @media (min-width: 1280px) {
-        .product-works-swiper .swiper-slide {
-          opacity: 1;
-          width: 360px;
-        }
-      }
-  
-      .product-works-swiper .swiper-slide-active {
-        width: 85vw;
-        opacity: 1;
-        z-index: 2;
-      }
-  
-      @media (min-width: 1280px) {
-        .product-works-swiper .swiper-slide-active {
-          width: 720px;
-        }
-      }
-  
-      .product-works-swiper .swiper-slide img {
-        transform: translateZ(0) scale(1.1) !important; 
-        transition: transform 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
-        backface-visibility: hidden;
-        will-change: transform;
-      }
-  
-      .product-works-swiper .swiper-slide-active img {
-        transform: translateZ(0) scale(1) !important;
-      }
-  
-      .slide-text-transition {
-        transition-property: opacity, transform !important;
-        transition-duration: 400ms !important;
-        transition-timing-function: ease-in-out !important;
-        will-change: opacity, transform;
-      }
-    </style>
   
     <!-- Section Title -->
     <div class="text-center mb-10 md:mb-16">
@@ -1462,101 +1307,7 @@
     </div>
   </section>
   
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var swiperEl = document.querySelector(".product-works-swiper");
-      if (!swiperEl) return;
   
-      var slideData =[
-        { title: "CHÙA BÁI ĐÍNH", location: "Ninh Bình", product: "Ngói âm dương nâu đen", link: "#baidinh" },
-        { title: "THIỀN VIỆN TRÚC LÂM", location: "Sapa", product: "Ngói âm dương tráng men", link: "#truclam" },
-        { title: "ĐỀN TRẦN", location: "Nam Định", product: "Ngói âm dương cổ", link: "#dentran" },
-        { title: "CHÙA BÁI ĐÍNH", location: "Ninh Bình", product: "Ngói âm dương nâu đen", link: "#baidinh" },
-        { title: "THIỀN VIỆN TRÚC LÂM", location: "Sapa", product: "Ngói âm dương tráng men", link: "#truclam" },
-        { title: "ĐỀN TRẦN", location: "Nam Định", product: "Ngói âm dương cổ", link: "#dentran" },
-        { title: "CHÙA BÁI ĐÍNH", location: "Ninh Bình", product: "Ngói âm dương nâu đen", link: "#baidinh" },
-        { title: "THIỀN VIỆN TRÚC LÂM", location: "Sapa", product: "Ngói âm dương tráng men", link: "#truclam" },
-        { title: "ĐỀN TRẦN", location: "Nam Định", product: "Ngói âm dương cổ", link: "#dentran" },
-        { title: "CHÙA BÁI ĐÍNH", location: "Ninh Bình", product: "Ngói âm dương nâu đen", link: "#baidinh" },
-        { title: "THIỀN VIỆN TRÚC LÂM", location: "Sapa", product: "Ngói âm dương tráng men", link: "#truclam" },
-        { title: "ĐỀN TRẦN", location: "Nam Định", product: "Ngói âm dương cổ", link: "#dentran" },
-      ];
-  
-      var titleEl = document.getElementById("slide-title");
-      var locationEl = document.getElementById("slide-location");
-      var productEl = document.getElementById("slide-product");
-      var linkEl = document.getElementById("slide-link");
-      var metaEl = document.getElementById("slide-meta");
-      var textRevealTimeout;
-  
-      var productWorksSwiper = new Swiper(".product-works-swiper", {
-        slidesPerView: "auto",
-        centeredSlides: true,
-        slideToClickedSlide: true,
-        watchSlidesProgress: true,
-        spaceBetween: 32,
-        // Tăng thời gian chuyển slide lên 1.2 giây để chuyển động thật êm ái
-        speed: 1200,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        },
-      });
-  
-      // Hàm thiết lập hiệu ứng mờ/hiện và trượt chữ
-      function setTextVisibility(isVisible) {
-        var opacity = isVisible ? "1" : "0";
-        var transform = isVisible ? "translateY(0)" : "translateY(12px)";
-        
-        if (titleEl) {
-          titleEl.style.opacity = opacity;
-          titleEl.style.transform = transform;
-        }
-        if (metaEl) {
-          metaEl.style.opacity = opacity;
-          metaEl.style.transform = transform;
-        }
-        if (linkEl) {
-          linkEl.style.opacity = opacity;
-          linkEl.style.transform = transform;
-        }
-      }
-  
-      // Hàm load dữ liệu mới vào Text
-      function updateTextBlock(index) {
-        var currentData = slideData[index];
-        if (!currentData) return;
-  
-        if (titleEl) titleEl.textContent = currentData.title;
-        if (locationEl) locationEl.textContent = currentData.location;
-        if (productEl) productEl.textContent = currentData.product;
-        if (linkEl) linkEl.href = currentData.link;
-      }
-  
-      // Setup Text đầu tiên khi mới vô
-      updateTextBlock(productWorksSwiper.realIndex);
-      setTextVisibility(true);
-  
-      // Event Swiper mượt mà được tinh gọn hoàn toàn
-      productWorksSwiper.on("slideChange", function (swiper) {
-        // 1. Cho text mờ dần đi ngay lập tức
-        setTextVisibility(false);
-  
-        // 2. Clear timeout cũ (Phòng trường hợp khách dùng tay vuốt lướt qua nhiều ảnh 1 lúc)
-        if (textRevealTimeout) clearTimeout(textRevealTimeout);
-  
-        // 3. Chờ text cũ mờ đi (400ms khớp với CSS class .slide-text-transition) rồi load data mới lên
-        textRevealTimeout = setTimeout(function () {
-          updateTextBlock(swiper.realIndex);
-          
-          requestAnimationFrame(function () {
-            setTextVisibility(true);
-          });
-        }, 400);
-      });
-    });
-  </script>
   <!-- FAQ Section -->
   <section class="w-full relative pb-32 bg-background-secondary overflow-hidden" data-aos="fade-up">
     <!-- Background Decoration -->
@@ -1644,67 +1395,16 @@
           </div>
         </div>
     
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const faqComponents = document.querySelectorAll("[data-faq-component]");
-    
-        faqComponents.forEach((component) => {
-          const faqItems = component.querySelectorAll(".faq-item");
-    
-          faqItems.forEach((item) => {
-            const button = item.querySelector(".faq-button");
-            const content = item.querySelector(".faq-content");
-            const icon = item.querySelector(".faq-icon");
-    
-            if (!button || !content || !icon) return;
-    
-            button.addEventListener("click", () => {
-              const isOpen = !content.classList.contains("hidden");
-    
-              faqItems.forEach((otherItem) => {
-                if (otherItem === item) return;
-    
-                const otherContent = otherItem.querySelector(".faq-content");
-                const otherIcon = otherItem.querySelector(".faq-icon");
-    
-                if (otherContent) {
-                  otherContent.classList.add("hidden");
-                }
-    
-                if (otherIcon) {
-                  otherIcon.classList.add("rotate-180");
-                  otherIcon.classList.replace("bg-textPrimary", "bg-gray-200");
-                  otherIcon.classList.replace("text-white", "text-gray-500");
-                }
-              });
-    
-              if (isOpen) {
-                content.classList.add("hidden");
-                icon.classList.add("rotate-180");
-                icon.classList.replace("bg-textPrimary", "bg-gray-200");
-                icon.classList.replace("text-white", "text-gray-500");
-              } else {
-                content.classList.remove("hidden");
-                icon.classList.remove("rotate-180");
-                icon.classList.replace("bg-gray-200", "bg-textPrimary");
-                icon.classList.replace("text-gray-500", "text-white");
-              }
-            });
-          });
-        });
-      });
-    </script>  </section>
+      </section>
 
   <footer class="bg-[#262723] text-white">
-    <!-- Newsletter Section -->
-    <div class="relative overflow-hidden">
+    <div class="relative overflow-hidden bg-primary">
       <img
         src="/assets/background-decorate.png"
         alt=""
-        class="block absolute top-[15%] left-[55%] lg:left-[50%] transform lg:-translate-x-1/2 w-[300px] h-[300px] lg:w-[560px] lg:h-[700px] opacity-80 lg:opacity-60 pointer-events-none"
+        class="block absolute top-[83px] left-[55%] lg:top-[15%] lg:left-[50%] transform lg:-translate-x-1/2 w-[300px] h-[300px] lg:w-[560px] lg:h-[700px] opacity-80 lg:opacity-60 pointer-events-none"
       />
   
-      <!-- Desktop: image full-bleed on right half -->
       <div class="hidden lg:block absolute inset-y-0 right-0 w-1/2">
         <img
           src="/assets/footer-image.png"
@@ -1713,12 +1413,10 @@
         />
       </div>
   
-      <!-- Content row constrained to 1320px -->
       <div class="relative w-[85%] max-w-[1320px] mx-auto flex flex-col lg:flex-row">
-        <!-- Text column: left half -->
-        <div class="w-full lg:w-1/2 pt-[7.5%] pb-[12.5%] lg:pt-[72px] lg:pb-[72px] lg:pr-16">
+        <div class="w-full lg:w-1/2 pt-[27px] pb-[46px] lg:pt-[72px] lg:pb-[72px] lg:pr-16">
           <div class="w-full max-w-[536px]">
-            <h2 class="text-neutral-1 text-[28px] lg:text-[32px] font-semibold leading-tight lg:leading-[44px] mb-20 lg:mb-[72px]">
+            <h2 class="text-neutral-1 text-[28px] lg:text-[32px] font-semibold leading-[35px] lg:leading-[44px] mb-[80px] lg:mb-[72px]">
               Hãy nói với chúng tôi<br />
               những mong muốn của bạn
             </h2>
@@ -1728,7 +1426,7 @@
                 <input
                   type="email"
                   placeholder="Nhập thông tin email của bạn"
-                  class="bg-transparent text-[#909090] text-sm font-light outline-none flex-1"
+                  class="bg-transparent text-[#9CA3AF] lg:text-[#909090] text-sm font-light outline-none flex-1"
                 />
                 <button
                   class="hover:opacity-80 transition-opacity"
@@ -1752,270 +1450,122 @@
           </div>
         </div>
   
-        <!-- Spacer for right half on desktop (image is absolute) -->
         <div class="hidden lg:block lg:w-1/2 lg:min-h-[541px]"></div>
       </div>
   
-      <!-- Mobile: image in normal flow -->
       <div class="lg:hidden w-full">
         <img
           src="/assets/footer-image.png"
           alt=""
-          class="w-full h-full object-cover max-h-[541px]"
+          class="w-full h-[298px] sm:h-[400px] object-cover"
         />
       </div>
     </div>
   
     <!-- Main Footer -->
     <div class="relative bg-[#262723] overflow-hidden">
-      <img
-        src="/assets/footer-image-2.png"
-        alt=""
-        class="hidden lg:block absolute inset-0 w-full h-full object-cover"
-      />
-      <div class="relative w-[85%] max-w-[1320px] mx-auto pt-12 lg:pt-[150px] pb-[60px] lg:whitespace-nowrap">
-        <!-- Footer Content -->
-        <!-- Footer grid: Logo col | Info col | Tổng quan | Sản phẩm (2 sub-cols) | Dịch vụ -->
-        <div class="flex flex-col gap-8 lg:grid lg:grid-cols-[200px_455px_195px_370px_200px] lg:gap-0 lg:w-[1420px] lg:justify-start lg:-translate-x-[38px]">
-          <!-- LEFT BLOCK: Logo trên, Bộ công thương + Download dưới -->
-          <div class="flex flex-col justify-between items-center gap-6 w-full lg:w-[200px] lg:pr-[45px] shrink-0">
-            <!-- Logo -->
-            <div>
-              <img
-                src="data:image/png;base64,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"
-                alt="Logo"
-                class="w-[88px] h-[88px]"
-              />
-            </div>
-            <!-- Bộ Công Thương -->
-            <div class="mt-auto lg:pt-16">
-              <a
-                href="#"
-                class="inline-block"
-                aria-label="Đã thông báo Bộ Công Thương"
-              >
-                <img
-                  src="/assets/bo-cong-thuong.png"
-                  alt="Đã thông báo Bộ Công Thương"
-                  class="h-[52px] w-auto"
-                />
-              </a>
-            </div>
+    <img
+      src="/assets/footer-image-2.png"
+      alt=""
+      class="hidden lg:block absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="relative w-[85%] max-w-[1320px] mx-auto pt-12 lg:pt-[150px] pb-[60px] lg:whitespace-nowrap">
+      <div class="grid grid-cols-2 gap-x-2 gap-y-8 lg:grid lg:grid-cols-[200px_455px_195px_370px_200px] lg:gap-0 lg:w-[1420px] lg:justify-start lg:-translate-x-[38px]">
+        
+        <div class="hidden lg:flex flex-col justify-between items-center gap-6 w-full lg:w-[200px] lg:pr-[45px] shrink-0">
+          <div>
+            <img src="data:image/png;base64,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" alt="Logo" class="w-[88px] h-[88px]" />
+          </div>
+          <div class="mt-auto lg:pt-16">
+            <a href="#" class="inline-block" aria-label="Đã thông báo Bộ Công Thương">
+              <img src="/assets/bo-cong-thuong.png" alt="Đã thông báo Bộ Công Thương" class="h-[52px] w-auto" />
+            </a>
+          </div>
+        </div>
+  
+        <div class="col-span-2 lg:col-span-1 w-full lg:w-[455px] shrink-0 order-1 lg:order-none">
+          <div class="text-white text-[15px] leading-[26px] mb-6 tracking-[-0.1px]">
+            <p class="font-bold uppercase">CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI<br class="block lg:hidden"/> THANH HẢI</p>
+            <p>18 Phố Gốm – Giang Cao, Bát Tràng, Gia Lâm, Hà Nội</p>
+            <p>0966 55 8808</p>
+            <p>gshaithanh@gmail.com</p>
           </div>
   
-          <!-- INFO BLOCK: Tên cty, địa chỉ, social, download -->
-          <div class="w-full lg:w-[455px] shrink-0">
-            <div class="text-white text-[15px] leading-[26px] mb-6 tracking-[-0.1px]">
-              <p class="font-bold uppercase">CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI THANH HẢI</p>
-              <p>18 Phố Gốm – Giang Cao, Bát Tràng, Gia Lâm, Hà Nội</p>
-              <p>0966 55 8808</p>
-              <p>gshaithanh@gmail.com</p>
-            </div>
-  
-            <!-- Social Icons -->
-            <div class="flex items-center gap-[20px] mb-8">
-              <a
-                href="#"
-                aria-label="Facebook"
-              >
-                <img
-                  src="data:image/svg+xml,%3csvg%20width='18'%20height='19'%20viewBox='0%200%2018%2019'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.25%200H0.75C0.335786%200%200%200.335996%200%200.750469V17.2608C0%2017.6753%200.335786%2018.0113%200.75%2018.0113H8.61436C9.16664%2018.0113%209.61436%2017.5635%209.61436%2017.0113V12.0364C9.61436%2011.4841%209.16664%2011.0364%208.61436%2011.0364H8.26863C7.71634%2011.0364%207.26862%2010.5886%207.26862%2010.0364V9.3181C7.26862%208.76581%207.71634%208.3181%208.26863%208.3181H8.61436C9.16664%208.3181%209.61436%207.87038%209.61436%207.3181V6.31346C9.61436%203.98709%2011.0343%202.72034%2013.1083%202.72034C13.5595%202.72034%2013.9819%202.73561%2014.332%202.75538C14.8325%202.78365%2015.2044%203.20194%2015.2044%203.70329V4.25908C15.2044%204.81119%2014.757%205.25883%2014.2049%205.25908L13.766%205.25928C12.6381%205.25928%2012.4197%205.7956%2012.4197%206.58261V7.3181C12.4197%207.87038%2012.8674%208.3181%2013.4197%208.3181H13.9726C14.5756%208.3181%2015.0415%208.84782%2014.9644%209.44589L14.8719%2010.1642C14.8076%2010.6629%2014.3829%2011.0364%2013.8801%2011.0364H13.4197C12.8674%2011.0364%2012.4197%2011.4841%2012.4197%2012.0364V17.0113C12.4197%2017.5635%2012.8674%2018.0113%2013.4197%2018.0113H17.25C17.6642%2018.0113%2018%2017.6753%2018%2017.2608V0.750469C18%200.335996%2017.6642%200%2017.25%200Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e"
-                  alt="Facebook"
-                  class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
-                />
-              </a>
-              <a
-                href="#"
-                aria-label="YouTube"
-              >
-                <img
-                  src="data:image/svg+xml,%3csvg%20width='26'%20height='18'%20viewBox='0%200%2026%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.4%2012.8571L17.147%209L10.4%205.14286V12.8571ZM25.428%202.79C25.597%203.39429%2025.714%204.20429%2025.792%205.23286C25.883%206.26143%2025.922%207.14857%2025.922%207.92L26%209C26%2011.8157%2025.792%2013.8857%2025.428%2015.21C25.103%2016.3671%2024.349%2017.1129%2023.179%2017.4343C22.568%2017.6014%2021.45%2017.7171%2019.734%2017.7943C18.044%2017.8843%2016.497%2017.9229%2015.067%2017.9229L13%2018C7.553%2018%204.16%2017.7943%202.821%2017.4343C1.651%2017.1129%200.897%2016.3671%200.572%2015.21C0.403%2014.6057%200.286%2013.7957%200.208%2012.7671C0.117%2011.7386%200.0779999%2010.8514%200.0779999%2010.08L0%209C0%206.18429%200.208%204.11429%200.572%202.79C0.897%201.63286%201.651%200.887143%202.821%200.565714C3.432%200.398572%204.55%200.282857%206.266%200.205714C7.956%200.115714%209.503%200.0771428%2010.933%200.0771428L13%200C18.447%200%2021.84%200.205714%2023.179%200.565714C24.349%200.887143%2025.103%201.63286%2025.428%202.79Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e"
-                  alt="YouTube"
-                  class="w-[24px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
-                />
-              </a>
-              <a
-                href="#"
-                aria-label="Pinterest"
-              >
-                <img
-                  src="data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.336%2017.586C7.2%2017.847%208.073%2018%209%2018C11.3869%2018%2013.6761%2017.0518%2015.364%2015.364C17.0518%2013.6761%2018%2011.3869%2018%209C18%207.8181%2017.7672%206.64778%2017.3149%205.55585C16.8626%204.46392%2016.1997%203.47177%2015.364%202.63604C14.5282%201.80031%2013.5361%201.13738%2012.4442%200.685084C11.3522%200.232792%2010.1819%200%209%200C7.8181%200%206.64778%200.232792%205.55585%200.685084C4.46392%201.13738%203.47177%201.80031%202.63604%202.63604C0.948211%204.32387%200%206.61305%200%209C0%2012.825%202.403%2016.11%205.796%2017.406C5.715%2016.704%205.634%2015.543%205.796%2014.742L6.831%2010.296C6.831%2010.296%206.57%209.774%206.57%208.946C6.57%207.704%207.344%206.777%208.226%206.777C9%206.777%209.36%207.344%209.36%208.073C9.36%208.847%208.847%209.954%208.586%2011.016C8.433%2011.898%209.054%2012.672%209.954%2012.672C11.556%2012.672%2012.798%2010.962%2012.798%208.55C12.798%206.39%2011.25%204.914%209.027%204.914C6.489%204.914%204.995%206.804%204.995%208.793C4.995%209.567%205.247%2010.35%205.661%2010.863C5.742%2010.917%205.742%2010.989%205.715%2011.124L5.454%2012.105C5.454%2012.258%205.355%2012.312%205.202%2012.204C4.05%2011.7%203.384%2010.062%203.384%208.739C3.384%205.895%205.4%203.312%209.288%203.312C12.384%203.312%2014.796%205.535%2014.796%208.487C14.796%2011.583%2012.879%2014.067%2010.134%2014.067C9.261%2014.067%208.406%2013.599%208.1%2013.05L7.497%2015.183C7.29%2015.957%206.723%2016.992%206.336%2017.613V17.586Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e"
-                  alt="Pinterest"
-                  class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
-                />
-              </a>
-            </div>
+          <div class="block lg:hidden mb-8">
+            <a href="#" class="inline-block" aria-label="Đã thông báo Bộ Công Thương">
+              <img src="/assets/bo-cong-thuong.png" alt="Đã thông báo Bộ Công Thương" class="h-[52px] w-auto" />
+            </a>
           </div>
   
-          <!-- Overview -->
-          <div class="w-full lg:w-[195px] min-w-0">
-            <h3 class="text-white text-base font-semibold leading-[26px] tracking-[-0.1px] mb-6 whitespace-nowrap">TỔNG QUAN</h3>
-            <div class="leading-[40px] whitespace-nowrap">
-              <a
-                href="/about/"
-                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Về chúng tôi</a
-              ><br />
-              <a
-                href="/showroom/"
-                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Showroom</a
-              ><br />
-              <a
-                href="/factory/"
-                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Nhà xưởng</a
-              ><br />
-              <a
-                href="/contact/"
-                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Liên hệ</a
-              >
-            </div>
+          <div class="hidden lg:flex items-center gap-[20px] mb-8">
+            <a href="#" aria-label="Facebook">
+              <img src="data:image/svg+xml,%3csvg%20width='18'%20height='19'%20viewBox='0%200%2018%2019'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.25%200H0.75C0.335786%200%200%200.335996%200%200.750469V17.2608C0%2017.6753%200.335786%2018.0113%200.75%2018.0113H8.61436C9.16664%2018.0113%209.61436%2017.5635%209.61436%2017.0113V12.0364C9.61436%2011.4841%209.16664%2011.0364%208.61436%2011.0364H8.26863C7.71634%2011.0364%207.26862%2010.5886%207.26862%2010.0364V9.3181C7.26862%208.76581%207.71634%208.3181%208.26863%208.3181H8.61436C9.16664%208.3181%209.61436%207.87038%209.61436%207.3181V6.31346C9.61436%203.98709%2011.0343%202.72034%2013.1083%202.72034C13.5595%202.72034%2013.9819%202.73561%2014.332%202.75538C14.8325%202.78365%2015.2044%203.20194%2015.2044%203.70329V4.25908C15.2044%204.81119%2014.757%205.25883%2014.2049%205.25908L13.766%205.25928C12.6381%205.25928%2012.4197%205.7956%2012.4197%206.58261V7.3181C12.4197%207.87038%2012.8674%208.3181%2013.4197%208.3181H13.9726C14.5756%208.3181%2015.0415%208.84782%2014.9644%209.44589L14.8719%2010.1642C14.8076%2010.6629%2014.3829%2011.0364%2013.8801%2011.0364H13.4197C12.8674%2011.0364%2012.4197%2011.4841%2012.4197%2012.0364V17.0113C12.4197%2017.5635%2012.8674%2018.0113%2013.4197%2018.0113H17.25C17.6642%2018.0113%2018%2017.6753%2018%2017.2608V0.750469C18%200.335996%2017.6642%200%2017.25%200Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e" alt="Facebook" class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity" />
+            </a>
+            <a href="#" aria-label="YouTube">
+              <img src="data:image/svg+xml,%3csvg%20width='26'%20height='18'%20viewBox='0%200%2026%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.4%2012.8571L17.147%209L10.4%205.14286V12.8571ZM25.428%202.79C25.597%203.39429%2025.714%204.20429%2025.792%205.23286C25.883%206.26143%2025.922%207.14857%2025.922%207.92L26%209C26%2011.8157%2025.792%2013.8857%2025.428%2015.21C25.103%2016.3671%2024.349%2017.1129%2023.179%2017.4343C22.568%2017.6014%2021.45%2017.7171%2019.734%2017.7943C18.044%2017.8843%2016.497%2017.9229%2015.067%2017.9229L13%2018C7.553%2018%204.16%2017.7943%202.821%2017.4343C1.651%2017.1129%200.897%2016.3671%200.572%2015.21C0.403%2014.6057%200.286%2013.7957%200.208%2012.7671C0.117%2011.7386%200.0779999%2010.8514%200.0779999%2010.08L0%209C0%206.18429%200.208%204.11429%200.572%202.79C0.897%201.63286%201.651%200.887143%202.821%200.565714C3.432%200.398572%204.55%200.282857%206.266%200.205714C7.956%200.115714%209.503%200.0771428%2010.933%200.0771428L13%200C18.447%200%2021.84%200.205714%2023.179%200.565714C24.349%200.887143%2025.103%201.63286%2025.428%202.79Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e" alt="YouTube" class="w-[24px] h-[18px] opacity-70 hover:opacity-100 transition-opacity" />
+            </a>
+            <a href="#" aria-label="Pinterest">
+              <img src="data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.336%2017.586C7.2%2017.847%208.073%2018%209%2018C11.3869%2018%2013.6761%2017.0518%2015.364%2015.364C17.0518%2013.6761%2018%2011.3869%2018%209C18%207.8181%2017.7672%206.64778%2017.3149%205.55585C16.8626%204.46392%2016.1997%203.47177%2015.364%202.63604C14.5282%201.80031%2013.5361%201.13738%2012.4442%200.685084C11.3522%200.232792%2010.1819%200%209%200C7.8181%200%206.64778%200.232792%205.55585%200.685084C4.46392%201.13738%203.47177%201.80031%202.63604%202.63604C0.948211%204.32387%200%206.61305%200%209C0%2012.825%202.403%2016.11%205.796%2017.406C5.715%2016.704%205.634%2015.543%205.796%2014.742L6.831%2010.296C6.831%2010.296%206.57%209.774%206.57%208.946C6.57%207.704%207.344%206.777%208.226%206.777C9%206.777%209.36%207.344%209.36%208.073C9.36%208.847%208.847%209.954%208.586%2011.016C8.433%2011.898%209.054%2012.672%209.954%2012.672C11.556%2012.672%2012.798%2010.962%2012.798%208.55C12.798%206.39%2011.25%204.914%209.027%204.914C6.489%204.914%204.995%206.804%204.995%208.793C4.995%209.567%205.247%2010.35%205.661%2010.863C5.742%2010.917%205.742%2010.989%205.715%2011.124L5.454%2012.105C5.454%2012.258%205.355%2012.312%205.202%2012.204C4.05%2011.7%203.384%2010.062%203.384%208.739C3.384%205.895%205.4%203.312%209.288%203.312C12.384%203.312%2014.796%205.535%2014.796%208.487C14.796%2011.583%2012.879%2014.067%2010.134%2014.067C9.261%2014.067%208.406%2013.599%208.1%2013.05L7.497%2015.183C7.29%2015.957%206.723%2016.992%206.336%2017.613V17.586Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e" alt="Pinterest" class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity" />
+            </a>
           </div>
+        </div>
   
-          <!-- Products -->
-          <div class="w-full lg:w-[370px] min-w-0">
-            <h3 class="text-white text-base font-semibold leading-[26px] tracking-[-0.1px] mb-6 text-start lg:text-center lg:mr-[65px] whitespace-nowrap">SẢN PHẨM</h3>
-  
-            <!-- Mobile/tablet: condensed product links in one row + see more -->
-            <div class="lg:hidden">
-              <div class="flex flex-nowrap gap-6 overflow-x-auto pb-2">
-                <a
-                  href="/products/ngoi-am-duong/"
-                  class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Ngói âm dương</a
-                >
-                <a
-                  href="/products/ngoi-hai-van-mieu/"
-                  class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Ngói hài văn miếu</a
-                >
-                <a
-                  href="/products/gach-hoa-thong-gio/"
-                  class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Gạch thông gió</a
-                >
-                <a
-                  href="/products/gach-trang-tri/"
-                  class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Gạch trang trí</a
-                >
-              </div>
-  
-              <a
-                href="/products/ngoi-am-duong/"
-                class="inline-flex items-center mt-4 px-4 py-2 border border-white/40 text-white text-sm font-medium uppercase tracking-[0.6px] hover:bg-white/10 transition-colors"
-                >Xem thêm sản phẩm</a
-              >
-            </div>
-  
-            <!-- Desktop: full product links in 2 columns -->
-            <div class="hidden lg:flex gap-[50px]">
-              <div class="leading-[40px] whitespace-nowrap">
-                <a
-                  href="/products/ngoi-am-duong/"
-                  class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Ngói âm dương</a
-                ><br />
-                <a
-                  href="/products/ngoi-hai-van-mieu/"
-                  class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Ngói hài văn miếu</a
-                ><br />
-                <a
-                  href="/products/phu-kien-ngoi/"
-                  class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Phụ kiện mái</a
-                ><br />
-                <a
-                  href="/products/linh-vat-phong-thuy/"
-                  class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Linh vật phong thủy</a
-                >
-              </div>
-              <div class="leading-[40px] whitespace-nowrap">
-                <a
-                  href="/products/gach-hoa-thong-gio/"
-                  class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Gạch thông gió</a
-                ><br />
-                <a
-                  href="/products/gach-trang-tri/"
-                  class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Gạch trang trí</a
-                ><br />
-                <a
-                  href="/products/lan-can-gom-su/"
-                  class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Lan can gốm sứ</a
-                ><br />
-                <a
-                  href="/products/den-gom-su/"
-                  class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Đèn vườn gốm sứ</a
-                >
-              </div>
-            </div>
+        <div class="col-span-1 lg:col-span-1 w-full lg:w-[195px] min-w-0 order-2 lg:order-none">
+          <h3 class="text-white text-[14px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 whitespace-nowrap uppercase">TỔNG QUAN</h3>
+          <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap">
+            <a href="/about/" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Về chúng tôi</a><br />
+            <a href="/showroom/" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Showroom</a><br />
+            <a href="/factory/" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Nhà xưởng</a><br />
+            <a href="/contact/" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Liên hệ</a>
           </div>
+        </div>
   
-          <!-- Customer Service -->
-          <div class="w-full lg:w-[200px] min-w-0">
-            <h3 class="text-white text-base font-semibold leading-[26px] tracking-[-0.1px] mb-6 whitespace-nowrap">DỊCH VỤ KHÁCH HÀNG</h3>
-            <div class="leading-[40px] whitespace-nowrap">
-              <a
-                href="/dich-vu-khach-hang/tai-khoan-cua-toi.html"
-                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Tài khoản</a
-              ><br />
-              <a
-                href="/dich-vu-khach-hang/quy-trinh-dat-hang.html"
-                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Quy trình đặt hàng</a
-              ><br />
-              <a
-                href="/dich-vu-khach-hang/huong-dan-thi-cong.html"
-                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Hướng dẫn thi công</a
-              ><br />
-              <a
-                href="/faq/index.html"
-                class="text-white text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >FAQ</a
-              >
+        <div class="col-span-1 lg:col-span-1 w-full lg:w-[200px] min-w-0 order-3 lg:order-none">
+          <h3 class="text-white text-[16px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 whitespace-nowrap uppercase">DỊCH VỤ KHÁCH HÀNG</h3>
+          <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap">
+            <a href="/dich-vu-khach-hang/tai-khoan-cua-toi.html" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Tài khoản</a><br />
+            <a href="/dich-vu-khach-hang/quy-trinh-dat-hang.html" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Quy trình đặt hàng</a><br />
+            <a href="/dich-vu-khach-hang/huong-dan-thi-cong.html" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Hướng dẫn thi công</a><br />
+            <a href="/faq/index.html" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">FAQ</a>
+          </div>
+        </div>
+  
+        <div class="col-span-2 lg:col-span-1 w-full lg:w-[370px] min-w-0 order-4 lg:order-none">
+          <h3 class="text-white text-[14px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 text-start lg:text-center lg:mr-[65px] whitespace-nowrap uppercase">SẢN PHẨM</h3>
+          <div class="flex gap-[40px] lg:gap-[50px]">
+            <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap flex-1">
+              <a href="/products/ngoi-am-duong/" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Ngói âm dương</a><br />
+              <a href="/products/ngoi-hai-van-mieu/" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Ngói hài văn miếu</a><br />
+              <a href="/products/phu-kien-ngoi/" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Phụ kiện mái</a><br />
+              <a href="/products/linh-vat-phong-thuy/" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Linh vật phong thủy</a>
+            </div>
+            <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap flex-1">
+              <a href="/products/gach-hoa-thong-gio/" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Gạch thông gió</a><br />
+              <a href="/products/gach-trang-tri/" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Gạch trang trí</a><br />
+              <a href="/products/lan-can-gom-su/" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Lan can gốm sứ</a><br />
+              <a href="/products/den-gom-su/" class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors">Đèn vườn gốm sứ</a>
             </div>
           </div>
         </div>
+  
       </div>
+    </div>
   
-      <!-- Bottom Bar -->
-      <div class="relative border-t border-white/20 w-full">
-        <div class="w-[85%] max-w-[1320px] mx-auto py-6">
-          <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-4">
-            <p class="text-[#909090] text-sm leading-[26px] whitespace-nowrap">Copyright © 2022 . All rights reserved</p>
-            <div class="text-[#909090] text-sm leading-[26px] whitespace-nowrap">
-              <a
-                href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html"
-                class="whitespace-nowrap hover:text-secondary transition-colors"
-                >Chính sách vận chuyển</a
-              ><span class="lg:mx-4 mx-2">|</span>
-  
-              <a
-                href="/dich-vu-khach-hang/chinh-sach-doi-tra.html"
-                class="whitespace-nowrap hover:text-secondary transition-colors"
-                >Chính sách đổi trả</a
-              ><span class="lg:mx-4 mx-2">|</span>
-  
-              <a
-                href="/dich-vu-khach-hang/bao-mat-thong-tin.html"
-                class="whitespace-nowrap hover:text-secondary transition-colors"
-                >Bảo mật thông tin</a
-              >
-            </div>
+    <div class="relative border-t border-white/20 w-full">
+      <div class="w-[85%] max-w-[1320px] mx-auto py-6">
+        <div class="flex flex-col-reverse md:flex-row justify-between items-center gap-2 md:gap-4">
+          <p class="text-[#909090] text-[12px] lg:text-sm leading-[26px] whitespace-nowrap text-center">Copyright © 2022 . All rights reserved</p>
+          <div class="text-[#909090] text-[12px] lg:text-sm leading-[26px] whitespace-nowrap flex items-center justify-center flex-wrap md:flex-nowrap">
+            <a href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html" class="whitespace-nowrap hover:text-secondary transition-colors">Chính sách vận chuyển</a>
+            <span class="text-[14px] mx-2 lg:mx-4">|</span>
+            <a href="/dich-vu-khach-hang/chinh-sach-doi-tra.html" class="whitespace-nowrap hover:text-secondary transition-colors">Chính sách đổi trả</a>
+            <span class="text-[14px] mx-2 lg:mx-4">|</span>
+            <a href="/dich-vu-khach-hang/bao-mat-thong-tin.html" class="whitespace-nowrap hover:text-secondary transition-colors">Bảo mật thông tin</a>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </footer>
   
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -2027,5 +1577,337 @@
       offset: 100,
     });
   </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 0. Sticky header scroll effect (home page only)
+    const siteHeader = document.getElementById("site-header");
+    if (siteHeader && siteHeader.classList.contains("fixed")) {
+      const onScroll = () => {
+        if (window.scrollY > 20) {
+          siteHeader.classList.remove("bg-opacity-60");
+          siteHeader.classList.add("bg-opacity-100", "shadow-md");
+        } else {
+          siteHeader.classList.add("bg-opacity-60");
+          siteHeader.classList.remove("bg-opacity-100", "shadow-md");
+        }
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    }
+
+    // 1. Highlight Active Link
+    const currentPath = window.location.pathname;
+
+    // Normalize path (ensure trailing slash for comparison if needed, or matched exactly)
+    // Simple matching:
+    const desktopLinks = document.querySelectorAll(".nav-link");
+    const desktopDropdownLinks = document.querySelectorAll(
+      ".desktop-dropdown-link",
+    );
+    const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+    const mobileProductsToggle = document.getElementById(
+      "mobile-products-toggle",
+    );
+
+    const setActive = (link) => {
+      if (link.classList.contains("nav-link")) {
+        // Desktop: Remove default light text and add underline
+        link.classList.remove("text-[#FFFAF3]");
+        link.classList.add("underline", "underline-offset-8", "decoration-2");
+      } else if (
+        link.classList.contains("mobile-nav-link") ||
+        link.classList.contains("mobile-nav-toggle")
+      ) {
+        // Mobile: Remove default white text
+        link.classList.remove("text-white", "text-white/90");
+      } else if (link.classList.contains("desktop-dropdown-link")) {
+        // Desktop Dropdown: Remove hover text color if any, but specifically remove black text
+        link.classList.remove("text-[#212121]");
+      }
+
+      // Add Active styling - Orange text
+      link.classList.add("text-secondary");
+    };
+
+    // Find matching link
+    // Priority: Exact match -> Parent match (e.g. /products/detail -> /products/)
+    let activeLinkFound = false;
+
+    [
+      ...desktopLinks,
+      ...desktopDropdownLinks,
+      ...mobileLinks,
+      mobileProductsToggle,
+    ]
+      .filter(Boolean)
+      .forEach((link) => {
+        const linkPath = link.getAttribute("data-path");
+        if (
+          currentPath === linkPath ||
+          (currentPath === "/index.html" && linkPath === "/") ||
+          (linkPath !== "/" && currentPath.startsWith(linkPath))
+        ) {
+          setActive(link);
+        }
+      });
+
+    // 2. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById("mobile-menu-button");
+    const closeMenuBtn = document.getElementById("close-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    const toggleMenu = () => {
+      mobileMenu.classList.toggle("hidden");
+      // Prevent body scroll when menu is open
+      if (!mobileMenu.classList.contains("hidden")) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    };
+
+    mobileMenuBtn?.addEventListener("click", toggleMenu);
+    closeMenuBtn?.addEventListener("click", toggleMenu);
+
+    // Close menu when clicking a link
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (!mobileMenu.classList.contains("hidden")) toggleMenu();
+      });
+    });
+
+    // 3. Mobile Products Submenu Toggle
+    if (mobileProductsToggle) {
+      mobileProductsToggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const submenu = document.getElementById("mobile-products-submenu");
+        const icon = document.getElementById("mobile-products-icon");
+        if (submenu.classList.contains("hidden")) {
+          submenu.classList.remove("hidden");
+          submenu.classList.add("flex");
+          if (icon) icon.classList.add("rotate-180");
+        } else {
+          submenu.classList.add("hidden");
+          submenu.classList.remove("flex");
+          if (icon) icon.classList.remove("rotate-180");
+        }
+      });
+    }
+
+    // 4. Mobile SPCT Submenu Toggle
+    const mobileSpctToggle = document.getElementById("mobile-spct-toggle");
+    if (mobileSpctToggle) {
+      mobileSpctToggle.addEventListener("click", (e) => {
+        e.preventDefault();
+        const submenu = document.getElementById("mobile-spct-submenu");
+        const icon = document.getElementById("mobile-spct-icon");
+        if (submenu.classList.contains("hidden")) {
+          submenu.classList.remove("hidden");
+          submenu.classList.add("flex");
+          if (icon) icon.classList.add("rotate-180");
+        } else {
+          submenu.classList.add("hidden");
+          submenu.classList.remove("flex");
+          if (icon) icon.classList.remove("rotate-180");
+        }
+      });
+    }
+  });
+</script>
+
+<script>
+      document.addEventListener("DOMContentLoaded", () => {
+         const valueSection = document.querySelector("#value-title")?.closest("section");
+         if (!valueSection) return;
+
+         const valueImages = Array.from(valueSection.querySelectorAll(".value-image-item"));
+         const valueTitle = valueSection.querySelector("#value-title");
+         const valueDescription = valueSection.querySelector("#value-description");
+
+         if (!valueImages.length || !valueTitle || !valueDescription) return;
+
+         const updateValueSection = (img) => {
+            if (img.classList.contains("active")) return;
+
+            valueImages.forEach((item) => item.classList.remove("active"));
+            img.classList.add("active");
+
+            valueTitle.style.opacity = "0";
+            valueDescription.style.opacity = "0";
+            valueTitle.style.transform = "translateY(10px)";
+            valueDescription.style.transform = "translateY(10px)";
+
+            window.setTimeout(() => {
+               valueTitle.textContent = img.dataset.title || "";
+               valueDescription.textContent = img.dataset.description || "";
+
+               valueTitle.style.opacity = "1";
+               valueDescription.style.opacity = "1";
+               valueTitle.style.transform = "translateY(0)";
+               valueDescription.style.transform = "translateY(0)";
+            }, 300);
+         };
+
+         valueImages.forEach((img) => {
+            img.addEventListener("mouseenter", () => {
+               if (window.innerWidth >= 1024) {
+                  updateValueSection(img);
+               }
+            });
+
+            img.addEventListener("click", () => {
+               updateValueSection(img);
+            });
+         });
+      });
+   </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var swiperEl = document.querySelector(".product-works-swiper");
+    if (!swiperEl) return;
+
+    var slideData =[
+      { title: "CHÙA BÁI ĐÍNH", location: "Ninh Bình", product: "Ngói âm dương nâu đen", link: "#baidinh" },
+      { title: "THIỀN VIỆN TRÚC LÂM", location: "Sapa", product: "Ngói âm dương tráng men", link: "#truclam" },
+      { title: "ĐỀN TRẦN", location: "Nam Định", product: "Ngói âm dương cổ", link: "#dentran" },
+      { title: "CHÙA BÁI ĐÍNH", location: "Ninh Bình", product: "Ngói âm dương nâu đen", link: "#baidinh" },
+      { title: "THIỀN VIỆN TRÚC LÂM", location: "Sapa", product: "Ngói âm dương tráng men", link: "#truclam" },
+      { title: "ĐỀN TRẦN", location: "Nam Định", product: "Ngói âm dương cổ", link: "#dentran" },
+      { title: "CHÙA BÁI ĐÍNH", location: "Ninh Bình", product: "Ngói âm dương nâu đen", link: "#baidinh" },
+      { title: "THIỀN VIỆN TRÚC LÂM", location: "Sapa", product: "Ngói âm dương tráng men", link: "#truclam" },
+      { title: "ĐỀN TRẦN", location: "Nam Định", product: "Ngói âm dương cổ", link: "#dentran" },
+      { title: "CHÙA BÁI ĐÍNH", location: "Ninh Bình", product: "Ngói âm dương nâu đen", link: "#baidinh" },
+      { title: "THIỀN VIỆN TRÚC LÂM", location: "Sapa", product: "Ngói âm dương tráng men", link: "#truclam" },
+      { title: "ĐỀN TRẦN", location: "Nam Định", product: "Ngói âm dương cổ", link: "#dentran" },
+    ];
+
+    var titleEl = document.getElementById("slide-title");
+    var locationEl = document.getElementById("slide-location");
+    var productEl = document.getElementById("slide-product");
+    var linkEl = document.getElementById("slide-link");
+    var metaEl = document.getElementById("slide-meta");
+    var textRevealTimeout;
+
+    var productWorksSwiper = new Swiper(".product-works-swiper", {
+      slidesPerView: "auto",
+      centeredSlides: true,
+      slideToClickedSlide: true,
+      watchSlidesProgress: true,
+      spaceBetween: 32,
+      // Tăng thời gian chuyển slide lên 1.2 giây để chuyển động thật êm ái
+      speed: 1200,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+    });
+
+    // Hàm thiết lập hiệu ứng mờ/hiện và trượt chữ
+    function setTextVisibility(isVisible) {
+      var opacity = isVisible ? "1" : "0";
+      var transform = isVisible ? "translateY(0)" : "translateY(12px)";
+      
+      if (titleEl) {
+        titleEl.style.opacity = opacity;
+        titleEl.style.transform = transform;
+      }
+      if (metaEl) {
+        metaEl.style.opacity = opacity;
+        metaEl.style.transform = transform;
+      }
+      if (linkEl) {
+        linkEl.style.opacity = opacity;
+        linkEl.style.transform = transform;
+      }
+    }
+
+    // Hàm load dữ liệu mới vào Text
+    function updateTextBlock(index) {
+      var currentData = slideData[index];
+      if (!currentData) return;
+
+      if (titleEl) titleEl.textContent = currentData.title;
+      if (locationEl) locationEl.textContent = currentData.location;
+      if (productEl) productEl.textContent = currentData.product;
+      if (linkEl) linkEl.href = currentData.link;
+    }
+
+    // Setup Text đầu tiên khi mới vô
+    updateTextBlock(productWorksSwiper.realIndex);
+    setTextVisibility(true);
+
+    // Event Swiper mượt mà được tinh gọn hoàn toàn
+    productWorksSwiper.on("slideChange", function (swiper) {
+      // 1. Cho text mờ dần đi ngay lập tức
+      setTextVisibility(false);
+
+      // 2. Clear timeout cũ (Phòng trường hợp khách dùng tay vuốt lướt qua nhiều ảnh 1 lúc)
+      if (textRevealTimeout) clearTimeout(textRevealTimeout);
+
+      // 3. Chờ text cũ mờ đi (400ms khớp với CSS class .slide-text-transition) rồi load data mới lên
+      textRevealTimeout = setTimeout(function () {
+        updateTextBlock(swiper.realIndex);
+        
+        requestAnimationFrame(function () {
+          setTextVisibility(true);
+        });
+      }, 400);
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const faqComponents = document.querySelectorAll("[data-faq-component]");
+
+    faqComponents.forEach((component) => {
+      const faqItems = component.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        const button = item.querySelector(".faq-button");
+        const content = item.querySelector(".faq-content");
+        const icon = item.querySelector(".faq-icon");
+
+        if (!button || !content || !icon) return;
+
+        button.addEventListener("click", () => {
+          const isOpen = !content.classList.contains("hidden");
+
+          faqItems.forEach((otherItem) => {
+            if (otherItem === item) return;
+
+            const otherContent = otherItem.querySelector(".faq-content");
+            const otherIcon = otherItem.querySelector(".faq-icon");
+
+            if (otherContent) {
+              otherContent.classList.add("hidden");
+            }
+
+            if (otherIcon) {
+              otherIcon.classList.add("rotate-180");
+              otherIcon.classList.replace("bg-textPrimary", "bg-gray-200");
+              otherIcon.classList.replace("text-white", "text-gray-500");
+            }
+          });
+
+          if (isOpen) {
+            content.classList.add("hidden");
+            icon.classList.add("rotate-180");
+            icon.classList.replace("bg-textPrimary", "bg-gray-200");
+            icon.classList.replace("text-white", "text-gray-500");
+          } else {
+            content.classList.remove("hidden");
+            icon.classList.remove("rotate-180");
+            icon.classList.replace("bg-gray-200", "bg-textPrimary");
+            icon.classList.replace("text-gray-500", "text-white");
+          }
+        });
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
