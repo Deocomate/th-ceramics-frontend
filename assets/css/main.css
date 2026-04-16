@@ -1351,6 +1351,10 @@ body {
   margin-top: 40px;
 }
 
+.mt-\[45px\]{
+  margin-top: 45px;
+}
+
 .mt-\[50px\]{
   margin-top: 50px;
 }
@@ -2880,6 +2884,10 @@ body {
   white-space: nowrap;
 }
 
+.text-nowrap{
+  text-wrap: nowrap;
+}
+
 .break-words{
   overflow-wrap: break-word;
 }
@@ -3871,10 +3879,6 @@ body {
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pt-\[15px\]{
-  padding-top: 15px;
 }
 
 .pt-\[170px\]{
