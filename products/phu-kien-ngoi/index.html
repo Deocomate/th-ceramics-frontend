@@ -36,660 +36,659 @@
     class="min-h-screen flex flex-col bg-background-secondary"
   >
     <header
-  id="site-header"
-  class="bg-primary sticky top-0 text-white h-[49px] xl:h-[94px] z-50 transition-all duration-300"
->
-  <div class="hidden xl:block w-[85%] max-w-[1320px] mx-auto h-full">
-    <nav class="flex items-center justify-between h-full">
-      <!-- Logo -->
-      <div class="flex-shrink-0 mr-[8%]">
-        <a href="/" class="block">
-          <img
-            src="data:image/png;base64,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"
-            alt="Logo"
-            class="h-[69px] w-[69px]"
-          />
-        </a>
-      </div>
-
-      <!-- Desktop Navigation -->
-      <div
-        class="hidden xl:flex items-center 2xl:gap-10 xl:gap-6 gap-6 flex-1 justify-end mr-8"
-        id="desktop-menu"
-      >
-        <a
-          href="/"
-          class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-          data-path="/"
-          >trang chủ</a
-        >
-        <a
-          href="/about/"
-          class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-          data-path="/about/"
-          >về chúng tôi</a
-        >
-        <div class="relative group">
-          <a
-            href="/products/ngoi-am-duong/"
-            class="nav-link flex items-center gap-[5px] text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-            data-path="/products/"
-          >
-            <span>sản phẩm</span>
-            <svg
-              class="w-[7px] h-[7px]"
-              viewBox="0 0 7 7"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
-                fill="currentColor"
+      id="site-header"
+      class="bg-primary sticky top-0 text-white h-[49px] xl:h-[94px] z-50 transition-all duration-300"
+    >
+      <div class="hidden xl:block w-[85%] max-w-[1320px] mx-auto h-full">
+        <nav class="flex items-center justify-between h-full">
+          <!-- Logo -->
+          <div class="flex-shrink-0 mr-[8%]">
+            <a href="/" class="block">
+              <img
+                src="data:image/png;base64,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"
+                alt="Logo"
+                class="h-[69px] w-[69px]"
               />
-            </svg>
-          </a>
-          <!-- Desktop Dropdown -->
+            </a>
+          </div>
+    
+          <!-- Desktop Navigation -->
           <div
-            class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary"
+            class="hidden xl:flex items-center 2xl:gap-10 xl:gap-6 gap-6 flex-1 justify-end mr-8"
+            id="desktop-menu"
           >
-            <ul class="py-2 flex flex-col">
-              <li>
+            <a
+              href="/"
+              class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
+              data-path="/"
+              >trang chủ</a
+            >
+            <a
+              href="/about/"
+              class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
+              data-path="/about/"
+              >về chúng tôi</a
+            >
+            <div class="relative group">
+              <a
+                href="/products/ngoi-am-duong/"
+                class="nav-link flex items-center gap-[5px] text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
+                data-path="/products/"
+              >
+                <span>sản phẩm</span>
+                <svg
+                  class="w-[7px] h-[7px]"
+                  viewBox="0 0 7 7"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+              <!-- Desktop Dropdown -->
+              <div
+                class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary"
+              >
+                <ul class="py-2 flex flex-col">
+                  <li>
+                    <a
+                      href="/products/ngoi-am-duong/"
+                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/ngoi-am-duong/"
+                      >Ngói Âm Dương</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/ngoi-hai-van-mieu/"
+                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/ngoi-hai-van-mieu/"
+                      >Ngói Hài Văn Miếu</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/gach-hoa-thong-gio/"
+                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-hoa-thong-gio/"
+                      >Gạch Hoa Thông Gió</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/phu-kien-ngoi/"
+                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/phu-kien-ngoi/"
+                      >Phụ Kiện Ngói</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/gach-trang-tri/"
+                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-trang-tri/"
+                      >Gạch Trang Trí</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/lan-can-gom-su/"
+                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/lan-can-gom-su/"
+                      >Lan Can Gốm Sứ</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/gach-co-bat-trang/"
+                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-co-bat-trang/"
+                      >Gạch Cổ Bát Tràng</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/linh-vat-phong-thuy/"
+                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/linh-vat-phong-thuy/"
+                      >Linh Vật Phong Thủy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/den-gom-su/"
+                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/den-gom-su/"
+                      >Đèn Gốm Sứ</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="relative group">
+              <a
+                href="#"
+                class="nav-link flex items-center gap-[5px] text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
+              >
+                <span>SPCT</span>
+                <svg
+                  class="w-[7px] h-[7px]"
+                  viewBox="0 0 7 7"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </a>
+              <!-- Quick access detail pages dropdown -->
+              <div
+                class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary overflow-y-auto max-h-[60vh]"
+              >
+                <ul class="py-2 flex flex-col">
+                  <li>
+                    <a
+                      href="/products/ngoi-am-duong/detail.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/ngoi-am-duong/detail.html"
+                      >Ngói Âm Dương</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/gach-co-bat-trang/detail-200x200x50.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-co-bat-trang/detail-200x200x50.html"
+                      >Gạch Bát 200x200x50</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/gach-co-bat-trang/detail-220x110x60.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-co-bat-trang/detail-220x110x60.html"
+                      >Gạch Bát 220x110x60</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/gach-co-bat-trang/detail-300x100x30.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-co-bat-trang/detail-300x100x30.html"
+                      >Gạch Bát 300x100x30</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/gach-co-bat-trang/detail-300x150x60.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-co-bat-trang/detail-300x150x60.html"
+                      >Gạch Bát 300x150x60</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/gach-co-bat-trang/detail-300x300x50.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-co-bat-trang/detail-300x300x50.html"
+                      >Gạch Bát 300x300x50</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/gach-hoa-thong-gio/detail.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-hoa-thong-gio/detail.html"
+                      >Gạch hoa thông gió</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/gach-trang-tri/detail.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-trang-tri/detail.html"
+                      >Gạch trang trí</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/linh-vat-phong-thuy/detail.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/linh-vat-phong-thuy/detail.html"
+                      >Linh vật phong thủy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/ngoi-hai-van-mieu/ngoi-hai-co-nau-den.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/ngoi-hai-van-mieu/ngoi-hai-co-nau-den.html"
+                      >Ngói Hài Cổ Nâu Đen</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/ngoi-hai-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/ngoi-hai-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
+                      >Ngói Văn Miếu Ghi Ánh Kim</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/phu-kien-ngoi/bo-noc-chu-van.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/phu-kien-ngoi/bo-noc-chu-van.html"
+                      >Bộ Nóc Chữ Vạn</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/products/phu-kien-ngoi/ngoi-bo-noc.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/phu-kien-ngoi/ngoi-bo-noc.html"
+                      >Ngói Bó Nóc</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a
+              href="/projects/"
+              class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
+              data-path="/projects/"
+              >Dự án</a
+            >
+            <a
+              href="/factory/"
+              class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
+              data-path="/factory/"
+              >Xưởng sản xuất</a
+            >
+            <a
+              href="/news/"
+              class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
+              data-path="/news/"
+              >Tin tức</a
+            >
+            <a
+              href="/contact/"
+              class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
+              data-path="/contact/"
+              >liên hệ</a
+            >
+          </div>
+    
+          <!-- Desktop Icons -->
+          <div class="hidden xl:flex items-center gap-5">
+            <button
+              class="hover:text-secondary transition-colors"
+              aria-label="Search"
+            >
+              <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-4 h-4" />
+            </button>
+            <a
+              href="/cart/gio-hang.html"
+              class="hover:text-secondary transition-colors"
+              aria-label="Cart"
+            >
+              <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-4 h-4" />
+            </a>
+            <a
+              href="/dich-vu-khach-hang/trang-thai-don-hang.html"
+              class="hover:text-secondary transition-colors"
+              aria-label="User"
+            >
+              <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-4 h-4" />
+            </a>
+          </div>
+        </nav>
+      </div>
+    
+      <!-- Mobile Header -->
+      <div
+        class="xl:hidden h-full bg-[linear-gradient(90deg,_#2F302C_0%,_#262720_100%)]"
+      >
+        <nav class="relative flex items-center justify-center h-full">
+          <button
+            id="mobile-menu-button"
+            class="absolute left-[23px] text-white hover:text-secondary transition-colors"
+            aria-label="Toggle menu"
+          >
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%2014H15C15.552%2014%2016%2013.552%2016%2013C16%2012.448%2015.552%2012%2015%2012H8C7.448%2012%207%2012.448%207%2013C7%2013.552%207.448%2014%208%2014Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%204H15C15.552%204%2016%203.552%2016%203C16%202.448%2015.552%202%2015%202H1C0.448%202%200%202.448%200%203C0%203.552%200.448%204%201%204Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%209H15C15.552%209%2016%208.552%2016%208C16%207.448%2015.552%207%2015%207H1C0.448%207%200%207.448%200%208C0%208.552%200.448%209%201%209Z'%20fill='%23F7F7F7'/%3e%3c/svg%3e" alt="menu" class="w-4 h-4" />
+          </button>
+    
+          <a href="/" class="block">
+            <img
+              src="data:image/png;base64,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"
+              alt="Logo"
+              class="h-[29px] w-[29px]"
+            />
+          </a>
+    
+          <div class="absolute right-[23px] flex items-center gap-[14px]">
+            <button
+              class="hover:text-secondary transition-colors"
+              aria-label="Search"
+            >
+              <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-4 h-4" />
+            </button>
+            <a
+              href="/cart/gio-hang.html"
+              class="hover:text-secondary transition-colors"
+              aria-label="Cart"
+            >
+              <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-4 h-4" />
+            </a>
+            <a
+              href="/dich-vu-khach-hang/trang-thai-don-hang.html"
+              class="hover:text-secondary transition-colors"
+              aria-label="User"
+            >
+              <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-4 h-4" />
+            </a>
+          </div>
+        </nav>
+      </div>
+    
+      <!-- Mobile Navigation -->
+      <div
+        id="mobile-menu"
+        class="hidden fixed inset-0 bg-primary z-50 overflow-y-auto"
+      >
+        <div
+          class="w-[85%] max-w-[1320px] mx-auto py-4 relative min-h-full flex flex-col"
+        >
+          <div class="flex justify-between items-center mb-8 shrink-0">
+            <a href="/" class="block">
+              <img
+                src="data:image/png;base64,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"
+                alt="Logo"
+                class="h-[69px] w-[69px]"
+              />
+            </a>
+            <div class="flex items-center gap-5">
+              <button
+                class="hover:text-secondary transition-colors"
+                aria-label="Search"
+              >
+                <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-4 h-4" />
+              </button>
+              <a
+                href="/cart/gio-hang.html"
+                class="hover:text-secondary transition-colors"
+                aria-label="Cart"
+              >
+                <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-4 h-4" />
+              </a>
+              <a
+                href="/dich-vu-khach-hang/trang-thai-don-hang.html"
+                class="hover:text-secondary transition-colors"
+                aria-label="User"
+              >
+                <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-4 h-4" />
+              </a>
+              <button
+                id="close-menu-button"
+                class="text-white hover:text-secondary transition-colors"
+              >
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col space-y-6 flex-grow">
+            <a
+              href="/"
+              class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/"
+              >trang chủ</a
+            >
+            <a
+              href="/about/"
+              class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/about/"
+              >về chúng tôi</a
+            >
+            <div class="flex flex-col">
+              <button
+                id="mobile-products-toggle"
+                class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
+                data-path="/products/"
+              >
+                <span>sản phẩm</span>
+                <svg
+                  class="w-[10px] h-[10px] transition-transform duration-300 transform"
+                  id="mobile-products-icon"
+                  viewBox="0 0 7 7"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+              <div
+                id="mobile-products-submenu"
+                class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2"
+              >
                 <a
                   href="/products/ngoi-am-duong/"
-                  class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/ngoi-am-duong/"
                   >Ngói Âm Dương</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/ngoi-hai-van-mieu/"
-                  class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/ngoi-hai-van-mieu/"
                   >Ngói Hài Văn Miếu</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/gach-hoa-thong-gio/"
-                  class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/gach-hoa-thong-gio/"
                   >Gạch Hoa Thông Gió</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/phu-kien-ngoi/"
-                  class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/phu-kien-ngoi/"
                   >Phụ Kiện Ngói</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/gach-trang-tri/"
-                  class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/gach-trang-tri/"
                   >Gạch Trang Trí</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/lan-can-gom-su/"
-                  class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/lan-can-gom-su/"
                   >Lan Can Gốm Sứ</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/gach-co-bat-trang/"
-                  class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/gach-co-bat-trang/"
                   >Gạch Cổ Bát Tràng</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/linh-vat-phong-thuy/"
-                  class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/linh-vat-phong-thuy/"
-                  >Linh Vật Phong Thủy</a
+                  >Linh vật Phong Thủy</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/den-gom-su/"
-                  class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/den-gom-su/"
                   >Đèn Gốm Sứ</a
                 >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="relative group">
-          <a
-            href="#"
-            class="nav-link flex items-center gap-[5px] text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-          >
-            <span>SPCT</span>
-            <svg
-              class="w-[7px] h-[7px]"
-              viewBox="0 0 7 7"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
-                fill="currentColor"
-              />
-            </svg>
-          </a>
-          <!-- Quick access detail pages dropdown -->
-          <div
-            class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary overflow-y-auto max-h-[60vh]"
-          >
-            <ul class="py-2 flex flex-col">
-              <li>
+              </div>
+            </div>
+    
+            <div class="flex flex-col">
+              <button
+                id="mobile-spct-toggle"
+                class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
+              >
+                <span>SPCT</span>
+                <svg
+                  class="w-[10px] h-[10px] transition-transform duration-300 transform"
+                  id="mobile-spct-icon"
+                  viewBox="0 0 7 7"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+              <div
+                id="mobile-spct-submenu"
+                class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2"
+              >
                 <a
                   href="/products/ngoi-am-duong/detail.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/ngoi-am-duong/detail.html"
                   >Ngói Âm Dương</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/gach-co-bat-trang/detail-200x200x50.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/gach-co-bat-trang/detail-200x200x50.html"
                   >Gạch Bát 200x200x50</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/gach-co-bat-trang/detail-220x110x60.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/gach-co-bat-trang/detail-220x110x60.html"
                   >Gạch Bát 220x110x60</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/gach-co-bat-trang/detail-300x100x30.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/gach-co-bat-trang/detail-300x100x30.html"
                   >Gạch Bát 300x100x30</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/gach-co-bat-trang/detail-300x150x60.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/gach-co-bat-trang/detail-300x150x60.html"
                   >Gạch Bát 300x150x60</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/gach-co-bat-trang/detail-300x300x50.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/gach-co-bat-trang/detail-300x300x50.html"
                   >Gạch Bát 300x300x50</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/gach-hoa-thong-gio/detail.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/gach-hoa-thong-gio/detail.html"
                   >Gạch hoa thông gió</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/gach-trang-tri/detail.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/gach-trang-tri/detail.html"
                   >Gạch trang trí</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/linh-vat-phong-thuy/detail.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/linh-vat-phong-thuy/detail.html"
                   >Linh vật phong thủy</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/ngoi-hai-van-mieu/ngoi-hai-co-nau-den.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/ngoi-hai-van-mieu/ngoi-hai-co-nau-den.html"
                   >Ngói Hài Cổ Nâu Đen</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/ngoi-hai-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/ngoi-hai-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
                   >Ngói Văn Miếu Ghi Ánh Kim</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/phu-kien-ngoi/bo-noc-chu-van.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/phu-kien-ngoi/bo-noc-chu-van.html"
                   >Bộ Nóc Chữ Vạn</a
                 >
-              </li>
-              <li>
                 <a
                   href="/products/phu-kien-ngoi/ngoi-bo-noc.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
                   data-path="/products/phu-kien-ngoi/ngoi-bo-noc.html"
                   >Ngói Bó Nóc</a
                 >
-              </li>
-            </ul>
+              </div>
+            </div>
+            <a
+              href="/projects/"
+              class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/projects/"
+              >Dự án</a
+            >
+            <a
+              href="/factory/"
+              class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/factory/"
+              >Xưởng sản xuất</a
+            >
+            <a
+              href="/news/"
+              class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/news/"
+              >Tin tức</a
+            >
+            <a
+              href="/contact/"
+              class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/contact/"
+              >liên hệ</a
+            >
           </div>
-        </div>
-        <a
-          href="/projects/"
-          class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-          data-path="/projects/"
-          >Dự án</a
-        >
-        <a
-          href="/factory/"
-          class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-          data-path="/factory/"
-          >Xưởng sản xuất</a
-        >
-        <a
-          href="/news/"
-          class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-          data-path="/news/"
-          >Tin tức</a
-        >
-        <a
-          href="/contact/"
-          class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-          data-path="/contact/"
-          >liên hệ</a
-        >
-      </div>
-
-      <!-- Desktop Icons -->
-      <div class="hidden xl:flex items-center gap-5">
-        <button
-          class="hover:text-secondary transition-colors"
-          aria-label="Search"
-        >
-          <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-4 h-4" />
-        </button>
-        <a
-          href="/cart/gio-hang.html"
-          class="hover:text-secondary transition-colors"
-          aria-label="Cart"
-        >
-          <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-4 h-4" />
-        </a>
-        <a
-          href="/dich-vu-khach-hang/trang-thai-don-hang.html"
-          class="hover:text-secondary transition-colors"
-          aria-label="User"
-        >
-          <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-4 h-4" />
-        </a>
-      </div>
-    </nav>
-  </div>
-
-  <!-- Mobile Header -->
-  <div
-    class="xl:hidden h-full bg-[linear-gradient(90deg,_#2F302C_0%,_#262720_100%)]"
-  >
-    <nav class="relative flex items-center justify-center h-full">
-      <button
-        id="mobile-menu-button"
-        class="absolute left-[23px] text-white hover:text-secondary transition-colors"
-        aria-label="Toggle menu"
-      >
-        <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%2014H15C15.552%2014%2016%2013.552%2016%2013C16%2012.448%2015.552%2012%2015%2012H8C7.448%2012%207%2012.448%207%2013C7%2013.552%207.448%2014%208%2014Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%204H15C15.552%204%2016%203.552%2016%203C16%202.448%2015.552%202%2015%202H1C0.448%202%200%202.448%200%203C0%203.552%200.448%204%201%204Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%209H15C15.552%209%2016%208.552%2016%208C16%207.448%2015.552%207%2015%207H1C0.448%207%200%207.448%200%208C0%208.552%200.448%209%201%209Z'%20fill='%23F7F7F7'/%3e%3c/svg%3e" alt="menu" class="w-4 h-4" />
-      </button>
-
-      <a href="/" class="block">
-        <img
-          src="data:image/png;base64,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"
-          alt="Logo"
-          class="h-[29px] w-[29px]"
-        />
-      </a>
-
-      <div class="absolute right-[23px] flex items-center gap-[14px]">
-        <button
-          class="hover:text-secondary transition-colors"
-          aria-label="Search"
-        >
-          <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-4 h-4" />
-        </button>
-        <a
-          href="/cart/gio-hang.html"
-          class="hover:text-secondary transition-colors"
-          aria-label="Cart"
-        >
-          <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-4 h-4" />
-        </a>
-        <a
-          href="/dich-vu-khach-hang/trang-thai-don-hang.html"
-          class="hover:text-secondary transition-colors"
-          aria-label="User"
-        >
-          <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-4 h-4" />
-        </a>
-      </div>
-    </nav>
-  </div>
-
-  <!-- Mobile Navigation -->
-  <div
-    id="mobile-menu"
-    class="hidden fixed inset-0 bg-primary z-50 overflow-y-auto"
-  >
-    <div
-      class="w-[85%] max-w-[1320px] mx-auto py-4 relative min-h-full flex flex-col"
-    >
-      <div class="flex justify-between items-center mb-8 shrink-0">
-        <a href="/" class="block">
           <img
-            src="data:image/png;base64,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"
-            alt="Logo"
-            class="h-[69px] w-[69px]"
+            src="/assets/background-decorate.svg"
+            alt="background-decorate"
+            class="fixed top-[395px] left-[124px] w-[480px] h-[480px] pointer-events-none opacity-100"
           />
-        </a>
-        <div class="flex items-center gap-5">
-          <button
-            class="hover:text-secondary transition-colors"
-            aria-label="Search"
-          >
-            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-4 h-4" />
-          </button>
-          <a
-            href="/cart/gio-hang.html"
-            class="hover:text-secondary transition-colors"
-            aria-label="Cart"
-          >
-            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-4 h-4" />
-          </a>
-          <a
-            href="/dich-vu-khach-hang/trang-thai-don-hang.html"
-            class="hover:text-secondary transition-colors"
-            aria-label="User"
-          >
-            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-4 h-4" />
-          </a>
-          <button
-            id="close-menu-button"
-            class="text-white hover:text-secondary transition-colors"
-          >
-            <svg
-              class="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
-          </button>
         </div>
       </div>
-      <div class="flex flex-col space-y-6 flex-grow">
-        <a
-          href="/"
-          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-          data-path="/"
-          >trang chủ</a
-        >
-        <a
-          href="/about/"
-          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-          data-path="/about/"
-          >về chúng tôi</a
-        >
-        <div class="flex flex-col">
-          <button
-            id="mobile-products-toggle"
-            class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
-            data-path="/products/"
-          >
-            <span>sản phẩm</span>
-            <svg
-              class="w-[10px] h-[10px] transition-transform duration-300 transform"
-              id="mobile-products-icon"
-              viewBox="0 0 7 7"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-          <div
-            id="mobile-products-submenu"
-            class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2"
-          >
-            <a
-              href="/products/ngoi-am-duong/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/ngoi-am-duong/"
-              >Ngói Âm Dương</a
-            >
-            <a
-              href="/products/ngoi-hai-van-mieu/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/ngoi-hai-van-mieu/"
-              >Ngói Hài Văn Miếu</a
-            >
-            <a
-              href="/products/gach-hoa-thong-gio/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/gach-hoa-thong-gio/"
-              >Gạch Hoa Thông Gió</a
-            >
-            <a
-              href="/products/phu-kien-ngoi/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/phu-kien-ngoi/"
-              >Phụ Kiện Ngói</a
-            >
-            <a
-              href="/products/gach-trang-tri/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/gach-trang-tri/"
-              >Gạch Trang Trí</a
-            >
-            <a
-              href="/products/lan-can-gom-su/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/lan-can-gom-su/"
-              >Lan Can Gốm Sứ</a
-            >
-            <a
-              href="/products/gach-co-bat-trang/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/gach-co-bat-trang/"
-              >Gạch Cổ Bát Tràng</a
-            >
-            <a
-              href="/products/linh-vat-phong-thuy/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/linh-vat-phong-thuy/"
-              >Linh vật Phong Thủy</a
-            >
-            <a
-              href="/products/den-gom-su/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/den-gom-su/"
-              >Đèn Gốm Sứ</a
-            >
-          </div>
-        </div>
-
-        <div class="flex flex-col">
-          <button
-            id="mobile-spct-toggle"
-            class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
-          >
-            <span>SPCT</span>
-            <svg
-              class="w-[10px] h-[10px] transition-transform duration-300 transform"
-              id="mobile-spct-icon"
-              viewBox="0 0 7 7"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-          <div
-            id="mobile-spct-submenu"
-            class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2"
-          >
-            <a
-              href="/products/ngoi-am-duong/detail.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/ngoi-am-duong/detail.html"
-              >Ngói Âm Dương</a
-            >
-            <a
-              href="/products/gach-co-bat-trang/detail-200x200x50.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/gach-co-bat-trang/detail-200x200x50.html"
-              >Gạch Bát 200x200x50</a
-            >
-            <a
-              href="/products/gach-co-bat-trang/detail-220x110x60.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/gach-co-bat-trang/detail-220x110x60.html"
-              >Gạch Bát 220x110x60</a
-            >
-            <a
-              href="/products/gach-co-bat-trang/detail-300x100x30.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/gach-co-bat-trang/detail-300x100x30.html"
-              >Gạch Bát 300x100x30</a
-            >
-            <a
-              href="/products/gach-co-bat-trang/detail-300x150x60.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/gach-co-bat-trang/detail-300x150x60.html"
-              >Gạch Bát 300x150x60</a
-            >
-            <a
-              href="/products/gach-co-bat-trang/detail-300x300x50.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/gach-co-bat-trang/detail-300x300x50.html"
-              >Gạch Bát 300x300x50</a
-            >
-            <a
-              href="/products/gach-hoa-thong-gio/detail.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/gach-hoa-thong-gio/detail.html"
-              >Gạch hoa thông gió</a
-            >
-            <a
-              href="/products/gach-trang-tri/detail.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/gach-trang-tri/detail.html"
-              >Gạch trang trí</a
-            >
-            <a
-              href="/products/linh-vat-phong-thuy/detail.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/linh-vat-phong-thuy/detail.html"
-              >Linh vật phong thủy</a
-            >
-            <a
-              href="/products/ngoi-hai-van-mieu/ngoi-hai-co-nau-den.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/ngoi-hai-van-mieu/ngoi-hai-co-nau-den.html"
-              >Ngói Hài Cổ Nâu Đen</a
-            >
-            <a
-              href="/products/ngoi-hai-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/ngoi-hai-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
-              >Ngói Văn Miếu Ghi Ánh Kim</a
-            >
-            <a
-              href="/products/phu-kien-ngoi/bo-noc-chu-van.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/phu-kien-ngoi/bo-noc-chu-van.html"
-              >Bộ Nóc Chữ Vạn</a
-            >
-            <a
-              href="/products/phu-kien-ngoi/ngoi-bo-noc.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/phu-kien-ngoi/ngoi-bo-noc.html"
-              >Ngói Bó Nóc</a
-            >
-          </div>
-        </div>
-        <a
-          href="/projects/"
-          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-          data-path="/projects/"
-          >Dự án</a
-        >
-        <a
-          href="/factory/"
-          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-          data-path="/factory/"
-          >Xưởng sản xuất</a
-        >
-        <a
-          href="/news/"
-          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-          data-path="/news/"
-          >Tin tức</a
-        >
-        <a
-          href="/contact/"
-          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-          data-path="/contact/"
-          >liên hệ</a
-        >
-      </div>
-      <img
-        src="/assets/background-decorate.svg"
-        alt="background-decorate"
-        class="fixed top-[395px] left-[124px] w-[480px] h-[480px] pointer-events-none opacity-100"
-      />
-    </div>
-  </div>
-</header>
-
- <!-- Catalog Sticky Button -->
-<a href="#" id="catalog-sticky-btn" class="fixed right-0 top-[124px] z-[45] hover:opacity-90 transition-all duration-300 bg-[#AB6520] w-[28px] h-[90px] flex items-center justify-center">
-    <span class="catalog-text-vertical">CATALOG</span>
-</a>
-
+    </header>
+    
+        <!-- Catalog Sticky Button -->
+    <a href="#" id="catalog-sticky-btn" class="fixed right-0 top-[124px] z-[45] hover:opacity-90 transition-all duration-300 bg-[#AB6520] w-[28px] h-[90px] flex items-center justify-center">
+        <span class="catalog-text-vertical">CATALOG</span>
+    </a>
 
     <main class="flex-grow bg-background-secondary overflow-hidden">
       <!-- Banner Section -->
@@ -744,7 +743,7 @@
             class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-25"
           />
           <h2
-            class="text-2xl md:text-3xl font-semibold text-[#C47526] uppercase"
+            class="text-[20px] lg:text-3xl font-semibold text-[#C47526] uppercase"
           >
             Danh Mục Sản Phẩm
           </h2>
@@ -1479,7 +1478,7 @@
           <!-- Title -->
           <div class="text-center mb-8 lg:mb-16" data-aos="fade-up">
             <h2
-              class="text-2xl lg:text-3xl font-semibold text-[#C47526] uppercase"
+              class="text-[20px] lg:text-3xl font-semibold text-[#C47526] uppercase"
             >
               Dấu Ấn Trên Những Công Trình
             </h2>
@@ -1632,86 +1631,229 @@
           />
         </div>
 
-            <!-- FAQ Content -->
-            <div class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto" data-faq-component>
-              <!-- Section Title -->
-              <div class="w-[85%] max-w-[1320px] mx-auto text-center mb-16" data-aos="fade-up">
-                <h2 class="font-archivo text-[24px] md:text-[32px] font-semibold text-secondary uppercase leading-[36px] md:leading-[45px]">Câu hỏi thường gặp</h2>
-              </div>
+        <!-- FAQ Content -->
+        <div
+          class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto"
+          data-faq-component
+        >
+          <!-- Section Title -->
+          <div
+            class="w-[85%] max-w-[1320px] mx-auto text-center mb-10 md:mb-16"
+            data-aos="fade-up"
+          >
+            <h2
+              class="font-archivo text-[24px] md:text-[32px] font-semibold text-secondary uppercase leading-[36px] md:leading-[45px]"
+            >
+              Câu hỏi thường gặp
+            </h2>
+          </div>
         
-              <!-- FAQ Card -->
-              <div class="bg-white px-6 md:px-10 py-8 shadow-lg relative" data-aos="fade-up" data-aos-delay="200">
-                <!-- FAQ Item 1 -->
-                <div class="faq-item border-b border-gray-200 pb-10 mb-2">
-                  <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                    <span class="text-[14px] md:text-[18px] pr-4">Showroom của Gốm sứ Thanh Hải ở đâu?</span>
-                    <span class="faq-icon w-6 h-6 flex-shrink-0 bg-textPrimary rounded-full flex items-center justify-center text-white transition-all duration-300">
-                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-                    </span>
-                  </button>
-                  <div class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed block overflow-hidden transition-all duration-300">
-                    <p class="mb-2"><span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi chỉ có duy nhất 1 showroom tại địa chỉ: Số 18 Phố Gốm - Giang Cao - Bát Tràng, Gia Lâm, Hà Nội. Ngoài địa chỉ này, chúng tôi không có bất kỳ đại lý đại diện nào khác tại các tỉnh thành trên cả nước.</p>
-                    <a href="#" class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] md:text-[18px]">Xem map tại đây</a>
-                  </div>
-                </div>
-        
-                <!-- FAQ Item 2 -->
-                <div class="faq-item border-b border-gray-200 pb-10 mb-2">
-                  <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                    <span class="text-[14px] md:text-[18px] pr-4">Tôi có thể đặt màu sắc và mẫu mã theo yêu cầu riêng không?</span>
-                    <span class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180">
-                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-                    </span>
-                  </button>
-                  <div class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed hidden overflow-hidden transition-all duration-300">
-                    <p><span class="font-bold text-textPrimary">Trả lời:</span> Vui lòng liên hệ với chúng tôi để biết thêm chi tiết về việc đặt màu sắc và mẫu mã theo yêu cầu riêng.</p>
-                  </div>
-                </div>
-        
-                <!-- FAQ Item 3 -->
-                <div class="faq-item border-b border-gray-200 pb-10 mb-2">
-                  <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                    <span class="text-[14px] md:text-[18px] pr-4">Tôi có thể tham quan xưởng sản xuất hay không?</span>
-                    <span class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180">
-                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-                    </span>
-                  </button>
-                  <div class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed hidden overflow-hidden transition-all duration-300">
-                    <p><span class="font-bold text-textPrimary">Trả lời:</span> Quý khách hoàn toàn có thể tham quan xưởng sản xuất của chúng tôi. Vui lòng liên hệ trước để được sắp xếp đón tiếp chu đáo nhất.</p>
-                  </div>
-                </div>
-        
-                <!-- FAQ Item 4 -->
-                <div class="faq-item border-b border-gray-200 pb-10 mb-2">
-                  <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                    <span class="text-[14px] md:text-[18px] pr-4">Chi phí vận chuyển và phạm vi giao hàng như thế nào?</span>
-                    <span class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180">
-                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-                    </span>
-                  </button>
-                  <div class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed hidden overflow-hidden transition-all duration-300">
-                    <p><span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi giao hàng toàn quốc. Chi phí vận chuyển sẽ phụ thuộc vào khối lượng đơn hàng và khoảng cách địa lý.</p>
-                  </div>
-                </div>
-        
-                <!-- FAQ Item 5 -->
-                <div class="faq-item mb-8">
-                  <button class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none">
-                    <span class="text-[14px] md:text-[18px] pr-4">Đặc tính thủ công của ngói âm dương cần lưu ý gì?</span>
-                    <span class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180">
-                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
-                    </span>
-                  </button>
-                  <div class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed hidden overflow-hidden transition-all duration-300">
-                    <p><span class="font-bold text-textPrimary">Trả lời:</span> Ngói thủ công mang vẻ đẹp độc bản, màu sắc có độ chuyển tự nhiên do nhiệt độ lò, không viên nào giống viên nào 100%.</p>
-                  </div>
-                </div>
-                
-                <div class="mt-8 text-right">
-                  <a href="/faq/index.html" class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] md:text-[18px]">Xem thêm</a>
-                </div>
+          <!-- FAQ Card -->
+          <div
+            class="bg-white px-6 md:px-10 py-8 shadow-lg relative"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <!-- FAQ Item 1 -->
+            <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+              <button
+                class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+              >
+                <span class="text-[14px] md:text-[18px] pr-4"
+                  >Showroom của Gốm sứ Thanh Hải ở đâu?</span
+                >
+                <span
+                  class="faq-icon w-6 h-6 flex-shrink-0 bg-textPrimary rounded-full flex items-center justify-center text-white transition-all duration-300"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed block overflow-hidden transition-all duration-300"
+              >
+                <p class="mb-2">
+                  <span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi chỉ
+                  có duy nhất 1 showroom tại địa chỉ: Số 18 Phố Gốm - Giang Cao - Bát
+                  Tràng, Gia Lâm, Hà Nội. Ngoài địa chỉ này, chúng tôi không có bất kỳ
+                  đại lý đại diện nào khác tại các tỉnh thành trên cả nước.
+                </p>
+                <a
+                  href="#"
+                  class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] md:text-[18px]"
+                  >Xem map tại đây</a
+                >
               </div>
             </div>
+        
+            <!-- FAQ Item 2 -->
+            <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+              <button
+                class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+              >
+                <span class="text-[14px] md:text-[18px] pr-4"
+                  >Tôi có thể đặt màu sắc và mẫu mã theo yêu cầu riêng không?</span
+                >
+                <span
+                  class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed hidden overflow-hidden transition-all duration-300"
+              >
+                <p>
+                  <span class="font-bold text-textPrimary">Trả lời:</span> Vui lòng liên
+                  hệ với chúng tôi để biết thêm chi tiết về việc đặt màu sắc và mẫu mã
+                  theo yêu cầu riêng.
+                </p>
+              </div>
+            </div>
+        
+            <!-- FAQ Item 3 -->
+            <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+              <button
+                class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+              >
+                <span class="text-[14px] md:text-[18px] pr-4"
+                  >Tôi có thể tham quan xưởng sản xuất hay không?</span
+                >
+                <span
+                  class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed hidden overflow-hidden transition-all duration-300"
+              >
+                <p>
+                  <span class="font-bold text-textPrimary">Trả lời:</span> Quý khách
+                  hoàn toàn có thể tham quan xưởng sản xuất của chúng tôi. Vui lòng liên
+                  hệ trước để được sắp xếp đón tiếp chu đáo nhất.
+                </p>
+              </div>
+            </div>
+        
+            <!-- FAQ Item 4 -->
+            <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+              <button
+                class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+              >
+                <span class="text-[14px] md:text-[18px] pr-4"
+                  >Chi phí vận chuyển và phạm vi giao hàng như thế nào?</span
+                >
+                <span
+                  class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed hidden overflow-hidden transition-all duration-300"
+              >
+                <p>
+                  <span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi
+                  giao hàng toàn quốc. Chi phí vận chuyển sẽ phụ thuộc vào khối lượng
+                  đơn hàng và khoảng cách địa lý.
+                </p>
+              </div>
+            </div>
+        
+            <!-- FAQ Item 5 -->
+            <div class="faq-item mb-8">
+              <button
+                class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+              >
+                <span class="text-[14px] md:text-[18px] pr-4"
+                  >Đặc tính thủ công của ngói âm dương cần lưu ý gì?</span
+                >
+                <span
+                  class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 15l7-7 7 7"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed hidden overflow-hidden transition-all duration-300"
+              >
+                <p>
+                  <span class="font-bold text-textPrimary">Trả lời:</span> Ngói thủ công
+                  mang vẻ đẹp độc bản, màu sắc có độ chuyển tự nhiên do nhiệt độ lò,
+                  không viên nào giống viên nào 100%.
+                </p>
+              </div>
+            </div>
+        
+            <div class="mt-8 text-right">
+              <a
+                href="/faq/index.html"
+                class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] md:text-[18px]"
+                >Xem thêm</a
+              >
+            </div>
+          </div>
+        </div>
         
               </section>
     </main>
