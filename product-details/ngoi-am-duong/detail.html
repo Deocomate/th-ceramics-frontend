@@ -795,21 +795,19 @@
       </section>
 
       <!-- Sub Breadcrumb -->
-      <div class="w-[85%] max-w-[1320px] mx-auto py-8">
-        <p class="font-semibold text-primary/60 uppercase text-[14px] md:text-base">
-          <a
-            href="/"
-            class="hover:text-primary transition-colors"
-            >Trang chủ</a
+      <div
+        class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
+      >
+        <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
+          <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
+          <span class="mx-1">/</span>
+          <a href="/products/ngoi-am-duong/" class="hover:text-secondary transition-colors"
+            >Sản phẩm</a
           >
           <span class="mx-1">/</span>
-            <a
-              href="/products/ngoi-am-duong/"
-              class="hover:text-primary transition-colors"
-              >Sản phẩm</a
-            >
-            <span class="mx-1">/</span>
-          <span class="text-primary font-semibold pb-1">NGÓI ÂM DƯƠNG</span>
+          <span class="text-primary font-semibold border-primary"
+            >NGÓI ÂM DƯƠNG</span
+          >
         </p>
         <hr class="border-t border-black/10 mt-4 w-full" />
       </div>
@@ -1130,1352 +1128,1354 @@
       </section>
 
       <section
-        class="w-full py-12 lg:py-16 bg-background-secondary"
-        data-aos="fade-up"
-        data-weight-calculator
-      >
-        <div class="w-[85%] max-w-[1320px] mx-auto">
-          <div class="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-24 items-start">
-            <!-- Left: Calculator Form -->
-            <div class="space-y-4 col-span-1 lg:col-span-3">
-              <!-- Dropdowns Row -->
-              <h2
-                class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-5 uppercase"
-              >
-                CÁCH TÍNH KHỐI LƯỢNG
-              </h2>
-              <hr class="border-t border-black/10 mt-4 w-full" />
-              <div class="grid grid-cols-2 gap-6">
-                <div class="relative">
-                  <select
-                    id="roof-style"
-                    class="w-full h-[44px] px-4 pr-10 border border-black/10 rounded-sm bg-transparent text-[13px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
-                  >
-                    <option value="" disabled selected>KIỂU MÁI</option>
-                    <option value="2-slope" data-factor="1.0">
-                      Mái dốc 2 mặt (Mái chữ A)
-                    </option>
-                    <option value="4-slope" data-factor="1.0">
-                      Mái dốc 4 mặt (Mái bánh ít)
-                    </option>
-                    <option value="chong-diem" data-factor="1.0">
-                      Mái chồng diêm
-                    </option>
-                    <option value="dao" data-factor="1.1">Mái đao</option>
-                  </select>
-                  <div
-                    class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
-                  >
-                    <svg
-                      class="w-4 h-4 text-secondary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      ></path>
-                    </svg>
-                  </div>
-                </div>
-                <div class="relative">
-                  <select
-                    id="tile-type"
-                    class="w-full h-[44px] px-4 pr-10 border border-black/10 rounded-sm bg-transparent text-[13px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
-                  >
-                    <option value="" disabled selected>LOẠI NGÓI</option>
-                    <option value="dai" data-am="27" data-duong="27" data-diem="5">
-                      Ngói Âm Dương cỡ Đại
-                    </option>
-                    <option value="trung" data-am="40" data-duong="27" data-diem="5">
-                      Ngói Âm Dương cỡ Trung
-                    </option>
-                    <option value="tieu" data-am="60" data-duong="60" data-diem="5">
-                      Ngói Âm Dương cỡ Tiểu
-                    </option>
-                  </select>
-                  <div
-                    class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
-                  >
-                    <svg
-                      class="w-4 h-4 text-secondary"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      ></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-      
-              <!-- DIỆN TÍCH 1 -->
-              <div class="flex flex-col md:flex-row gap-4 items-end">
-                <div class="w-full md:w-[150px] shrink-0 pb-1">
-                  <span class="font-semibold text-primary uppercase text-base"
-                    >DIỆN TÍCH 1</span
-                  >
-                </div>
-                <div class="flex-1 w-full grid grid-cols-12 gap-7 items-end">
-                  <div class="col-span-12 md:col-span-3">
-                    <div class="relative">
-                      <select
-                        class="w-full h-[45px] px-3 pr-6 border border-black/10 rounded-sm bg-transparent text-[11px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
-                      >
-                        <option selected>HÌNH CHỮ NHẬT</option>
-                        <option>HÌNH THANG</option>
-                      </select>
-                      <div
-                        class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary"
-                      >
-                        <svg
-                          class="w-3 h-3"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-span-6 md:col-span-3 flex flex-col gap-2">
-                    <label
-                      class="text-[16px] uppercase font-semibold text-primary text-center"
-                      >CHIỀU DÀI
-                      <span
-                        class="block text-[12px] font-normal italic normal-case text-secondary"
-                        >Chiều tính diềm mái</span
-                      ></label
-                    >
-                    <div class="relative">
-                      <input
-                        type="text"
-                        placeholder="00"
-                        class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
-                      />
-                      <span
-                        class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
-                        >m</span
-                      >
-                    </div>
-                  </div>
-                  <div class="col-span-6 md:col-span-3 flex flex-col gap-2">
-                    <label
-                      class="text-[16px] uppercase font-semibold text-primary text-center"
-                      >CHIỀU RỘNG
-                      <span class="block text-[12px] opacity-0">-</span></label
-                    >
-                    <div class="relative">
-                      <input
-                        type="text"
-                        placeholder="00"
-                        class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
-                      />
-                      <span
-                        class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
-                        >m</span
-                      >
-                    </div>
-                  </div>
-                  <div
-                    class="col-span-4 md:col-span-3 flex flex-col gap-2"
-                    style="display: none"
-                  >
-                    <label
-                      class="text-[16px] uppercase font-semibold text-primary text-center"
-                      >CHIỀU CAO
-                      <span class="block text-[12px] opacity-0">-</span></label
-                    >
-                    <div class="relative">
-                      <input
-                        type="text"
-                        placeholder="00"
-                        class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
-                      />
-                      <span
-                        class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
-                        >m</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-      
-              <!-- DIỆN TÍCH 2 -->
-              <div class="flex flex-col md:flex-row gap-4 items-end">
-                <div class="w-full md:w-[150px] shrink-0 pb-1 flex flex-col">
-                  <span class="font-semibold text-primary uppercase text-base"
-                    >DIỆN TÍCH 2</span
-                  >
-                  <button
-                    class="text-[14px] text-secondary underline text-left font-medium ml-4"
-                  >
-                    Loại bỏ
-                  </button>
-                </div>
-                <div class="flex-1 w-full grid grid-cols-12 gap-7 items-end">
-                  <div class="col-span-12 md:col-span-3">
-                    <div class="relative">
-                      <select
-                        class="w-full h-[45px] px-3 pr-6 border border-black/10 rounded-sm bg-transparent text-[11px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
-                      >
-                        <option>HÌNH CHỮ NHẬT</option>
-                        <option selected>HÌNH THANG</option>
-                      </select>
-                      <div
-                        class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary"
-                      >
-                        <svg
-                          class="w-3 h-3"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-span-4 md:col-span-3 flex flex-col gap-2">
-                    <label
-                      class="text-[16px] uppercase font-semibold text-primary text-center"
-                      >ĐÁY LỚN
-                      <span
-                        class="block text-[12px] font-normal italic normal-case text-secondary"
-                        >Chiều tính diềm mái</span
-                      ></label
-                    >
-                    <div class="relative">
-                      <input
-                        type="text"
-                        placeholder="00"
-                        class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
-                      />
-                      <span
-                        class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
-                        >m</span
-                      >
-                    </div>
-                  </div>
-                  <div class="col-span-4 md:col-span-3 flex flex-col gap-2">
-                    <label
-                      class="text-[16px] uppercase font-semibold text-primary text-center"
-                      >ĐÁY BÉ
-                      <span class="block text-[12px] opacity-0">-</span></label
-                    >
-                    <div class="relative">
-                      <input
-                        type="text"
-                        placeholder="00"
-                        class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
-                      />
-                      <span
-                        class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
-                        >m</span
-                      >
-                    </div>
-                  </div>
-                  <div class="col-span-4 md:col-span-3 flex flex-col gap-2">
-                    <label
-                      class="text-[16px] uppercase font-semibold text-primary text-center"
-                      >CHIỀU CAO
-                      <span class="block text-[12px] opacity-0">-</span></label
-                    >
-                    <div class="relative">
-                      <input
-                        type="text"
-                        placeholder="00"
-                        class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
-                      />
-                      <span
-                        class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
-                        >m</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="text-center">
-                <button class="text-secondary font-semibold text-sm underline">
-                  + Thêm diện tích
-                </button>
-              </div>
-      
-              <button
-                class="w-full py-4 bg-secondary text-white text-sm uppercase tracking-widest rounded-sm shadow-md hover:bg-secondary/90 hover:scale-[1.01] transition-all duration-300"
-              >
-                TÍNH TOÁN KHỐI LƯỢNG
-              </button>
-      
-              <!-- Results -->
-              <div class="pt-8">
-                <div class="grid grid-cols-12 gap-4 pb-4 items-center">
-                  <div class="col-span-6 md:col-span-5">
-                    <h4
-                      class="font-semibold text-primary uppercase text-base tracking-wider"
-                    >
-                      KẾT QUẢ
-                    </h4>
-                  </div>
-                  <div class="col-span-3 md:col-span-4 text-center">
-                    <span class="text-base font-semibold text-primary">Định mức</span>
-                  </div>
-                  <div class="col-span-3 md:col-span-3 text-right">
-                    <span class="text-base font-semibold text-primary">Số lượng</span>
-                  </div>
-                </div>
-      
-                <div class="space-y-4">
-                  <!-- Ngói âm -->
-                  <div class="grid grid-cols-12 gap-4 items-center">
-                    <div class="col-span-3 md:col-span-3">
-                      <span class="text-primary/80 font-medium text-base"
-                        >Ngói âm</span
-                      >
-                    </div>
-                    <div class="col-span-3 md:col-span-2 text-right">
-                      <span class="text-primary/80 font-medium text-base">00 m²</span>
-                    </div>
-                    <div class="col-span-3 md:col-span-4 text-center">
-                      <span class="text-primary/80 font-medium text-base"
-                        >40 viên/m²</span
-                      >
-                    </div>
-                    <div class="col-span-3 md:col-span-3 text-right">
-                      <span class="text-primary font-extrabold text-[16px]"
-                        >00 viên</span
-                      >
-                    </div>
-                  </div>
-      
-                  <!-- Ngói dương -->
-                  <div class="grid grid-cols-12 gap-4 items-center">
-                    <div class="col-span-3 md:col-span-3">
-                      <span class="text-primary/80 font-medium text-base"
-                        >Ngói dương</span
-                      >
-                    </div>
-                    <div class="col-span-3 md:col-span-2 text-right">
-                      <span class="text-primary/80 font-medium text-base">00 m²</span>
-                    </div>
-                    <div class="col-span-3 md:col-span-4 text-center">
-                      <span class="text-primary/80 font-medium text-base"
-                        >27 viên/m²</span
-                      >
-                    </div>
-                    <div class="col-span-3 md:col-span-3 text-right">
-                      <span class="text-primary font-extrabold text-[16px]"
-                        >00 viên</span
-                      >
-                    </div>
-                  </div>
-      
-                  <!-- Diềm -->
-                  <div class="grid grid-cols-12 gap-4 items-center">
-                    <div class="col-span-3 md:col-span-3">
-                      <span class="text-primary/80 font-medium text-base">Diềm</span>
-                    </div>
-                    <div class="col-span-3 md:col-span-2 text-right">
-                      <span class="text-primary/80 font-medium text-base">00 md</span>
-                    </div>
-                    <div class="col-span-3 md:col-span-4 text-center">
-                      <span class="text-primary/80 font-medium text-base"
-                        >5 cặp/md</span
-                      >
-                    </div>
-                    <div class="col-span-3 md:col-span-3 text-right">
-                      <span class="text-primary font-extrabold text-[16px]"
-                        >00 cặp</span
-                      >
-                    </div>
-                  </div>
-                </div>
-                <hr class="border-black/10 mt-8 mb-8" />
-              </div>
-      
-              <!-- Extras -->
-              <div class="space-y-6">
-                <input type="checkbox" id="extra-loss" class="peer sr-only" />
-                <label
-                  for="extra-loss"
-                  class="w-fit flex items-center gap-2 cursor-pointer select-none peer-checked:[&_.loss-checkbox-box]:border-secondary peer-checked:[&_.loss-checkbox-box]:bg-secondary peer-checked:[&_.loss-checkbox-icon]:opacity-100 peer-focus-visible:[&_.loss-checkbox-box]:ring-2 peer-focus-visible:[&_.loss-checkbox-box]:ring-secondary/40 peer-focus-visible:[&_.loss-checkbox-box]:ring-offset-1"
-                >
-                  <span
-                    class="loss-checkbox-box relative flex h-5 w-5 items-center justify-center border border-black/20 rounded-none bg-transparent transition-all"
-                  >
-                    <svg
-                      class="loss-checkbox-icon h-3 w-3 text-white opacity-0 transition-opacity"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.5"
-                    >
-                      <path
-                        d="M4 10.5L8 14.5L16 6.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                  </span>
-                  <span class="text-[15px] font-medium text-primary/80"
-                    >Cộng thêm hao hụt</span
-                  >
-                  <span class="group relative inline-block ml-1">
-                    <span
-                      class="w-5 h-5 rounded-full text-primary border-primary border flex items-center justify-center text-[12px] font-bold"
-                    >
-                      ?
-                    </span>
-                    <span
-                      class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-primary text-white text-[12px] rounded-sm opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity shadow-lg z-10 leading-relaxed"
-                    >
-                      Tính toán dựa trên độ dốc mái thực tế và hao hụt vận chuyển/thi
-                      công.
-                    </span>
-                  </span>
-                </label>
-      
-                <div class="pl-7 space-y-4 hidden peer-checked:block">
-                  <label class="flex items-center gap-3 cursor-pointer group">
-                    <div class="relative flex items-center justify-center">
-                      <input
-                        type="radio"
-                        name="loss-rate"
-                        class="peer appearance-none w-5 h-5 border border-black/30 rounded-full checked:border-primary transition-all cursor-pointer"
-                        checked
-                      />
-                      <div
-                        class="absolute w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"
-                      ></div>
-                    </div>
-                    <span class="text-[14px] text-primary/70 font-medium"
-                      >Thêm 15% (Độ dốc mái)</span
-                    >
-                  </label>
-                  <label class="flex items-center gap-3 cursor-pointer group">
-                    <div class="relative flex items-center justify-center">
-                      <input
-                        type="radio"
-                        name="loss-rate"
-                        class="peer appearance-none w-5 h-5 border border-black/30 rounded-full checked:border-primary transition-all cursor-pointer"
-                      />
-                      <div
-                        class="absolute w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"
-                      ></div>
-                    </div>
-                    <span class="text-[14px] text-primary/70 font-medium"
-                      >Thêm 20% (Độ dốc mái + hao vỡ)</span
-                    >
-                  </label>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Right: Diagrams -->
-            <div class="flex flex-col gap-12 lg:gap-20 col-span-1 lg:col-span-2">
-              <img
-                src="/assets/weight-01.svg"
-                alt="Cách đo mái chữ nhật"
-                class="w-full h-auto object-contain"
-              />
-              <img
-                src="/assets/weight-02.svg"
-                alt="Cách đo mái hình thang"
-                class="w-full h-auto object-contain"
-              />
-              <img
-                src="/assets/weight-03.svg"
-                alt="Cách đo diện tích mái"
-                class="w-full h-auto object-contain"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      
-            <section class="w-full bg-background-secondary" data-aos="fade-up">
-        <div class="w-[85%] max-w-[1320px] mx-auto">
-          <h2
-            class="text-[20px] md:text-3xl font-bold text-center text-secondary mb-12 uppercase tracking-wide"
-          >
-            ỨNG DỤNG ĐA DẠNG
-          </h2>
-      
-          <!-- Top: 3 images with absolute labels -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
-            <!-- Item 1 -->
-            <div class="relative group overflow-hidden shadow-lg">
-              <img
-                src="/assets/am-duong-detail-01.png"
-                alt="Ốp mái"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div class="absolute bottom-6 left-1/2 -translate-x-1/2">
-                <div
-                  class="border border-white/60 bg-black/20 backdrop-blur-sm px-10 py-2"
-                >
-                  <span
-                    class="text-white font-semibold text-sm tracking-[0.2em] uppercase whitespace-nowrap"
-                    >ỐP MÁI</span
-                  >
-                </div>
-              </div>
-            </div>
-      
-            <!-- Item 2 -->
-            <div class="relative group overflow-hidden shadow-lg">
-              <img
-                src="/assets/am-duong-detail-02.png"
-                alt="Bờ rào"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div class="absolute bottom-6 left-1/2 -translate-x-1/2">
-                <div
-                  class="border border-white/60 bg-black/20 backdrop-blur-sm px-10 py-2"
-                >
-                  <span
-                    class="text-white font-semibold text-sm tracking-[0.2em] uppercase whitespace-nowrap"
-                    >BỜ RÀO</span
-                  >
-                </div>
-              </div>
-            </div>
-      
-            <!-- Item 3 -->
-            <div class="relative group overflow-hidden shadow-lg">
-              <img
-                src="/assets/am-duong-detail-03.png"
-                alt="Trang trí tường"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div class="absolute bottom-6 left-1/2 -translate-x-1/2">
-                <div
-                  class="border border-white/60 bg-black/20 backdrop-blur-sm px-10 py-2"
-                >
-                  <span
-                    class="text-white font-semibold text-sm tracking-[0.2em] uppercase whitespace-nowrap text-center"
-                    >TRANG TRÍ TƯỜNG</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Bottom: 5 icons with text -->
-          <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
-            <!-- Icon 1 -->
-            <div class="flex flex-col items-center gap-6 group cursor-pointer">
-              <div
-                class="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2"
-              >
-                <img
-                  src="data:image/svg+xml,%3csvg%20width='61'%20height='55'%20viewBox='0%200%2061%2055'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M53.3797%2026.6157H7.51855V53.334H53.3797V26.6157Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M1.5%2026.6156H59.0949L30.305%201.5L1.5%2026.6156ZM1.5%2026.6156H59.0949'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M29.8819%2035.7634H31.0159C34.8263%2035.7634%2037.911%2038.8632%2037.911%2042.6585V53.3337H22.9717V42.6585C22.9717%2038.8481%2026.0714%2035.7634%2029.8667%2035.7634H29.8819Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3c/svg%3e"
-                  alt="Tư gia"
-                  class="w-full h-full object-contain"
-                />
-              </div>
-              <span
-                class="text-secondary font-bold text-lg tracking-wide group-hover:text-primary transition-colors"
-                >Tư gia</span
-              >
-            </div>
-      
-            <!-- Icon 2 -->
-            <div class="flex flex-col items-center gap-6 group cursor-pointer">
-              <div
-                class="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2"
-              >
-                <img
-                  src="data:image/svg+xml,%3csvg%20width='75'%20height='65'%20viewBox='0%200%2075%2065'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M60.1073%2039.5284H14.2461V63.0563H60.1073V39.5284Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M55.9339%2013.1125H18.4043V26.071H55.9339V13.1125Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M36.6104%2045.4863H37.7444C41.5548%2045.4863%2044.6395%2048.5861%2044.6395%2052.3814V63.0566H29.7002V52.3814C29.7002%2048.571%2032.7999%2045.4863%2036.5952%2045.4863H36.6104Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M56.0102%2026.0712H18.3445C18.3445%2026.0712%208.37993%2034.5388%201.5%2032.7546C1.5%2032.7546%203.79837%2039.5286%2015.4565%2039.5286H58.9134C70.5715%2039.5286%2072.8699%2032.7546%2072.8699%2032.7546C65.9899%2034.5539%2056.0254%2026.0712%2056.0254%2026.0712H56.0102Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M49.9614%201.5H24.3922C24.3922%201.5%2017.6181%208.81843%2012.9609%207.26099C12.9609%207.26099%2014.5184%2013.1127%2022.4416%2013.1127H51.9422C59.8654%2013.1127%2061.4229%207.26099%2061.4229%207.26099C56.7506%208.80331%2049.9916%201.5%2049.9916%201.5H49.9614Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
-                  alt="Đền chùa"
-                  class="w-full h-full object-contain"
-                />
-              </div>
-              <span
-                class="text-secondary font-bold text-lg tracking-wide group-hover:text-primary transition-colors"
-                >Đền chùa</span
-              >
-            </div>
-      
-            <!-- Icon 3 -->
-            <div class="flex flex-col items-center gap-6 group cursor-pointer">
-              <div
-                class="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2"
-              >
-                <img
-                  src="data:image/svg+xml,%3csvg%20width='49'%20height='57'%20viewBox='0%200%2049%2057'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M47.3758%2010.6027H1.51465V55.0122H47.3758V10.6027Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M23.8789%2037.442H25.013C28.8234%2037.442%2031.908%2040.5418%2031.908%2044.3371V55.0123H16.9688V44.3371C16.9688%2040.5266%2020.0685%2037.442%2023.8638%2037.442H23.8789Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M8.41018%201.5H40.4661C44.2766%201.5%2047.3612%204.59975%2047.3612%208.39505V10.5875H1.5V8.39505C1.5%204.58463%204.59975%201.5%208.39505%201.5H8.41018Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M13.1724%2017.4373H6.74609V25.9502H13.1724V17.4373Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M27.6587%2017.4373H21.2324V25.9502H27.6587V17.4373Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M42.1587%2017.4373H35.7324V25.9502H42.1587V17.4373Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M42.1587%2030.4258H35.7324V38.9387H42.1587V30.4258Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M13.1724%2030.4258H6.74609V38.9387H13.1724V30.4258Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3c/svg%3e"
-                  alt="Resort - Khách sạn"
-                  class="w-full h-full object-contain text-secondary fill-secondary"
-                />
-              </div>
-              <span
-                class="text-secondary font-bold text-lg tracking-wide group-hover:text-primary transition-colors text-center"
-                >Resort - Khách sạn</span
-              >
-            </div>
-      
-            <!-- Icon 4 -->
-            <div class="flex flex-col items-center gap-6 group cursor-pointer">
-              <div
-                class="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2"
-              >
-                <img
-                  src="/assets/nha-hang.svg"
-                  alt="Nhà hàng"
-                  class="w-full h-full object-contain"
-                />
-              </div>
-              <span
-                class="text-secondary font-bold text-lg tracking-wide group-hover:text-primary transition-colors"
-                >Nhà hàng</span
-              >
-            </div>
-      
-            <!-- Icon 5 -->
-            <div class="flex flex-col items-center gap-6 group cursor-pointer">
-              <div
-                class="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2"
-              >
-                <img
-                  src="data:image/svg+xml,%3csvg%20width='49'%20height='58'%20viewBox='0%200%2049%2058'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M47.3612%2029.3267H1.5V56.2542H47.3612V29.3267Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M23.8632%2038.5464H24.9973C28.8077%2038.5464%2031.8923%2041.6704%2031.8923%2045.4954V56.2542H16.9531V45.4954C16.9531%2041.6552%2020.0529%2038.5464%2023.8482%2038.5464H23.8632Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M24.4229%2011.8779C13.8838%2011.8779%205.06839%2019.3451%202.78516%2029.342H46.0608C43.7775%2019.3451%2034.9621%2011.8779%2024.4229%2011.8779Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M31.9685%2012.9293C31.5451%209.08906%2028.3545%206.10217%2024.4232%206.10217C20.4918%206.10217%2017.3164%209.08906%2016.8779%2012.9293C19.2368%2012.0607%2021.777%2011.5883%2024.4232%2011.5883C27.0693%2011.5883%2029.6096%2012.0607%2031.9685%2012.9293Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-miterlimit='10'/%3e%3cpath%20d='M24.4238%206.1022V1.5'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
-                  alt="Miếu mộ"
-                  class="w-full h-full object-contain"
-                />
-              </div>
-              <span
-                class="text-secondary font-bold text-lg tracking-wide group-hover:text-primary transition-colors"
-                >Miếu mộ</span
-              >
-            </div>
-          </div>
-        </div>
-      </section>      <section
-        class="w-full py-16 lg:py-20 bg-background-secondary"
-        data-aos="fade-up"
-      >
-        <div class="w-[85%] max-w-[1320px] mx-auto">
-          <h2
-            class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-12 uppercase"
-          >
-            HƯỚNG DẪN LẮP ĐẶT
-          </h2>
-      
-          <!-- Tabs Header -->
-          <div class="flex justify-center mb-16 px-4">
-            <div class="flex border-b border-black/10 w-full max-w-[600px]">
-              <button
-                class="flex-1 pb-4 text-lg md:text-2xl font-semibold uppercase text-secondary border-b-4 border-secondary transition-all"
-              >
-                MÁI BÊ TÔNG
-              </button>
-              <button
-                class="flex-1 pb-4 text-lg md:text-2xl font-semibold uppercase text-secondary border-b-4 border-transparent hover:text-secondary transition-all"
-              >
-                MÁI GỖ
-              </button>
-            </div>
-          </div>
-      
-          <!-- Content Grid -->
-          <div class="space-y-16 md:space-y-20">
-            <!-- First Row -->
-            <div class="flex flex-col md:flex-row items-center gap-4">
-              <!-- Step 1 -->
-              <div
-                class="flex-1 w-full bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
-              >
-                <div class="flex h-24">
-                  <div
-                    class="w-12 flex items-center justify-center bg-white text-secondary font-bold font-advent text-4xl lg:text-[40px] border-b border-secondary"
-                  >
-                    1
-                  </div>
-                  <div
-                    class="flex-1 flex items-center px-8 bg-secondary text-white text-[20px] font-semibold leading-tight"
-                  >
-                    Chống thấm mái, tóc khô cắt
-                  </div>
-                </div>
-                <div
-                  class="aspect-[6/5] w-full bg-[#f0f0f0] p-4 flex items-center justify-center"
-                ></div>
-              </div>
-      
-              <!-- Arrow -->
-              <div
-                class="hidden md:flex shrink-0 items-center justify-center px-1 lg:px-2"
-              >
-                <div class="flex items-center -space-x-1.5 lg:-space-x-2">
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-4 lg:w-7 h-auto opacity-20"
-                  />
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-40"
-                  />
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-70"
-                  />
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-100"
-                  />
-                </div>
-              </div>
-      
-              <!-- Step 2 -->
-              <div
-                class="flex-1 w-full bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
-              >
-                <div class="flex h-24">
-                  <div
-                    class="w-12 flex items-center justify-center bg-white text-secondary font-bold font-advent text-4xl lg:text-[40px] border-b border-secondary"
-                  >
-                    2
-                  </div>
-                  <div
-                    class="flex-1 flex items-center px-8 bg-secondary text-white text-[20px] font-semibold leading-tight"
-                  >
-                    Chống thấm mái, tóc khô cắt
-                  </div>
-                </div>
-                <div
-                  class="aspect-[6/5] w-full bg-[#f0f0f0] p-4 flex items-center justify-center"
-                ></div>
-              </div>
-      
-              <!-- Arrow -->
-              <div
-                class="hidden md:flex shrink-0 items-center justify-center px-1 lg:px-2"
-              >
-                <div class="flex items-center -space-x-1.5 lg:-space-x-2">
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-20"
-                  />
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-40"
-                  />
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-70"
-                  />
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-100"
-                  />
-                </div>
-              </div>
-      
-              <!-- Step 3 -->
-              <div
-                class="flex-1 w-full bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
-              >
-                <div class="flex h-24">
-                  <div
-                    class="w-12 flex items-center justify-center bg-white text-secondary font-bold font-advent text-4xl lg:text-[40px] border-b border-secondary"
-                  >
-                    3
-                  </div>
-                  <div
-                    class="flex-1 flex items-center px-8 bg-secondary text-white text-[20px] font-semibold leading-tight"
-                  >
-                    Chống thấm mái, tóc khô cắt
-                  </div>
-                </div>
-                <div
-                  class="aspect-[6/5] w-full bg-[#f0f0f0] p-4 flex items-center justify-center"
-                ></div>
-              </div>
-            </div>
-      
-            <!-- Second Row -->
-            <div class="flex flex-col md:flex-row items-center gap-4">
-              <!-- Step 1 -->
-              <div
-                class="flex-1 w-full bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
-              >
-                <div class="flex h-24">
-                  <div
-                    class="w-12 flex items-center justify-center bg-white text-secondary font-bold font-advent text-4xl lg:text-[40px] border-b border-secondary"
-                  >
-                    1
-                  </div>
-                  <div
-                    class="flex-1 flex items-center px-8 bg-secondary text-white text-[20px] font-semibold leading-tight"
-                  >
-                    Chống thấm mái, tóc khô cắt
-                  </div>
-                </div>
-                <div
-                  class="aspect-[6/5] w-full bg-[#f0f0f0] p-4 flex items-center justify-center"
-                ></div>
-              </div>
-      
-              <!-- Arrow -->
-              <div
-                class="hidden md:flex shrink-0 items-center justify-center px-1 lg:px-2"
-              >
-                <div class="flex items-center -space-x-1.5 lg:-space-x-2">
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-20"
-                  />
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-40"
-                  />
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-70"
-                  />
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-100"
-                  />
-                </div>
-              </div>
-      
-              <!-- Step 2 -->
-              <div
-                class="flex-1 w-full bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
-              >
-                <div class="flex h-24">
-                  <div
-                    class="w-12 flex items-center justify-center bg-white text-secondary font-bold font-advent text-4xl lg:text-[40px] border-b border-secondary"
-                  >
-                    2
-                  </div>
-                  <div
-                    class="flex-1 flex items-center px-8 bg-secondary text-white text-[20px] font-semibold leading-tight"
-                  >
-                    Chống thấm mái, tóc khô cắt
-                  </div>
-                </div>
-                <div
-                  class="aspect-[6/5] w-full bg-[#f0f0f0] p-4 flex items-center justify-center"
-                ></div>
-              </div>
-      
-              <!-- Arrow -->
-              <div
-                class="hidden md:flex shrink-0 items-center justify-center px-1 lg:px-2"
-              >
-                <div class="flex items-center -space-x-1.5 lg:-space-x-2">
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-20"
-                  />
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-40"
-                  />
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-70"
-                  />
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
-                    alt="Arrow"
-                    class="w-5 lg:w-7 h-auto opacity-100"
-                  />
-                </div>
-              </div>
-      
-              <!-- Step 3 -->
-              <div
-                class="flex-1 w-full bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
-              >
-                <div class="flex h-24">
-                  <div
-                    class="w-12 flex items-center justify-center bg-white text-secondary font-bold font-advent text-4xl lg:text-[40px] border-b border-secondary"
-                  >
-                    3
-                  </div>
-                  <div
-                    class="flex-1 flex items-center px-8 bg-secondary text-white text-[20px] font-semibold leading-tight"
-                  >
-                    Chống thấm mái, tóc khô cắt
-                  </div>
-                </div>
-                <div
-                  class="aspect-[6/5] w-full bg-[#f0f0f0] p-4 flex items-center justify-center"
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>      <!-- Works Section -->
-      <section
-        class="w-full bg-background-secondary pb-12 md:pb-16 relative overflow-visible animate-fade-in-up xl:min-h-[760px]"
-        data-aos="fade-up"
-      >
-      
-        <!-- Section Title -->
-        <div class="text-center mb-8 md:mb-16">
-          <h2
-            class="text-[20px] md:text-3xl font-semibold text-secondary uppercase drop-shadow-sm"
-          >
-            Dấu ấn trên những công trình
-          </h2>
-        </div>
-      
-        <!-- Main Content Area: Swiper + Text Block -->
-        <div class="relative w-full flex flex-col md:block">
-          <!-- Swiper Container (Order 1 for mobile) -->
-          <div
-            class="swiper product-works-swiper w-full pb-[15px] md:pb-10 pr-[20%] order-1"
-          >
-            <div class="swiper-wrapper flex items-end">
-              <!-- Slide 1 -->
-              <div class="swiper-slide product-works-slide overflow-hidden">
-                <img
-                  src="/assets/work-01.jpg"
-                  alt="Chùa Bái Đính"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-      
-              <!-- Slide 2 -->
-              <div class="swiper-slide product-works-slide overflow-hidden">
-                <img
-                  src="/assets/about-01.png"
-                  alt="Thiền Viện Trúc Lâm"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-      
-              <!-- Slide 3 -->
-              <div class="swiper-slide product-works-slide overflow-hidden">
-                <img
-                  src="/assets/work-03.jpg"
-                  alt="Đền Trần"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-      
-              <!-- Slide 4 -->
-              <div class="swiper-slide product-works-slide overflow-hidden">
-                <img
-                  src="/assets/work-01.jpg"
-                  alt="Chùa Bái Đính"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-      
-              <!-- Slide 5 -->
-              <div class="swiper-slide product-works-slide overflow-hidden">
-                <img
-                  src="/assets/about-01.png"
-                  alt="Thiền Viện Trúc Lâm"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-      
-              <!-- Slide 6 -->
-              <div class="swiper-slide product-works-slide overflow-hidden">
-                <img
-                  src="/assets/work-03.jpg"
-                  alt="Đền Trần"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-      
-              <!-- Slide 7 -->
-              <div class="swiper-slide product-works-slide overflow-hidden">
-                <img
-                  src="/assets/work-01.jpg"
-                  alt="Chùa Bái Đính"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-      
-              <!-- Slide 8 -->
-              <div class="swiper-slide product-works-slide overflow-hidden">
-                <img
-                  src="/assets/about-01.png"
-                  alt="Thiền Viện Trúc Lâm"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-      
-              <!-- Slide 9 -->
-              <div class="swiper-slide product-works-slide overflow-hidden">
-                <img
-                  src="/assets/work-03.jpg"
-                  alt="Đền Trần"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-      
-              <!-- Slide 10 -->
-              <div class="swiper-slide product-works-slide overflow-hidden">
-                <img
-                  src="/assets/work-01.jpg"
-                  alt="Chùa Bái Đính"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-      
-              <!-- Slide 11 -->
-              <div class="swiper-slide product-works-slide overflow-hidden">
-                <img
-                  src="/assets/about-01.png"
-                  alt="Thiền Viện Trúc Lâm"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-      
-              <!-- Slide 12 -->
-              <div class="swiper-slide product-works-slide overflow-hidden">
-                <img
-                  src="/assets/work-03.jpg"
-                  alt="Đền Trần"
-                  class="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-      
-          <!-- Text Block (Relative on mobile, Absolute on desktop) (Order 2 for mobile) -->
-          <div
-            class="w-full px-4 relative xl:absolute xl:inset-x-0 xl:top-0 xl:pointer-events-none z-10 order-2"
-          >
-            <div
-              class="xl:absolute xl:top-0 xl:right-[max(1rem,calc(60%-808px))] w-full xl:max-w-[400px] bg-transparent pt-8 pointer-events-auto"
-            >
-              <div
-                class="flex justify-between items-start pb-4 border-b border-black/10 xl:border-none"
-              >
-                <h3
-                  id="slide-title"
-                  class="text-base font-bold uppercase tracking-wide slide-text-transition"
-                >
-                  CHÙA BÁI ĐÍNH
-                </h3>
-              </div>
-      
-              <div
-                class="space-y-3 text-[15px] mt-[13px] mb-[15px] md:mt-8 md:mb-12 slide-text-transition"
-                id="slide-meta"
-              >
-                <p>
-                  <span class="font-bold">Địa điểm:</span>
-                  <span id="slide-location">Ninh Bình</span>
-                </p>
-                <p>
-                  <span class="font-bold">Sản phẩm:</span>
-                  <span id="slide-product">Ngói âm dương nâu đen</span>
-                </p>
-              </div>
-      
-              <a
-                href="#"
-                id="slide-link"
-                class="font-bold text-black border-b-[1.5px] border-black inline-block hover:text-secondary hover:border-secondary tracking-[0.05em] text-[13px] slide-text-transition"
-                >See more</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-      
-            <section
-        class="w-full pb-12 md:pb-16 bg-background-secondary relative "
-        data-aos="fade-up"
-      >
-      
-      
-        <div class="max-w-[1320px] w-[85%] mx-auto relative z-10">
-          <h2 class="text-[20px] md:text-3xl font-semibold text-secondary text-center uppercase mb-16">CÓ THỂ BẠN QUAN TÂM</h2>
-      
-          <div class="relative">
-            <div class="overflow-x-auto pb-6 custom-recommend-scrollbar">
-              <div class="min-w-[1000px]">
-                <!-- Product Info Row -->
-                <div class="flex gap-10 mb-8">
-                  <!-- Empty space for labels -->
-                  <div class="w-[140px] shrink-0 sticky left-0 bg-background-secondary z-10"></div>
-      
-                  <div class="flex-grow flex gap-8">
-                    <!-- Product 1 -->
-                    <div class="w-[220px] shrink-0 flex flex-col items-start">
-                      <a
-                        href="/products/ngoi-am-duong/detail.html"
-                        class="w-full group"
-                      >
-                        <div class="product-card relative aspect-[6/5] w-full mb-4 bg-gray-100 rounded-sm overflow-hidden">
-                          <img
-                            src="/assets/gach-co-work-2.jpg"
-                            alt="Ngói Âm Dương 27 Nâu Đỏ"
-                            class="aspect-[6/5] object-cover w-full h-full"
-                            onerror="this.src = 'https://placehold.co/400x400/eee/999?text=Product'"
-                          />
-                          <div class="product-overlay">
-                            <img
-                              src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
-                              alt="Search"
-                            />
-                            <span>Xem chi tiết</span>
-                          </div>
-                        </div>
-                      </a>
-                      <a
-                        href="/products/ngoi-am-duong/detail.html"
-                        class="text-[#004B8D] hover:text-secondary transition-colors"
-                      >
-                        <h3 class="font-bold text-sm md:text-base leading-snug h-12 overflow-hidden">Ngói Âm Dương 27 Nâu Đỏ</h3>
-                      </a>
-                      <button
-                        class="border border-secondary text-secondary text-xs md:text-[13px] font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-white transition-all"
-                      >
-                        Thêm vào giỏ
-                      </button>
-                    </div>
-                    <!-- Product 2 -->
-                    <div class="w-[220px] shrink-0 flex flex-col items-start">
-                      <a
-                        href="/products/ngoi-am-duong/detail.html"
-                        class="w-full group"
-                      >
-                        <div class="product-card relative aspect-[6/5] w-full mb-4 bg-[#E5E5E5] rounded-sm overflow-hidden">
-                          <div class="product-overlay">
-                            <img
-                              src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
-                              alt="Search"
-                            />
-                            <span>Xem chi tiết</span>
-                          </div>
-                        </div>
-                      </a>
-                      <a
-                        href="/products/ngoi-am-duong/detail.html"
-                        class="text-[#004B8D] hover:text-secondary transition-colors"
-                      >
-                        <h3 class="font-bold text-sm md:text-base leading-snug h-12 overflow-hidden">Ngói Âm Dương 27 Nâu Đỏ</h3>
-                      </a>
-                      <button
-                        class="border border-secondary text-secondary text-xs md:text-[13px] font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-white transition-all"
-                      >
-                        Thêm vào giỏ
-                      </button>
-                    </div>
-                    <!-- Product 3 -->
-                    <div class="w-[220px] shrink-0 flex flex-col items-start">
-                      <a
-                        href="/products/ngoi-am-duong/detail.html"
-                        class="w-full group"
-                      >
-                        <div class="product-card relative aspect-[6/5] w-full mb-4 bg-[#E5E5E5] rounded-sm overflow-hidden">
-                          <div class="product-overlay">
-                            <img
-                              src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
-                              alt="Search"
-                            />
-                            <span>Xem chi tiết</span>
-                          </div>
-                        </div>
-                      </a>
-                      <a
-                        href="/products/ngoi-am-duong/detail.html"
-                        class="text-[#004B8D] hover:text-secondary transition-colors"
-                      >
-                        <h3 class="font-bold text-sm md:text-base leading-snug h-12 overflow-hidden">Ngói Âm Dương 27 Nâu Đỏ</h3>
-                      </a>
-                      <button
-                        class="border border-secondary text-secondary text-xs md:text-[13px] font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-white transition-all"
-                      >
-                        Thêm vào giỏ
-                      </button>
-                    </div>
-                    <!-- Product 4 -->
-                    <div class="w-[220px] shrink-0 flex flex-col items-start">
-                      <a
-                        href="/products/ngoi-am-duong/detail.html"
-                        class="w-full group"
-                      >
-                        <div class="product-card relative aspect-[6/5] w-full mb-4 bg-[#E5E5E5] rounded-sm overflow-hidden">
-                          <div class="product-overlay">
-                            <img
-                              src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
-                              alt="Search"
-                            />
-                            <span>Xem chi tiết</span>
-                          </div>
-                        </div>
-                      </a>
-                      <a
-                        href="/products/ngoi-am-duong/detail.html"
-                        class="text-[#004B8D] hover:text-secondary transition-colors"
-                      >
-                        <h3 class="font-bold text-sm md:text-base leading-snug h-12 overflow-hidden">Ngói Âm Dương 27 Nâu Đỏ</h3>
-                      </a>
-                      <button
-                        class="border border-secondary text-secondary text-xs md:text-[13px] font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-white transition-all"
-                      >
-                        Thêm vào giỏ
-                      </button>
-                    </div>
-                    <!-- Product 5 -->
-                    <div class="w-[220px] shrink-0 flex flex-col items-start">
-                      <a
-                        href="/products/ngoi-am-duong/detail.html"
-                        class="w-full group"
-                      >
-                        <div class="product-card relative aspect-[6/5] w-full mb-4 bg-[#E5E5E5] rounded-sm overflow-hidden">
-                          <div class="product-overlay">
-                            <img
-                              src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
-                              alt="Search"
-                            />
-                            <span>Xem chi tiết</span>
-                          </div>
-                        </div>
-                      </a>
-                      <a
-                        href="/products/ngoi-am-duong/detail.html"
-                        class="text-[#004B8D] hover:text-secondary transition-colors"
-                      >
-                        <h3 class="font-bold text-sm md:text-base leading-snug h-12 overflow-hidden">Ngói Âm Dương 27 Nâu Đỏ</h3>
-                      </a>
-                      <button
-                        class="border border-secondary text-secondary text-xs md:text-[13px] font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-white transition-all"
-                      >
-                        Thêm vào giỏ
-                      </button>
-                    </div>
-                  </div>
-                </div>
-      
-                <!-- Comparison Table -->
-                <div class="flex flex-col border-t border-black/10">
-                  <!-- Price Row -->
-                  <div class="flex gap-10 group">
-                    <div
-                      class="w-[140px] shrink-0 py-3 text-[14px] md:text-base font-bold text-primary flex items-center sticky left-0 bg-background-secondary z-10"
-                    >
-                      Giá
-                    </div>
-                    <div class="flex-grow flex gap-10">
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">675.000 đ/m²</div>
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">675.000 đ/m²</div>
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">675.000 đ/m²</div>
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">675.000 đ/m²</div>
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">675.000 đ/m²</div>
-                    </div>
-                  </div>
-                  <!-- Color Row -->
-                  <div class="flex gap-10 border-t border-black/10 group">
-                    <div
-                      class="w-[140px] shrink-0 py-3 text-[14px] md:text-base font-bold text-primary flex items-center sticky left-0 bg-background-secondary z-10"
-                    >
-                      Màu sắc
-                    </div>
-                    <div class="flex-grow flex gap-10">
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">Nâu đỏ</div>
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">Nâu đỏ</div>
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">Nâu đỏ</div>
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">Nâu đỏ</div>
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">Nâu đỏ</div>
-                    </div>
-                  </div>
-                  <!-- Size Row -->
-                  <div class="flex gap-10 border-t border-black/5 group">
-                    <div
-                      class="w-[140px] shrink-0 py-3 text-[14px] md:text-base font-bold text-primary flex items-center sticky left-0 bg-background-secondary z-10"
-                    >
-                      Kích thước
-                    </div>
-                    <div class="flex-grow flex gap-10">
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80 leading-relaxed">L280 x W280 x H54mm</div>
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80 leading-relaxed">L280 x W280 x H54mm</div>
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80 leading-relaxed">L280 x W280 x H54mm</div>
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80 leading-relaxed">L280 x W280 x H54mm</div>
-                      <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80 leading-relaxed">L280 x W280 x H54mm</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- FAQ 2 Section Partial -->
-      <section
-        class="w-full bg-background-secondary pb-12 lg:pb-10 pt-14 overflow-hidden"
-      >
-        <div
-          class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center"
+  class="w-full py-12 lg:py-16 bg-background-secondary"
+  data-aos="fade-up"
+  data-weight-calculator
+>
+  <div class="w-[85%] max-w-[1320px] mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-24 items-start">
+      <!-- Left: Calculator Form -->
+      <div class="space-y-4 col-span-1 lg:col-span-3">
+        <!-- Dropdowns Row -->
+        <h2
+          class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-5 uppercase"
         >
-          <!-- Left: Image -->
-          <div class="w-full aspect-square" data-aos="fade-right">
+          CÁCH TÍNH KHỐI LƯỢNG
+        </h2>
+        <hr class="border-t border-black/10 mt-4 w-full" />
+        <div class="grid grid-cols-2 gap-6">
+          <div class="relative">
+            <select
+              id="roof-style"
+              class="w-full h-[44px] px-4 pr-10 border border-black/10 rounded-sm bg-transparent text-[13px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
+            >
+              <option value="" disabled selected>KIỂU MÁI</option>
+              <option value="2-slope" data-factor="1.0">
+                Mái dốc 2 mặt (Mái chữ A)
+              </option>
+              <option value="4-slope" data-factor="1.0">
+                Mái dốc 4 mặt (Mái bánh ít)
+              </option>
+              <option value="chong-diem" data-factor="1.0">
+                Mái chồng diêm
+              </option>
+              <option value="dao" data-factor="1.1">Mái đao</option>
+            </select>
+            <div
+              class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-secondary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div class="relative">
+            <select
+              id="tile-type"
+              class="w-full h-[44px] px-4 pr-10 border border-black/10 rounded-sm bg-transparent text-[13px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
+            >
+              <option value="" disabled selected>LOẠI NGÓI</option>
+              <option value="dai" data-am="27" data-duong="27" data-diem="5">
+                Ngói Âm Dương cỡ Đại
+              </option>
+              <option value="trung" data-am="40" data-duong="27" data-diem="5">
+                Ngói Âm Dương cỡ Trung
+              </option>
+              <option value="tieu" data-am="60" data-duong="60" data-diem="5">
+                Ngói Âm Dương cỡ Tiểu
+              </option>
+            </select>
+            <div
+              class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-secondary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIỆN TÍCH 1 -->
+        <div class="flex flex-col md:flex-row gap-4 items-end">
+          <div class="w-full md:w-[150px] shrink-0 pb-1">
+            <span class="font-semibold text-primary uppercase text-base"
+              >DIỆN TÍCH 1</span
+            >
+          </div>
+          <div class="flex-1 w-full grid grid-cols-12 gap-7 items-end">
+            <div class="col-span-12 md:col-span-3">
+              <div class="relative">
+                <select
+                  class="w-full h-[45px] px-3 pr-6 border border-black/10 rounded-sm bg-transparent text-[11px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
+                >
+                  <option selected>HÌNH CHỮ NHẬT</option>
+                  <option>HÌNH THANG</option>
+                </select>
+                <div
+                  class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary"
+                >
+                  <svg
+                    class="w-3 h-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-6 md:col-span-3 flex flex-col gap-2">
+              <label
+                class="text-[16px] uppercase font-semibold text-primary text-center"
+                >CHIỀU DÀI
+                <span
+                  class="block text-[12px] font-normal italic normal-case text-secondary"
+                  >Chiều tính diềm mái</span
+                ></label
+              >
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="00"
+                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
+                />
+                <span
+                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
+                  >m</span
+                >
+              </div>
+            </div>
+            <div class="col-span-6 md:col-span-3 flex flex-col gap-2">
+              <label
+                class="text-[16px] uppercase font-semibold text-primary text-center"
+                >CHIỀU RỘNG
+                <span class="block text-[12px] opacity-0">-</span></label
+              >
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="00"
+                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
+                />
+                <span
+                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
+                  >m</span
+                >
+              </div>
+            </div>
+            <div
+              class="col-span-4 md:col-span-3 flex flex-col gap-2"
+              style="display: none"
+            >
+              <label
+                class="text-[16px] uppercase font-semibold text-primary text-center"
+                >CHIỀU CAO
+                <span class="block text-[12px] opacity-0">-</span></label
+              >
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="00"
+                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
+                />
+                <span
+                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
+                  >m</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIỆN TÍCH 2 -->
+        <div class="flex flex-col md:flex-row gap-4 items-end">
+          <div class="w-full md:w-[150px] shrink-0 pb-1 flex flex-col">
+            <span class="font-semibold text-primary uppercase text-base"
+              >DIỆN TÍCH 2</span
+            >
+            <button
+              class="text-[14px] text-secondary underline text-left font-medium ml-4"
+            >
+              Loại bỏ
+            </button>
+          </div>
+          <div class="flex-1 w-full grid grid-cols-12 gap-7 items-end">
+            <div class="col-span-12 md:col-span-3">
+              <div class="relative">
+                <select
+                  class="w-full h-[45px] px-3 pr-6 border border-black/10 rounded-sm bg-transparent text-[11px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
+                >
+                  <option>HÌNH CHỮ NHẬT</option>
+                  <option selected>HÌNH THANG</option>
+                </select>
+                <div
+                  class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary"
+                >
+                  <svg
+                    class="w-3 h-3"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="col-span-4 md:col-span-3 flex flex-col gap-2">
+              <label
+                class="text-[16px] uppercase font-semibold text-primary text-center"
+                >ĐÁY LỚN
+                <span
+                  class="block text-[12px] font-normal italic normal-case text-secondary"
+                  >Chiều tính diềm mái</span
+                ></label
+              >
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="00"
+                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
+                />
+                <span
+                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
+                  >m</span
+                >
+              </div>
+            </div>
+            <div class="col-span-4 md:col-span-3 flex flex-col gap-2">
+              <label
+                class="text-[16px] uppercase font-semibold text-primary text-center"
+                >ĐÁY BÉ
+                <span class="block text-[12px] opacity-0">-</span></label
+              >
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="00"
+                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
+                />
+                <span
+                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
+                  >m</span
+                >
+              </div>
+            </div>
+            <div class="col-span-4 md:col-span-3 flex flex-col gap-2">
+              <label
+                class="text-[16px] uppercase font-semibold text-primary text-center"
+                >CHIỀU CAO
+                <span class="block text-[12px] opacity-0">-</span></label
+              >
+              <div class="relative">
+                <input
+                  type="text"
+                  placeholder="00"
+                  class="w-full h-[45px] p-3 border border-black/10 rounded-sm bg-transparent text-left pr-6 focus:border-secondary outline-none transition-colors"
+                />
+                <span
+                  class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40"
+                  >m</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button class="text-secondary font-semibold text-sm underline">
+            + Thêm diện tích
+          </button>
+        </div>
+
+        <button
+          class="w-full py-4 bg-secondary text-white text-sm uppercase tracking-widest rounded-sm shadow-md hover:bg-secondary/90 hover:scale-[1.01] transition-all duration-300"
+        >
+          TÍNH TOÁN KHỐI LƯỢNG
+        </button>
+
+        <!-- Results -->
+        <div class="pt-8">
+          <div class="grid grid-cols-12 gap-4 pb-4 items-center">
+            <div class="col-span-6 md:col-span-5">
+              <h4
+                class="font-semibold text-primary uppercase text-base tracking-wider"
+              >
+                KẾT QUẢ
+              </h4>
+            </div>
+            <div class="col-span-3 md:col-span-4 text-center">
+              <span class="text-base font-semibold text-primary">Định mức</span>
+            </div>
+            <div class="col-span-3 md:col-span-3 text-right">
+              <span class="text-base font-semibold text-primary">Số lượng</span>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Ngói âm -->
+            <div class="grid grid-cols-12 gap-4 items-center">
+              <div class="col-span-3 md:col-span-3">
+                <span class="text-primary/80 font-medium text-base"
+                  >Ngói âm</span
+                >
+              </div>
+              <div class="col-span-3 md:col-span-2 text-right">
+                <span class="text-primary/80 font-medium text-base">00 m²</span>
+              </div>
+              <div class="col-span-3 md:col-span-4 text-center">
+                <span class="text-primary/80 font-medium text-base"
+                  >40 viên/m²</span
+                >
+              </div>
+              <div class="col-span-3 md:col-span-3 text-right">
+                <span class="text-primary font-extrabold text-[16px]"
+                  >00 viên</span
+                >
+              </div>
+            </div>
+
+            <!-- Ngói dương -->
+            <div class="grid grid-cols-12 gap-4 items-center">
+              <div class="col-span-3 md:col-span-3">
+                <span class="text-primary/80 font-medium text-base"
+                  >Ngói dương</span
+                >
+              </div>
+              <div class="col-span-3 md:col-span-2 text-right">
+                <span class="text-primary/80 font-medium text-base">00 m²</span>
+              </div>
+              <div class="col-span-3 md:col-span-4 text-center">
+                <span class="text-primary/80 font-medium text-base"
+                  >27 viên/m²</span
+                >
+              </div>
+              <div class="col-span-3 md:col-span-3 text-right">
+                <span class="text-primary font-extrabold text-[16px]"
+                  >00 viên</span
+                >
+              </div>
+            </div>
+
+            <!-- Diềm -->
+            <div class="grid grid-cols-12 gap-4 items-center">
+              <div class="col-span-3 md:col-span-3">
+                <span class="text-primary/80 font-medium text-base">Diềm</span>
+              </div>
+              <div class="col-span-3 md:col-span-2 text-right">
+                <span class="text-primary/80 font-medium text-base">00 md</span>
+              </div>
+              <div class="col-span-3 md:col-span-4 text-center">
+                <span class="text-primary/80 font-medium text-base"
+                  >5 cặp/md</span
+                >
+              </div>
+              <div class="col-span-3 md:col-span-3 text-right">
+                <span class="text-primary font-extrabold text-[16px]"
+                  >00 cặp</span
+                >
+              </div>
+            </div>
+          </div>
+          <hr class="border-black/10 mt-8 mb-8" />
+        </div>
+
+        <!-- Extras -->
+        <div class="space-y-6">
+          <input type="checkbox" id="extra-loss" class="peer sr-only" />
+          <label
+            for="extra-loss"
+            class="w-fit flex items-center gap-2 cursor-pointer select-none peer-checked:[&_.loss-checkbox-box]:border-secondary peer-checked:[&_.loss-checkbox-box]:bg-secondary peer-checked:[&_.loss-checkbox-icon]:opacity-100 peer-focus-visible:[&_.loss-checkbox-box]:ring-2 peer-focus-visible:[&_.loss-checkbox-box]:ring-secondary/40 peer-focus-visible:[&_.loss-checkbox-box]:ring-offset-1"
+          >
+            <span
+              class="loss-checkbox-box relative flex h-5 w-5 items-center justify-center border border-black/20 rounded-none bg-transparent transition-all"
+            >
+              <svg
+                class="loss-checkbox-icon h-3 w-3 text-white opacity-0 transition-opacity"
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path
+                  d="M4 10.5L8 14.5L16 6.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+            </span>
+            <span class="text-[15px] font-medium text-primary/80"
+              >Cộng thêm hao hụt</span
+            >
+            <span class="group relative inline-block ml-1">
+              <span
+                class="w-5 h-5 rounded-full text-primary border-primary border flex items-center justify-center text-[12px] font-bold"
+              >
+                ?
+              </span>
+              <span
+                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-primary text-white text-[12px] rounded-sm opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity shadow-lg z-10 leading-relaxed"
+              >
+                Tính toán dựa trên độ dốc mái thực tế và hao hụt vận chuyển/thi
+                công.
+              </span>
+            </span>
+          </label>
+
+          <div class="pl-7 space-y-4 hidden peer-checked:block">
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <div class="relative flex items-center justify-center">
+                <input
+                  type="radio"
+                  name="loss-rate"
+                  class="peer appearance-none w-5 h-5 border border-black/30 rounded-full checked:border-primary transition-all cursor-pointer"
+                  checked
+                />
+                <div
+                  class="absolute w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"
+                ></div>
+              </div>
+              <span class="text-[14px] text-primary/70 font-medium"
+                >Thêm 15% (Độ dốc mái)</span
+              >
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer group">
+              <div class="relative flex items-center justify-center">
+                <input
+                  type="radio"
+                  name="loss-rate"
+                  class="peer appearance-none w-5 h-5 border border-black/30 rounded-full checked:border-primary transition-all cursor-pointer"
+                />
+                <div
+                  class="absolute w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"
+                ></div>
+              </div>
+              <span class="text-[14px] text-primary/70 font-medium"
+                >Thêm 20% (Độ dốc mái + hao vỡ)</span
+              >
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Diagrams -->
+      <div class="flex flex-col gap-12 lg:gap-20 col-span-1 lg:col-span-2">
+        <img
+          src="/assets/weight-01.svg"
+          alt="Cách đo mái chữ nhật"
+          class="w-full h-auto object-contain"
+        />
+        <img
+          src="/assets/weight-02.svg"
+          alt="Cách đo mái hình thang"
+          class="w-full h-auto object-contain"
+        />
+        <img
+          src="/assets/weight-03.svg"
+          alt="Cách đo diện tích mái"
+          class="w-full h-auto object-contain"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+ <section class="w-full bg-background-secondary" data-aos="fade-up">
+  <div class="w-[85%] max-w-[1320px] mx-auto">
+    <h2
+      class="text-[20px] md:text-3xl font-bold text-center text-secondary mb-12 uppercase tracking-wide"
+    >
+      ỨNG DỤNG ĐA DẠNG
+    </h2>
+
+    <!-- Top: 3 images with absolute labels -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24">
+      <!-- Item 1 -->
+      <div class="relative group overflow-hidden shadow-lg">
+        <img
+          src="/assets/am-duong-detail-01.png"
+          alt="Ốp mái"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2">
+          <div
+            class="border border-white/60 bg-black/20 backdrop-blur-sm px-10 py-2"
+          >
+            <span
+              class="text-white font-semibold text-sm tracking-[0.2em] uppercase whitespace-nowrap"
+              >ỐP MÁI</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="relative group overflow-hidden shadow-lg">
+        <img
+          src="/assets/am-duong-detail-02.png"
+          alt="Bờ rào"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2">
+          <div
+            class="border border-white/60 bg-black/20 backdrop-blur-sm px-10 py-2"
+          >
+            <span
+              class="text-white font-semibold text-sm tracking-[0.2em] uppercase whitespace-nowrap"
+              >BỜ RÀO</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="relative group overflow-hidden shadow-lg">
+        <img
+          src="/assets/am-duong-detail-03.png"
+          alt="Trang trí tường"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2">
+          <div
+            class="border border-white/60 bg-black/20 backdrop-blur-sm px-10 py-2"
+          >
+            <span
+              class="text-white font-semibold text-sm tracking-[0.2em] uppercase whitespace-nowrap text-center"
+              >TRANG TRÍ TƯỜNG</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom: 5 icons with text -->
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+      <!-- Icon 1 -->
+      <div class="flex flex-col items-center gap-6 group cursor-pointer">
+        <div
+          class="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2"
+        >
+          <img
+            src="data:image/svg+xml,%3csvg%20width='61'%20height='55'%20viewBox='0%200%2061%2055'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M53.3797%2026.6157H7.51855V53.334H53.3797V26.6157Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M1.5%2026.6156H59.0949L30.305%201.5L1.5%2026.6156ZM1.5%2026.6156H59.0949'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M29.8819%2035.7634H31.0159C34.8263%2035.7634%2037.911%2038.8632%2037.911%2042.6585V53.3337H22.9717V42.6585C22.9717%2038.8481%2026.0714%2035.7634%2029.8667%2035.7634H29.8819Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+            alt="Tư gia"
+            class="w-full h-full object-contain"
+          />
+        </div>
+        <span
+          class="text-secondary font-bold text-lg tracking-wide group-hover:text-primary transition-colors"
+          >Tư gia</span
+        >
+      </div>
+
+      <!-- Icon 2 -->
+      <div class="flex flex-col items-center gap-6 group cursor-pointer">
+        <div
+          class="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2"
+        >
+          <img
+            src="data:image/svg+xml,%3csvg%20width='75'%20height='65'%20viewBox='0%200%2075%2065'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M60.1073%2039.5284H14.2461V63.0563H60.1073V39.5284Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M55.9339%2013.1125H18.4043V26.071H55.9339V13.1125Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M36.6104%2045.4863H37.7444C41.5548%2045.4863%2044.6395%2048.5861%2044.6395%2052.3814V63.0566H29.7002V52.3814C29.7002%2048.571%2032.7999%2045.4863%2036.5952%2045.4863H36.6104Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M56.0102%2026.0712H18.3445C18.3445%2026.0712%208.37993%2034.5388%201.5%2032.7546C1.5%2032.7546%203.79837%2039.5286%2015.4565%2039.5286H58.9134C70.5715%2039.5286%2072.8699%2032.7546%2072.8699%2032.7546C65.9899%2034.5539%2056.0254%2026.0712%2056.0254%2026.0712H56.0102Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M49.9614%201.5H24.3922C24.3922%201.5%2017.6181%208.81843%2012.9609%207.26099C12.9609%207.26099%2014.5184%2013.1127%2022.4416%2013.1127H51.9422C59.8654%2013.1127%2061.4229%207.26099%2061.4229%207.26099C56.7506%208.80331%2049.9916%201.5%2049.9916%201.5H49.9614Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+            alt="Đền chùa"
+            class="w-full h-full object-contain"
+          />
+        </div>
+        <span
+          class="text-secondary font-bold text-lg tracking-wide group-hover:text-primary transition-colors"
+          >Đền chùa</span
+        >
+      </div>
+
+      <!-- Icon 3 -->
+      <div class="flex flex-col items-center gap-6 group cursor-pointer">
+        <div
+          class="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2"
+        >
+          <img
+            src="data:image/svg+xml,%3csvg%20width='49'%20height='57'%20viewBox='0%200%2049%2057'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M47.3758%2010.6027H1.51465V55.0122H47.3758V10.6027Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M23.8789%2037.442H25.013C28.8234%2037.442%2031.908%2040.5418%2031.908%2044.3371V55.0123H16.9688V44.3371C16.9688%2040.5266%2020.0685%2037.442%2023.8638%2037.442H23.8789Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M8.41018%201.5H40.4661C44.2766%201.5%2047.3612%204.59975%2047.3612%208.39505V10.5875H1.5V8.39505C1.5%204.58463%204.59975%201.5%208.39505%201.5H8.41018Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M13.1724%2017.4373H6.74609V25.9502H13.1724V17.4373Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M27.6587%2017.4373H21.2324V25.9502H27.6587V17.4373Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M42.1587%2017.4373H35.7324V25.9502H42.1587V17.4373Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M42.1587%2030.4258H35.7324V38.9387H42.1587V30.4258Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M13.1724%2030.4258H6.74609V38.9387H13.1724V30.4258Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+            alt="Resort - Khách sạn"
+            class="w-full h-full object-contain text-secondary fill-secondary"
+          />
+        </div>
+        <span
+          class="text-secondary font-bold text-lg tracking-wide group-hover:text-primary transition-colors text-center"
+          >Resort - Khách sạn</span
+        >
+      </div>
+
+      <!-- Icon 4 -->
+      <div class="flex flex-col items-center gap-6 group cursor-pointer">
+        <div
+          class="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2"
+        >
+          <img
+            src="/assets/nha-hang.svg"
+            alt="Nhà hàng"
+            class="w-full h-full object-contain"
+          />
+        </div>
+        <span
+          class="text-secondary font-bold text-lg tracking-wide group-hover:text-primary transition-colors"
+          >Nhà hàng</span
+        >
+      </div>
+
+      <!-- Icon 5 -->
+      <div class="flex flex-col items-center gap-6 group cursor-pointer">
+        <div
+          class="w-16 h-16 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2"
+        >
+          <img
+            src="data:image/svg+xml,%3csvg%20width='49'%20height='58'%20viewBox='0%200%2049%2058'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M47.3612%2029.3267H1.5V56.2542H47.3612V29.3267Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M23.8632%2038.5464H24.9973C28.8077%2038.5464%2031.8923%2041.6704%2031.8923%2045.4954V56.2542H16.9531V45.4954C16.9531%2041.6552%2020.0529%2038.5464%2023.8482%2038.5464H23.8632Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M24.4229%2011.8779C13.8838%2011.8779%205.06839%2019.3451%202.78516%2029.342H46.0608C43.7775%2019.3451%2034.9621%2011.8779%2024.4229%2011.8779Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linejoin='round'/%3e%3cpath%20d='M31.9685%2012.9293C31.5451%209.08906%2028.3545%206.10217%2024.4232%206.10217C20.4918%206.10217%2017.3164%209.08906%2016.8779%2012.9293C19.2368%2012.0607%2021.777%2011.5883%2024.4232%2011.5883C27.0693%2011.5883%2029.6096%2012.0607%2031.9685%2012.9293Z'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-miterlimit='10'/%3e%3cpath%20d='M24.4238%206.1022V1.5'%20stroke='%23C76E00'%20stroke-width='3'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+            alt="Miếu mộ"
+            class="w-full h-full object-contain"
+          />
+        </div>
+        <span
+          class="text-secondary font-bold text-lg tracking-wide group-hover:text-primary transition-colors"
+          >Miếu mộ</span
+        >
+      </div>
+    </div>
+  </div>
+</section> <section
+  class="w-full py-16 lg:py-20 bg-background-secondary"
+  data-aos="fade-up"
+>
+  <div class="w-[85%] max-w-[1320px] mx-auto">
+    <h2
+      class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-12 uppercase"
+    >
+      HƯỚNG DẪN LẮP ĐẶT
+    </h2>
+
+    <!-- Tabs Header -->
+    <div class="flex justify-center mb-16 px-4">
+      <div class="flex border-b border-black/10 w-full max-w-[600px]">
+        <button
+          class="flex-1 pb-4 text-lg md:text-2xl font-semibold uppercase text-secondary border-b-4 border-secondary transition-all"
+        >
+          MÁI BÊ TÔNG
+        </button>
+        <button
+          class="flex-1 pb-4 text-lg md:text-2xl font-semibold uppercase text-secondary border-b-4 border-transparent hover:text-secondary transition-all"
+        >
+          MÁI GỖ
+        </button>
+      </div>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="space-y-16 md:space-y-20">
+      <!-- First Row -->
+      <div class="flex flex-col md:flex-row items-center gap-4">
+        <!-- Step 1 -->
+        <div
+          class="flex-1 w-full bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
+        >
+          <div class="flex h-24">
+            <div
+              class="w-12 flex items-center justify-center bg-white text-secondary font-bold font-advent text-4xl lg:text-[40px] border-b border-secondary"
+            >
+              1
+            </div>
+            <div
+              class="flex-1 flex items-center px-8 bg-secondary text-white text-[20px] font-semibold leading-tight"
+            >
+              Chống thấm mái, tóc khô cắt
+            </div>
+          </div>
+          <div
+            class="aspect-[6/5] w-full bg-[#f0f0f0] p-4 flex items-center justify-center"
+          ></div>
+        </div>
+
+        <!-- Arrow -->
+        <div
+          class="hidden md:flex shrink-0 items-center justify-center px-1 lg:px-2"
+        >
+          <div class="flex items-center -space-x-1.5 lg:-space-x-2">
             <img
-              src="/assets/faq2.png"
-              alt="FAQ Image"
-              class="w-full h-full object-cover"
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-4 lg:w-7 h-auto opacity-20"
+            />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-40"
+            />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-70"
+            />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-100"
             />
           </div>
-      
-          <!-- Right: Content -->
-          <div class="flex flex-col items-start" data-aos="fade-left">
-            <p
-              class="text-[#262626] text-sm md:text-base font-extrabold uppercase tracking-[0.1em] mb-8"
+        </div>
+
+        <!-- Step 2 -->
+        <div
+          class="flex-1 w-full bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
+        >
+          <div class="flex h-24">
+            <div
+              class="w-12 flex items-center justify-center bg-white text-secondary font-bold font-advent text-4xl lg:text-[40px] border-b border-secondary"
             >
-              Bạn có thắc mắc?
-            </p>
-            <h2 class="text-3xl md:text-4xl text-primary leading-tight">
-              Xem các câu hỏi thường gặp
-            </h2>
-            <p class="text-[#262626]/70 text-sm md:text-base mb-10 leading-relaxed">
-              Khám phá danh sách các câu hỏi thường gặp và câu trả lời của chúng tôi.
-            </p>
-            <a
-              href="/faq/"
-              class="inline-block px-5 py-2 border border-black/40 text-[#262626] text-xs md:text-sm hover:bg-secondary hover:text-white hover:border-secondary transition-all"
+              2
+            </div>
+            <div
+              class="flex-1 flex items-center px-8 bg-secondary text-white text-[20px] font-semibold leading-tight"
             >
-              (FAQ) Câu hỏi thường gặp
-            </a>
+              Chống thấm mái, tóc khô cắt
+            </div>
+          </div>
+          <div
+            class="aspect-[6/5] w-full bg-[#f0f0f0] p-4 flex items-center justify-center"
+          ></div>
+        </div>
+
+        <!-- Arrow -->
+        <div
+          class="hidden md:flex shrink-0 items-center justify-center px-1 lg:px-2"
+        >
+          <div class="flex items-center -space-x-1.5 lg:-space-x-2">
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-20"
+            />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-40"
+            />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-70"
+            />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-100"
+            />
           </div>
         </div>
-      </section>    </main>
+
+        <!-- Step 3 -->
+        <div
+          class="flex-1 w-full bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
+        >
+          <div class="flex h-24">
+            <div
+              class="w-12 flex items-center justify-center bg-white text-secondary font-bold font-advent text-4xl lg:text-[40px] border-b border-secondary"
+            >
+              3
+            </div>
+            <div
+              class="flex-1 flex items-center px-8 bg-secondary text-white text-[20px] font-semibold leading-tight"
+            >
+              Chống thấm mái, tóc khô cắt
+            </div>
+          </div>
+          <div
+            class="aspect-[6/5] w-full bg-[#f0f0f0] p-4 flex items-center justify-center"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Second Row -->
+      <div class="flex flex-col md:flex-row items-center gap-4">
+        <!-- Step 1 -->
+        <div
+          class="flex-1 w-full bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
+        >
+          <div class="flex h-24">
+            <div
+              class="w-12 flex items-center justify-center bg-white text-secondary font-bold font-advent text-4xl lg:text-[40px] border-b border-secondary"
+            >
+              1
+            </div>
+            <div
+              class="flex-1 flex items-center px-8 bg-secondary text-white text-[20px] font-semibold leading-tight"
+            >
+              Chống thấm mái, tóc khô cắt
+            </div>
+          </div>
+          <div
+            class="aspect-[6/5] w-full bg-[#f0f0f0] p-4 flex items-center justify-center"
+          ></div>
+        </div>
+
+        <!-- Arrow -->
+        <div
+          class="hidden md:flex shrink-0 items-center justify-center px-1 lg:px-2"
+        >
+          <div class="flex items-center -space-x-1.5 lg:-space-x-2">
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-20"
+            />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-40"
+            />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-70"
+            />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-100"
+            />
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div
+          class="flex-1 w-full bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
+        >
+          <div class="flex h-24">
+            <div
+              class="w-12 flex items-center justify-center bg-white text-secondary font-bold font-advent text-4xl lg:text-[40px] border-b border-secondary"
+            >
+              2
+            </div>
+            <div
+              class="flex-1 flex items-center px-8 bg-secondary text-white text-[20px] font-semibold leading-tight"
+            >
+              Chống thấm mái, tóc khô cắt
+            </div>
+          </div>
+          <div
+            class="aspect-[6/5] w-full bg-[#f0f0f0] p-4 flex items-center justify-center"
+          ></div>
+        </div>
+
+        <!-- Arrow -->
+        <div
+          class="hidden md:flex shrink-0 items-center justify-center px-1 lg:px-2"
+        >
+          <div class="flex items-center -space-x-1.5 lg:-space-x-2">
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-20"
+            />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-40"
+            />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-70"
+            />
+            <img
+              src="data:image/svg+xml,%3csvg%20width='35'%20height='35'%20viewBox='0%200%2035%2035'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M11.5797%2031.4214C11.1695%2031.0111%2010.9391%2030.4548%2010.9391%2029.8747C10.9391%2029.2946%2011.1695%2028.7383%2011.5797%2028.3281L22.4078%2017.5L11.5797%206.67184C11.1937%206.25726%2010.9836%205.70915%2010.9936%205.14283C11.0036%204.5765%2011.2328%204.03612%2011.6331%203.63539C12.0334%203.23465%2012.5735%203.0048%2013.1399%202.99421C13.7062%202.98361%2014.2545%203.1931%2014.6695%203.57858L27.046%2015.9516C27.4561%2016.3618%2027.6865%2016.9182%2027.6865%2017.4983C27.6865%2018.0783%2027.4561%2018.6347%2027.046%2019.0449L14.6729%2031.4214C14.2627%2031.8315%2013.7064%2032.0619%2013.1263%2032.0619C12.5462%2032.0619%2011.9899%2031.8315%2011.5797%2031.4214Z'%20fill='%23C76E00'/%3e%3c/svg%3e"
+              alt="Arrow"
+              class="w-5 lg:w-7 h-auto opacity-100"
+            />
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div
+          class="flex-1 w-full bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
+        >
+          <div class="flex h-24">
+            <div
+              class="w-12 flex items-center justify-center bg-white text-secondary font-bold font-advent text-4xl lg:text-[40px] border-b border-secondary"
+            >
+              3
+            </div>
+            <div
+              class="flex-1 flex items-center px-8 bg-secondary text-white text-[20px] font-semibold leading-tight"
+            >
+              Chống thấm mái, tóc khô cắt
+            </div>
+          </div>
+          <div
+            class="aspect-[6/5] w-full bg-[#f0f0f0] p-4 flex items-center justify-center"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> <!-- Works Section -->
+<section
+  class="w-full bg-background-secondary pb-12 md:pb-16 relative overflow-visible animate-fade-in-up xl:min-h-[760px]"
+  data-aos="fade-up"
+>
+
+  <!-- Section Title -->
+  <div class="text-center mb-8 md:mb-16">
+    <h2
+      class="text-[20px] md:text-3xl font-semibold text-secondary uppercase drop-shadow-sm"
+    >
+      Dấu ấn trên những công trình
+    </h2>
+  </div>
+
+  <!-- Main Content Area: Swiper + Text Block -->
+  <div class="relative w-full flex flex-col md:block">
+    <!-- Swiper Container (Order 1 for mobile) -->
+    <div
+      class="swiper product-works-swiper w-full pb-[15px] md:pb-10 pr-[20%] order-1"
+    >
+      <div class="swiper-wrapper flex items-end">
+        <!-- Slide 1 -->
+        <div class="swiper-slide product-works-slide overflow-hidden">
+          <img
+            src="/assets/work-01.jpg"
+            alt="Chùa Bái Đính"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide product-works-slide overflow-hidden">
+          <img
+            src="/assets/about-01.png"
+            alt="Thiền Viện Trúc Lâm"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide product-works-slide overflow-hidden">
+          <img
+            src="/assets/work-03.jpg"
+            alt="Đền Trần"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide product-works-slide overflow-hidden">
+          <img
+            src="/assets/work-01.jpg"
+            alt="Chùa Bái Đính"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide product-works-slide overflow-hidden">
+          <img
+            src="/assets/about-01.png"
+            alt="Thiền Viện Trúc Lâm"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide product-works-slide overflow-hidden">
+          <img
+            src="/assets/work-03.jpg"
+            alt="Đền Trần"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="swiper-slide product-works-slide overflow-hidden">
+          <img
+            src="/assets/work-01.jpg"
+            alt="Chùa Bái Đính"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="swiper-slide product-works-slide overflow-hidden">
+          <img
+            src="/assets/about-01.png"
+            alt="Thiền Viện Trúc Lâm"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="swiper-slide product-works-slide overflow-hidden">
+          <img
+            src="/assets/work-03.jpg"
+            alt="Đền Trần"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="swiper-slide product-works-slide overflow-hidden">
+          <img
+            src="/assets/work-01.jpg"
+            alt="Chùa Bái Đính"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="swiper-slide product-works-slide overflow-hidden">
+          <img
+            src="/assets/about-01.png"
+            alt="Thiền Viện Trúc Lâm"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Slide 12 -->
+        <div class="swiper-slide product-works-slide overflow-hidden">
+          <img
+            src="/assets/work-03.jpg"
+            alt="Đền Trần"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Text Block (Relative on mobile, Absolute on desktop) (Order 2 for mobile) -->
+    <div
+      class="w-full px-4 relative xl:absolute xl:inset-x-0 xl:top-0 xl:pointer-events-none z-10 order-2"
+    >
+      <div
+        class="xl:absolute xl:top-0 xl:right-[max(1rem,calc(60%-808px))] w-full xl:max-w-[400px] bg-transparent pt-8 pointer-events-auto"
+      >
+        <div
+          class="flex justify-between items-start pb-4 border-b border-black/10 xl:border-none"
+        >
+          <h3
+            id="slide-title"
+            class="text-base font-bold uppercase tracking-wide slide-text-transition"
+          >
+            CHÙA BÁI ĐÍNH
+          </h3>
+        </div>
+
+        <div
+          class="space-y-3 text-[15px] mt-[13px] mb-[15px] md:mt-8 md:mb-12 slide-text-transition"
+          id="slide-meta"
+        >
+          <p>
+            <span class="font-bold">Địa điểm:</span>
+            <span id="slide-location">Ninh Bình</span>
+          </p>
+          <p>
+            <span class="font-bold">Sản phẩm:</span>
+            <span id="slide-product">Ngói âm dương nâu đen</span>
+          </p>
+        </div>
+
+        <a
+          href="#"
+          id="slide-link"
+          class="font-bold text-black border-b-[1.5px] border-black inline-block hover:text-secondary hover:border-secondary tracking-[0.05em] text-[13px] slide-text-transition"
+          >See more</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <section
+  class="w-full pb-12 md:pb-16 bg-background-secondary relative "
+  data-aos="fade-up"
+>
+
+
+  <div class="max-w-[1320px] w-[85%] mx-auto relative z-10">
+    <h2 class="text-[20px] md:text-3xl font-semibold text-secondary text-center uppercase mb-16">CÓ THỂ BẠN QUAN TÂM</h2>
+
+    <div class="relative">
+      <div class="overflow-x-auto pb-6 custom-recommend-scrollbar">
+        <div class="min-w-[1000px]">
+          <!-- Product Info Row -->
+          <div class="flex gap-10 mb-8">
+            <!-- Empty space for labels -->
+            <div class="w-[140px] shrink-0 sticky left-0 bg-background-secondary z-10"></div>
+
+            <div class="flex-grow flex gap-8">
+              <!-- Product 1 -->
+              <div class="w-[220px] shrink-0 flex flex-col items-start">
+                <a
+                  href="/products/ngoi-am-duong/detail.html"
+                  class="w-full group"
+                >
+                  <div class="product-card relative aspect-[6/5] w-full mb-4 bg-gray-100 rounded-sm overflow-hidden">
+                    <img
+                      src="/assets/gach-co-work-2.jpg"
+                      alt="Ngói Âm Dương 27 Nâu Đỏ"
+                      class="aspect-[6/5] object-cover w-full h-full"
+                      onerror="this.src = 'https://placehold.co/400x400/eee/999?text=Product'"
+                    />
+                    <div class="product-overlay">
+                      <img
+                        src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                        alt="Search"
+                      />
+                      <span>Xem chi tiết</span>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="/products/ngoi-am-duong/detail.html"
+                  class="text-[#004B8D] hover:text-secondary transition-colors"
+                >
+                  <h3 class="font-bold text-sm md:text-base leading-snug h-12 overflow-hidden">Ngói Âm Dương 27 Nâu Đỏ</h3>
+                </a>
+                <button
+                  class="border border-secondary text-secondary text-xs md:text-[13px] font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-white transition-all"
+                >
+                  Thêm vào giỏ
+                </button>
+              </div>
+              <!-- Product 2 -->
+              <div class="w-[220px] shrink-0 flex flex-col items-start">
+                <a
+                  href="/products/ngoi-am-duong/detail.html"
+                  class="w-full group"
+                >
+                  <div class="product-card relative aspect-[6/5] w-full mb-4 bg-[#E5E5E5] rounded-sm overflow-hidden">
+                    <div class="product-overlay">
+                      <img
+                        src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                        alt="Search"
+                      />
+                      <span>Xem chi tiết</span>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="/products/ngoi-am-duong/detail.html"
+                  class="text-[#004B8D] hover:text-secondary transition-colors"
+                >
+                  <h3 class="font-bold text-sm md:text-base leading-snug h-12 overflow-hidden">Ngói Âm Dương 27 Nâu Đỏ</h3>
+                </a>
+                <button
+                  class="border border-secondary text-secondary text-xs md:text-[13px] font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-white transition-all"
+                >
+                  Thêm vào giỏ
+                </button>
+              </div>
+              <!-- Product 3 -->
+              <div class="w-[220px] shrink-0 flex flex-col items-start">
+                <a
+                  href="/products/ngoi-am-duong/detail.html"
+                  class="w-full group"
+                >
+                  <div class="product-card relative aspect-[6/5] w-full mb-4 bg-[#E5E5E5] rounded-sm overflow-hidden">
+                    <div class="product-overlay">
+                      <img
+                        src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                        alt="Search"
+                      />
+                      <span>Xem chi tiết</span>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="/products/ngoi-am-duong/detail.html"
+                  class="text-[#004B8D] hover:text-secondary transition-colors"
+                >
+                  <h3 class="font-bold text-sm md:text-base leading-snug h-12 overflow-hidden">Ngói Âm Dương 27 Nâu Đỏ</h3>
+                </a>
+                <button
+                  class="border border-secondary text-secondary text-xs md:text-[13px] font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-white transition-all"
+                >
+                  Thêm vào giỏ
+                </button>
+              </div>
+              <!-- Product 4 -->
+              <div class="w-[220px] shrink-0 flex flex-col items-start">
+                <a
+                  href="/products/ngoi-am-duong/detail.html"
+                  class="w-full group"
+                >
+                  <div class="product-card relative aspect-[6/5] w-full mb-4 bg-[#E5E5E5] rounded-sm overflow-hidden">
+                    <div class="product-overlay">
+                      <img
+                        src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                        alt="Search"
+                      />
+                      <span>Xem chi tiết</span>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="/products/ngoi-am-duong/detail.html"
+                  class="text-[#004B8D] hover:text-secondary transition-colors"
+                >
+                  <h3 class="font-bold text-sm md:text-base leading-snug h-12 overflow-hidden">Ngói Âm Dương 27 Nâu Đỏ</h3>
+                </a>
+                <button
+                  class="border border-secondary text-secondary text-xs md:text-[13px] font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-white transition-all"
+                >
+                  Thêm vào giỏ
+                </button>
+              </div>
+              <!-- Product 5 -->
+              <div class="w-[220px] shrink-0 flex flex-col items-start">
+                <a
+                  href="/products/ngoi-am-duong/detail.html"
+                  class="w-full group"
+                >
+                  <div class="product-card relative aspect-[6/5] w-full mb-4 bg-[#E5E5E5] rounded-sm overflow-hidden">
+                    <div class="product-overlay">
+                      <img
+                        src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e"
+                        alt="Search"
+                      />
+                      <span>Xem chi tiết</span>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="/products/ngoi-am-duong/detail.html"
+                  class="text-[#004B8D] hover:text-secondary transition-colors"
+                >
+                  <h3 class="font-bold text-sm md:text-base leading-snug h-12 overflow-hidden">Ngói Âm Dương 27 Nâu Đỏ</h3>
+                </a>
+                <button
+                  class="border border-secondary text-secondary text-xs md:text-[13px] font-bold py-2 px-6 rounded-full hover:bg-secondary hover:text-white transition-all"
+                >
+                  Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparison Table -->
+          <div class="flex flex-col border-t border-black/10">
+            <!-- Price Row -->
+            <div class="flex gap-10 group">
+              <div
+                class="w-[140px] shrink-0 py-3 text-[14px] md:text-base font-bold text-primary flex items-center sticky left-0 bg-background-secondary z-10"
+              >
+                Giá
+              </div>
+              <div class="flex-grow flex gap-10">
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">675.000 đ/m²</div>
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">675.000 đ/m²</div>
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">675.000 đ/m²</div>
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">675.000 đ/m²</div>
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">675.000 đ/m²</div>
+              </div>
+            </div>
+            <!-- Color Row -->
+            <div class="flex gap-10 border-t border-black/10 group">
+              <div
+                class="w-[140px] shrink-0 py-3 text-[14px] md:text-base font-bold text-primary flex items-center sticky left-0 bg-background-secondary z-10"
+              >
+                Màu sắc
+              </div>
+              <div class="flex-grow flex gap-10">
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">Nâu đỏ</div>
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">Nâu đỏ</div>
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">Nâu đỏ</div>
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">Nâu đỏ</div>
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80">Nâu đỏ</div>
+              </div>
+            </div>
+            <!-- Size Row -->
+            <div class="flex gap-10 border-t border-black/5 group">
+              <div
+                class="w-[140px] shrink-0 py-3 text-[14px] md:text-base font-bold text-primary flex items-center sticky left-0 bg-background-secondary z-10"
+              >
+                Kích thước
+              </div>
+              <div class="flex-grow flex gap-10">
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80 leading-relaxed">L280 x W280 x H54mm</div>
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80 leading-relaxed">L280 x W280 x H54mm</div>
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80 leading-relaxed">L280 x W280 x H54mm</div>
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80 leading-relaxed">L280 x W280 x H54mm</div>
+                <div class="w-[220px] shrink-0 py-3 text-[14px] md:text-base text-primary/80 leading-relaxed">L280 x W280 x H54mm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- FAQ 2 Section Partial -->
+<section
+  class="w-full bg-background-secondary pb-12 lg:pb-10 pt-14 overflow-hidden"
+>
+  <div
+    class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center"
+  >
+    <!-- Left: Image -->
+    <div class="w-full aspect-square" data-aos="fade-right">
+      <img
+        src="/assets/faq2.png"
+        alt="FAQ Image"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- Right: Content -->
+    <div class="flex flex-col items-start" data-aos="fade-left">
+      <p
+        class="text-[#262626] text-sm md:text-base font-extrabold uppercase tracking-[0.1em] mb-8"
+      >
+        Bạn có thắc mắc?
+      </p>
+      <h2 class="text-3xl md:text-4xl text-primary leading-tight">
+        Xem các câu hỏi thường gặp
+      </h2>
+      <p class="text-[#262626]/70 text-sm md:text-base mb-10 leading-relaxed">
+        Khám phá danh sách các câu hỏi thường gặp và câu trả lời của chúng tôi.
+      </p>
+      <a
+        href="/faq/"
+        class="inline-block px-5 py-2 border border-black/40 text-[#262626] text-xs md:text-sm hover:bg-secondary hover:text-white hover:border-secondary transition-all"
+      >
+        (FAQ) Câu hỏi thường gặp
+      </a>
+    </div>
+  </div>
+</section>
+    </main>
 
     <footer class="bg-[#262723] text-white">
     

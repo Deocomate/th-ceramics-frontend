@@ -259,7 +259,21 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
     />
-    
+      <style>
+    @media (max-width: 767px) {
+      .process-mobile-scroll {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-gutter: stable both-edges;
+        scrollbar-width: auto;
+        scrollbar-color: #c76e00 #fff1e3;
+        padding-bottom: 12px;
+        scroll-behavior: smooth;
+      }
+    }
+  </style>
+
     <script type="module" crossorigin src="/assets/js/main.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/css/main.css">
   </head>
@@ -988,7 +1002,7 @@
       
           <p
             class="font-italianno text-3xl md:text-5xl text-primary leading-relaxed max-w-6xl mx-auto tracking-wide md:mt-24 lg:mt-0 gach-hoa-hero-copy -translate-y-[95px] md:translate-y-0"
-            style="text-shadow: 0px 1px 0px #fff;"
+            style="text-shadow: 0px 1px 0px #fff"
           >
             Kết tinh từ cốt gốm đanh thép, tôi luyện giữa lò nung nghìn độ, Thanh Hải
             phục dựng tinh hoa gạch thông gió cổ qua những nét chạm thủ công và sắc
@@ -996,7 +1010,8 @@
             trường tồn.
           </p>
         </div>
-      </section>      <!-- Product Collage Carousel -->
+      </section>
+      <!-- Product Collage Carousel -->
       <section
         class="relative w-full md:py-16 max-w-[1920px] mx-auto gach-hoa-collage-section"
       >
@@ -1027,7 +1042,7 @@
           data-aos="fade-up"
         >
           <!-- Swiper Container -->
-          <div class="swiper product-collage-swiper w-full pb-0 -scale-125">
+          <div class="swiper product-collage-swiper w-full pb-0 scale-[1.2]">
             <div class="swiper-wrapper">
               <!-- Slide 1 -->
               <div class="swiper-slide w-full">
@@ -1399,7 +1414,7 @@
       
           <!-- Swiper Navigation -->
           <div
-            class="w-full max-w-[1320px] mx-auto flex items-center justify-between z-20 text-textPrimary font-bold text-[17px] mt-[20px] md:-mt-8"
+            class="w-full max-w-[1320px] mx-auto flex items-center justify-between z-20 text-textPrimary font-bold text-[17px] md:-mt-8"
           >
             <div
               class="collage-button-prev shrink-0 w-10 h-10 border-2 border-black/20 rounded-full flex items-center justify-center text-black/40 hover:border-black hover:text-black transition-all cursor-pointer"
@@ -1442,19 +1457,18 @@
             </div>
           </div>
         </div>
-      </section>      <!-- Breadcrumb + Product Grid -->
+      </section>
+      <!-- Breadcrumb + Product Grid -->
       <section class="w-full gach-hoa-product-showcase-section">
         <div
-          class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pt-4 md:pb-6 relative z-10"
+          class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
         >
-          <p class="font-bold text-primary/60 uppercase text-xs md:text-base gach-hoa-breadcrumb">
-            <a
-              href="/"
-              class="hover:text-secondary transition-colors gach-hoa-breadcrumb-link"
-              >Trang chủ</a
+          <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
+            <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
+            <span class="mx-1">/</span>
+            <span class="text-primary font-semibold border-primary"
+              >Gạch Hoa Thông Gió</span
             >
-            <span class="mx-1 gach-hoa-breadcrumb-separator">/</span>
-            <span class="text-primary font-semibold border-primary gach-hoa-breadcrumb-current">Gạch Hoa Thông Gió</span>
           </p>
         </div>
       
@@ -1699,7 +1713,8 @@
                   </div>
               </section>
         </div>
-      </section>      <!-- Video Section -->
+      </section>
+      <!-- Video Section -->
       <section
         class="w-full max-w-[1920px] mx-auto md:pb-16 animate-fade-in-up gach-hoa-video-section"
       >
@@ -1902,30 +1917,35 @@
           <div class="w-full mb-[10px] md:mb-10">
             <div class="flex flex-col w-full">
               <h2
-                class="text-secondary font-italianno text-[45px] md:text-[60px] leading-none text-left drop-shadow-sm"
+                class="text-nowrap text-secondary font-italianno text-[28px] md:text-[60px] leading-[45px] md:leading-none text-left drop-shadow-sm"
               >
                 Cùng chúng tôi hiện thực hóa mẫu gạch trong mơ...
               </h2>
               <h2
-                class="text-secondary font-italianno text-[45px] md:text-[60px] leading-none text-right mt-2 drop-shadow-sm"
+                class="text-secondary font-italianno text-[28px] md:text-[60px] leading-[45px] md:leading-none text-right mt-2 drop-shadow-sm"
               >
                 Yêu cầu của bạn là gì?
               </h2>
             </div>
           </div>
         
+        
           <!-- Image Process -->
-          <div class="w-full flex justify-center mb-[15px] md:mb-6">
+          <div
+            class="w-full flex md:justify-center mb-[15px] md:mb-6 process-mobile-scroll"
+          >
             <img
               src="/assets/process.png"
               alt="Quy trình chế tác gạch"
-              class="w-full h-auto object-contain"
+              class="h-auto object-contain w-[200%] max-w-none md:w-full md:max-w-[100%]"
             />
           </div>
         
           <!-- Note Text -->
           <div class="w-full">
-            <p class="text-base md:text-xl italic text-primary font-thin">
+            <p
+              class="text-[10px] leading-[18px] md:text-xl md:leading-normal italic text-primary font-thin"
+            >
               * Để đảm bảo sự hoàn mỹ: Quá trình chế tác mẫu có tính phí và thời gian
               thực hiện tùy thuộc vào độ tinh xảo của sản phẩm
             </p>
@@ -1948,7 +1968,9 @@
               data-aos="fade-up"
             />
           </div>
-        </section></div>      <!-- FAQ Section -->
+        </section>
+      </div>
+      <!-- FAQ Section -->
       <section
         class="w-full relative pb-[65px] md:pb-32 bg-background-secondary overflow-visible gach-hoa-faq-section"
         data-aos="fade-up"
