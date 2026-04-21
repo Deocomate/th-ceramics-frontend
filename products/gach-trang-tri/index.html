@@ -862,18 +862,19 @@
         </p>
       </div>
 
-      <!-- Product Grid Section -->
-<section
-  class="w-[85%] max-w-[1320px] mx-auto pb-[43px] md:pb-16 animate-fade-in-up"
->
-  <!-- Divider -->
+      <!-- ============================================== -->
+<!-- COMPONENT BỘ LỌC SẢN PHẨM -->
+<!-- ============================================== -->
+<section class="w-[85%] max-w-[1320px] mx-auto">
+  <!-- Đường kẻ phân cách phía trên bộ lọc -->
   <hr class="border-t border-black/10 mb-3 w-full" />
 
-  <!-- Filter Button -->
+  <!-- Nút Bộ Lọc Sản Phẩm -->
   <div class="mb-[30px] md:mb-10 block" data-aos="fade-up">
     <button
-      class="flex items-center gap-3 text-textPrimary hover:text-secondary transition-colors font-bold uppercase tracking-[0.05em] text-[13px]"
+      class="product-filter-trigger flex items-center gap-3 text-textPrimary hover:text-secondary transition-colors font-bold uppercase tracking-[0.05em] text-[13px]"
     >
+      <!-- Icon Lọc -->
       <div
         class="w-8 h-8 flex items-center justify-center border border-black/60 rounded text-black/60"
       >
@@ -894,619 +895,218 @@
       BỘ LỌC SẢN PHẨM
     </button>
   </div>
-
-  <!-- Product Grid (4x4 = 16 items) -->
+</section>
+ <!-- ============================================== -->
+<!-- COMPONENT LƯỚI SẢN PHẨM Ở TRANG DANH MỤC THÀNH PHẦN -->
+<!-- ============================================== -->
+<section
+  class="w-[85%] max-w-[1320px] mx-auto pb-[43px] md:pb-16 animate-fade-in-up"
+>
+  <!-- Danh sách Lưới Sản phẩm (Mặc định hiển thị dạng Grid 4 cột trên PC, 2 cột trên Mobile) -->
   <div
     class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[16px] gap-y-[30px] sm:gap-x-6 sm:gap-y-14"
     data-aos="fade-up"
     data-aos-delay="200"
   >
-    <a
-      href="/products/gach-trang-tri/detail.html"
-      class="flex flex-col group cursor-pointer"
-    >
+    <a href="#" class="flex flex-col group cursor-pointer">
       <div
         class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
       >
         <img
           src="/assets/ngoi-01.jpg"
-          alt="Riềm âm dương sen bầu"
+          alt="Riềm Âm Dương Sen Bầu"
           class="w-full h-full object-cover mix-blend-multiply"
         />
         <div class="product-overlay">
           <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-          <span
-            >Xem chi tiết</span
-          >
+          <span>Xem chi tiết</span>
         </div>
       </div>
       <h3
         class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
       >
-        <span class="block lowercase first-letter:uppercase md:uppercase">
-          Riềm âm dương sen bầu
-        </span>
+        <span class="block lowercase first-letter:uppercase md:uppercase"
+          >Riềm âm dương sen bầu</span
+        >
       </h3>
-      <p
-        class="text-gray-500 text-[13px] mb-2"
-      >
-        MSP: 1234RDS
-      </p>
-      <p
-        class="text-secondary font-bold text-[14px]"
-      >
-        Giá: 675.000 đ/m2
-      </p>
+      <p class="text-gray-500 text-[13px] mb-2">MSP: 1234RDS</p>
+      <p class="text-secondary font-bold text-[14px]">Giá: 675.000 đ/m2</p>
     </a>
-    <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-05.jpg"
-      alt="Riềm âm dương sen bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+    <a href="#" class="flex flex-col group cursor-pointer">
+      <div
+        class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-06.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+        <img
+          src="/assets/ngoi-01.jpg"
+          alt="Riềm Âm Dương Sen Bầu"
+          class="w-full h-full object-cover mix-blend-multiply"
+        />
+        <div class="product-overlay">
+          <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+          <span>Xem chi tiết</span>
+        </div>
+      </div>
+      <h3
+        class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-07.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+        <span class="block lowercase first-letter:uppercase md:uppercase"
+          >Riềm âm dương sen bầu</span
+        >
+      </h3>
+      <p class="text-gray-500 text-[13px] mb-2">MSP: 1234RDS</p>
+      <p class="text-secondary font-bold text-[14px]">Giá: 675.000 đ/m2</p>
+    </a>
+    <a href="#" class="flex flex-col group cursor-pointer">
+      <div
+        class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-01.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+        <img
+          src="/assets/ngoi-01.jpg"
+          alt="Riềm Âm Dương Sen Bầu"
+          class="w-full h-full object-cover mix-blend-multiply"
+        />
+        <div class="product-overlay">
+          <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+          <span>Xem chi tiết</span>
+        </div>
+      </div>
+      <h3
+        class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen
-    bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-05.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+        <span class="block lowercase first-letter:uppercase md:uppercase"
+          >Riềm âm dương sen bầu</span
+        >
+      </h3>
+      <p class="text-gray-500 text-[13px] mb-2">MSP: 1234RDS</p>
+      <p class="text-secondary font-bold text-[14px]">Giá: 675.000 đ/m2</p>
+    </a>
+    <a href="#" class="flex flex-col group cursor-pointer">
+      <div
+        class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-06.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+        <img
+          src="/assets/ngoi-01.jpg"
+          alt="Riềm Âm Dương Sen Bầu"
+          class="w-full h-full object-cover mix-blend-multiply"
+        />
+        <div class="product-overlay">
+          <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+          <span>Xem chi tiết</span>
+        </div>
+      </div>
+      <h3
+        class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen
-    bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-07.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+        <span class="block lowercase first-letter:uppercase md:uppercase"
+          >Riềm âm dương sen bầu</span
+        >
+      </h3>
+      <p class="text-gray-500 text-[13px] mb-2">MSP: 1234RDS</p>
+      <p class="text-secondary font-bold text-[14px]">Giá: 675.000 đ/m2</p>
+    </a>
+    <a href="#" class="flex flex-col group cursor-pointer">
+      <div
+        class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-01.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+        <img
+          src="/assets/ngoi-01.jpg"
+          alt="Riềm Âm Dương Sen Bầu"
+          class="w-full h-full object-cover mix-blend-multiply"
+        />
+        <div class="product-overlay">
+          <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+          <span>Xem chi tiết</span>
+        </div>
+      </div>
+      <h3
+        class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen
-    bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-05.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+        <span class="block lowercase first-letter:uppercase md:uppercase"
+          >Riềm âm dương sen bầu</span
+        >
+      </h3>
+      <p class="text-gray-500 text-[13px] mb-2">MSP: 1234RDS</p>
+      <p class="text-secondary font-bold text-[14px]">Giá: 675.000 đ/m2</p>
+    </a>
+    <a href="#" class="flex flex-col group cursor-pointer">
+      <div
+        class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-06.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+        <img
+          src="/assets/ngoi-01.jpg"
+          alt="Riềm Âm Dương Sen Bầu"
+          class="w-full h-full object-cover mix-blend-multiply"
+        />
+        <div class="product-overlay">
+          <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+          <span>Xem chi tiết</span>
+        </div>
+      </div>
+      <h3
+        class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen
-    bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-07.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+        <span class="block lowercase first-letter:uppercase md:uppercase"
+          >Riềm âm dương sen bầu</span
+        >
+      </h3>
+      <p class="text-gray-500 text-[13px] mb-2">MSP: 1234RDS</p>
+      <p class="text-secondary font-bold text-[14px]">Giá: 675.000 đ/m2</p>
+    </a>
+    <a href="#" class="flex flex-col group cursor-pointer">
+      <div
+        class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-01.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+        <img
+          src="/assets/ngoi-01.jpg"
+          alt="Riềm Âm Dương Sen Bầu"
+          class="w-full h-full object-cover mix-blend-multiply"
+        />
+        <div class="product-overlay">
+          <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+          <span>Xem chi tiết</span>
+        </div>
+      </div>
+      <h3
+        class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen
-    bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-05.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+        <span class="block lowercase first-letter:uppercase md:uppercase"
+          >Riềm âm dương sen bầu</span
+        >
+      </h3>
+      <p class="text-gray-500 text-[13px] mb-2">MSP: 1234RDS</p>
+      <p class="text-secondary font-bold text-[14px]">Giá: 675.000 đ/m2</p>
+    </a>
+    <a href="#" class="flex flex-col group cursor-pointer">
+      <div
+        class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-06.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
+        <img
+          src="/assets/ngoi-01.jpg"
+          alt="Riềm Âm Dương Sen Bầu"
+          class="w-full h-full object-cover mix-blend-multiply"
+        />
+        <div class="product-overlay">
+          <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+          <span>Xem chi tiết</span>
+        </div>
+      </div>
+      <h3
+        class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
       >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen
-    bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
- <a
-  href="/products/gach-trang-tri/detail.html"
-  class="flex flex-col group cursor-pointer"
->
-  <div
-    class="product-card relative bg-white rounded-sm shadow-lg overflow-hidden mb-4 aspect-square transition-all duration-300 group-hover:-translate-y-1"
-  >
-    <img
-      src="/assets/ngoi-07.jpg"
-      alt="Riềm Âm Dương Sen Bầu"
-      class="w-full h-full object-cover mix-blend-multiply"
-    />
-    <div class="product-overlay">
-      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-      <span
-        >Xem chi tiết</span
-      >
-    </div>
-  </div>
-  <h3
-    class="text-primary font-semibold text-sm uppercase mb-2 transition-colors group-hover:text-secondary"
-  >
-    <span class="block lowercase first-letter:uppercase md:uppercase">
-      Riềm âm dương sen bầu
-    </span>
-  </h3>
-  <p
-    class="text-gray-500 text-[13px] mb-2"
-  >
-    MSP: 1234RDS
-  </p>
-  <p
-    class="text-secondary font-bold text-[14px]"
-  >
-    Giá: 675.000 đ/m2
-  </p>
-</a>
-
+        <span class="block lowercase first-letter:uppercase md:uppercase"
+          >Riềm âm dương sen bầu</span
+        >
+      </h3>
+      <p class="text-gray-500 text-[13px] mb-2">MSP: 1234RDS</p>
+      <p class="text-secondary font-bold text-[14px]">Giá: 675.000 đ/m2</p>
+    </a>
   </div>
 
-  <!-- Pagination -->
+  <!-- Component Phân Trang (Pagination) dưới cùng của Lưới Sản phẩm -->
   <div
     class="flex items-center justify-between gap-6 mt-[50px] md:mt-16 text-textPrimary font-bold text-[17px]"
   >
-    <!-- Prev Button -->
+    <!-- Prev Button (Nút quay lại trang trước) -->
     <button
       class="w-10 h-10 border-2 border-black/20 rounded-full flex items-center justify-center text-black/40 hover:border-black hover:text-black transition-all cursor-pointer"
     >
@@ -1525,24 +1125,27 @@
       </svg>
     </button>
 
-    <!-- Page Numbers -->
+    <!-- Page Numbers (Chỉ số thứ tự trang) -->
     <div class="flex items-center gap-5">
+      <!-- Nút trang đang active (có border dưới) -->
       <a href="#" class="text-black border-b-[3px] border-black pb-[2px] px-1"
         >1</a
       >
+      <!-- Các nút trang chưa chọn -->
       <a href="#" class="text-black/40 hover:text-black transition-colors px-1"
         >2</a
       >
       <a href="#" class="text-black/40 hover:text-black transition-colors px-1"
         >3</a
       >
+      <!-- Dấu ba chấm đại diện cho các trang bị ẩn -->
       <span class="text-black/40 tracking-widest px-1">...</span>
       <a href="#" class="text-black/40 hover:text-black transition-colors px-1"
         >9</a
       >
     </div>
 
-    <!-- Next Button -->
+    <!-- Next Button (Nút sang trang tiếp theo) -->
     <button
       class="w-10 h-10 border-2 border-black/20 rounded-full flex items-center justify-center text-black/40 hover:border-black hover:text-black transition-all cursor-pointer"
     >
@@ -1690,23 +1293,32 @@
         </div>
       </section>
 
-      <!-- Video Section -->
+      <!-- ============================================== -->
+      <!-- COMPONENT VIDEO HÀNH TRÌNH CHẾ TÁC               -->
+      <!-- ============================================== -->
       <section class="w-full mx-auto pb-[30px] md:pb-16 max-w-[1920px]">
+        <!-- Tiêu đề (Có thể ẩn đi nếu tham số hideTitle = true) -->
+      
+        <!-- Khung chứa Video (Tỷ lệ 16:9 - aspect-video) -->
         <div
           class="relative w-full aspect-video overflow-hidden cursor-pointer group"
           data-aos="fade-up"
           data-aos-delay="200"
         >
+          <!-- Ảnh Thumbnail đại diện cho video (Khi hover sẽ tối đi) -->
           <img
             src="/assets/video-placeholder-02.png"
             alt="Video placeholder"
             class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300"
           />
-          <!-- Play Button -->
+          
+          <!-- Lớp phủ chứa Nút Play ở giữa màn hình -->
           <div class="absolute inset-0 flex items-center justify-center">
+            <!-- Vòng tròn mờ (backdrop-blur) của nút Play -->
             <div
               class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300"
             >
+              <!-- Icon tam giác Play -->
               <svg
                 class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1"
                 fill="currentColor"
@@ -2111,12 +1723,15 @@
           class="absolute top-[38%] -translate-y-1/3 md:right-12 -right-1/2 w-[42%] object-contain opacity-80 pointer-events-none z-0"
           alt=""
         />
-        <!-- FAQ Content -->
+        <!-- ============================================== -->
+        <!-- COMPONENT CÂU HỎI THƯỜNG GẶP (FAQ)               -->
+        <!-- Bản chất là danh sách Accordion (Click để mở)    -->
+        <!-- ============================================== -->
         <div
           class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto"
           data-faq-component
         >
-          <!-- Section Title -->
+          <!-- Tiêu đề Section CÂU HỎI THƯỜNG GẶP -->
           <div
             class="w-[85%] max-w-[1320px] mx-auto text-center mb-[22px] md:mb-16"
             data-aos="fade-up"
@@ -2128,20 +1743,22 @@
             </h2>
           </div>
         
-          <!-- FAQ Card -->
+          <!-- Khung Thẻ Card trắng chứa toàn bộ danh sách câu hỏi -->
           <div
             class="bg-white px-6 md:px-10 py-8 shadow-lg relative"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <!-- FAQ Item 1 -->
+            <!-- Câu Hỏi Item 1 (Mặc định được hiển thị mở rộng sẵn) -->
             <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+              <!-- Nút để click đóng/mở nội dung -->
               <button
                 class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
               >
                 <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
                   >Showroom của Gốm sứ Thanh Hải ở đâu?</span
                 >
+                <!-- Icon Mũi tên Dropdown -->
                 <span
                   class="faq-icon w-6 h-6 flex-shrink-0 bg-textPrimary rounded-full flex items-center justify-center text-white transition-all duration-300"
                 >
@@ -2160,6 +1777,7 @@
                   </svg>
                 </span>
               </button>
+              <!-- Khối nội dung câu trả lời -->
               <div
                 class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed block overflow-hidden transition-all duration-300"
               >

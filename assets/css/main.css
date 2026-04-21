@@ -1319,16 +1319,8 @@ body {
   margin-left: 2rem;
 }
 
-.ml-\[15\.5\%\]{
-  margin-left: 15.5%;
-}
-
 .ml-\[7\.5\%\]{
   margin-left: 7.5%;
-}
-
-.ml-\[calc\(max\(7\.5\%\2c \(100\%-1320px\)\/2\)\)\]{
-  margin-left: calc(max(7.5%, (100% - 1320px) / 2));
 }
 
 .ml-auto{
@@ -1345,10 +1337,6 @@ body {
 
 .mr-\[8\%\]{
   margin-right: 8%;
-}
-
-.mr-\[calc\(max\(7\.5\%\2c \(100\%-1320px\)\/2\)\)\]{
-  margin-right: calc(max(7.5%, (100% - 1320px) / 2));
 }
 
 .mr-auto{
@@ -3321,6 +3309,15 @@ body {
   background-color: rgb(193 106 0 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#C76E00\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(199 110 0 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#C76E00\]\/30{
+  background-color: rgb(199 110 0 / 0.3);
+}
+
 .bg-\[\#CAE5FF\]{
   --tw-bg-opacity: 1;
   background-color: rgb(202 229 255 / var(--tw-bg-opacity, 1));
@@ -4858,6 +4855,12 @@ body {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-none{
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-sm{
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -4942,6 +4945,11 @@ body {
 
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-blur{
+  --tw-backdrop-blur: blur(8px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
 .backdrop-blur-md{
@@ -5721,10 +5729,6 @@ body {
     margin-left: -3rem;
   }
 
-  .md\:-mt-12{
-    margin-top: -3rem;
-  }
-
   .md\:-mt-8{
     margin-top: -2rem;
   }
@@ -5801,12 +5805,20 @@ body {
     margin-left: -6%;
   }
 
+  .md\:ml-\[15\.5\%\]{
+    margin-left: 15.5%;
+  }
+
   .md\:ml-\[20\%\]{
     margin-left: 20%;
   }
 
   .md\:ml-\[5\%\]{
     margin-left: 5%;
+  }
+
+  .md\:ml-\[calc\(max\(7\.5\%\2c \(100\%-1320px\)\/2\)\)\]{
+    margin-left: calc(max(7.5%, (100% - 1320px) / 2));
   }
 
   .md\:mr-\[-6\%\]{
@@ -6925,6 +6937,12 @@ body {
 
   .md\:opacity-80{
     opacity: 0.8;
+  }
+
+  .md\:shadow-2xl{
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 
   .md\:shadow-lg{
