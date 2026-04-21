@@ -588,7 +588,7 @@ body {
 
 /* Hide Swiper's default pagination if not used */
 
-.swiper-pagination {
+.swiper-pagination:not(.product-list-pagination):not(.fabrication-pagination):not(.projects-pagination) {
     display: none !important;
   }
 
