@@ -87,7 +87,20 @@
           font-weight: 600;
           line-height: 20px;
           overflow-wrap: break-word;
-          text-transform: none;
+          text-transform: lowercase;
+        }
+
+        .page-phu-kien-ngoi
+          main
+          > section:nth-of-type(2)
+          .product-card
+          + h3::first-letter,
+        .page-phu-kien-ngoi
+          main
+          > section:nth-of-type(3)
+          .product-card
+          + h3::first-letter {
+          text-transform: uppercase;
         }
 
         .page-phu-kien-ngoi
@@ -139,7 +152,15 @@
           font-weight: 600;
           line-height: 20px;
           overflow-wrap: break-word;
-          text-transform: none;
+          text-transform: lowercase;
+        }
+
+        .page-phu-kien-ngoi
+          main
+          > section:nth-of-type(4)
+          .product-card
+          + h3::first-letter {
+          text-transform: uppercase;
         }
 
         .page-phu-kien-ngoi
@@ -268,677 +289,678 @@
     class="min-h-screen flex flex-col bg-background-secondary page-phu-kien-ngoi"
   >
     <header
-      id="site-header"
-      class="bg-primary sticky top-0 text-white h-[58px] xl:h-[108px] z-50 transition-all duration-300"
-    >
-      <div class="hidden xl:block w-[85%] max-w-[1320px] mx-auto h-full">
-        <nav class="flex items-center justify-between h-full">
-          <!-- Logo -->
-          <div class="flex-shrink-0 mr-[8%]">
-            <a href="/" class="block">
-              <img
-                src="data:image/png;base64,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"
-                alt="Logo"
-                class="h-[92px] w-[92px]"
-              />
-            </a>
-          </div>
-    
-          <!-- Desktop Navigation -->
-          <div
-            class="hidden xl:flex items-center 2xl:gap-10 xl:gap-6 gap-6 flex-1 justify-end mr-8"
-            id="desktop-menu"
-          >
-            <a
-              href="/"
-              class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-              data-path="/"
-              >trang chủ</a
-            >
-            <a
-              href="/about/"
-              class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-              data-path="/about/"
-              >về chúng tôi</a
-            >
-            <div class="relative group">
-              <a
-                href="/products/ngoi-am-duong/"
-                class="nav-link flex items-center gap-[5px] text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-                data-path="/products/"
-              >
-                <span>sản phẩm</span>
-                <svg
-                  class="w-[7px] h-[7px]"
-                  viewBox="0 0 7 7"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </a>
-              <!-- Desktop Dropdown -->
-              <div
-                class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary"
-              >
-                <ul class="py-2 flex flex-col">
-                  <li>
-                    <a
-                      href="/products/ngoi-am-duong/"
-                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/products/ngoi-am-duong/"
-                      >Ngói Âm Dương</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/products/ngoi-hai-van-mieu/"
-                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/products/ngoi-hai-van-mieu/"
-                      >Ngói Hài Văn Miếu</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/products/gach-hoa-thong-gio/"
-                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/products/gach-hoa-thong-gio/"
-                      >Gạch Hoa Thông Gió</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/products/phu-kien-ngoi/"
-                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/products/phu-kien-ngoi/"
-                      >Phụ Kiện Ngói</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/products/gach-trang-tri/"
-                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/products/gach-trang-tri/"
-                      >Gạch Trang Trí</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/products/lan-can-gom-su/"
-                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/products/lan-can-gom-su/"
-                      >Lan Can Gốm Sứ</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/products/gach-co-bat-trang/"
-                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/products/gach-co-bat-trang/"
-                      >Gạch Cổ Bát Tràng</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/products/linh-vat-phong-thuy/"
-                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/products/linh-vat-phong-thuy/"
-                      >Linh Vật Phong Thủy</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/products/den-gom-su/"
-                      class="desktop-dropdown-link block px-5 py-3 text-sm text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/products/den-gom-su/"
-                      >Đèn Gốm Sứ</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-    
-            <div class="relative group">
-              <a
-                href="#"
-                class="nav-link flex items-center gap-[5px] text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-                data-path="/product-details/"
-              >
-                <span>SPCT</span>
-                <svg
-                  class="w-[7px] h-[7px]"
-                  viewBox="0 0 7 7"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </a>
-              <!-- Quick access detail pages dropdown -->
-              <div
-                class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary overflow-y-auto max-h-[60vh]"
-              >
-                <ul class="py-2 flex flex-col">
-                  <li>
-                    <a
-                      href="/product-details/ngoi-am-duong/detail.html"
-                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/product-details/ngoi-am-duong/detail.html"
-                      >Ngói Âm Dương</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/product-details/gach-co-bat-trang/detail-200x200x50.html"
-                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/product-details/gach-co-bat-trang/detail-200x200x50.html"
-                      >Gạch Bát 200x200x50</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/product-details/gach-co-bat-trang/detail-220x110x60.html"
-                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/product-details/gach-co-bat-trang/detail-220x110x60.html"
-                      >Gạch Bát 220x110x60</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/product-details/gach-co-bat-trang/detail-300x100x30.html"
-                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/product-details/gach-co-bat-trang/detail-300x100x30.html"
-                      >Gạch Bát 300x100x30</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/product-details/gach-co-bat-trang/detail-300x150x60.html"
-                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/product-details/gach-co-bat-trang/detail-300x150x60.html"
-                      >Gạch Bát 300x150x60</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/product-details/gach-co-bat-trang/detail-300x300x50.html"
-                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/product-details/gach-co-bat-trang/detail-300x300x50.html"
-                      >Gạch Bát 300x300x50</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/product-details/gach-hoa-thong-gio/detail.html"
-                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/product-details/gach-hoa-thong-gio/detail.html"
-                      >Gạch hoa thông gió</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/product-details/gach-trang-tri/detail.html"
-                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/product-details/gach-trang-tri/detail.html"
-                      >Gạch trang trí</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/product-details/linh-vat/detail.html"
-                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/product-details/linh-vat/detail.html"
-                      >Linh vật phong thủy</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/product-details/ngoi-hai-co/ngoi-hai-co-nau-den.html"
-                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/product-details/ngoi-hai-co/ngoi-hai-co-nau-den.html"
-                      >Ngói Hài Cổ Nâu Đen</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/product-details/ngoi-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
-                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/product-details/ngoi-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
-                      >Ngói Văn Miếu Ghi Ánh Kim</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/product-details/bo-noc-chu-van/bo-noc-chu-van.html"
-                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/product-details/bo-noc-chu-van/bo-noc-chu-van.html"
-                      >Bộ Nóc Chữ Vạn</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="/product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html"
-                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                      data-path="/product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html"
-                      >Ngói Bó Nóc</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <a
-              href="/projects/"
-              class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-              data-path="/projects/"
-              >Dự án</a
-            >
-            <a
-              href="/factory/"
-              class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-              data-path="/factory/"
-              >Xưởng sản xuất</a
-            >
-            <a
-              href="/news/"
-              class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-              data-path="/news/"
-              >Tin tức</a
-            >
-            <a
-              href="/contact/"
-              class="nav-link text-[#FFFAF3] font-bold 2xl:text-base xl:text-sm text-xs uppercase leading-[18px] hover:text-secondary transition-colors"
-              data-path="/contact/"
-              >liên hệ</a
-            >
-          </div>
-    
-          <!-- Desktop Icons -->
-          <div class="hidden xl:flex items-center gap-6">
-            <button
-              class="hover:text-secondary transition-colors"
-              aria-label="Search"
-            >
-              <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-5 h-5" />
-            </button>
-            <a
-              href="/cart/gio-hang.html"
-              class="hover:text-secondary transition-colors"
-              aria-label="Cart"
-            >
-              <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-5 h-5" />
-            </a>
-            <a
-              href="/dich-vu-khach-hang/trang-thai-don-hang.html"
-              class="hover:text-secondary transition-colors"
-              aria-label="User"
-            >
-              <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-5 h-5" />
-            </a>
-          </div>
-        </nav>
+  id="site-header"
+  class="bg-primary sticky top-0 text-white h-[58px] xl:h-[108px] z-50 transition-all duration-300"
+>
+  <div class="hidden xl:block w-[85%] max-w-[1320px] mx-auto h-full">
+    <nav class="flex items-center justify-between h-full">
+      <!-- Logo -->
+      <div class="flex-shrink-0 mr-[8%]">
+        <a href="/" class="block">
+          <img
+            src="data:image/png;base64,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"
+            alt="Logo"
+            class="h-[78px] w-[78px]"
+          />
+        </a>
       </div>
-    
-      <!-- Mobile Header -->
+
+      <!-- Desktop Navigation -->
       <div
-        class="xl:hidden h-full bg-[linear-gradient(90deg,_#2F302C_0%,_#262720_100%)]"
+        class="hidden xl:flex items-center 2xl:gap-10 xl:gap-6 gap-6 flex-1 justify-end mr-8"
+        id="desktop-menu"
       >
-        <nav class="relative flex items-center justify-center h-full">
-          <button
-            id="mobile-menu-button"
-            class="absolute left-[23px] text-white hover:text-secondary transition-colors"
-            aria-label="Toggle menu"
-          >
-            <img
-              src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%2014H15C15.552%2014%2016%2013.552%2016%2013C16%2012.448%2015.552%2012%2015%2012H8C7.448%2012%207%2012.448%207%2013C7%2013.552%207.448%2014%208%2014Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%204H15C15.552%204%2016%203.552%2016%203C16%202.448%2015.552%202%2015%202H1C0.448%202%200%202.448%200%203C0%203.552%200.448%204%201%204Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%209H15C15.552%209%2016%208.552%2016%208C16%207.448%2015.552%207%2015%207H1C0.448%207%200%207.448%200%208C0%208.552%200.448%209%201%209Z'%20fill='%23F7F7F7'/%3e%3c/svg%3e"
-              alt="menu"
-              class="w-[18px] h-[18px]"
-            />
-          </button>
-    
-          <a href="/" class="block">
-            <img
-              src="data:image/png;base64,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"
-              alt="Logo"
-              class="h-[44px] w-[44px]"
-            />
-          </a>
-    
-          <div class="absolute right-[23px] flex items-center gap-[14px]">
-            <button
-              class="hover:text-secondary transition-colors"
-              aria-label="Search"
-            >
-              <img
-                src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
-                alt="search"
-                class="w-[18px] h-[18px]"
-              />
-            </button>
-            <a
-              href="/cart/gio-hang.html"
-              class="hover:text-secondary transition-colors"
-              aria-label="Cart"
-            >
-              <img
-                src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e"
-                alt="cart"
-                class="w-[18px] h-[18px]"
-              />
-            </a>
-            <a
-              href="/dich-vu-khach-hang/trang-thai-don-hang.html"
-              class="hover:text-secondary transition-colors"
-              aria-label="User"
-            >
-              <img
-                src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e"
-                alt="user"
-                class="w-[18px] h-[18px]"
-              />
-            </a>
-          </div>
-        </nav>
-      </div>
-    
-      <!-- Mobile Navigation -->
-      <div
-        id="mobile-menu"
-        class="hidden fixed inset-0 bg-primary z-50 overflow-y-auto"
-      >
-        <div
-          class="w-[85%] max-w-[1320px] mx-auto py-6 relative min-h-full flex flex-col"
+        <a
+          href="/"
+          class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+          data-path="/"
+          >trang chủ</a
         >
-          <div class="flex justify-between items-center mb-8 shrink-0">
-            <a href="/" class="block">
-              <img
-                src="data:image/png;base64,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"
-                alt="Logo"
-                class="h-[90px] w-[90px]"
+        <a
+          href="/about/"
+          class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+          data-path="/about/"
+          >về chúng tôi</a
+        >
+        <div class="relative group">
+          <a
+            href="/products/ngoi-am-duong/"
+            class="nav-link flex items-center gap-[5px] whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+            data-path="/products/"
+          >
+            <span>sản phẩm</span>
+            <svg
+              class="w-[7px] h-[7px]"
+              viewBox="0 0 7 7"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
+                fill="currentColor"
               />
-            </a>
-            <div class="flex items-center gap-5">
-              <button
-                class="hover:text-secondary transition-colors"
-                aria-label="Search"
-              >
-                <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-5 h-5" />
-              </button>
-              <a
-                href="/cart/gio-hang.html"
-                class="hover:text-secondary transition-colors"
-                aria-label="Cart"
-              >
-                <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-5 h-5" />
-              </a>
-              <a
-                href="/dich-vu-khach-hang/trang-thai-don-hang.html"
-                class="hover:text-secondary transition-colors"
-                aria-label="User"
-              >
-                <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-5 h-5" />
-              </a>
-              <button
-                id="close-menu-button"
-                class="text-white hover:text-secondary transition-colors"
-              >
-                <svg
-                  class="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="flex flex-col space-y-6 flex-grow">
-            <a
-              href="/"
-              class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-              data-path="/"
-              >trang chủ</a
-            >
-            <a
-              href="/about/"
-              class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-              data-path="/about/"
-              >về chúng tôi</a
-            >
-            <div class="flex flex-col">
-              <button
-                id="mobile-products-toggle"
-                class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
-                data-path="/products/"
-              >
-                <span>sản phẩm</span>
-                <svg
-                  class="w-[10px] h-[10px] transition-transform duration-300 transform"
-                  id="mobile-products-icon"
-                  viewBox="0 0 7 7"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </button>
-              <div
-                id="mobile-products-submenu"
-                class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2"
-              >
+            </svg>
+          </a>
+          <!-- Desktop Dropdown -->
+          <div
+            class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary"
+          >
+            <ul class="py-2 flex flex-col">
+              <li>
                 <a
                   href="/products/ngoi-am-duong/"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
                   data-path="/products/ngoi-am-duong/"
                   >Ngói Âm Dương</a
                 >
+              </li>
+              <li>
                 <a
                   href="/products/ngoi-hai-van-mieu/"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
                   data-path="/products/ngoi-hai-van-mieu/"
                   >Ngói Hài Văn Miếu</a
                 >
+              </li>
+              <li>
                 <a
                   href="/products/gach-hoa-thong-gio/"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
                   data-path="/products/gach-hoa-thong-gio/"
                   >Gạch Hoa Thông Gió</a
                 >
+              </li>
+              <li>
                 <a
                   href="/products/phu-kien-ngoi/"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
                   data-path="/products/phu-kien-ngoi/"
                   >Phụ Kiện Ngói</a
                 >
+              </li>
+              <li>
                 <a
                   href="/products/gach-trang-tri/"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
                   data-path="/products/gach-trang-tri/"
                   >Gạch Trang Trí</a
                 >
+              </li>
+              <li>
                 <a
                   href="/products/lan-can-gom-su/"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
                   data-path="/products/lan-can-gom-su/"
                   >Lan Can Gốm Sứ</a
                 >
+              </li>
+              <li>
                 <a
                   href="/products/gach-co-bat-trang/"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
                   data-path="/products/gach-co-bat-trang/"
                   >Gạch Cổ Bát Tràng</a
                 >
+              </li>
+              <li>
                 <a
                   href="/products/linh-vat-phong-thuy/"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
                   data-path="/products/linh-vat-phong-thuy/"
-                  >Linh vật Phong Thủy</a
+                  >Linh Vật Phong Thủy</a
                 >
+              </li>
+              <li>
                 <a
                   href="/products/den-gom-su/"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
                   data-path="/products/den-gom-su/"
                   >Đèn Gốm Sứ</a
                 >
-              </div>
-            </div>
-    
-            <div class="flex flex-col">
-              <button
-                id="mobile-spct-toggle"
-                class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
-                data-path="/product-details/"
-              >
-                <span>SPCT</span>
-                <svg
-                  class="w-[10px] h-[10px] transition-transform duration-300 transform"
-                  id="mobile-spct-icon"
-                  viewBox="0 0 7 7"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </button>
-              <div
-                id="mobile-spct-submenu"
-                class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2"
-              >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <a
+            href="#"
+            class="nav-link flex items-center gap-[5px] whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+            data-path="/product-details/"
+          >
+            <span>SPCT</span>
+            <svg
+              class="w-[7px] h-[7px]"
+              viewBox="0 0 7 7"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+          <!-- Quick access detail pages dropdown -->
+          <div
+            class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary overflow-y-auto max-h-[60vh]"
+          >
+            <ul class="py-2 flex flex-col">
+              <li>
                 <a
                   href="/product-details/ngoi-am-duong/detail.html"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
                   data-path="/product-details/ngoi-am-duong/detail.html"
                   >Ngói Âm Dương</a
                 >
+              </li>
+              <li>
                 <a
                   href="/product-details/gach-co-bat-trang/detail-200x200x50.html"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
                   data-path="/product-details/gach-co-bat-trang/detail-200x200x50.html"
                   >Gạch Bát 200x200x50</a
                 >
+              </li>
+              <li>
                 <a
                   href="/product-details/gach-co-bat-trang/detail-220x110x60.html"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
                   data-path="/product-details/gach-co-bat-trang/detail-220x110x60.html"
                   >Gạch Bát 220x110x60</a
                 >
+              </li>
+              <li>
                 <a
                   href="/product-details/gach-co-bat-trang/detail-300x100x30.html"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
                   data-path="/product-details/gach-co-bat-trang/detail-300x100x30.html"
                   >Gạch Bát 300x100x30</a
                 >
+              </li>
+              <li>
                 <a
                   href="/product-details/gach-co-bat-trang/detail-300x150x60.html"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
                   data-path="/product-details/gach-co-bat-trang/detail-300x150x60.html"
                   >Gạch Bát 300x150x60</a
                 >
+              </li>
+              <li>
                 <a
                   href="/product-details/gach-co-bat-trang/detail-300x300x50.html"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
                   data-path="/product-details/gach-co-bat-trang/detail-300x300x50.html"
                   >Gạch Bát 300x300x50</a
                 >
+              </li>
+              <li>
                 <a
                   href="/product-details/gach-hoa-thong-gio/detail.html"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
                   data-path="/product-details/gach-hoa-thong-gio/detail.html"
                   >Gạch hoa thông gió</a
                 >
+              </li>
+              <li>
                 <a
                   href="/product-details/gach-trang-tri/detail.html"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
                   data-path="/product-details/gach-trang-tri/detail.html"
                   >Gạch trang trí</a
                 >
+              </li>
+              <li>
                 <a
                   href="/product-details/linh-vat/detail.html"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
                   data-path="/product-details/linh-vat/detail.html"
                   >Linh vật phong thủy</a
                 >
+              </li>
+              <li>
                 <a
                   href="/product-details/ngoi-hai-co/ngoi-hai-co-nau-den.html"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
                   data-path="/product-details/ngoi-hai-co/ngoi-hai-co-nau-den.html"
                   >Ngói Hài Cổ Nâu Đen</a
                 >
+              </li>
+              <li>
                 <a
                   href="/product-details/ngoi-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
                   data-path="/product-details/ngoi-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
                   >Ngói Văn Miếu Ghi Ánh Kim</a
                 >
+              </li>
+              <li>
                 <a
                   href="/product-details/bo-noc-chu-van/bo-noc-chu-van.html"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
                   data-path="/product-details/bo-noc-chu-van/bo-noc-chu-van.html"
                   >Bộ Nóc Chữ Vạn</a
                 >
+              </li>
+              <li>
                 <a
                   href="/product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html"
-                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
                   data-path="/product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html"
                   >Ngói Bó Nóc</a
                 >
-              </div>
-            </div>
-            <a
-              href="/projects/"
-              class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-              data-path="/projects/"
-              >Dự án</a
-            >
-            <a
-              href="/factory/"
-              class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-              data-path="/factory/"
-              >Xưởng sản xuất</a
-            >
-            <a
-              href="/news/"
-              class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-              data-path="/news/"
-              >Tin tức</a
-            >
-            <a
-              href="/contact/"
-              class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-              data-path="/contact/"
-              >liên hệ</a
-            >
+              </li>
+            </ul>
           </div>
+        </div>
+        <a
+          href="/projects/"
+          class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+          data-path="/projects/"
+          >Dự án</a
+        >
+        <a
+          href="/factory/"
+          class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+          data-path="/factory/"
+          >Xưởng sản xuất</a
+        >
+        <a
+          href="/news/"
+          class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+          data-path="/news/"
+          >Tin tức</a
+        >
+        <a
+          href="/contact/"
+          class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+          data-path="/contact/"
+          >liên hệ</a
+        >
+      </div>
+
+      <!-- Desktop Icons -->
+      <div class="hidden xl:flex items-center gap-6">
+        <button
+          class="hover:text-secondary transition-colors"
+          aria-label="Search"
+        >
+          <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-5 h-5" />
+        </button>
+        <a
+          href="/cart/gio-hang.html"
+          class="hover:text-secondary transition-colors"
+          aria-label="Cart"
+        >
+          <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-5 h-5" />
+        </a>
+        <a
+          href="/dich-vu-khach-hang/trang-thai-don-hang.html"
+          class="hover:text-secondary transition-colors"
+          aria-label="User"
+        >
+          <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-5 h-5" />
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Header -->
+  <div
+    class="xl:hidden h-full bg-[linear-gradient(90deg,_#2F302C_0%,_#262720_100%)]"
+  >
+    <nav class="relative flex items-center justify-center h-full">
+      <button
+        id="mobile-menu-button"
+        class="absolute left-[23px] text-white hover:text-secondary transition-colors"
+        aria-label="Toggle menu"
+      >
+        <img
+          src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%2014H15C15.552%2014%2016%2013.552%2016%2013C16%2012.448%2015.552%2012%2015%2012H8C7.448%2012%207%2012.448%207%2013C7%2013.552%207.448%2014%208%2014Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%204H15C15.552%204%2016%203.552%2016%203C16%202.448%2015.552%202%2015%202H1C0.448%202%200%202.448%200%203C0%203.552%200.448%204%201%204Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M1%209H15C15.552%209%2016%208.552%2016%208C16%207.448%2015.552%207%2015%207H1C0.448%207%200%207.448%200%208C0%208.552%200.448%209%201%209Z'%20fill='%23F7F7F7'/%3e%3c/svg%3e"
+          alt="menu"
+          class="w-[18px] h-[18px]"
+        />
+      </button>
+
+      <a href="/" class="block">
+        <img
+          src="data:image/png;base64,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"
+          alt="Logo"
+          class="h-[44px] w-[44px]"
+        />
+      </a>
+
+      <div class="absolute right-[23px] flex items-center gap-[14px]">
+        <button
+          class="hover:text-secondary transition-colors"
+          aria-label="Search"
+        >
           <img
-            src="/assets/background-decorate.svg"
-            alt="background-decorate"
-            class="fixed top-[395px] left-[124px] w-[480px] h-[480px] pointer-events-none opacity-100"
+            src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e"
+            alt="search"
+            class="w-[18px] h-[18px]"
           />
+        </button>
+        <a
+          href="/cart/gio-hang.html"
+          class="hover:text-secondary transition-colors"
+          aria-label="Cart"
+        >
+          <img
+            src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e"
+            alt="cart"
+            class="w-[18px] h-[18px]"
+          />
+        </a>
+        <a
+          href="/dich-vu-khach-hang/trang-thai-don-hang.html"
+          class="hover:text-secondary transition-colors"
+          aria-label="User"
+        >
+          <img
+            src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e"
+            alt="user"
+            class="w-[18px] h-[18px]"
+          />
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div
+    id="mobile-menu"
+    class="hidden fixed inset-0 bg-primary z-50 overflow-y-auto"
+  >
+    <div
+      class="w-[85%] max-w-[1320px] mx-auto py-6 relative min-h-full flex flex-col"
+    >
+      <div class="flex justify-between items-center mb-8 shrink-0">
+        <a href="/" class="block">
+          <img
+            src="data:image/png;base64,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"
+            alt="Logo"
+            class="h-[90px] w-[90px]"
+          />
+        </a>
+        <div class="flex items-center gap-5">
+          <button
+            class="hover:text-secondary transition-colors"
+            aria-label="Search"
+          >
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_4051_2436)'%3e%3cpath%20d='M7%2014C3.14%2014%200%2010.86%200%207C0%203.14%203.14%200%207%200C10.86%200%2014%203.14%2014%207C14%2010.86%2010.86%2014%207%2014ZM7%202C4.243%202%202%204.243%202%207C2%209.757%204.243%2012%207%2012C9.757%2012%2012%209.757%2012%207C12%204.243%209.757%202%207%202Z'%20fill='%23F7F7F7'/%3e%3cpath%20d='M15.707%2014.2929L13.314%2011.8999C12.903%2012.4289%2012.429%2012.9029%2011.9%2013.3139L14.293%2015.7069C14.488%2015.9019%2014.744%2015.9999%2015%2015.9999C15.256%2015.9999%2015.512%2015.9019%2015.707%2015.7069C16.098%2015.3159%2016.098%2014.6839%2015.707%2014.2929Z'%20fill='%23F7F7F7'/%3e%3c/g%3e%3cdefs%3e%3cclipPath%20id='clip0_4051_2436'%3e%3crect%20width='16'%20height='16'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="search" class="w-5 h-5" />
+          </button>
+          <a
+            href="/cart/gio-hang.html"
+            class="hover:text-secondary transition-colors"
+            aria-label="Cart"
+          >
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.2045%203.2H4.04707L3.15928%200.544003C3.10562%200.385106%203.00339%200.247095%202.86705%200.149476C2.7307%200.0518578%202.56713%20-0.000430263%202.39945%202.66683e-06H0V1.6H1.82358L4.65493%2010.104C4.76088%2010.4233%204.96475%2010.7011%205.23756%2010.8978C5.51037%2011.0946%205.83825%2011.2003%206.17458%2011.2H12.2452C12.5707%2011.1994%2012.8882%2011.0996%2013.1555%2010.9137C13.4227%2010.7279%2013.6269%2010.465%2013.7408%2010.16L15.9483%204.28C15.994%204.15943%2016.0097%204.02958%2015.9942%203.9016C15.9787%203.77361%2015.9324%203.65129%2015.8593%203.54512C15.7861%203.43895%2015.6884%203.35209%2015.5743%203.29198C15.4603%203.23188%2015.3334%203.20031%2015.2045%203.2ZM6.40653%2012.8C5.98228%2012.8%205.57541%2012.9686%205.27542%2013.2686C4.97543%2013.5687%204.8069%2013.9757%204.8069%2014.4C4.8069%2014.8243%204.97543%2015.2313%205.27542%2015.5314C5.57541%2015.8314%205.98228%2016%206.40653%2016C6.83078%2016%207.23765%2015.8314%207.53764%2015.5314C7.83763%2015.2313%208.00616%2014.8243%208.00616%2014.4C8.00616%2013.9757%207.83763%2013.5687%207.53764%2013.2686C7.23765%2012.9686%206.83078%2012.8%206.40653%2012.8ZM12.0052%2012.8C11.581%2012.8%2011.1741%2012.9686%2010.8741%2013.2686C10.5741%2013.5687%2010.4056%2013.9757%2010.4056%2014.4C10.4056%2014.8243%2010.5741%2015.2313%2010.8741%2015.5314C11.1741%2015.8314%2011.581%2016%2012.0052%2016C12.4295%2016%2012.8364%2015.8314%2013.1364%2015.5314C13.4363%2015.2313%2013.6049%2014.8243%2013.6049%2014.4C13.6049%2013.9757%2013.4363%2013.5687%2013.1364%2013.2686C12.8364%2012.9686%2012.4295%2012.8%2012.0052%2012.8Z'%20fill='white'/%3e%3c/svg%3e" alt="cart" class="w-5 h-5" />
+          </a>
+          <a
+            href="/dich-vu-khach-hang/trang-thai-don-hang.html"
+            class="hover:text-secondary transition-colors"
+            aria-label="User"
+          >
+            <img src="data:image/svg+xml,%3csvg%20width='16'%20height='16'%20viewBox='0%200%2016%2016'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M8%200C9.06087%200%2010.0783%200.421427%2010.8284%201.17157C11.5786%201.92172%2012%202.93913%2012%204C12%205.06087%2011.5786%206.07828%2010.8284%206.82843C10.0783%207.57857%209.06087%208%208%208C6.93913%208%205.92172%207.57857%205.17157%206.82843C4.42143%206.07828%204%205.06087%204%204C4%202.93913%204.42143%201.92172%205.17157%201.17157C5.92172%200.421427%206.93913%200%208%200ZM8%2010C12.42%2010%2016%2011.79%2016%2014V16H0V14C0%2011.79%203.58%2010%208%2010Z'%20fill='white'/%3e%3c/svg%3e" alt="user" class="w-5 h-5" />
+          </a>
+          <button
+            id="close-menu-button"
+            class="text-white hover:text-secondary transition-colors"
+          >
+            <svg
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
         </div>
       </div>
-    </header>
-    
-        <!-- Catalog Sticky Button -->
-    <a href="#" id="catalog-sticky-btn" class="fixed right-0 top-[124px] z-[45] hover:opacity-90 transition-all duration-300 bg-[#AB6520] w-[28px] h-[90px] flex items-center justify-center">
-        <span class="catalog-text-vertical">CATALOG</span>
-    </a>
+      <div class="flex flex-col space-y-6 flex-grow">
+        <a
+          href="/"
+          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+          data-path="/"
+          >trang chủ</a
+        >
+        <a
+          href="/about/"
+          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+          data-path="/about/"
+          >về chúng tôi</a
+        >
+        <div class="flex flex-col">
+          <button
+            id="mobile-products-toggle"
+            class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
+            data-path="/products/"
+          >
+            <span>sản phẩm</span>
+            <svg
+              class="w-[10px] h-[10px] transition-transform duration-300 transform"
+              id="mobile-products-icon"
+              viewBox="0 0 7 7"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+          <div
+            id="mobile-products-submenu"
+            class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2"
+          >
+            <a
+              href="/products/ngoi-am-duong/"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/products/ngoi-am-duong/"
+              >Ngói Âm Dương</a
+            >
+            <a
+              href="/products/ngoi-hai-van-mieu/"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/products/ngoi-hai-van-mieu/"
+              >Ngói Hài Văn Miếu</a
+            >
+            <a
+              href="/products/gach-hoa-thong-gio/"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/products/gach-hoa-thong-gio/"
+              >Gạch Hoa Thông Gió</a
+            >
+            <a
+              href="/products/phu-kien-ngoi/"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/products/phu-kien-ngoi/"
+              >Phụ Kiện Ngói</a
+            >
+            <a
+              href="/products/gach-trang-tri/"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/products/gach-trang-tri/"
+              >Gạch Trang Trí</a
+            >
+            <a
+              href="/products/lan-can-gom-su/"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/products/lan-can-gom-su/"
+              >Lan Can Gốm Sứ</a
+            >
+            <a
+              href="/products/gach-co-bat-trang/"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/products/gach-co-bat-trang/"
+              >Gạch Cổ Bát Tràng</a
+            >
+            <a
+              href="/products/linh-vat-phong-thuy/"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/products/linh-vat-phong-thuy/"
+              >Linh vật Phong Thủy</a
+            >
+            <a
+              href="/products/den-gom-su/"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/products/den-gom-su/"
+              >Đèn Gốm Sứ</a
+            >
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <button
+            id="mobile-spct-toggle"
+            class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
+            data-path="/product-details/"
+          >
+            <span>SPCT</span>
+            <svg
+              class="w-[10px] h-[10px] transition-transform duration-300 transform"
+              id="mobile-spct-icon"
+              viewBox="0 0 7 7"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
+                fill="currentColor"
+              />
+            </svg>
+          </button>
+          <div
+            id="mobile-spct-submenu"
+            class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2"
+          >
+            <a
+              href="/product-details/ngoi-am-duong/detail.html"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/product-details/ngoi-am-duong/detail.html"
+              >Ngói Âm Dương</a
+            >
+            <a
+              href="/product-details/gach-co-bat-trang/detail-200x200x50.html"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/product-details/gach-co-bat-trang/detail-200x200x50.html"
+              >Gạch Bát 200x200x50</a
+            >
+            <a
+              href="/product-details/gach-co-bat-trang/detail-220x110x60.html"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/product-details/gach-co-bat-trang/detail-220x110x60.html"
+              >Gạch Bát 220x110x60</a
+            >
+            <a
+              href="/product-details/gach-co-bat-trang/detail-300x100x30.html"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/product-details/gach-co-bat-trang/detail-300x100x30.html"
+              >Gạch Bát 300x100x30</a
+            >
+            <a
+              href="/product-details/gach-co-bat-trang/detail-300x150x60.html"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/product-details/gach-co-bat-trang/detail-300x150x60.html"
+              >Gạch Bát 300x150x60</a
+            >
+            <a
+              href="/product-details/gach-co-bat-trang/detail-300x300x50.html"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/product-details/gach-co-bat-trang/detail-300x300x50.html"
+              >Gạch Bát 300x300x50</a
+            >
+            <a
+              href="/product-details/gach-hoa-thong-gio/detail.html"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/product-details/gach-hoa-thong-gio/detail.html"
+              >Gạch hoa thông gió</a
+            >
+            <a
+              href="/product-details/gach-trang-tri/detail.html"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/product-details/gach-trang-tri/detail.html"
+              >Gạch trang trí</a
+            >
+            <a
+              href="/product-details/linh-vat/detail.html"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/product-details/linh-vat/detail.html"
+              >Linh vật phong thủy</a
+            >
+            <a
+              href="/product-details/ngoi-hai-co/ngoi-hai-co-nau-den.html"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/product-details/ngoi-hai-co/ngoi-hai-co-nau-den.html"
+              >Ngói Hài Cổ Nâu Đen</a
+            >
+            <a
+              href="/product-details/ngoi-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/product-details/ngoi-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
+              >Ngói Văn Miếu Ghi Ánh Kim</a
+            >
+            <a
+              href="/product-details/bo-noc-chu-van/bo-noc-chu-van.html"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/product-details/bo-noc-chu-van/bo-noc-chu-van.html"
+              >Bộ Nóc Chữ Vạn</a
+            >
+            <a
+              href="/product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html"
+              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+              data-path="/product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html"
+              >Ngói Bó Nóc</a
+            >
+          </div>
+        </div>
+        <a
+          href="/projects/"
+          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+          data-path="/projects/"
+          >Dự án</a
+        >
+        <a
+          href="/factory/"
+          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+          data-path="/factory/"
+          >Xưởng sản xuất</a
+        >
+        <a
+          href="/news/"
+          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+          data-path="/news/"
+          >Tin tức</a
+        >
+        <a
+          href="/contact/"
+          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+          data-path="/contact/"
+          >liên hệ</a
+        >
+      </div>
+      <img
+        src="/assets/background-decorate.svg"
+        alt="background-decorate"
+        class="fixed top-[395px] left-[124px] w-[480px] h-[480px] pointer-events-none opacity-100"
+      />
+    </div>
+  </div>
+</header>
+
+ <!-- Catalog Sticky Button -->
+<a href="#" id="catalog-sticky-btn" class="fixed right-0 top-[124px] z-[45] hover:opacity-90 transition-all duration-300 bg-[#AB6520] w-[28px] h-[90px] flex items-center justify-center">
+    <span class="catalog-text-vertical">CATALOG</span>
+</a>
+
 
     <main class="flex-grow bg-background-secondary overflow-hidden">
       <!-- Banner Section -->
@@ -981,668 +1003,676 @@
       </section>
 
       <!-- Danh Mục Sản Phẩm Section 1 -->
-      <section class="w-full md:pb-16 pt-2 md:pt-8">
-        <!-- Section Title -->
-        <div
-          class="flex items-center justify-center gap-4 md:gap-5 md:mb-10 max-w-[315px] md:max-w-full mx-auto"
-          data-aos="fade-up"
-        >
-          <img
-            src="/assets/title-left.svg"
-            alt=""
-            class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-25 scale-[60%] md:scale-100"
-          />
-          <h2
-            class="text-[20px] lg:text-3xl font-semibold text-[#C47526] uppercase text-nowrap"
-          >
-            Danh Mục Sản Phẩm
-          </h2>
-          <img
-            src="/assets/title-right.svg"
-            alt=""
-            class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-25 scale-[60%] md:scale-100"
-          />
-        </div>
-      
-        <!-- Main Container -->
-        <div
-          class="bg-[# ] opacity-80 p-6 lg:p-10"
-          style="margin-left: max(0px, calc((100% - 1320px) / 2))"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <!-- Featured Image & Brush Title -->
+<section class="w-full md:pb-16 pt-2 md:pt-8">
+  <!-- Section Title -->
+  <div
+    class="flex items-center justify-center gap-4 md:gap-5 md:mb-10 max-w-[315px] md:max-w-full mx-auto"
+    data-aos="fade-up"
+  >
+    <img
+      src="/assets/title-left.svg"
+      alt=""
+      class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-25 scale-[60%] md:scale-100"
+    />
+    <h2
+      class="text-[20px] lg:text-3xl font-semibold text-[#C47526] uppercase text-nowrap"
+    >
+      Danh Mục Sản Phẩm
+    </h2>
+    <img
+      src="/assets/title-right.svg"
+      alt=""
+      class="h-16 md:h-20 lg:h-[110px] drop-shadow-sm opacity-25 scale-[60%] md:scale-100"
+    />
+  </div>
+
+  <!-- Main Container -->
+  <div
+    class="bg-[# ] opacity-80 p-6 lg:p-10"
+    style="margin-left: max(0px, calc((100% - 1320px) / 2))"
+    data-aos="fade-up"
+    data-aos-delay="100"
+  >
+    <!-- Featured Image & Brush Title -->
+    <div
+      class="flex flex-col-reverse lg:flex-row gap-8 lg:gap-16 max-w-[1320px]"
+    >
+      <!-- Left Column: Products Grid & Pagination -->
+      <div class="w-full lg:w-[55%] flex flex-col justify-between">
+        <div class="lg:hidden" data-product-section>
           <div
-            class="flex flex-col-reverse lg:flex-row gap-8 lg:gap-16 max-w-[1320px]"
+            class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+            data-product-carousel
           >
-            <!-- Left Column: Products Grid & Pagination -->
-            <div class="w-full lg:w-[55%] flex flex-col justify-between">
-              <div class="lg:hidden" data-product-section>
-                <div
-                  class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
-                  data-product-carousel
-                >
-                  <article
-                    class="flex-shrink-0 w-full snap-start pb-1"
-                    data-product-slide
-                  >
-                    <div class="grid grid-cols-2 gap-4">
-                      <a href="/products/phu-kien-ngoi/bo-noc-chu-van.html" class="flex flex-col group cursor-pointer">
-                        <div
-                          class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
-                        >
-                          <img
-                            src="/assets/bo-noc.png"
-                            alt="Bộ bò nóc chữ vạn men nâu"
-                            class="w-full h-full object-containmix-blend-multiply"
-                          />
-                        </div>
-                        <h3
-                          class="mt-3 text-black font-semibold text-[14px] leading-[20px] uppercase"
-                        >
-                          Bộ bò nóc chữ vạn men nâu
-                        </h3>
-                        <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-BN01</p>
-                        <p class="text-secondary font-bold text-[14px] leading-[20px]">845.000 đ/bộ</p>
-                      </a>                <a href="/products/phu-kien-ngoi/ngoi-bo-noc.html" class="flex flex-col group cursor-pointer">
-                        <div
-                          class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
-                        >
-                          <img
-                            src="/assets/dao-kim.png"
-                            alt="Đao kim tráng men xanh rêu"
-                            class="w-full h-full object-containmix-blend-multiply"
-                          />
-                        </div>
-                        <h3
-                          class="mt-3 text-black font-semibold text-[14px] leading-[20px] uppercase"
-                        >
-                          Đao kim tráng men xanh rêu
-                        </h3>
-                        <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-DK02</p>
-                        <p class="text-secondary font-bold text-[14px] leading-[20px]">525.000 đ/cặp</p>
-                      </a>                <a href="/products/phu-kien-ngoi/bo-noc-chu-van.html" class="flex flex-col group cursor-pointer">
-                        <div
-                          class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
-                        >
-                          <img
-                            src="/assets/pk-03.jpg"
-                            alt="Phù điêu đuôi mái cổ điển"
-                            class="w-full h-full object-containmix-blend-multiply"
-                          />
-                        </div>
-                        <h3
-                          class="mt-3 text-black font-semibold text-[14px] leading-[20px] uppercase"
-                        >
-                          Phù điêu đuôi mái cổ điển
-                        </h3>
-                        <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-PD03</p>
-                        <p class="text-secondary font-bold text-[14px] leading-[20px]">395.000 đ/chiếc</p>
-                      </a>                <a href="/products/phu-kien-ngoi/ngoi-bo-noc.html" class="flex flex-col group cursor-pointer">
-                        <div
-                          class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
-                        >
-                          <img
-                            src="/assets/pk-04.jpg"
-                            alt="Con kìm trang trí mái đình"
-                            class="w-full h-full object-containmix-blend-multiply"
-                          />
-                        </div>
-                        <h3
-                          class="mt-3 text-black font-semibold text-[14px] leading-[20px] uppercase"
-                        >
-                          Con kìm trang trí mái đình
-                        </h3>
-                        <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-CK04</p>
-                        <p class="text-secondary font-bold text-[14px] leading-[20px]">460.000 đ/chiếc</p>
-                      </a>              </div>
-                  </article>
-                </div>
-      
-                <div
-                  class="mt-3 flex justify-center gap-[3px]"
-                  aria-label="Product mobile pagination"
-                >
-                  <button
-                    class="product-section-dot h-1 w-1 rounded-full bg-secondary"
-                    data-product-dot="0"
-                    aria-label="Slide 1"
-                  ></button>
-                </div>
-              </div>
-      
-              <!-- Products Grid -->
-              <div
-                class="hidden lg:grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10"
-              >
-                <div
-                  class="flex flex-col group cursor-pointer"
-                  onclick="
-                    window.location.href =
-                      '/products/phu-kien-ngoi/bo-noc-chu-van.html'
-                  "
-                >
+            <article
+              class="flex-shrink-0 w-full snap-start pb-1"
+              data-product-slide
+            >
+              <div class="grid grid-cols-2 gap-4">
+                <a href="/products/phu-kien-ngoi/bo-noc-chu-van.html" class="flex flex-col group cursor-pointer">
                   <div
-                    class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+                    class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
                   >
                     <img
                       src="/assets/bo-noc.png"
                       alt="Bộ bò nóc chữ vạn men nâu"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover mix-blend-multiply"
                     />
-                    <div class="product-overlay">
-                      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
                   </div>
                   <h3
-                    class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+                    class="mt-3 text-black font-semibold text-[14px] leading-[20px] lowercase first-letter:uppercase"
                   >
-                    Bộ bò nóc chữ vạn men nâu
+                    <span class="block">Bộ bò nóc chữ vạn men nâu</span>
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                    MSP: PKN-BN01
-                  </p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                    Giá: 845.000 đ/bộ
-                  </p>
-                </div>
-      
-                <div
-                  class="flex flex-col group cursor-pointer"
-                  onclick="
-                    window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'
-                  "
-                >
+                  <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-BN01</p>
+                  <p class="text-secondary font-bold text-[14px] leading-[20px]">845.000 đ/bộ</p>
+                </a>
+                <a href="/products/phu-kien-ngoi/ngoi-bo-noc.html" class="flex flex-col group cursor-pointer">
                   <div
-                    class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+                    class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
                   >
                     <img
                       src="/assets/dao-kim.png"
                       alt="Đao kim tráng men xanh rêu"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover mix-blend-multiply"
                     />
-                    <div class="product-overlay">
-                      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
                   </div>
                   <h3
-                    class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+                    class="mt-3 text-black font-semibold text-[14px] leading-[20px] lowercase first-letter:uppercase"
                   >
-                    Đao kim tráng men xanh rêu
+                    <span class="block">Đao kim tráng men xanh rêu</span>
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                    MSP: PKN-DK02
-                  </p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                    Giá: 525.000 đ/cặp
-                  </p>
-                </div>
-      
-                <div
-                  class="flex flex-col group cursor-pointer"
-                  onclick="
-                    window.location.href =
-                      '/products/phu-kien-ngoi/bo-noc-chu-van.html'
-                  "
-                >
+                  <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-DK02</p>
+                  <p class="text-secondary font-bold text-[14px] leading-[20px]">525.000 đ/cặp</p>
+                </a>
+                <a href="/products/phu-kien-ngoi/bo-noc-chu-van.html" class="flex flex-col group cursor-pointer">
                   <div
-                    class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+                    class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
                   >
                     <img
                       src="/assets/pk-03.jpg"
                       alt="Phù điêu đuôi mái cổ điển"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover mix-blend-multiply"
                     />
-                    <div class="product-overlay">
-                      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
                   </div>
                   <h3
-                    class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+                    class="mt-3 text-black font-semibold text-[14px] leading-[20px] lowercase first-letter:uppercase"
                   >
-                    Phù điêu đuôi mái cổ điển
+                    <span class="block">Phù điêu đuôi mái cổ điển</span>
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                    MSP: PKN-PD03
-                  </p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                    Giá: 395.000 đ/chiếc
-                  </p>
-                </div>
-      
-                <div
-                  class="flex flex-col group cursor-pointer"
-                  onclick="
-                    window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'
-                  "
-                >
+                  <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-PD03</p>
+                  <p class="text-secondary font-bold text-[14px] leading-[20px]">395.000 đ/chiếc</p>
+                </a>
+                <a href="/products/phu-kien-ngoi/ngoi-bo-noc.html" class="flex flex-col group cursor-pointer">
                   <div
-                    class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+                    class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
                   >
                     <img
                       src="/assets/pk-04.jpg"
                       alt="Con kìm trang trí mái đình"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover mix-blend-multiply"
                     />
-                    <div class="product-overlay">
-                      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
                   </div>
                   <h3
-                    class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+                    class="mt-3 text-black font-semibold text-[14px] leading-[20px] lowercase first-letter:uppercase"
                   >
-                    Con kìm trang trí mái đình
+                    <span class="block">Con kìm trang trí mái đình</span>
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                    MSP: PKN-CK04
-                  </p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                    Giá: 460.000 đ/chiếc
-                  </p>
-                </div>
+                  <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-CK04</p>
+                  <p class="text-secondary font-bold text-[14px] leading-[20px]">460.000 đ/chiếc</p>
+                </a>
               </div>
-      
-              <!-- Pagination -->
-              <div
-                class="hidden lg:flex items-center justify-center gap-5 mt-10 lg:mt-auto"
-              >
-                <button
-                  class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
-                >
-                  <svg
-                    class="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                      d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                    ></path>
-                  </svg>
-                </button>
-                <button
-                  class="w-[40px] h-[40px] rounded-full bg-secondary flex items-center justify-center text-white hover:opacity-90 transition-all duration-300"
-                >
-                  <svg
-                    class="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    ></path>
-                  </svg>
-                </button>
+            </article>
+          </div>
+
+          <div
+            class="mt-3 flex justify-center gap-[3px]"
+            aria-label="Product mobile pagination"
+          >
+            <button
+              class="product-section-dot h-1 w-1 rounded-full bg-secondary"
+              data-product-dot="0"
+              aria-label="Slide 1"
+            ></button>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div
+          class="hidden lg:grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10"
+        >
+          <div
+            class="flex flex-col group cursor-pointer"
+            onclick="
+              window.location.href =
+                '/products/phu-kien-ngoi/bo-noc-chu-van.html'
+            "
+          >
+            <div
+              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+            >
+              <img
+                src="/assets/bo-noc.png"
+                alt="Bộ bò nóc chữ vạn men nâu"
+                class="w-full h-full object-cover"
+              />
+              <div class="product-overlay">
+                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+                <span>Xem chi tiết</span>
               </div>
             </div>
-      
-            <!-- Right Column: Featured Image & Brush Title -->
-            <div
-              class="w-full lg:w-[45%] mr-0 lg:mr-[10%] flex flex-col justify-stretch"
+            <h3
+              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
             >
-              <div
-                class="w-full flex-grow relative shadow-lg overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px]"
-              >
-                <img
-                  src="/assets/bo-noc.png"
-                  alt=""
-                  class="absolute inset-0 w-full h-full object-cover"
-                />
-      
-                <!-- Brush Title Overlay inside image container -->
-                <div
-                  class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300"
-                >
-                  <div class="relative w-full flex items-center justify-center">
-                    <img
-                      src="/assets/brush.svg"
-                      alt=""
-                      class="w-full drop-shadow-xl"
-                    />
-                    <span
-                      class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
-                      style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)"
-                    >
-                      Ngói Bò Nóc
-                    </span>
-                  </div>
-                </div>
+              Bộ bò nóc chữ vạn men nâu
+            </h3>
+            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+              MSP: PKN-BN01
+            </p>
+            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+              Giá: 845.000 đ/bộ
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col group cursor-pointer"
+            onclick="
+              window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'
+            "
+          >
+            <div
+              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+            >
+              <img
+                src="/assets/dao-kim.png"
+                alt="Đao kim tráng men xanh rêu"
+                class="w-full h-full object-cover"
+              />
+              <div class="product-overlay">
+                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+                <span>Xem chi tiết</span>
               </div>
+            </div>
+            <h3
+              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+            >
+              Đao kim tráng men xanh rêu
+            </h3>
+            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+              MSP: PKN-DK02
+            </p>
+            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+              Giá: 525.000 đ/cặp
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col group cursor-pointer"
+            onclick="
+              window.location.href =
+                '/products/phu-kien-ngoi/bo-noc-chu-van.html'
+            "
+          >
+            <div
+              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+            >
+              <img
+                src="/assets/pk-03.jpg"
+                alt="Phù điêu đuôi mái cổ điển"
+                class="w-full h-full object-cover"
+              />
+              <div class="product-overlay">
+                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+                <span>Xem chi tiết</span>
+              </div>
+            </div>
+            <h3
+              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+            >
+              Phù điêu đuôi mái cổ điển
+            </h3>
+            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+              MSP: PKN-PD03
+            </p>
+            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+              Giá: 395.000 đ/chiếc
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col group cursor-pointer"
+            onclick="
+              window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'
+            "
+          >
+            <div
+              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+            >
+              <img
+                src="/assets/pk-04.jpg"
+                alt="Con kìm trang trí mái đình"
+                class="w-full h-full object-cover"
+              />
+              <div class="product-overlay">
+                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+                <span>Xem chi tiết</span>
+              </div>
+            </div>
+            <h3
+              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+            >
+              Con kìm trang trí mái đình
+            </h3>
+            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+              MSP: PKN-CK04
+            </p>
+            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+              Giá: 460.000 đ/chiếc
+            </p>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div
+          class="hidden lg:flex items-center justify-center gap-5 mt-10 lg:mt-auto"
+        >
+          <button
+            class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              ></path>
+            </svg>
+          </button>
+          <button
+            class="w-[40px] h-[40px] rounded-full bg-secondary flex items-center justify-center text-white hover:opacity-90 transition-all duration-300"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Column: Featured Image & Brush Title -->
+      <div
+        class="w-full lg:w-[45%] mr-0 lg:mr-[10%] flex flex-col justify-stretch"
+      >
+        <div
+          class="w-full flex-grow relative shadow-lg overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px]"
+        >
+          <img
+            src="/assets/bo-noc.png"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+
+          <!-- Brush Title Overlay inside image container -->
+          <div
+            class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300"
+          >
+            <div class="relative w-full flex items-center justify-center">
+              <img
+                src="/assets/brush.svg"
+                alt=""
+                class="w-full drop-shadow-xl"
+              />
+              <span
+                class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
+                style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)"
+              >
+                Ngói Bò Nóc
+              </span>
             </div>
           </div>
         </div>
-      </section>
-      <!-- Danh Mục Sản Phẩm Section 2 -->
-      <section class="w-full pb-[30px] md:pb-16">
-        <!-- Main Container -->
+      </div>
+    </div>
+  </div>
+</section> <!-- Danh Mục Sản Phẩm Section 2 -->
+<section class="w-full pb-[30px] md:pb-16">
+  <!-- Main Container -->
+  <div
+    class="md:bg-[#EBCEC1] opacity-80 p-6 lg:p-10"
+    style="margin-right: max(0px, calc((100% - 1320px) / 2))"
+    data-aos="fade-up"
+    data-aos-delay="100"
+  >
+    <!-- Featured Image & Brush Title -->
+    <div
+      class="flex flex-col lg:flex-row gap-8 lg:gap-16 max-w-[1320px] ml-auto"
+    >
+      <!-- Left Column: Featured Image & Brush Title -->
+      <div
+        class="w-full lg:w-[45%] ml-0 lg:ml-[10%] flex flex-col justify-stretch"
+      >
         <div
-          class="md:bg-[#EBCEC1] opacity-80 p-6 lg:p-10"
-          style="margin-right: max(0px, calc((100% - 1320px) / 2))"
-          data-aos="fade-up"
-          data-aos-delay="100"
+          class="w-full flex-grow relative shadow-lg overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px]"
         >
-          <!-- Featured Image & Brush Title -->
+          <img
+            src="/assets/dao-kim.png"
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+
+          <!-- Brush Title Overlay inside image container -->
           <div
-            class="flex flex-col lg:flex-row gap-8 lg:gap-16 max-w-[1320px] ml-auto"
+            class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300"
           >
-            <!-- Left Column: Featured Image & Brush Title -->
-            <div
-              class="w-full lg:w-[45%] ml-0 lg:ml-[10%] flex flex-col justify-stretch"
-            >
-              <div
-                class="w-full flex-grow relative shadow-lg overflow-hidden bg-black/5 min-h-[400px] lg:min-h-[500px]"
+            <div class="relative w-full flex items-center justify-center">
+              <img
+                src="/assets/brush.svg"
+                alt=""
+                class="w-full drop-shadow-xl"
+              />
+              <span
+                class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
+                style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)"
               >
-                <img
-                  src="/assets/dao-kim.png"
-                  alt=""
-                  class="absolute inset-0 w-full h-full object-cover"
-                />
-      
-                <!-- Brush Title Overlay inside image container -->
-                <div
-                  class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[95%] max-w-[560px] z-10 hover:scale-105 transition-transform duration-300"
-                >
-                  <div class="relative w-full flex items-center justify-center">
-                    <img
-                      src="/assets/brush.svg"
-                      alt=""
-                      class="w-full drop-shadow-xl"
-                    />
-                    <span
-                      class="absolute text-white font-bold text-[24px] md:text-[32px] uppercase tracking-wider"
-                      style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)"
-                    >
-                      Ngói Bò Nóc
-                    </span>
-                  </div>
-                </div>
-              </div>
+                Ngói Bò Nóc
+              </span>
             </div>
-            <!-- Right Column: Products Grid & Pagination -->
-            <div class="w-full lg:w-[55%] flex flex-col justify-between">
-              <div class="lg:hidden" data-product-section>
-                <div
-                  class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
-                  data-product-carousel
-                >
-                  <article
-                    class="flex-shrink-0 w-full snap-start pb-1"
-                    data-product-slide
-                  >
-                    <div class="grid grid-cols-2 gap-4">
-                      <a href="/products/phu-kien-ngoi/ngoi-bo-noc.html" class="flex flex-col group cursor-pointer">
-                        <div
-                          class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
-                        >
-                          <img
-                            src="/assets/pk-03.jpg"
-                            alt="Ngói bò nóc chữ vạn cỡ lớn"
-                            class="w-full h-full object-containmix-blend-multiply"
-                          />
-                        </div>
-                        <h3
-                          class="mt-3 text-black font-semibold text-[14px] leading-[20px] uppercase"
-                        >
-                          Ngói bò nóc chữ vạn cỡ lớn
-                        </h3>
-                        <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-BN05</p>
-                        <p class="text-secondary font-bold text-[14px] leading-[20px]">975.000 đ/bộ</p>
-                      </a>                <a href="/products/phu-kien-ngoi/bo-noc-chu-van.html" class="flex flex-col group cursor-pointer">
-                        <div
-                          class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
-                        >
-                          <img
-                            src="/assets/pk-04.jpg"
-                            alt="Bộ bò nóc men cổ phục dựng"
-                            class="w-full h-full object-containmix-blend-multiply"
-                          />
-                        </div>
-                        <h3
-                          class="mt-3 text-black font-semibold text-[14px] leading-[20px] uppercase"
-                        >
-                          Bộ bò nóc men cổ phục dựng
-                        </h3>
-                        <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-BN06</p>
-                        <p class="text-secondary font-bold text-[14px] leading-[20px]">1.050.000 đ/bộ</p>
-                      </a>                <a href="/products/phu-kien-ngoi/ngoi-bo-noc.html" class="flex flex-col group cursor-pointer">
-                        <div
-                          class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
-                        >
-                          <img
-                            src="/assets/ngoi-05.jpg"
-                            alt="Phụ kiện đỉnh mái hoa sen"
-                            class="w-full h-full object-containmix-blend-multiply"
-                          />
-                        </div>
-                        <h3
-                          class="mt-3 text-black font-semibold text-[14px] leading-[20px] uppercase"
-                        >
-                          Phụ kiện đỉnh mái hoa sen
-                        </h3>
-                        <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-DM07</p>
-                        <p class="text-secondary font-bold text-[14px] leading-[20px]">580.000 đ/chiếc</p>
-                      </a>                <a href="/products/phu-kien-ngoi/bo-noc-chu-van.html" class="flex flex-col group cursor-pointer">
-                        <div
-                          class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
-                        >
-                          <img
-                            src="/assets/ngoi-04.jpg"
-                            alt="Đầu hồi mái ngói cổ"
-                            class="w-full h-full object-containmix-blend-multiply"
-                          />
-                        </div>
-                        <h3
-                          class="mt-3 text-black font-semibold text-[14px] leading-[20px] uppercase"
-                        >
-                          Đầu hồi mái ngói cổ
-                        </h3>
-                        <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-DH08</p>
-                        <p class="text-secondary font-bold text-[14px] leading-[20px]">620.000 đ/chiếc</p>
-                      </a>              </div>
-                  </article>
-                </div>
-      
-                <div
-                  class="mt-3 flex justify-center gap-[3px]"
-                  aria-label="Product mobile pagination"
-                >
-                  <button
-                    class="product-section-dot h-1 w-1 rounded-full bg-secondary"
-                    data-product-dot="0"
-                    aria-label="Slide 1"
-                  ></button>
-                </div>
-              </div>
-      
-              <!-- Products Grid -->
-              <div
-                class="hidden lg:grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10"
-              >
-                <div
-                  class="flex flex-col group cursor-pointer"
-                  onclick="
-                    window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'
-                  "
-                >
+          </div>
+        </div>
+      </div>
+      <!-- Right Column: Products Grid & Pagination -->
+      <div class="w-full lg:w-[55%] flex flex-col justify-between">
+        <div class="lg:hidden" data-product-section>
+          <div
+            class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+            data-product-carousel
+          >
+            <article
+              class="flex-shrink-0 w-full snap-start pb-1"
+              data-product-slide
+            >
+              <div class="grid grid-cols-2 gap-4">
+                <a href="/products/phu-kien-ngoi/ngoi-bo-noc.html" class="flex flex-col group cursor-pointer">
                   <div
-                    class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+                    class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
                   >
                     <img
                       src="/assets/pk-03.jpg"
                       alt="Ngói bò nóc chữ vạn cỡ lớn"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover mix-blend-multiply"
                     />
-                    <div class="product-overlay">
-                      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
                   </div>
                   <h3
-                    class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+                    class="mt-3 text-black font-semibold text-[14px] leading-[20px] lowercase first-letter:uppercase"
                   >
-                    Ngói bò nóc chữ vạn cỡ lớn
+                    <span class="block">Ngói bò nóc chữ vạn cỡ lớn</span>
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                    MSP: PKN-BN05
-                  </p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                    Giá: 975.000 đ/bộ
-                  </p>
-                </div>
-      
-                <div
-                  class="flex flex-col group cursor-pointer"
-                  onclick="
-                    window.location.href =
-                      '/products/phu-kien-ngoi/bo-noc-chu-van.html'
-                  "
-                >
+                  <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-BN05</p>
+                  <p class="text-secondary font-bold text-[14px] leading-[20px]">975.000 đ/bộ</p>
+                </a>
+                <a href="/products/phu-kien-ngoi/bo-noc-chu-van.html" class="flex flex-col group cursor-pointer">
                   <div
-                    class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+                    class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
                   >
                     <img
                       src="/assets/pk-04.jpg"
                       alt="Bộ bò nóc men cổ phục dựng"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover mix-blend-multiply"
                     />
-                    <div class="product-overlay">
-                      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
                   </div>
                   <h3
-                    class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+                    class="mt-3 text-black font-semibold text-[14px] leading-[20px] lowercase first-letter:uppercase"
                   >
-                    Bộ bò nóc men cổ phục dựng
+                    <span class="block">Bộ bò nóc men cổ phục dựng</span>
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                    MSP: PKN-BN06
-                  </p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                    Giá: 1.050.000 đ/bộ
-                  </p>
-                </div>
-      
-                <div
-                  class="flex flex-col group cursor-pointer"
-                  onclick="
-                    window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'
-                  "
-                >
+                  <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-BN06</p>
+                  <p class="text-secondary font-bold text-[14px] leading-[20px]">1.050.000 đ/bộ</p>
+                </a>
+                <a href="/products/phu-kien-ngoi/ngoi-bo-noc.html" class="flex flex-col group cursor-pointer">
                   <div
-                    class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+                    class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
                   >
                     <img
                       src="/assets/ngoi-05.jpg"
                       alt="Phụ kiện đỉnh mái hoa sen"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover mix-blend-multiply"
                     />
-                    <div class="product-overlay">
-                      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
                   </div>
                   <h3
-                    class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+                    class="mt-3 text-black font-semibold text-[14px] leading-[20px] lowercase first-letter:uppercase"
                   >
-                    Phụ kiện đỉnh mái hoa sen
+                    <span class="block">Phụ kiện đỉnh mái hoa sen</span>
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                    MSP: PKN-DM07
-                  </p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                    Giá: 580.000 đ/chiếc
-                  </p>
-                </div>
-      
-                <div
-                  class="flex flex-col group cursor-pointer"
-                  onclick="
-                    window.location.href =
-                      '/products/phu-kien-ngoi/bo-noc-chu-van.html'
-                  "
-                >
+                  <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-DM07</p>
+                  <p class="text-secondary font-bold text-[14px] leading-[20px]">580.000 đ/chiếc</p>
+                </a>
+                <a href="/products/phu-kien-ngoi/bo-noc-chu-van.html" class="flex flex-col group cursor-pointer">
                   <div
-                    class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+                    class="bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden aspect-square"
                   >
                     <img
                       src="/assets/ngoi-04.jpg"
                       alt="Đầu hồi mái ngói cổ"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover mix-blend-multiply"
                     />
-                    <div class="product-overlay">
-                      <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
                   </div>
                   <h3
-                    class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+                    class="mt-3 text-black font-semibold text-[14px] leading-[20px] lowercase first-letter:uppercase"
                   >
-                    Đầu hồi mái ngói cổ
+                    <span class="block">Đầu hồi mái ngói cổ</span>
                   </h3>
-                  <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
-                    MSP: PKN-DH08
-                  </p>
-                  <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
-                    Giá: 620.000 đ/chiếc
-                  </p>
-                </div>
+                  <p class="text-gray-500 text-[12px] leading-[20px]">MSP: PKN-DH08</p>
+                  <p class="text-secondary font-bold text-[14px] leading-[20px]">620.000 đ/chiếc</p>
+                </a>
               </div>
-      
-              <!-- Pagination -->
-              <div
-                class="hidden lg:flex items-center justify-center gap-5 mt-10 lg:mt-auto"
-              >
-                <button
-                  class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
-                >
-                  <svg
-                    class="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                      d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                    ></path>
-                  </svg>
-                </button>
-                <button
-                  class="w-[40px] h-[40px] rounded-full bg-secondary flex items-center justify-center text-white hover:opacity-90 transition-all duration-300"
-                >
-                  <svg
-                    class="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.2"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    ></path>
-                  </svg>
-                </button>
-              </div>
-            </div>
+            </article>
+          </div>
+
+          <div
+            class="mt-3 flex justify-center gap-[3px]"
+            aria-label="Product mobile pagination"
+          >
+            <button
+              class="product-section-dot h-1 w-1 rounded-full bg-secondary"
+              data-product-dot="0"
+              aria-label="Slide 1"
+            ></button>
           </div>
         </div>
-      </section>
+
+        <!-- Products Grid -->
+        <div
+          class="hidden lg:grid grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-10 lg:gap-y-12 mb-10"
+        >
+          <div
+            class="flex flex-col group cursor-pointer"
+            onclick="
+              window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'
+            "
+          >
+            <div
+              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+            >
+              <img
+                src="/assets/pk-03.jpg"
+                alt="Ngói bò nóc chữ vạn cỡ lớn"
+                class="w-full h-full object-cover"
+              />
+              <div class="product-overlay">
+                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+                <span>Xem chi tiết</span>
+              </div>
+            </div>
+            <h3
+              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+            >
+              Ngói bò nóc chữ vạn cỡ lớn
+            </h3>
+            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+              MSP: PKN-BN05
+            </p>
+            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+              Giá: 975.000 đ/bộ
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col group cursor-pointer"
+            onclick="
+              window.location.href =
+                '/products/phu-kien-ngoi/bo-noc-chu-van.html'
+            "
+          >
+            <div
+              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+            >
+              <img
+                src="/assets/pk-04.jpg"
+                alt="Bộ bò nóc men cổ phục dựng"
+                class="w-full h-full object-cover"
+              />
+              <div class="product-overlay">
+                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+                <span>Xem chi tiết</span>
+              </div>
+            </div>
+            <h3
+              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+            >
+              Bộ bò nóc men cổ phục dựng
+            </h3>
+            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+              MSP: PKN-BN06
+            </p>
+            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+              Giá: 1.050.000 đ/bộ
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col group cursor-pointer"
+            onclick="
+              window.location.href = '/products/phu-kien-ngoi/ngoi-bo-noc.html'
+            "
+          >
+            <div
+              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+            >
+              <img
+                src="/assets/ngoi-05.jpg"
+                alt="Phụ kiện đỉnh mái hoa sen"
+                class="w-full h-full object-cover"
+              />
+              <div class="product-overlay">
+                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+                <span>Xem chi tiết</span>
+              </div>
+            </div>
+            <h3
+              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+            >
+              Phụ kiện đỉnh mái hoa sen
+            </h3>
+            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+              MSP: PKN-DM07
+            </p>
+            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+              Giá: 580.000 đ/chiếc
+            </p>
+          </div>
+
+          <div
+            class="flex flex-col group cursor-pointer"
+            onclick="
+              window.location.href =
+                '/products/phu-kien-ngoi/bo-noc-chu-van.html'
+            "
+          >
+            <div
+              class="product-card relative w-full aspect-square shadow mb-4 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:-translate-y-1"
+            >
+              <img
+                src="/assets/ngoi-04.jpg"
+                alt="Đầu hồi mái ngói cổ"
+                class="w-full h-full object-cover"
+              />
+              <div class="product-overlay">
+                <img src="data:image/svg+xml,%3csvg%20width='24'%20height='18'%20viewBox='0%200%2024%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M1.37267%2010.183C1.1301%209.8362%201%209.42321%201%209C1%208.57679%201.1301%208.1638%201.37267%207.817C2.94567%205.59%206.81867%201%2011.9997%201C17.1807%201%2021.0537%205.59%2022.6267%207.817C22.8692%208.1638%2022.9993%208.57679%2022.9993%209C22.9993%209.42321%2022.8692%209.8362%2022.6267%2010.183C21.0537%2012.41%2017.1807%2017%2011.9997%2017C6.81867%2017%202.94567%2012.41%201.37267%2010.183Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M12%2013C14.2091%2013%2016%2011.2091%2016%209C16%206.79086%2014.2091%205%2012%205C9.79086%205%208%206.79086%208%209C8%2011.2091%209.79086%2013%2012%2013Z'%20stroke='%23F7F7F7'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="Search" />
+                <span>Xem chi tiết</span>
+              </div>
+            </div>
+            <h3
+              class="font-bold text-[#212121] text-[14px] lg:text-[15px] uppercase mb-1 tracking-wide transition-colors group-hover:text-secondary"
+            >
+              Đầu hồi mái ngói cổ
+            </h3>
+            <p class="text-gray-500 text-[12px] lg:text-[13px] mb-1">
+              MSP: PKN-DH08
+            </p>
+            <p class="font-bold text-[#C47526] text-[13px] lg:text-[14px]">
+              Giá: 620.000 đ/chiếc
+            </p>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div
+          class="hidden lg:flex items-center justify-center gap-5 mt-10 lg:mt-auto"
+        >
+          <button
+            class="w-[40px] h-[40px] rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.2"
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              ></path>
+            </svg>
+          </button>
+          <button
+            class="w-[40px] h-[40px] rounded-full bg-secondary flex items-center justify-center text-white hover:opacity-90 transition-all duration-300"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       <!-- Danh Mục Sản Phẩm Section 3 -->
       <section class="relative mx-auto pb-10 lg:pb-16 overflow-visible">
         <!-- Background Decorations -->
@@ -2054,7 +2084,7 @@
             data-aos="fade-up"
           >
             <h2
-              class="font-archivo text-[24px] md:text-[32px] font-semibold text-secondary uppercase leading-[36px] md:leading-[45px]"
+              class="font-archivo text-[20px] leading-[36px] md:text-[32px] md:leading-[45px] font-semibold text-secondary uppercase"
             >
               Câu hỏi thường gặp
             </h2>
@@ -2071,7 +2101,7 @@
               <button
                 class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
               >
-                <span class="text-[14px] md:text-[18px] pr-4"
+                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
                   >Showroom của Gốm sứ Thanh Hải ở đâu?</span
                 >
                 <span
@@ -2093,7 +2123,7 @@
                 </span>
               </button>
               <div
-                class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed block overflow-hidden transition-all duration-300"
+                class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed block overflow-hidden transition-all duration-300"
               >
                 <p class="mb-2">
                   <span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi chỉ
@@ -2103,7 +2133,7 @@
                 </p>
                 <a
                   href="#"
-                  class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] md:text-[18px]"
+                  class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] leading-[22.75px] md:text-[18px] md:leading-normal"
                   >Xem map tại đây</a
                 >
               </div>
@@ -2114,7 +2144,7 @@
               <button
                 class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
               >
-                <span class="text-[14px] md:text-[18px] pr-4"
+                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
                   >Tôi có thể đặt màu sắc và mẫu mã theo yêu cầu riêng không?</span
                 >
                 <span
@@ -2136,7 +2166,7 @@
                 </span>
               </button>
               <div
-                class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed hidden overflow-hidden transition-all duration-300"
+                class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
               >
                 <p>
                   <span class="font-bold text-textPrimary">Trả lời:</span> Vui lòng liên
@@ -2151,7 +2181,7 @@
               <button
                 class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
               >
-                <span class="text-[14px] md:text-[18px] pr-4"
+                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
                   >Tôi có thể tham quan xưởng sản xuất hay không?</span
                 >
                 <span
@@ -2173,7 +2203,7 @@
                 </span>
               </button>
               <div
-                class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed hidden overflow-hidden transition-all duration-300"
+                class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
               >
                 <p>
                   <span class="font-bold text-textPrimary">Trả lời:</span> Quý khách
@@ -2188,7 +2218,7 @@
               <button
                 class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
               >
-                <span class="text-[14px] md:text-[18px] pr-4"
+                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
                   >Chi phí vận chuyển và phạm vi giao hàng như thế nào?</span
                 >
                 <span
@@ -2210,7 +2240,7 @@
                 </span>
               </button>
               <div
-                class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed hidden overflow-hidden transition-all duration-300"
+                class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
               >
                 <p>
                   <span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi
@@ -2225,7 +2255,7 @@
               <button
                 class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
               >
-                <span class="text-[14px] md:text-[18px] pr-4"
+                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
                   >Đặc tính thủ công của ngói âm dương cần lưu ý gì?</span
                 >
                 <span
@@ -2247,7 +2277,7 @@
                 </span>
               </button>
               <div
-                class="faq-content mt-4 text-gray-600 text-[14px] md:text-[18px] leading-relaxed hidden overflow-hidden transition-all duration-300"
+                class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
               >
                 <p>
                   <span class="font-bold text-textPrimary">Trả lời:</span> Ngói thủ công
@@ -2260,7 +2290,7 @@
             <div class="mt-8 text-right">
               <a
                 href="/faq/index.html"
-                class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] md:text-[18px]"
+                class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] leading-[21px] md:text-[18px] md:leading-normal"
                 >Xem thêm</a
               >
             </div>
