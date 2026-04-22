@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/ngoi-hai-van-mieu/index.html uid=3fd492f7 -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -445,11 +446,15 @@
     data-page="products"
     class="page-ngoi-hai-van-mieu min-h-screen flex flex-col bg-neutral-1"
   >
-    <header
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-hai-van-mieu/index.html include=components/header idx=001 uid=9eda2929 -->
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/header.html uid=0505a17c -->
+<!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=header idx=001 uid=038b0028 -->
+<header
   id="site-header"
   class="bg-primary sticky top-0 text-white h-[58px] xl:h-[108px] z-50 transition-all duration-300"
 >
   <div class="hidden xl:block w-[85%] max-w-[1320px] mx-auto h-full">
+    <!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=nav idx=001 uid=a62974be -->
     <nav class="flex items-center justify-between h-full">
       <!-- Logo -->
       <div class="flex-shrink-0 mr-[8%]">
@@ -766,6 +771,7 @@
   <div
     class="xl:hidden h-full bg-[linear-gradient(90deg,_#2F302C_0%,_#262720_100%)]"
   >
+    <!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=nav idx=002 uid=d604044c -->
     <nav class="relative flex items-center justify-center h-full">
       <button
         id="mobile-menu-button"
@@ -1113,15 +1119,29 @@
   </div>
 </header>
 
- <!-- Catalog Sticky Button -->
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/header.html uid=0505a17c -->
+
+
+
+ <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/catalog-button.html uid=a1639f05 -->
+<!-- Catalog Sticky Button -->
+<!-- GSXD-BLOCK:BEGIN file=components/catalog-button.html tag=a idx=001 uid=fb4becb8 -->
 <a href="#" id="catalog-sticky-btn" class="fixed right-0 top-[124px] z-[45] hover:opacity-90 transition-all duration-300 bg-[#AB6520] w-[28px] h-[90px] flex items-center justify-center">
     <span class="catalog-text-vertical">CATALOG</span>
 </a>
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/catalog-button.html uid=a1639f05 -->
 
+
+
+
+
+
+    <!-- GSXD-ELEMENT:BEGIN file=products/ngoi-hai-van-mieu/index.html tag=main idx=001 uid=92da9087 -->
 
     <main class="flex-grow bg-background-secondary">
       <!-- Top Banner -->
-      <section class="relative w-full pt-0 md:pt-20 pb-0 md:pb-8 lg:pb-10">
+<!-- GSXD-SECTION:BEGIN file=products/ngoi-hai-van-mieu/index.html tag=section idx=001 uid=83f0ae04 -->
+<section class="relative w-full pt-0 md:pt-20 pb-0 md:pb-8 lg:pb-10">
         <!-- Mobile Top Banner -->
         <div class="md:hidden relative h-[403px] overflow-hidden">
           <div class="absolute inset-x-0 top-0 h-[245px] z-0">
@@ -1333,19 +1353,30 @@
       <div
         class="ngoi-hai-breadcrumb-scope w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
       >
-        <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
-          <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
-          <span class="mx-1">/</span>
-          <span class="text-primary font-semibold border-primary"
-            >Ngói Hài Văn Miếu</span
-          >
-        </p>
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-hai-van-mieu/index.html include=components/products/breadcrumb idx=002 uid=c4bde9fe -->
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/breadcrumb.html uid=fbcaa7d9 -->
+<!-- GSXD-BLOCK:BEGIN file=components/products/breadcrumb.html tag=p idx=001 uid=a6ea24f9 -->
+<p class="font-bold text-primary/60 uppercase text-xs md:text-base">
+  <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
+  <span class="mx-1">/</span>
+  <span class="text-primary font-semibold border-primary"
+    >Ngói Hài Văn Miếu</span
+  >
+</p>
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/breadcrumb.html uid=fbcaa7d9 -->
+
+
+
+
       </div>
 
       <div class="ngoi-hai-product-grid-scope">
-        <!-- ============================================== -->
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-hai-van-mieu/index.html include=components/products/product-filter idx=003 uid=b67deab5 -->
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/product-filter.html uid=6f165588 -->
+<!-- ============================================== -->
 <!-- COMPONENT BỘ LỌC SẢN PHẨM -->
 <!-- ============================================== -->
+<!-- GSXD-SECTION:BEGIN file=components/products/product-filter.html tag=section idx=001 uid=7bfa9de6 -->
 <section class="w-[85%] max-w-[1320px] mx-auto">
   <!-- Đường kẻ phân cách phía trên bộ lọc -->
   <hr class="border-t border-black/10 mb-3 w-full" />
@@ -1377,9 +1408,15 @@
     </button>
   </div>
 </section>
- <!-- ============================================== -->
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/product-filter.html uid=6f165588 -->
+
+
+
+ <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/product-grid.html uid=ce312d92 -->
+<!-- ============================================== -->
 <!-- COMPONENT LƯỚI SẢN PHẨM Ở TRANG DANH MỤC THÀNH PHẦN -->
 <!-- ============================================== -->
+<!-- GSXD-SECTION:BEGIN file=components/products/product-grid.html tag=section idx=001 uid=f921e9d8 -->
 <section
   class="w-[85%] max-w-[1320px] mx-auto pb-[43px] md:pb-16 animate-fade-in-up"
 >
@@ -1646,11 +1683,16 @@
     </button>
   </div>
 </section>
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/product-grid.html uid=ce312d92 -->
+
+
+
 
       </div>
 
       <!-- Difference Section -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/ngoi-hai-van-mieu/index.html tag=section idx=002 uid=f2b401db -->
+<section
         class="relative w-full overflow-hidden bg-background-secondary mb-[35px] md:mb-16"
       >
         <!-- Section Title -->
@@ -1761,51 +1803,61 @@
       </section>
 
       <div class="ngoi-hai-journey-scope">
-        <!-- ============================================== -->
-        <!-- COMPONENT VIDEO HÀNH TRÌNH CHẾ TÁC               -->
-        <!-- ============================================== -->
-        <section class="w-full mx-auto pb-[30px] md:pb-16 max-w-[1920px]">
-          <!-- Tiêu đề (Có thể ẩn đi nếu tham số hideTitle = true) -->
-          <div class="text-center mb-8 md:mb-16" data-aos="fade-up">
-            <h2 class="text-[20px] md:text-3xl font-semibold text-secondary uppercase">
-              Hành trình chế tác
-            </h2>
-          </div>
-        
-          <!-- Khung chứa Video (Tỷ lệ 16:9 - aspect-video) -->
-          <div
-            class="relative w-full aspect-video overflow-hidden cursor-pointer group"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <!-- Ảnh Thumbnail đại diện cho video (Khi hover sẽ tối đi) -->
-            <img
-              src="/assets/video-placeholder-02.png"
-              alt="Video placeholder"
-              class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300"
-            />
-            
-            <!-- Lớp phủ chứa Nút Play ở giữa màn hình -->
-            <div class="absolute inset-0 flex items-center justify-center">
-              <!-- Vòng tròn mờ (backdrop-blur) của nút Play -->
-              <div
-                class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300"
-              >
-                <!-- Icon tam giác Play -->
-                <svg
-                  class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M8 5v14l11-7z"></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </section>      </div>
-      <div class="ngoi-hai-works-scope"><!-- ============================================== -->
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-hai-van-mieu/index.html include=components/products/journey-video idx=004 uid=3697d229 -->
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
+<!-- ============================================== -->
+<!-- COMPONENT VIDEO HÀNH TRÌNH CHẾ TÁC               -->
+<!-- ============================================== -->
+<!-- GSXD-SECTION:BEGIN file=components/products/journey-video.html tag=section idx=001 uid=d26acfc5 -->
+<section class="w-full mx-auto pb-[30px] md:pb-16 max-w-[1920px]">
+  <!-- Tiêu đề (Có thể ẩn đi nếu tham số hideTitle = true) -->
+  <div class="text-center mb-8 md:mb-16" data-aos="fade-up">
+    <h2 class="text-[20px] md:text-3xl font-semibold text-secondary uppercase">
+      Hành trình chế tác
+    </h2>
+  </div>
+
+  <!-- Khung chứa Video (Tỷ lệ 16:9 - aspect-video) -->
+  <div
+    class="relative w-full aspect-video overflow-hidden cursor-pointer group"
+    data-aos="fade-up"
+    data-aos-delay="200"
+  >
+    <!-- Ảnh Thumbnail đại diện cho video (Khi hover sẽ tối đi) -->
+    <img
+      src="/assets/video-placeholder-02.png"
+      alt="Video placeholder"
+      class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300"
+    />
+    
+    <!-- Lớp phủ chứa Nút Play ở giữa màn hình -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <!-- Vòng tròn mờ (backdrop-blur) của nút Play -->
+      <div
+        class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300"
+      >
+        <!-- Icon tam giác Play -->
+        <svg
+          class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path d="M8 5v14l11-7z"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
+
+
+
+      </div>
+      <div class="ngoi-hai-works-scope"><!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/works.html uid=85f5fb0d -->
+<!-- ============================================== -->
 <!-- COMPONENT DẤU ẤN CÔNG TRÌNH (WORKS SECTION)      -->
 <!-- ============================================== -->
+<!-- GSXD-SECTION:BEGIN file=components/products/works.html tag=section idx=001 uid=82e281f2 -->
 <section
   class="w-full bg-background-secondary pb-12 md:pb-16 relative overflow-visible animate-fade-in-up xl:min-h-[760px]"
   data-aos="fade-up"
@@ -1983,10 +2035,15 @@
   </div>
 </section>
 
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/works.html uid=85f5fb0d -->
+
+
+
 </div>
 
       <!-- FAQ Section -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/ngoi-hai-van-mieu/index.html tag=section idx=003 uid=902f7088 -->
+<section
         class="w-full relative pb-[65px] md:pb-32 bg-background-secondary overflow-hidden"
         data-aos="fade-up"
       >
@@ -2003,241 +2060,251 @@
         />
 
         <div class="ngoi-hai-faq-scope">
-          <!-- ============================================== -->
-          <!-- COMPONENT CÂU HỎI THƯỜNG GẶP (FAQ)               -->
-          <!-- Bản chất là danh sách Accordion (Click để mở)    -->
-          <!-- ============================================== -->
-          <div
-            class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto"
-            data-faq-component
+<!-- GSXD-PARTIAL:BEGIN file=products/ngoi-hai-van-mieu/index.html include=components/products/faq-content idx=005 uid=2796c15d -->
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/faq-content.html uid=1e3c4970 -->
+<!-- ============================================== -->
+<!-- COMPONENT CÂU HỎI THƯỜNG GẶP (FAQ)               -->
+<!-- Bản chất là danh sách Accordion (Click để mở)    -->
+<!-- ============================================== -->
+<!-- GSXD-BLOCK:BEGIN file=components/products/faq-content.html tag=div idx=001 uid=82efd9d3 -->
+<div
+  class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto"
+  data-faq-component
+>
+  <!-- Tiêu đề Section CÂU HỎI THƯỜNG GẶP -->
+  <div
+    class="w-[85%] max-w-[1320px] mx-auto text-center mb-[22px] md:mb-16"
+    data-aos="fade-up"
+  >
+    <h2
+      class="font-archivo text-[20px] leading-[36px] md:text-[32px] md:leading-[45px] font-semibold text-secondary uppercase"
+    >
+      Câu hỏi thường gặp
+    </h2>
+  </div>
+
+  <!-- Khung Thẻ Card trắng chứa toàn bộ danh sách câu hỏi -->
+  <div
+    class="bg-white px-6 md:px-10 py-8 shadow-lg relative"
+    data-aos="fade-up"
+    data-aos-delay="200"
+  >
+    <!-- Câu Hỏi Item 1 (Mặc định được hiển thị mở rộng sẵn) -->
+    <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+      <!-- Nút để click đóng/mở nội dung -->
+      <button
+        class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+      >
+        <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+          >Showroom của Gốm sứ Thanh Hải ở đâu?</span
+        >
+        <!-- Icon Mũi tên Dropdown -->
+        <span
+          class="faq-icon w-6 h-6 flex-shrink-0 bg-textPrimary rounded-full flex items-center justify-center text-white transition-all duration-300"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
           >
-            <!-- Tiêu đề Section CÂU HỎI THƯỜNG GẶP -->
-            <div
-              class="w-[85%] max-w-[1320px] mx-auto text-center mb-[22px] md:mb-16"
-              data-aos="fade-up"
-            >
-              <h2
-                class="font-archivo text-[20px] leading-[36px] md:text-[32px] md:leading-[45px] font-semibold text-secondary uppercase"
-              >
-                Câu hỏi thường gặp
-              </h2>
-            </div>
-          
-            <!-- Khung Thẻ Card trắng chứa toàn bộ danh sách câu hỏi -->
-            <div
-              class="bg-white px-6 md:px-10 py-8 shadow-lg relative"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <!-- Câu Hỏi Item 1 (Mặc định được hiển thị mở rộng sẵn) -->
-              <div class="faq-item border-b border-gray-200 pb-10 mb-2">
-                <!-- Nút để click đóng/mở nội dung -->
-                <button
-                  class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
-                >
-                  <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
-                    >Showroom của Gốm sứ Thanh Hải ở đâu?</span
-                  >
-                  <!-- Icon Mũi tên Dropdown -->
-                  <span
-                    class="faq-icon w-6 h-6 flex-shrink-0 bg-textPrimary rounded-full flex items-center justify-center text-white transition-all duration-300"
-                  >
-                    <svg
-                      class="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 15l7-7 7 7"
-                      ></path>
-                    </svg>
-                  </span>
-                </button>
-                <!-- Khối nội dung câu trả lời -->
-                <div
-                  class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed block overflow-hidden transition-all duration-300"
-                >
-                  <p class="mb-2">
-                    <span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi chỉ
-                    có duy nhất 1 showroom tại địa chỉ: Số 18 Phố Gốm - Giang Cao - Bát
-                    Tràng, Gia Lâm, Hà Nội. Ngoài địa chỉ này, chúng tôi không có bất kỳ
-                    đại lý đại diện nào khác tại các tỉnh thành trên cả nước.
-                  </p>
-                  <a
-                    href="#"
-                    class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] leading-[22.75px] md:text-[18px] md:leading-normal"
-                    >Xem map tại đây</a
-                  >
-                </div>
-              </div>
-          
-              <!-- FAQ Item 2 -->
-              <div class="faq-item border-b border-gray-200 pb-10 mb-2">
-                <button
-                  class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
-                >
-                  <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
-                    >Tôi có thể đặt màu sắc và mẫu mã theo yêu cầu riêng không?</span
-                  >
-                  <span
-                    class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
-                  >
-                    <svg
-                      class="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 15l7-7 7 7"
-                      ></path>
-                    </svg>
-                  </span>
-                </button>
-                <div
-                  class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
-                >
-                  <p>
-                    <span class="font-bold text-textPrimary">Trả lời:</span> Vui lòng liên
-                    hệ với chúng tôi để biết thêm chi tiết về việc đặt màu sắc và mẫu mã
-                    theo yêu cầu riêng.
-                  </p>
-                </div>
-              </div>
-          
-              <!-- FAQ Item 3 -->
-              <div class="faq-item border-b border-gray-200 pb-10 mb-2">
-                <button
-                  class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
-                >
-                  <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
-                    >Tôi có thể tham quan xưởng sản xuất hay không?</span
-                  >
-                  <span
-                    class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
-                  >
-                    <svg
-                      class="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 15l7-7 7 7"
-                      ></path>
-                    </svg>
-                  </span>
-                </button>
-                <div
-                  class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
-                >
-                  <p>
-                    <span class="font-bold text-textPrimary">Trả lời:</span> Quý khách
-                    hoàn toàn có thể tham quan xưởng sản xuất của chúng tôi. Vui lòng liên
-                    hệ trước để được sắp xếp đón tiếp chu đáo nhất.
-                  </p>
-                </div>
-              </div>
-          
-              <!-- FAQ Item 4 -->
-              <div class="faq-item border-b border-gray-200 pb-10 mb-2">
-                <button
-                  class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
-                >
-                  <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
-                    >Chi phí vận chuyển và phạm vi giao hàng như thế nào?</span
-                  >
-                  <span
-                    class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
-                  >
-                    <svg
-                      class="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 15l7-7 7 7"
-                      ></path>
-                    </svg>
-                  </span>
-                </button>
-                <div
-                  class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
-                >
-                  <p>
-                    <span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi
-                    giao hàng toàn quốc. Chi phí vận chuyển sẽ phụ thuộc vào khối lượng
-                    đơn hàng và khoảng cách địa lý.
-                  </p>
-                </div>
-              </div>
-          
-              <!-- FAQ Item 5 -->
-              <div class="faq-item mb-8">
-                <button
-                  class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
-                >
-                  <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
-                    >Đặc tính thủ công của ngói âm dương cần lưu ý gì?</span
-                  >
-                  <span
-                    class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
-                  >
-                    <svg
-                      class="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 15l7-7 7 7"
-                      ></path>
-                    </svg>
-                  </span>
-                </button>
-                <div
-                  class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
-                >
-                  <p>
-                    <span class="font-bold text-textPrimary">Trả lời:</span> Ngói thủ công
-                    mang vẻ đẹp độc bản, màu sắc có độ chuyển tự nhiên do nhiệt độ lò,
-                    không viên nào giống viên nào 100%.
-                  </p>
-                </div>
-              </div>
-          
-              <div class="mt-8 text-right">
-                <a
-                  href="/faq/index.html"
-                  class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] leading-[21px] md:text-[18px] md:leading-normal"
-                  >Xem thêm</a
-                >
-              </div>
-            </div>
-          </div>
-          
-                  </div>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 15l7-7 7 7"
+            ></path>
+          </svg>
+        </span>
+      </button>
+      <!-- Khối nội dung câu trả lời -->
+      <div
+        class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed block overflow-hidden transition-all duration-300"
+      >
+        <p class="mb-2">
+          <span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi chỉ
+          có duy nhất 1 showroom tại địa chỉ: Số 18 Phố Gốm - Giang Cao - Bát
+          Tràng, Gia Lâm, Hà Nội. Ngoài địa chỉ này, chúng tôi không có bất kỳ
+          đại lý đại diện nào khác tại các tỉnh thành trên cả nước.
+        </p>
+        <a
+          href="#"
+          class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] leading-[22.75px] md:text-[18px] md:leading-normal"
+          >Xem map tại đây</a
+        >
+      </div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+      <button
+        class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+      >
+        <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+          >Tôi có thể đặt màu sắc và mẫu mã theo yêu cầu riêng không?</span
+        >
+        <span
+          class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 15l7-7 7 7"
+            ></path>
+          </svg>
+        </span>
+      </button>
+      <div
+        class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
+      >
+        <p>
+          <span class="font-bold text-textPrimary">Trả lời:</span> Vui lòng liên
+          hệ với chúng tôi để biết thêm chi tiết về việc đặt màu sắc và mẫu mã
+          theo yêu cầu riêng.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+      <button
+        class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+      >
+        <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+          >Tôi có thể tham quan xưởng sản xuất hay không?</span
+        >
+        <span
+          class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 15l7-7 7 7"
+            ></path>
+          </svg>
+        </span>
+      </button>
+      <div
+        class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
+      >
+        <p>
+          <span class="font-bold text-textPrimary">Trả lời:</span> Quý khách
+          hoàn toàn có thể tham quan xưởng sản xuất của chúng tôi. Vui lòng liên
+          hệ trước để được sắp xếp đón tiếp chu đáo nhất.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+      <button
+        class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+      >
+        <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+          >Chi phí vận chuyển và phạm vi giao hàng như thế nào?</span
+        >
+        <span
+          class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 15l7-7 7 7"
+            ></path>
+          </svg>
+        </span>
+      </button>
+      <div
+        class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
+      >
+        <p>
+          <span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi
+          giao hàng toàn quốc. Chi phí vận chuyển sẽ phụ thuộc vào khối lượng
+          đơn hàng và khoảng cách địa lý.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="faq-item mb-8">
+      <button
+        class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+      >
+        <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+          >Đặc tính thủ công của ngói âm dương cần lưu ý gì?</span
+        >
+        <span
+          class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 15l7-7 7 7"
+            ></path>
+          </svg>
+        </span>
+      </button>
+      <div
+        class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
+      >
+        <p>
+          <span class="font-bold text-textPrimary">Trả lời:</span> Ngói thủ công
+          mang vẻ đẹp độc bản, màu sắc có độ chuyển tự nhiên do nhiệt độ lò,
+          không viên nào giống viên nào 100%.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-8 text-right">
+      <a
+        href="/faq/index.html"
+        class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] leading-[21px] md:text-[18px] md:leading-normal"
+        >Xem thêm</a
+      >
+    </div>
+  </div>
+</div>
+
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/faq-content.html uid=1e3c4970 -->
+
+
+
+
+        </div>
       </section>
     </main>
 
-    <div class="ngoi-hai-footer-scope"><footer class="bg-[#262723] text-white">
+    <div class="ngoi-hai-footer-scope"><!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
+<!-- GSXD-ELEMENT:BEGIN file=components/footer.html tag=footer idx=001 uid=540a3f40 -->
+<footer class="bg-[#262723] text-white">
   <div class="relative overflow-hidden bg-primary">
     <img
       src="/assets/background-decorate.png"
@@ -2603,7 +2670,12 @@
       />
     </a>
   </div>
-</footer></div>
+</footer>
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
+
+
+
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -2954,5 +3026,10 @@
   });
 </script>
 
-  </body>
+<!-- GSXD-DEBUG:END type=PAGE file=products/ngoi-hai-van-mieu/index.html uid=3fd492f7 -->
+</body>
 </html>
+
+
+
+

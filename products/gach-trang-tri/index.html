@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=products/gach-trang-tri/index.html uid=c8361727 -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -54,11 +55,15 @@
     <link rel="stylesheet" crossorigin href="/assets/css/main.css">
   </head>
   <body data-page="products" class="min-h-screen flex flex-col bg-neutral-1">
-    <header
+<!-- GSXD-PARTIAL:BEGIN file=products/gach-trang-tri/index.html include=components/header idx=001 uid=2f21a96d -->
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/header.html uid=0505a17c -->
+<!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=header idx=001 uid=038b0028 -->
+<header
   id="site-header"
   class="bg-primary sticky top-0 text-white h-[58px] xl:h-[108px] z-50 transition-all duration-300"
 >
   <div class="hidden xl:block w-[85%] max-w-[1320px] mx-auto h-full">
+    <!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=nav idx=001 uid=a62974be -->
     <nav class="flex items-center justify-between h-full">
       <!-- Logo -->
       <div class="flex-shrink-0 mr-[8%]">
@@ -375,6 +380,7 @@
   <div
     class="xl:hidden h-full bg-[linear-gradient(90deg,_#2F302C_0%,_#262720_100%)]"
   >
+    <!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=nav idx=002 uid=d604044c -->
     <nav class="relative flex items-center justify-center h-full">
       <button
         id="mobile-menu-button"
@@ -722,15 +728,29 @@
   </div>
 </header>
 
- <!-- Catalog Sticky Button -->
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/header.html uid=0505a17c -->
+
+
+
+ <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/catalog-button.html uid=a1639f05 -->
+<!-- Catalog Sticky Button -->
+<!-- GSXD-BLOCK:BEGIN file=components/catalog-button.html tag=a idx=001 uid=fb4becb8 -->
 <a href="#" id="catalog-sticky-btn" class="fixed right-0 top-[124px] z-[45] hover:opacity-90 transition-all duration-300 bg-[#AB6520] w-[28px] h-[90px] flex items-center justify-center">
     <span class="catalog-text-vertical">CATALOG</span>
 </a>
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/catalog-button.html uid=a1639f05 -->
 
+
+
+
+
+
+    <!-- GSXD-ELEMENT:BEGIN file=products/gach-trang-tri/index.html tag=main idx=001 uid=2e3771be -->
 
     <main class="flex-grow bg-background-secondary">
       <!-- Top Banner -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/gach-trang-tri/index.html tag=section idx=001 uid=90977a51 -->
+<section
         class="relative w-full min-h-[322px] md:min-h-[500px] lg:min-h-[600px] flex items-center md:pb-8 overflow-hidden"
       >
         <!-- Background Image with Dark Overlay -->
@@ -770,7 +790,8 @@
       </section>
 
       <!-- Ứng dụng đa dạng Section -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/gach-trang-tri/index.html tag=section idx=002 uid=7fc6c919 -->
+<section
         class="max-w-[1320px] w-[85%] mx-auto pb-4 pt-8 md:py-12"
         data-aos="fade-up"
       >
@@ -853,18 +874,28 @@
       <div
         class="w-[85%] max-w-[1320px] mx-auto pt-6 pb-3 md:pb-6 md:pt-8 relative z-10"
       >
-        <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
-          <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
-          <span class="mx-1">/</span>
-          <span class="text-primary font-semibold border-primary"
-            >Gạch Trang Trí</span
-          >
-        </p>
-      </div>
+<!-- GSXD-PARTIAL:BEGIN file=products/gach-trang-tri/index.html include=components/products/breadcrumb idx=002 uid=d600140d -->
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/breadcrumb.html uid=fbcaa7d9 -->
+<!-- GSXD-BLOCK:BEGIN file=components/products/breadcrumb.html tag=p idx=001 uid=a6ea24f9 -->
+<p class="font-bold text-primary/60 uppercase text-xs md:text-base">
+  <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
+  <span class="mx-1">/</span>
+  <span class="text-primary font-semibold border-primary"
+    >Gạch Trang Trí</span
+  >
+</p>
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/breadcrumb.html uid=fbcaa7d9 -->
 
-      <!-- ============================================== -->
+
+
+
+      </div>
+<!-- GSXD-PARTIAL:BEGIN file=products/gach-trang-tri/index.html include=components/products/product-filter idx=003 uid=951744d2 -->
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/product-filter.html uid=6f165588 -->
+<!-- ============================================== -->
 <!-- COMPONENT BỘ LỌC SẢN PHẨM -->
 <!-- ============================================== -->
+<!-- GSXD-SECTION:BEGIN file=components/products/product-filter.html tag=section idx=001 uid=7bfa9de6 -->
 <section class="w-[85%] max-w-[1320px] mx-auto">
   <!-- Đường kẻ phân cách phía trên bộ lọc -->
   <hr class="border-t border-black/10 mb-3 w-full" />
@@ -896,9 +927,15 @@
     </button>
   </div>
 </section>
- <!-- ============================================== -->
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/product-filter.html uid=6f165588 -->
+
+
+
+ <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/product-grid.html uid=ce312d92 -->
+<!-- ============================================== -->
 <!-- COMPONENT LƯỚI SẢN PHẨM Ở TRANG DANH MỤC THÀNH PHẦN -->
 <!-- ============================================== -->
+<!-- GSXD-SECTION:BEGIN file=components/products/product-grid.html tag=section idx=001 uid=f921e9d8 -->
 <section
   class="w-[85%] max-w-[1320px] mx-auto pb-[43px] md:pb-16 animate-fade-in-up"
 >
@@ -1165,7 +1202,13 @@
     </button>
   </div>
 </section>
- <!-- Process Section -->
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/product-grid.html uid=ce312d92 -->
+
+
+
+ <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/trang-tri-process.html uid=9a25de87 -->
+<!-- Process Section -->
+<!-- GSXD-SECTION:BEGIN file=components/products/trang-tri-process.html tag=section idx=001 uid=dbe320b9 -->
 <section
   class="w-[85%] max-w-[1320px] mx-auto pb-[20px] md:pb-16"
   data-aos="fade-up"
@@ -1210,6 +1253,7 @@
 </section>
 
 <!-- 2 Images Section -->
+<!-- GSXD-SECTION:BEGIN file=components/products/trang-tri-process.html tag=section idx=002 uid=a7d24630 -->
 <section class="w-full max-w-[1920px] mx-auto">
   <div class="trang-tri-swiper-mobile md:hidden">
     <div class="swiper trang-tri-two-image-swiper overflow-hidden">
@@ -1258,10 +1302,15 @@
   </div>
 </section>
 
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/trang-tri-process.html uid=9a25de87 -->
+
+
+
 
 
       <!-- Công đoạn chế tác Section -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/gach-trang-tri/index.html tag=section idx=003 uid=c04db61e -->
+<section
         class="relative w-full overflow-hidden py-12 md:py-20"
         data-aos="fade-up"
       >
@@ -1292,46 +1341,54 @@
           </div>
         </div>
       </section>
+<!-- GSXD-PARTIAL:BEGIN file=products/gach-trang-tri/index.html include=components/products/journey-video idx=004 uid=1b0bb8f1 -->
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
+<!-- ============================================== -->
+<!-- COMPONENT VIDEO HÀNH TRÌNH CHẾ TÁC               -->
+<!-- ============================================== -->
+<!-- GSXD-SECTION:BEGIN file=components/products/journey-video.html tag=section idx=001 uid=d26acfc5 -->
+<section class="w-full mx-auto pb-[30px] md:pb-16 max-w-[1920px]">
+  <!-- Tiêu đề (Có thể ẩn đi nếu tham số hideTitle = true) -->
 
-      <!-- ============================================== -->
-      <!-- COMPONENT VIDEO HÀNH TRÌNH CHẾ TÁC               -->
-      <!-- ============================================== -->
-      <section class="w-full mx-auto pb-[30px] md:pb-16 max-w-[1920px]">
-        <!-- Tiêu đề (Có thể ẩn đi nếu tham số hideTitle = true) -->
-      
-        <!-- Khung chứa Video (Tỷ lệ 16:9 - aspect-video) -->
-        <div
-          class="relative w-full aspect-video overflow-hidden cursor-pointer group"
-          data-aos="fade-up"
-          data-aos-delay="200"
+  <!-- Khung chứa Video (Tỷ lệ 16:9 - aspect-video) -->
+  <div
+    class="relative w-full aspect-video overflow-hidden cursor-pointer group"
+    data-aos="fade-up"
+    data-aos-delay="200"
+  >
+    <!-- Ảnh Thumbnail đại diện cho video (Khi hover sẽ tối đi) -->
+    <img
+      src="/assets/video-placeholder-02.png"
+      alt="Video placeholder"
+      class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300"
+    />
+    
+    <!-- Lớp phủ chứa Nút Play ở giữa màn hình -->
+    <div class="absolute inset-0 flex items-center justify-center">
+      <!-- Vòng tròn mờ (backdrop-blur) của nút Play -->
+      <div
+        class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300"
+      >
+        <!-- Icon tam giác Play -->
+        <svg
+          class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1"
+          fill="currentColor"
+          viewBox="0 0 24 24"
         >
-          <!-- Ảnh Thumbnail đại diện cho video (Khi hover sẽ tối đi) -->
-          <img
-            src="/assets/video-placeholder-02.png"
-            alt="Video placeholder"
-            class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300"
-          />
-          
-          <!-- Lớp phủ chứa Nút Play ở giữa màn hình -->
-          <div class="absolute inset-0 flex items-center justify-center">
-            <!-- Vòng tròn mờ (backdrop-blur) của nút Play -->
-            <div
-              class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300"
-            >
-              <!-- Icon tam giác Play -->
-              <svg
-                class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M8 5v14l11-7z"></path>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </section>
+          <path d="M8 5v14l11-7z"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
+
+
+
+
       <!-- Nâng tầm giá trị nghệ thuật Section -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/gach-trang-tri/index.html tag=section idx=004 uid=d1334522 -->
+<section
         class="max-w-[1320px] w-[85%] mx-auto md:pb-20"
         data-aos="fade-up"
       >
@@ -1427,7 +1484,8 @@
       </section>
 
       <!-- Dấu ấn trên những công trình Section -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/gach-trang-tri/index.html tag=section idx=005 uid=79d01305 -->
+<section
         class="max-w-[1320px] w-[85%] mx-auto overflow-x-hidden"
         data-aos="fade-up"
       >
@@ -1709,7 +1767,8 @@
       </section>
 
       <!-- FAQ Section -->
-      <section
+<!-- GSXD-SECTION:BEGIN file=products/gach-trang-tri/index.html tag=section idx=006 uid=c7110059 -->
+<section
         class="w-full relative pt-[40px] pb-20 md:pt-[150px] md:pb-[120px] bg-background-secondary overflow-hidden"
         data-aos="fade-up"
       >
@@ -1723,537 +1782,552 @@
           class="absolute top-[38%] -translate-y-1/3 md:right-12 -right-1/2 w-[42%] object-contain opacity-80 pointer-events-none z-0"
           alt=""
         />
-        <!-- ============================================== -->
-        <!-- COMPONENT CÂU HỎI THƯỜNG GẶP (FAQ)               -->
-        <!-- Bản chất là danh sách Accordion (Click để mở)    -->
-        <!-- ============================================== -->
-        <div
-          class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto"
-          data-faq-component
-        >
-          <!-- Tiêu đề Section CÂU HỎI THƯỜNG GẶP -->
-          <div
-            class="w-[85%] max-w-[1320px] mx-auto text-center mb-[22px] md:mb-16"
-            data-aos="fade-up"
-          >
-            <h2
-              class="font-archivo text-[20px] leading-[36px] md:text-[32px] md:leading-[45px] font-semibold text-secondary uppercase"
-            >
-              Câu hỏi thường gặp
-            </h2>
-          </div>
-        
-          <!-- Khung Thẻ Card trắng chứa toàn bộ danh sách câu hỏi -->
-          <div
-            class="bg-white px-6 md:px-10 py-8 shadow-lg relative"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <!-- Câu Hỏi Item 1 (Mặc định được hiển thị mở rộng sẵn) -->
-            <div class="faq-item border-b border-gray-200 pb-10 mb-2">
-              <!-- Nút để click đóng/mở nội dung -->
-              <button
-                class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
-              >
-                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
-                  >Showroom của Gốm sứ Thanh Hải ở đâu?</span
-                >
-                <!-- Icon Mũi tên Dropdown -->
-                <span
-                  class="faq-icon w-6 h-6 flex-shrink-0 bg-textPrimary rounded-full flex items-center justify-center text-white transition-all duration-300"
-                >
-                  <svg
-                    class="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 15l7-7 7 7"
-                    ></path>
-                  </svg>
-                </span>
-              </button>
-              <!-- Khối nội dung câu trả lời -->
-              <div
-                class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed block overflow-hidden transition-all duration-300"
-              >
-                <p class="mb-2">
-                  <span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi chỉ
-                  có duy nhất 1 showroom tại địa chỉ: Số 18 Phố Gốm - Giang Cao - Bát
-                  Tràng, Gia Lâm, Hà Nội. Ngoài địa chỉ này, chúng tôi không có bất kỳ
-                  đại lý đại diện nào khác tại các tỉnh thành trên cả nước.
-                </p>
-                <a
-                  href="#"
-                  class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] leading-[22.75px] md:text-[18px] md:leading-normal"
-                  >Xem map tại đây</a
-                >
-              </div>
-            </div>
-        
-            <!-- FAQ Item 2 -->
-            <div class="faq-item border-b border-gray-200 pb-10 mb-2">
-              <button
-                class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
-              >
-                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
-                  >Tôi có thể đặt màu sắc và mẫu mã theo yêu cầu riêng không?</span
-                >
-                <span
-                  class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
-                >
-                  <svg
-                    class="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 15l7-7 7 7"
-                    ></path>
-                  </svg>
-                </span>
-              </button>
-              <div
-                class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
-              >
-                <p>
-                  <span class="font-bold text-textPrimary">Trả lời:</span> Vui lòng liên
-                  hệ với chúng tôi để biết thêm chi tiết về việc đặt màu sắc và mẫu mã
-                  theo yêu cầu riêng.
-                </p>
-              </div>
-            </div>
-        
-            <!-- FAQ Item 3 -->
-            <div class="faq-item border-b border-gray-200 pb-10 mb-2">
-              <button
-                class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
-              >
-                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
-                  >Tôi có thể tham quan xưởng sản xuất hay không?</span
-                >
-                <span
-                  class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
-                >
-                  <svg
-                    class="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 15l7-7 7 7"
-                    ></path>
-                  </svg>
-                </span>
-              </button>
-              <div
-                class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
-              >
-                <p>
-                  <span class="font-bold text-textPrimary">Trả lời:</span> Quý khách
-                  hoàn toàn có thể tham quan xưởng sản xuất của chúng tôi. Vui lòng liên
-                  hệ trước để được sắp xếp đón tiếp chu đáo nhất.
-                </p>
-              </div>
-            </div>
-        
-            <!-- FAQ Item 4 -->
-            <div class="faq-item border-b border-gray-200 pb-10 mb-2">
-              <button
-                class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
-              >
-                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
-                  >Chi phí vận chuyển và phạm vi giao hàng như thế nào?</span
-                >
-                <span
-                  class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
-                >
-                  <svg
-                    class="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 15l7-7 7 7"
-                    ></path>
-                  </svg>
-                </span>
-              </button>
-              <div
-                class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
-              >
-                <p>
-                  <span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi
-                  giao hàng toàn quốc. Chi phí vận chuyển sẽ phụ thuộc vào khối lượng
-                  đơn hàng và khoảng cách địa lý.
-                </p>
-              </div>
-            </div>
-        
-            <!-- FAQ Item 5 -->
-            <div class="faq-item mb-8">
-              <button
-                class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
-              >
-                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
-                  >Đặc tính thủ công của ngói âm dương cần lưu ý gì?</span
-                >
-                <span
-                  class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
-                >
-                  <svg
-                    class="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 15l7-7 7 7"
-                    ></path>
-                  </svg>
-                </span>
-              </button>
-              <div
-                class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
-              >
-                <p>
-                  <span class="font-bold text-textPrimary">Trả lời:</span> Ngói thủ công
-                  mang vẻ đẹp độc bản, màu sắc có độ chuyển tự nhiên do nhiệt độ lò,
-                  không viên nào giống viên nào 100%.
-                </p>
-              </div>
-            </div>
-        
-            <div class="mt-8 text-right">
-              <a
-                href="/faq/index.html"
-                class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] leading-[21px] md:text-[18px] md:leading-normal"
-                >Xem thêm</a
-              >
-            </div>
-          </div>
-        </div>
-        
-              </section>
-    </main>
+<!-- GSXD-PARTIAL:BEGIN file=products/gach-trang-tri/index.html include=components/products/faq-content idx=005 uid=878f399f -->
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/faq-content.html uid=1e3c4970 -->
+<!-- ============================================== -->
+<!-- COMPONENT CÂU HỎI THƯỜNG GẶP (FAQ)               -->
+<!-- Bản chất là danh sách Accordion (Click để mở)    -->
+<!-- ============================================== -->
+<!-- GSXD-BLOCK:BEGIN file=components/products/faq-content.html tag=div idx=001 uid=82efd9d3 -->
+<div
+  class="relative z-10 w-[90%] md:w-[75%] lg:w-[800px] min-h-[670px] mx-auto"
+  data-faq-component
+>
+  <!-- Tiêu đề Section CÂU HỎI THƯỜNG GẶP -->
+  <div
+    class="w-[85%] max-w-[1320px] mx-auto text-center mb-[22px] md:mb-16"
+    data-aos="fade-up"
+  >
+    <h2
+      class="font-archivo text-[20px] leading-[36px] md:text-[32px] md:leading-[45px] font-semibold text-secondary uppercase"
+    >
+      Câu hỏi thường gặp
+    </h2>
+  </div>
 
-    <footer class="bg-[#262723] text-white">
-    
-      <!-- Main Footer -->
-      <div class="relative bg-[#262723] overflow-hidden">
-        <img
-          src="/assets/footer-image-2.png"
-          alt=""
-          class="hidden lg:block absolute inset-0 w-full h-full object-cover"
-        />
-        <div
-          class="relative w-[85%] max-w-[1320px] mx-auto pt-12 lg:pt-[150px] pb-[60px] lg:whitespace-nowrap"
-        >
-          <div
-            class="grid grid-cols-2 gap-x-2 gap-y-8 lg:grid lg:grid-cols-[200px_455px_195px_370px_200px] lg:gap-0 lg:w-[1420px] lg:justify-start lg:-translate-x-[38px]"
-          >
-            <div
-              class="hidden lg:flex flex-col justify-between items-center gap-6 w-full lg:w-[200px] lg:pr-[45px] shrink-0"
-            >
-              <div>
-                <img
-                  src="data:image/png;base64,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"
-                  alt="Logo"
-                  class="w-[88px] h-[88px]"
-                />
-              </div>
-              <div class="mt-auto lg:pt-16">
-                <a
-                  href="#"
-                  class="inline-block"
-                  aria-label="Đã thông báo Bộ Công Thương"
-                >
-                  <img
-                    src="/assets/bo-cong-thuong.png"
-                    alt="Đã thông báo Bộ Công Thương"
-                    class="h-[52px] w-auto"
-                  />
-                </a>
-              </div>
-            </div>
-    
-            <div
-              class="col-span-2 lg:col-span-1 w-full lg:w-[455px] shrink-0 order-1 lg:order-none"
-            >
-              <div
-                class="text-white text-[15px] leading-[26px] mb-6 tracking-[-0.1px]"
-              >
-                <p class="font-bold uppercase">
-                  CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI<br class="block lg:hidden" />
-                  THANH HẢI
-                </p>
-                <p>18 Phố Gốm – Giang Cao, Bát Tràng, Gia Lâm, Hà Nội</p>
-                <p>0966 55 8808</p>
-                <p>gshaithanh@gmail.com</p>
-              </div>
-    
-              <div class="block lg:hidden mb-8">
-                <a
-                  href="#"
-                  class="inline-block"
-                  aria-label="Đã thông báo Bộ Công Thương"
-                >
-                  <img
-                    src="/assets/bo-cong-thuong.png"
-                    alt="Đã thông báo Bộ Công Thương"
-                    class="h-[52px] w-auto"
-                  />
-                </a>
-              </div>
-    
-              <div class="hidden lg:flex items-center gap-[20px] mb-8">
-                <a href="#" aria-label="Facebook">
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='18'%20height='19'%20viewBox='0%200%2018%2019'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.25%200H0.75C0.335786%200%200%200.335996%200%200.750469V17.2608C0%2017.6753%200.335786%2018.0113%200.75%2018.0113H8.61436C9.16664%2018.0113%209.61436%2017.5635%209.61436%2017.0113V12.0364C9.61436%2011.4841%209.16664%2011.0364%208.61436%2011.0364H8.26863C7.71634%2011.0364%207.26862%2010.5886%207.26862%2010.0364V9.3181C7.26862%208.76581%207.71634%208.3181%208.26863%208.3181H8.61436C9.16664%208.3181%209.61436%207.87038%209.61436%207.3181V6.31346C9.61436%203.98709%2011.0343%202.72034%2013.1083%202.72034C13.5595%202.72034%2013.9819%202.73561%2014.332%202.75538C14.8325%202.78365%2015.2044%203.20194%2015.2044%203.70329V4.25908C15.2044%204.81119%2014.757%205.25883%2014.2049%205.25908L13.766%205.25928C12.6381%205.25928%2012.4197%205.7956%2012.4197%206.58261V7.3181C12.4197%207.87038%2012.8674%208.3181%2013.4197%208.3181H13.9726C14.5756%208.3181%2015.0415%208.84782%2014.9644%209.44589L14.8719%2010.1642C14.8076%2010.6629%2014.3829%2011.0364%2013.8801%2011.0364H13.4197C12.8674%2011.0364%2012.4197%2011.4841%2012.4197%2012.0364V17.0113C12.4197%2017.5635%2012.8674%2018.0113%2013.4197%2018.0113H17.25C17.6642%2018.0113%2018%2017.6753%2018%2017.2608V0.750469C18%200.335996%2017.6642%200%2017.25%200Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e"
-                    alt="Facebook"
-                    class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
-                  />
-                </a>
-                <a href="#" aria-label="YouTube">
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='26'%20height='18'%20viewBox='0%200%2026%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.4%2012.8571L17.147%209L10.4%205.14286V12.8571ZM25.428%202.79C25.597%203.39429%2025.714%204.20429%2025.792%205.23286C25.883%206.26143%2025.922%207.14857%2025.922%207.92L26%209C26%2011.8157%2025.792%2013.8857%2025.428%2015.21C25.103%2016.3671%2024.349%2017.1129%2023.179%2017.4343C22.568%2017.6014%2021.45%2017.7171%2019.734%2017.7943C18.044%2017.8843%2016.497%2017.9229%2015.067%2017.9229L13%2018C7.553%2018%204.16%2017.7943%202.821%2017.4343C1.651%2017.1129%200.897%2016.3671%200.572%2015.21C0.403%2014.6057%200.286%2013.7957%200.208%2012.7671C0.117%2011.7386%200.0779999%2010.8514%200.0779999%2010.08L0%209C0%206.18429%200.208%204.11429%200.572%202.79C0.897%201.63286%201.651%200.887143%202.821%200.565714C3.432%200.398572%204.55%200.282857%206.266%200.205714C7.956%200.115714%209.503%200.0771428%2010.933%200.0771428L13%200C18.447%200%2021.84%200.205714%2023.179%200.565714C24.349%200.887143%2025.103%201.63286%2025.428%202.79Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e"
-                    alt="YouTube"
-                    class="w-[24px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
-                  />
-                </a>
-                <a href="#" aria-label="Pinterest">
-                  <img
-                    src="data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.336%2017.586C7.2%2017.847%208.073%2018%209%2018C11.3869%2018%2013.6761%2017.0518%2015.364%2015.364C17.0518%2013.6761%2018%2011.3869%2018%209C18%207.8181%2017.7672%206.64778%2017.3149%205.55585C16.8626%204.46392%2016.1997%203.47177%2015.364%202.63604C14.5282%201.80031%2013.5361%201.13738%2012.4442%200.685084C11.3522%200.232792%2010.1819%200%209%200C7.8181%200%206.64778%200.232792%205.55585%200.685084C4.46392%201.13738%203.47177%201.80031%202.63604%202.63604C0.948211%204.32387%200%206.61305%200%209C0%2012.825%202.403%2016.11%205.796%2017.406C5.715%2016.704%205.634%2015.543%205.796%2014.742L6.831%2010.296C6.831%2010.296%206.57%209.774%206.57%208.946C6.57%207.704%207.344%206.777%208.226%206.777C9%206.777%209.36%207.344%209.36%208.073C9.36%208.847%208.847%209.954%208.586%2011.016C8.433%2011.898%209.054%2012.672%209.954%2012.672C11.556%2012.672%2012.798%2010.962%2012.798%208.55C12.798%206.39%2011.25%204.914%209.027%204.914C6.489%204.914%204.995%206.804%204.995%208.793C4.995%209.567%205.247%2010.35%205.661%2010.863C5.742%2010.917%205.742%2010.989%205.715%2011.124L5.454%2012.105C5.454%2012.258%205.355%2012.312%205.202%2012.204C4.05%2011.7%203.384%2010.062%203.384%208.739C3.384%205.895%205.4%203.312%209.288%203.312C12.384%203.312%2014.796%205.535%2014.796%208.487C14.796%2011.583%2012.879%2014.067%2010.134%2014.067C9.261%2014.067%208.406%2013.599%208.1%2013.05L7.497%2015.183C7.29%2015.957%206.723%2016.992%206.336%2017.613V17.586Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e"
-                    alt="Pinterest"
-                    class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
-                  />
-                </a>
-              </div>
-            </div>
-    
-            <div
-              class="col-span-1 lg:col-span-1 w-full lg:w-[195px] min-w-0 order-2 lg:order-none"
-            >
-              <h3
-                class="text-white text-[14px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 whitespace-nowrap uppercase"
-              >
-                TỔNG QUAN
-              </h3>
-              <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap">
-                <a
-                  href="/about/"
-                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Về chúng tôi</a
-                ><br />
-                <a
-                  href="/showroom/"
-                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Showroom</a
-                ><br />
-                <a
-                  href="/factory/"
-                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Nhà xưởng</a
-                ><br />
-                <a
-                  href="/contact/"
-                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Liên hệ</a
-                >
-              </div>
-            </div>
-    
-            <div
-              class="col-span-1 lg:col-span-1 w-full lg:w-[200px] min-w-0 order-3 lg:order-none"
-            >
-              <h3
-                class="text-white text-[16px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 whitespace-nowrap uppercase"
-              >
-                DỊCH VỤ KHÁCH HÀNG
-              </h3>
-              <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap">
-                <a
-                  href="/dich-vu-khach-hang/tai-khoan-cua-toi.html"
-                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Tài khoản</a
-                ><br />
-                <a
-                  href="/dich-vu-khach-hang/quy-trinh-dat-hang.html"
-                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Quy trình đặt hàng</a
-                ><br />
-                <a
-                  href="/dich-vu-khach-hang/huong-dan-thi-cong.html"
-                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >Hướng dẫn thi công</a
-                ><br />
-                <a
-                  href="/faq/index.html"
-                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                  >FAQ</a
-                >
-              </div>
-            </div>
-    
-            <div
-              class="col-span-2 lg:col-span-1 w-full lg:w-[370px] min-w-0 order-4 lg:order-none"
-            >
-              <h3
-                class="text-white text-[14px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 text-start lg:text-center lg:mr-[65px] whitespace-nowrap uppercase"
-              >
-                SẢN PHẨM
-              </h3>
-              <div class="flex gap-[40px] lg:gap-[50px]">
-                <div
-                  class="leading-[30px] lg:leading-[40px] whitespace-nowrap flex-1"
-                >
-                  <a
-                    href="/products/ngoi-am-duong/"
-                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                    >Ngói âm dương</a
-                  ><br />
-                  <a
-                    href="/products/ngoi-hai-van-mieu/"
-                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                    >Ngói hài văn miếu</a
-                  ><br />
-                  <a
-                    href="/products/phu-kien-ngoi/"
-                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                    >Phụ kiện mái</a
-                  ><br />
-                  <a
-                    href="/products/linh-vat-phong-thuy/"
-                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                    >Linh vật phong thủy</a
-                  >
-                </div>
-                <div
-                  class="leading-[30px] lg:leading-[40px] whitespace-nowrap flex-1"
-                >
-                  <a
-                    href="/products/gach-hoa-thong-gio/"
-                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                    >Gạch thông gió</a
-                  ><br />
-                  <a
-                    href="/products/gach-trang-tri/"
-                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                    >Gạch trang trí</a
-                  ><br />
-                  <a
-                    href="/products/lan-can-gom-su/"
-                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                    >Lan can gốm sứ</a
-                  ><br />
-                  <a
-                    href="/products/den-gom-su/"
-                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                    >Đèn vườn gốm sứ</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-        <div class="relative border-t border-white/20 w-full">
-          <div class="w-[85%] max-w-[1320px] mx-auto py-6">
-            <div
-              class="flex flex-col-reverse md:flex-row justify-between items-center gap-2 md:gap-4"
-            >
-              <p
-                class="text-[#909090] text-[12px] lg:text-sm leading-[26px] whitespace-nowrap text-center"
-              >
-                Copyright © 2022 . All rights reserved
-              </p>
-              <div
-                class="text-[#909090] text-[12px] lg:text-sm leading-[26px] whitespace-nowrap flex items-center justify-center flex-wrap md:flex-nowrap"
-              >
-                <a
-                  href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html"
-                  class="whitespace-nowrap hover:text-secondary transition-colors"
-                  >Chính sách vận chuyển</a
-                >
-                <span class="text-[14px] mx-2 lg:mx-4">|</span>
-                <a
-                  href="/dich-vu-khach-hang/chinh-sach-doi-tra.html"
-                  class="whitespace-nowrap hover:text-secondary transition-colors"
-                  >Chính sách đổi trả</a
-                >
-                <span class="text-[14px] mx-2 lg:mx-4">|</span>
-                <a
-                  href="/dich-vu-khach-hang/bao-mat-thong-tin.html"
-                  class="whitespace-nowrap hover:text-secondary transition-colors"
-                  >Bảo mật thông tin</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      <div
-        class="md:hidden fixed right-4 bottom-4 z-[60] flex flex-col items-center gap-3"
-        aria-label="Hành động nhanh"
+  <!-- Khung Thẻ Card trắng chứa toàn bộ danh sách câu hỏi -->
+  <div
+    class="bg-white px-6 md:px-10 py-8 shadow-lg relative"
+    data-aos="fade-up"
+    data-aos-delay="200"
+  >
+    <!-- Câu Hỏi Item 1 (Mặc định được hiển thị mở rộng sẵn) -->
+    <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+      <!-- Nút để click đóng/mở nội dung -->
+      <button
+        class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
       >
-        <button
-          type="button"
-          data-back-to-top
-          aria-label="Lên đầu trang"
-          class="w-12 h-12 rounded-full bg-secondary text-white shadow-lg ring-1 ring-black/10 flex items-center justify-center transition-all duration-300 active:scale-95 opacity-0 translate-y-2 pointer-events-none"
+        <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+          >Showroom của Gốm sứ Thanh Hải ở đâu?</span
+        >
+        <!-- Icon Mũi tên Dropdown -->
+        <span
+          class="faq-icon w-6 h-6 flex-shrink-0 bg-textPrimary rounded-full flex items-center justify-center text-white transition-all duration-300"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
+            class="w-4 h-4"
             fill="none"
             stroke="currentColor"
-            stroke-width="2"
-            class="w-5 h-5"
-            aria-hidden="true"
+            viewBox="0 0 24 24"
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
+              stroke-width="2"
               d="M5 15l7-7 7 7"
             ></path>
           </svg>
-        </button>
-    
+        </span>
+      </button>
+      <!-- Khối nội dung câu trả lời -->
+      <div
+        class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed block overflow-hidden transition-all duration-300"
+      >
+        <p class="mb-2">
+          <span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi chỉ
+          có duy nhất 1 showroom tại địa chỉ: Số 18 Phố Gốm - Giang Cao - Bát
+          Tràng, Gia Lâm, Hà Nội. Ngoài địa chỉ này, chúng tôi không có bất kỳ
+          đại lý đại diện nào khác tại các tỉnh thành trên cả nước.
+        </p>
         <a
-          href="https://zalo.me/0966558808"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Hỗ trợ Zalo"
-          class="w-12 h-12 rounded-full bg-[#EBDDD0] shadow-lg ring-1 ring-black/10 flex items-center justify-center transition-transform duration-300 active:scale-95"
+          href="#"
+          class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] leading-[22.75px] md:text-[18px] md:leading-normal"
+          >Xem map tại đây</a
         >
-          <img
-            src="/assets/zalo.png"
-            alt="Zalo"
-            class="w-8 h-8 object-contain"
-          />
-        </a>
       </div>
-    </footer>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+      <button
+        class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+      >
+        <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+          >Tôi có thể đặt màu sắc và mẫu mã theo yêu cầu riêng không?</span
+        >
+        <span
+          class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 15l7-7 7 7"
+            ></path>
+          </svg>
+        </span>
+      </button>
+      <div
+        class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
+      >
+        <p>
+          <span class="font-bold text-textPrimary">Trả lời:</span> Vui lòng liên
+          hệ với chúng tôi để biết thêm chi tiết về việc đặt màu sắc và mẫu mã
+          theo yêu cầu riêng.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+      <button
+        class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+      >
+        <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+          >Tôi có thể tham quan xưởng sản xuất hay không?</span
+        >
+        <span
+          class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 15l7-7 7 7"
+            ></path>
+          </svg>
+        </span>
+      </button>
+      <div
+        class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
+      >
+        <p>
+          <span class="font-bold text-textPrimary">Trả lời:</span> Quý khách
+          hoàn toàn có thể tham quan xưởng sản xuất của chúng tôi. Vui lòng liên
+          hệ trước để được sắp xếp đón tiếp chu đáo nhất.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="faq-item border-b border-gray-200 pb-10 mb-2">
+      <button
+        class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+      >
+        <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+          >Chi phí vận chuyển và phạm vi giao hàng như thế nào?</span
+        >
+        <span
+          class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 15l7-7 7 7"
+            ></path>
+          </svg>
+        </span>
+      </button>
+      <div
+        class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
+      >
+        <p>
+          <span class="font-bold text-textPrimary">Trả lời:</span> Chúng tôi
+          giao hàng toàn quốc. Chi phí vận chuyển sẽ phụ thuộc vào khối lượng
+          đơn hàng và khoảng cách địa lý.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="faq-item mb-8">
+      <button
+        class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
+      >
+        <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+          >Đặc tính thủ công của ngói âm dương cần lưu ý gì?</span
+        >
+        <span
+          class="faq-icon w-6 h-6 flex-shrink-0 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 transition-all duration-300 transform rotate-180"
+        >
+          <svg
+            class="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 15l7-7 7 7"
+            ></path>
+          </svg>
+        </span>
+      </button>
+      <div
+        class="faq-content mt-4 text-gray-600 text-[14px] leading-[22.75px] md:text-[18px] md:leading-relaxed hidden overflow-hidden transition-all duration-300"
+      >
+        <p>
+          <span class="font-bold text-textPrimary">Trả lời:</span> Ngói thủ công
+          mang vẻ đẹp độc bản, màu sắc có độ chuyển tự nhiên do nhiệt độ lò,
+          không viên nào giống viên nào 100%.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-8 text-right">
+      <a
+        href="/faq/index.html"
+        class="font-bold text-textPrimary border-b-[1.5px] border-textPrimary inline-block pb-0.5 hover:text-secondary hover:border-secondary transition-colors text-[14px] leading-[21px] md:text-[18px] md:leading-normal"
+        >Xem thêm</a
+      >
+    </div>
+  </div>
+</div>
+
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/faq-content.html uid=1e3c4970 -->
+
+
+
+
+      </section>
+    </main>
+<!-- GSXD-PARTIAL:BEGIN file=products/gach-trang-tri/index.html include=components/footer idx=006 uid=6e9190c9 -->
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
+<!-- GSXD-ELEMENT:BEGIN file=components/footer.html tag=footer idx=001 uid=540a3f40 -->
+<footer class="bg-[#262723] text-white">
+
+  <!-- Main Footer -->
+  <div class="relative bg-[#262723] overflow-hidden">
+    <img
+      src="/assets/footer-image-2.png"
+      alt=""
+      class="hidden lg:block absolute inset-0 w-full h-full object-cover"
+    />
+    <div
+      class="relative w-[85%] max-w-[1320px] mx-auto pt-12 lg:pt-[150px] pb-[60px] lg:whitespace-nowrap"
+    >
+      <div
+        class="grid grid-cols-2 gap-x-2 gap-y-8 lg:grid lg:grid-cols-[200px_455px_195px_370px_200px] lg:gap-0 lg:w-[1420px] lg:justify-start lg:-translate-x-[38px]"
+      >
+        <div
+          class="hidden lg:flex flex-col justify-between items-center gap-6 w-full lg:w-[200px] lg:pr-[45px] shrink-0"
+        >
+          <div>
+            <img
+              src="data:image/png;base64,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"
+              alt="Logo"
+              class="w-[88px] h-[88px]"
+            />
+          </div>
+          <div class="mt-auto lg:pt-16">
+            <a
+              href="#"
+              class="inline-block"
+              aria-label="Đã thông báo Bộ Công Thương"
+            >
+              <img
+                src="/assets/bo-cong-thuong.png"
+                alt="Đã thông báo Bộ Công Thương"
+                class="h-[52px] w-auto"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="col-span-2 lg:col-span-1 w-full lg:w-[455px] shrink-0 order-1 lg:order-none"
+        >
+          <div
+            class="text-white text-[15px] leading-[26px] mb-6 tracking-[-0.1px]"
+          >
+            <p class="font-bold uppercase">
+              CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI<br class="block lg:hidden" />
+              THANH HẢI
+            </p>
+            <p>18 Phố Gốm – Giang Cao, Bát Tràng, Gia Lâm, Hà Nội</p>
+            <p>0966 55 8808</p>
+            <p>gshaithanh@gmail.com</p>
+          </div>
+
+          <div class="block lg:hidden mb-8">
+            <a
+              href="#"
+              class="inline-block"
+              aria-label="Đã thông báo Bộ Công Thương"
+            >
+              <img
+                src="/assets/bo-cong-thuong.png"
+                alt="Đã thông báo Bộ Công Thương"
+                class="h-[52px] w-auto"
+              />
+            </a>
+          </div>
+
+          <div class="hidden lg:flex items-center gap-[20px] mb-8">
+            <a href="#" aria-label="Facebook">
+              <img
+                src="data:image/svg+xml,%3csvg%20width='18'%20height='19'%20viewBox='0%200%2018%2019'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17.25%200H0.75C0.335786%200%200%200.335996%200%200.750469V17.2608C0%2017.6753%200.335786%2018.0113%200.75%2018.0113H8.61436C9.16664%2018.0113%209.61436%2017.5635%209.61436%2017.0113V12.0364C9.61436%2011.4841%209.16664%2011.0364%208.61436%2011.0364H8.26863C7.71634%2011.0364%207.26862%2010.5886%207.26862%2010.0364V9.3181C7.26862%208.76581%207.71634%208.3181%208.26863%208.3181H8.61436C9.16664%208.3181%209.61436%207.87038%209.61436%207.3181V6.31346C9.61436%203.98709%2011.0343%202.72034%2013.1083%202.72034C13.5595%202.72034%2013.9819%202.73561%2014.332%202.75538C14.8325%202.78365%2015.2044%203.20194%2015.2044%203.70329V4.25908C15.2044%204.81119%2014.757%205.25883%2014.2049%205.25908L13.766%205.25928C12.6381%205.25928%2012.4197%205.7956%2012.4197%206.58261V7.3181C12.4197%207.87038%2012.8674%208.3181%2013.4197%208.3181H13.9726C14.5756%208.3181%2015.0415%208.84782%2014.9644%209.44589L14.8719%2010.1642C14.8076%2010.6629%2014.3829%2011.0364%2013.8801%2011.0364H13.4197C12.8674%2011.0364%2012.4197%2011.4841%2012.4197%2012.0364V17.0113C12.4197%2017.5635%2012.8674%2018.0113%2013.4197%2018.0113H17.25C17.6642%2018.0113%2018%2017.6753%2018%2017.2608V0.750469C18%200.335996%2017.6642%200%2017.25%200Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e"
+                alt="Facebook"
+                class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
+              />
+            </a>
+            <a href="#" aria-label="YouTube">
+              <img
+                src="data:image/svg+xml,%3csvg%20width='26'%20height='18'%20viewBox='0%200%2026%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10.4%2012.8571L17.147%209L10.4%205.14286V12.8571ZM25.428%202.79C25.597%203.39429%2025.714%204.20429%2025.792%205.23286C25.883%206.26143%2025.922%207.14857%2025.922%207.92L26%209C26%2011.8157%2025.792%2013.8857%2025.428%2015.21C25.103%2016.3671%2024.349%2017.1129%2023.179%2017.4343C22.568%2017.6014%2021.45%2017.7171%2019.734%2017.7943C18.044%2017.8843%2016.497%2017.9229%2015.067%2017.9229L13%2018C7.553%2018%204.16%2017.7943%202.821%2017.4343C1.651%2017.1129%200.897%2016.3671%200.572%2015.21C0.403%2014.6057%200.286%2013.7957%200.208%2012.7671C0.117%2011.7386%200.0779999%2010.8514%200.0779999%2010.08L0%209C0%206.18429%200.208%204.11429%200.572%202.79C0.897%201.63286%201.651%200.887143%202.821%200.565714C3.432%200.398572%204.55%200.282857%206.266%200.205714C7.956%200.115714%209.503%200.0771428%2010.933%200.0771428L13%200C18.447%200%2021.84%200.205714%2023.179%200.565714C24.349%200.887143%2025.103%201.63286%2025.428%202.79Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e"
+                alt="YouTube"
+                class="w-[24px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
+              />
+            </a>
+            <a href="#" aria-label="Pinterest">
+              <img
+                src="data:image/svg+xml,%3csvg%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M6.336%2017.586C7.2%2017.847%208.073%2018%209%2018C11.3869%2018%2013.6761%2017.0518%2015.364%2015.364C17.0518%2013.6761%2018%2011.3869%2018%209C18%207.8181%2017.7672%206.64778%2017.3149%205.55585C16.8626%204.46392%2016.1997%203.47177%2015.364%202.63604C14.5282%201.80031%2013.5361%201.13738%2012.4442%200.685084C11.3522%200.232792%2010.1819%200%209%200C7.8181%200%206.64778%200.232792%205.55585%200.685084C4.46392%201.13738%203.47177%201.80031%202.63604%202.63604C0.948211%204.32387%200%206.61305%200%209C0%2012.825%202.403%2016.11%205.796%2017.406C5.715%2016.704%205.634%2015.543%205.796%2014.742L6.831%2010.296C6.831%2010.296%206.57%209.774%206.57%208.946C6.57%207.704%207.344%206.777%208.226%206.777C9%206.777%209.36%207.344%209.36%208.073C9.36%208.847%208.847%209.954%208.586%2011.016C8.433%2011.898%209.054%2012.672%209.954%2012.672C11.556%2012.672%2012.798%2010.962%2012.798%208.55C12.798%206.39%2011.25%204.914%209.027%204.914C6.489%204.914%204.995%206.804%204.995%208.793C4.995%209.567%205.247%2010.35%205.661%2010.863C5.742%2010.917%205.742%2010.989%205.715%2011.124L5.454%2012.105C5.454%2012.258%205.355%2012.312%205.202%2012.204C4.05%2011.7%203.384%2010.062%203.384%208.739C3.384%205.895%205.4%203.312%209.288%203.312C12.384%203.312%2014.796%205.535%2014.796%208.487C14.796%2011.583%2012.879%2014.067%2010.134%2014.067C9.261%2014.067%208.406%2013.599%208.1%2013.05L7.497%2015.183C7.29%2015.957%206.723%2016.992%206.336%2017.613V17.586Z'%20fill='%23AFAFAF'/%3e%3c/svg%3e"
+                alt="Pinterest"
+                class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="col-span-1 lg:col-span-1 w-full lg:w-[195px] min-w-0 order-2 lg:order-none"
+        >
+          <h3
+            class="text-white text-[14px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 whitespace-nowrap uppercase"
+          >
+            TỔNG QUAN
+          </h3>
+          <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap">
+            <a
+              href="/about/"
+              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Về chúng tôi</a
+            ><br />
+            <a
+              href="/showroom/"
+              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Showroom</a
+            ><br />
+            <a
+              href="/factory/"
+              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Nhà xưởng</a
+            ><br />
+            <a
+              href="/contact/"
+              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Liên hệ</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="col-span-1 lg:col-span-1 w-full lg:w-[200px] min-w-0 order-3 lg:order-none"
+        >
+          <h3
+            class="text-white text-[16px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 whitespace-nowrap uppercase"
+          >
+            DỊCH VỤ KHÁCH HÀNG
+          </h3>
+          <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap">
+            <a
+              href="/dich-vu-khach-hang/tai-khoan-cua-toi.html"
+              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Tài khoản</a
+            ><br />
+            <a
+              href="/dich-vu-khach-hang/quy-trinh-dat-hang.html"
+              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Quy trình đặt hàng</a
+            ><br />
+            <a
+              href="/dich-vu-khach-hang/huong-dan-thi-cong.html"
+              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >Hướng dẫn thi công</a
+            ><br />
+            <a
+              href="/faq/index.html"
+              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+              >FAQ</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="col-span-2 lg:col-span-1 w-full lg:w-[370px] min-w-0 order-4 lg:order-none"
+        >
+          <h3
+            class="text-white text-[14px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 text-start lg:text-center lg:mr-[65px] whitespace-nowrap uppercase"
+          >
+            SẢN PHẨM
+          </h3>
+          <div class="flex gap-[40px] lg:gap-[50px]">
+            <div
+              class="leading-[30px] lg:leading-[40px] whitespace-nowrap flex-1"
+            >
+              <a
+                href="/products/ngoi-am-duong/"
+                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Ngói âm dương</a
+              ><br />
+              <a
+                href="/products/ngoi-hai-van-mieu/"
+                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Ngói hài văn miếu</a
+              ><br />
+              <a
+                href="/products/phu-kien-ngoi/"
+                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Phụ kiện mái</a
+              ><br />
+              <a
+                href="/products/linh-vat-phong-thuy/"
+                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Linh vật phong thủy</a
+              >
+            </div>
+            <div
+              class="leading-[30px] lg:leading-[40px] whitespace-nowrap flex-1"
+            >
+              <a
+                href="/products/gach-hoa-thong-gio/"
+                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Gạch thông gió</a
+              ><br />
+              <a
+                href="/products/gach-trang-tri/"
+                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Gạch trang trí</a
+              ><br />
+              <a
+                href="/products/lan-can-gom-su/"
+                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Lan can gốm sứ</a
+              ><br />
+              <a
+                href="/products/den-gom-su/"
+                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                >Đèn vườn gốm sứ</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative border-t border-white/20 w-full">
+      <div class="w-[85%] max-w-[1320px] mx-auto py-6">
+        <div
+          class="flex flex-col-reverse md:flex-row justify-between items-center gap-2 md:gap-4"
+        >
+          <p
+            class="text-[#909090] text-[12px] lg:text-sm leading-[26px] whitespace-nowrap text-center"
+          >
+            Copyright © 2022 . All rights reserved
+          </p>
+          <div
+            class="text-[#909090] text-[12px] lg:text-sm leading-[26px] whitespace-nowrap flex items-center justify-center flex-wrap md:flex-nowrap"
+          >
+            <a
+              href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html"
+              class="whitespace-nowrap hover:text-secondary transition-colors"
+              >Chính sách vận chuyển</a
+            >
+            <span class="text-[14px] mx-2 lg:mx-4">|</span>
+            <a
+              href="/dich-vu-khach-hang/chinh-sach-doi-tra.html"
+              class="whitespace-nowrap hover:text-secondary transition-colors"
+              >Chính sách đổi trả</a
+            >
+            <span class="text-[14px] mx-2 lg:mx-4">|</span>
+            <a
+              href="/dich-vu-khach-hang/bao-mat-thong-tin.html"
+              class="whitespace-nowrap hover:text-secondary transition-colors"
+              >Bảo mật thông tin</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="md:hidden fixed right-4 bottom-4 z-[60] flex flex-col items-center gap-3"
+    aria-label="Hành động nhanh"
+  >
+    <button
+      type="button"
+      data-back-to-top
+      aria-label="Lên đầu trang"
+      class="w-12 h-12 rounded-full bg-secondary text-white shadow-lg ring-1 ring-black/10 flex items-center justify-center transition-all duration-300 active:scale-95 opacity-0 translate-y-2 pointer-events-none"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        class="w-5 h-5"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 15l7-7 7 7"
+        ></path>
+      </svg>
+    </button>
+
+    <a
+      href="https://zalo.me/0966558808"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Hỗ trợ Zalo"
+      class="w-12 h-12 rounded-full bg-[#EBDDD0] shadow-lg ring-1 ring-black/10 flex items-center justify-center transition-transform duration-300 active:scale-95"
+    >
+      <img
+        src="/assets/zalo.png"
+        alt="Zalo"
+        class="w-8 h-8 object-contain"
+      />
+    </a>
+  </div>
+</footer>
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -2590,5 +2664,10 @@
   });
 </script>
 
-  </body>
+<!-- GSXD-DEBUG:END type=PAGE file=products/gach-trang-tri/index.html uid=c8361727 -->
+</body>
 </html>
+
+
+
+
