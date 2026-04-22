@@ -2699,9 +2699,8 @@ body {
   cursor: zoom-in;
 }
 
-.touch-pan-x{
-  --tw-pan-x: pan-x;
-  touch-action: var(--tw-pan-x) var(--tw-pan-y) var(--tw-pinch-zoom);
+.touch-auto{
+  touch-action: auto;
 }
 
 .select-none{
@@ -3361,11 +3360,6 @@ body {
   background-color: rgb(61 62 57 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\#5A6A4E\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(90 106 78 / var(--tw-bg-opacity, 1));
-}
-
 .bg-\[\#5A7E46\]{
   --tw-bg-opacity: 1;
   background-color: rgb(90 126 70 / var(--tw-bg-opacity, 1));
@@ -3414,16 +3408,6 @@ body {
 .bg-\[\#BD724F\]{
   --tw-bg-opacity: 1;
   background-color: rgb(189 114 79 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#C06848\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(192 104 72 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[\#C0815F\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(192 129 95 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[\#C16A00\]{
@@ -4324,6 +4308,10 @@ body {
 
 .text-\[28px\]{
   font-size: 28px;
+}
+
+.text-\[29px\]{
+  font-size: 29px;
 }
 
 .text-\[30px\]{
@@ -5987,10 +5975,6 @@ body {
 
   .md\:-ml-12{
     margin-left: -3rem;
-  }
-
-  .md\:-mt-8{
-    margin-top: -2rem;
   }
 
   .md\:-mt-\[100px\]{
