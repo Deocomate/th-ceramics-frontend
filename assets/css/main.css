@@ -1439,10 +1439,6 @@ body {
   margin-top: 45px;
 }
 
-.mt-\[50px\]{
-  margin-top: 50px;
-}
-
 .mt-\[5px\]{
   margin-top: 5px;
 }
@@ -3854,6 +3850,10 @@ body {
   padding-bottom: 46px;
 }
 
+.pb-\[50px\]{
+  padding-bottom: 50px;
+}
+
 .pb-\[60px\]{
   padding-bottom: 60px;
 }
@@ -5823,6 +5823,10 @@ body {
 
   .md\:mr-\[-6\%\]{
     margin-right: -6%;
+  }
+
+  .md\:mr-\[calc\(max\(7\.5\%\2c \(100\%-1320px\)\/2\)\)\]{
+    margin-right: calc(max(7.5%, (100% - 1320px) / 2));
   }
 
   .md\:mt-0{
