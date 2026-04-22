@@ -5221,6 +5221,38 @@ body {
     }
   }
 
+/* Always-visible horizontal scrollbar for mobile (iOS/Android) */
+
+.mobile-scroll-visible {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #c76e00cc rgba(0, 0, 0, 0.05);
+  }
+
+.mobile-scroll-visible::-webkit-scrollbar {
+    display: block !important;
+    height: 6px;
+    -webkit-appearance: none;
+  }
+
+.mobile-scroll-visible::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+  }
+
+.mobile-scroll-visible::-webkit-scrollbar-thumb {
+    background: #c76e00cc;
+    border-radius: 10px;
+    min-width: 30px;
+  }
+
+@media (min-width: 768px) {
+    .mobile-scroll-visible::-webkit-scrollbar {
+      height: 4px;
+    }
+  }
+
 .catalog-text-vertical {
     color: #fff;
     text-align: center;
