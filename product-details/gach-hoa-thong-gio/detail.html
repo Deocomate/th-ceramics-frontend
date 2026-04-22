@@ -16,37 +16,7 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
       <style>
-    /* Ẩn scrollbar trên mobile */
-    .custom-recommend-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .custom-recommend-scrollbar {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-    }
-
-    /* Hiển thị thanh cuộn tuỳ chỉnh trên desktop (từ 768px trở lên) */
-    @media (min-width: 768px) {
-      .custom-recommend-scrollbar::-webkit-scrollbar {
-        display: block;
-        height: 4px;
-      }
-
-      .custom-recommend-scrollbar::-webkit-scrollbar-track {
-        background: white;
-        border-radius: 10px;
-      }
-
-      .custom-recommend-scrollbar::-webkit-scrollbar-thumb {
-        background: #c76e00cc;
-        border-radius: 10px;
-      }
-
-      .custom-recommend-scrollbar {
-        scrollbar-width: thin;
-        scrollbar-color: #c76e00cc rgba(0, 0, 0, 0.05);
-      }
-    }
+    /* Native scrollbar hidden - JS scroll indicator handles display */
   </style>
 
     <script type="module" crossorigin src="/assets/js/main2.js"></script>
@@ -1015,7 +985,7 @@
                             <input
                               type="text"
                               placeholder="00"
-                              class="w-full h-[30px] md:h-[45px] p-2 md:p-3 text-[12px] md:text-base border border-[#DDD6D0] md:border-black/10 rounded-[1px] md:rounded-sm bg-transparent text-left pr-6 md:pr-8 focus:border-secondary outline-none transition-colors text-[#9CA3AF]"
+                              class="w-full h-[30px] md:h-[45px] p-2 md:p-3 text-[12px] md:text-base border border-[#DDD6D0] md:border-black/10 rounded-[1px] md:rounded-sm bg-transparent text-left pr-6 md:pr-8 focus:border-secondary outline-none transition-colors text-[#2E2F2A] md:text-primary placeholder:text-[#9CA3AF]"
                             />
                             <span class="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 text-[10px] md:text-[12px] text-black/40 md:text-primary/40 leading-[15px]">m</span>
                           </div>
@@ -1026,7 +996,7 @@
                             <input
                               type="text"
                               placeholder="00"
-                              class="w-full h-[30px] md:h-[45px] p-2 md:p-3 text-[12px] md:text-base border border-[#DDD6D0] md:border-black/10 rounded-[1px] md:rounded-sm bg-transparent text-left pr-6 md:pr-8 focus:border-secondary outline-none transition-colors text-[#9CA3AF]"
+                              class="w-full h-[30px] md:h-[45px] p-2 md:p-3 text-[12px] md:text-base border border-[#DDD6D0] md:border-black/10 rounded-[1px] md:rounded-sm bg-transparent text-left pr-6 md:pr-8 focus:border-secondary outline-none transition-colors text-[#2E2F2A] md:text-primary placeholder:text-[#9CA3AF]"
                             />
                             <span class="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 text-[10px] md:text-[12px] text-black/40 md:text-primary/40 leading-[15px]">m</span>
                           </div>
@@ -1054,7 +1024,7 @@
                           <input
                             type="text"
                             placeholder="00"
-                            class="w-full h-[30px] md:h-[45px] p-2 md:p-3 text-[12px] md:text-base border border-[#DDD6D0] md:border-black/10 rounded-[1px] md:rounded-sm bg-transparent text-left pr-6 md:pr-8 focus:border-secondary outline-none transition-colors text-[#9CA3AF]"
+                            class="w-full h-[30px] md:h-[45px] p-2 md:p-3 text-[12px] md:text-base border border-[#DDD6D0] md:border-black/10 rounded-[1px] md:rounded-sm bg-transparent text-left pr-6 md:pr-8 focus:border-secondary outline-none transition-colors text-[#2E2F2A] md:text-primary placeholder:text-[#9CA3AF]"
                           />
                           <span class="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 text-[10px] md:text-[12px] text-black/40 md:text-primary/40 leading-[15px]">m</span>
                         </div>
@@ -1062,7 +1032,7 @@
                           <input
                             type="text"
                             placeholder="00"
-                            class="w-full h-[30px] md:h-[45px] p-2 md:p-3 text-[12px] md:text-base border border-[#DDD6D0] md:border-black/10 rounded-[1px] md:rounded-sm bg-transparent text-left pr-6 md:pr-8 focus:border-secondary outline-none transition-colors text-[#9CA3AF]"
+                            class="w-full h-[30px] md:h-[45px] p-2 md:p-3 text-[12px] md:text-base border border-[#DDD6D0] md:border-black/10 rounded-[1px] md:rounded-sm bg-transparent text-left pr-6 md:pr-8 focus:border-secondary outline-none transition-colors text-[#2E2F2A] md:text-primary placeholder:text-[#9CA3AF]"
                           />
                           <span class="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 text-[10px] md:text-[12px] text-black/40 md:text-primary/40 leading-[15px]">m</span>
                         </div>
@@ -1429,12 +1399,12 @@
         <div class="w-full mb-[10px] md:mb-10">
           <div class="flex flex-col w-full">
             <h2
-              class="text-secondary font-italianno font-normal text-[28px] leading-[45px] md:text-[60px] md:leading-none text-left drop-shadow-sm"
+              class="text-nowrap text-secondary font-italianno font-normal text-[25px] sm:text-[28px] leading-[45px] md:text-[60px] md:leading-none text-left drop-shadow-sm"
             >
               Cùng chúng tôi hiện thực hóa mẫu gạch trong mơ...
             </h2>
             <h2
-              class="text-secondary font-italianno font-normal text-[28px] leading-[45px] md:text-[60px] md:leading-none text-right mt-0 md:mt-2 drop-shadow-sm"
+              class="text-secondary font-italianno font-normal text-[25px] sm:text-[28px] leading-[45px] md:text-[60px] md:leading-none text-right mt-0 md:mt-2 drop-shadow-sm"
             >
               Yêu cầu của bạn là gì?
             </h2>
@@ -1442,17 +1412,21 @@
         </div>
       
         <!-- Image Process -->
-        <div class="w-full flex justify-center mb-[15px] md:mb-6">
+        <div
+          class="w-full flex justify-start md:justify-center md:mb-6 pb-2 md:pb-0 mobile-scroll-visible"
+        >
           <img
             src="/assets/images/process.png"
             alt="Quy trình chế tác gạch"
-            class="w-full h-auto object-contain"
+            class="h-auto object-contain max-w-none w-[200%] md:max-w-full md:w-full"
           />
         </div>
       
         <!-- Note Text -->
-        <div class="w-full">
-          <p class="text-[10px] md:text-xl italic text-[#2E2F2A] md:text-primary font-thin leading-[18px] md:leading-normal">
+        <div class="w-full mt-[10px] md:mt-auto">
+          <p
+            class="text-[10px] md:text-xl italic text-[#2E2F2A] md:text-primary font-thin leading-[18px] md:leading-normal"
+          >
             * Để đảm bảo sự hoàn mỹ: Quá trình chế tác mẫu có tính phí và thời gian
             thực hiện tùy thuộc vào độ tinh xảo của sản phẩm
           </p>
@@ -1475,7 +1449,8 @@
             data-aos="fade-up"
           />
         </div>
-      </section>      <hr class="md:mb-16 mb-8" />
+      </section>
+      <hr class="md:mb-16 mb-8" />
       <!-- DẤU ẤN TRÊN NHỮNG CÔNG TRÌNH SECTION -->
       <section
         class="w-full pb-8 md:pb-16 bg-background-secondary overflow-hidden"

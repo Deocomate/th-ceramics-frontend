@@ -9,37 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Ẩn scrollbar trên mobile */
-    .custom-recommend-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .custom-recommend-scrollbar {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-    }
-
-    /* Hiển thị thanh cuộn tuỳ chỉnh trên desktop (từ 768px trở lên) */
-    @media (min-width: 768px) {
-      .custom-recommend-scrollbar::-webkit-scrollbar {
-        display: block;
-        height: 4px;
-      }
-
-      .custom-recommend-scrollbar::-webkit-scrollbar-track {
-        background: white;
-        border-radius: 10px;
-      }
-
-      .custom-recommend-scrollbar::-webkit-scrollbar-thumb {
-        background: #c76e00cc;
-        border-radius: 10px;
-      }
-
-      .custom-recommend-scrollbar {
-        scrollbar-width: thin;
-        scrollbar-color: #c76e00cc rgba(0, 0, 0, 0.05);
-      }
-    }
+    /* Native scrollbar hidden - JS scroll indicator handles display */
   </style>
 
   <script type="module" crossorigin src="/assets/js/main2.js"></script>

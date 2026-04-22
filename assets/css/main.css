@@ -592,6 +592,28 @@ body {
     display: none !important;
   }
 
+/* Fix Swiper bullet double-color glitch on mobile:
+     Swiper sets its own background + opacity on bullets which conflicts
+     with Tailwind bg-secondary/30. Override all Swiper defaults here. */
+
+.fabrication-pagination .swiper-pagination-bullet,
+  .projects-pagination .swiper-pagination-bullet {
+    background: rgba(199, 110, 0, 0.3) !important;
+    opacity: 1 !important;
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 9999px !important;
+    transition: all 0.3s ease !important;
+    margin: 0 6px !important;
+  }
+
+.fabrication-pagination .swiper-pagination-bullet-active,
+  .projects-pagination .swiper-pagination-bullet-active {
+    background: #C76E00 !important;
+    width: 12px !important;
+    border-radius: 6px !important;
+  }
+
 /* Hide Swiper's default scrollbar */
 
 /* Remove any horizontal rules from Swiper */
@@ -2075,6 +2097,10 @@ body {
 
 .w-\[20\%\]{
   width: 20%;
+}
+
+.w-\[200\%\]{
+  width: 200%;
 }
 
 .w-\[20px\]{
@@ -4288,6 +4314,10 @@ body {
   font-size: 24px;
 }
 
+.text-\[25px\]{
+  font-size: 25px;
+}
+
 .text-\[26px\]{
   font-size: 26px;
 }
@@ -5221,36 +5251,39 @@ body {
     }
   }
 
-/* Always-visible horizontal scrollbar for mobile (iOS/Android) */
+/* Custom scroll indicator for horizontal scroll (JS-created) */
+
+/* Hide native scrollbar everywhere - JS indicator replaces it */
 
 .mobile-scroll-visible {
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
-    scrollbar-width: thin;
-    scrollbar-color: #c76e00cc rgba(0, 0, 0, 0.05);
+    scrollbar-width: none;
   }
 
 .mobile-scroll-visible::-webkit-scrollbar {
-    display: block !important;
-    height: 6px;
-    -webkit-appearance: none;
+    display: none;
   }
 
-.mobile-scroll-visible::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
+/* Custom scroll indicator track + thumb (JS-created) */
+
+.scroll-indicator-track {
+    height: 4px;
+    background: rgba(0, 0, 0, 0.08);
     border-radius: 10px;
+    margin-top: 8px;
+    position: relative;
+    overflow: hidden;
   }
 
-.mobile-scroll-visible::-webkit-scrollbar-thumb {
+.scroll-indicator-thumb {
+    height: 100%;
     background: #c76e00cc;
     border-radius: 10px;
-    min-width: 30px;
-  }
-
-@media (min-width: 768px) {
-    .mobile-scroll-visible::-webkit-scrollbar {
-      height: 4px;
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.1s ease, left 0.1s ease;
   }
 
 .catalog-text-vertical {
@@ -5313,6 +5346,16 @@ body {
 
 .marker\:text-primary::marker{
   color: rgb(46 47 42 );
+}
+
+.placeholder\:text-\[\#9CA3AF\]::-moz-placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+
+.placeholder\:text-\[\#9CA3AF\]::placeholder{
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
 }
 
 .placeholder\:text-white::-moz-placeholder{
@@ -5780,6 +5823,10 @@ body {
     font-size: 24px;
   }
 
+  .sm\:text-\[28px\]{
+    font-size: 28px;
+  }
+
   .sm\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
@@ -6100,6 +6147,10 @@ body {
 
   .md\:mt-\[60px\]{
     margin-top: 60px;
+  }
+
+  .md\:mt-auto{
+    margin-top: auto;
   }
 
   .md\:block{

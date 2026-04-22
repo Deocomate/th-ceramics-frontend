@@ -239,10 +239,51 @@ const initMobileFloatingActions = () => {
   window.addEventListener("resize", toggleBackToTop);
   toggleBackToTop();
 };
+const initMobileScrollIndicators = () => {
+  document.querySelectorAll(".mobile-scroll-visible").forEach((scroller) => {
+    if (scroller.dataset.scrollIndicatorInit === "true") {
+      return;
+    }
+    scroller.dataset.scrollIndicatorInit = "true";
+    const track = document.createElement("div");
+    track.className = "scroll-indicator-track";
+    const thumb = document.createElement("div");
+    thumb.className = "scroll-indicator-thumb";
+    track.appendChild(thumb);
+    scroller.parentNode.insertBefore(track, scroller.nextSibling);
+    const updateThumb = () => {
+      const scrollWidth = scroller.scrollWidth;
+      const clientWidth = scroller.clientWidth;
+      if (scrollWidth <= clientWidth) {
+        track.style.display = "none";
+        return;
+      }
+      track.style.display = "";
+      const trackWidth = track.clientWidth;
+      const thumbWidth = Math.max(30, clientWidth / scrollWidth * trackWidth);
+      const maxScrollLeft = scrollWidth - clientWidth;
+      const scrollRatio = scroller.scrollLeft / maxScrollLeft;
+      const thumbLeft = scrollRatio * (trackWidth - thumbWidth);
+      thumb.style.width = thumbWidth + "px";
+      thumb.style.left = thumbLeft + "px";
+    };
+    let scrollFrame = null;
+    scroller.addEventListener("scroll", () => {
+      if (scrollFrame !== null) return;
+      scrollFrame = requestAnimationFrame(() => {
+        scrollFrame = null;
+        updateThumb();
+      });
+    }, { passive: true });
+    window.addEventListener("resize", updateThumb);
+    requestAnimationFrame(updateThumb);
+  });
+};
 const initSharedScripts = () => {
   initProductSectionCarousels();
   initAboutTabs();
   initCertificatesSwiper();
   initMobileFloatingActions();
+  initMobileScrollIndicators();
 };
 document.addEventListener("DOMContentLoaded", initSharedScripts);
