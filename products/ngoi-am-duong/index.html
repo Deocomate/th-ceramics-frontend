@@ -22,7 +22,19 @@
     </style>
 <style>
       .size-options-scroll {
+        overflow-x: auto;
         scroll-behavior: smooth;
+      }
+      .size-options-scroll .size-img {
+        width: 200%;
+      }
+      @media (min-width: 768px) {
+        .size-options-scroll {
+          overflow-x: visible;
+        }
+        .size-options-scroll .size-img {
+          width: 100%;
+        }
       }
     </style>
 
@@ -1280,13 +1292,12 @@
         </h2>
 
         <!-- Khung bao bọc cuộn ngang để chứa bản đồ/hình ảnh kích thước -->
-        <div class="size-options-scroll mobile-scroll-visible w-full pb-2">
-          <!-- Hình ảnh chi tiết kích thước (hiển thị vượt ngoài width gốc để vuốt ngang) -->
+        <div class="size-options-scroll w-full pb-2">
+          <!-- Mobile: 200% width + cuộn ngang | Desktop: 100% width bình thường -->
           <img
             src="/assets/images/ngoi-am-duong-size.png"
             alt="Đa dạng kích thước ngói âm dương"
-            class="h-auto object-contain max-w-none"
-            style="width: 200%"
+            class="size-img h-auto object-contain"
           />
         </div>
       </section>
