@@ -28,10 +28,10 @@
     <style>
   /* ── Product Main Swiper: Mobile Dots Pagination ─────────────────────── */
   .product-main-pagination .swiper-pagination-bullet {
-    width: 6px;
-    height: 6px;
-    background: white;
-    opacity: 0.5;
+    width: 8px;
+    height: 8px;
+    background: rgba(199, 110, 0, 0.3);
+    opacity: 1;
     margin: 0 !important;
     border-radius: 9999px;
     transition: all 0.3s ease;
@@ -39,9 +39,7 @@
     flex-shrink: 0;
   }
   .product-main-pagination .swiper-pagination-bullet-active {
-    width: 10px;
     background: #C76E00;
-    opacity: 1;
   }
 </style>
 
@@ -844,12 +842,11 @@
               </div>
             </div>
         
-            <!-- Mobile Dots Pagination (Exact Figma Dimensions) -->
-            <div class="md:hidden absolute bottom-[13px] left-1/2 -translate-x-1/2 z-10">
-              <div
-                class="product-main-pagination h-[17px] px-[21px] bg-[#C76E00]/10 rounded-[17px] flex items-center justify-center gap-[14px]"
-              ></div>
-            </div>
+          </div>
+        
+          <!-- Mobile Dots Pagination -->
+          <div class="md:hidden flex justify-center mt-5">
+            <div class="product-main-pagination flex justify-center gap-3"></div>
           </div>
         
           <!-- Thumbnails (Desktop only) -->
@@ -1642,7 +1639,9 @@
             </div>
           </div>
         </div>
-      </section>      <section
+      </section>
+      
+            <section
         class="w-full pb-0 md:pb-16 bg-background-secondary relative "
         data-aos="fade-up"
       >
@@ -2363,88 +2362,6 @@
       document.addEventListener('DOMContentLoaded', () => {
         // Initialize AOS
         AOS.init({ duration: 800, once: true, offset: 100 });
-
-        // Initialize Fabrication Slider
-        const fabricationRoot = document.querySelector('.fabrication-slider')?.closest('.group') || document;
-        const fabricationNextEl = fabricationRoot.querySelector('.fabrication-next');
-        const fabricationPrevEl = fabricationRoot.querySelector('.fabrication-prev');
-        const fabricationPaginationEl = fabricationRoot.querySelector('.fabrication-pagination');
-
-        new Swiper('.fabrication-slider', {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            centeredSlides: true,
-            loop: true,
-            pagination: {
-                el: fabricationPaginationEl,
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>';
-                }
-            },
-            navigation: {
-                nextEl: fabricationNextEl,
-                prevEl: fabricationPrevEl,
-            },
-            breakpoints: {
-              768: {
-                spaceBetween: 40,
-              },
-              1280: {
-                spaceBetween: 80,
-              }
-            },
-            on: {
-                init: function() {
-                    setTimeout(() => {
-                        if (typeof AOS !== 'undefined') AOS.refresh();
-                    }, 500);
-                }
-            }
-        });
-
-        // Initialize Works/Projects Slider if present
-        new Swiper('.projects-slider', {
-            slidesPerView: 1.2,
-            spaceBetween: 20,
-            centeredSlides: true,
-            loop: true,
-            pagination: {
-                el: '.projects-pagination',
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>';
-                }
-            },
-            navigation: {
-                nextEl: '.projects-next',
-                prevEl: '.projects-prev',
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 30,
-                    centeredSlides: false,
-                },
-                1024: {
-                    slidesPerView: 2,
-                    spaceBetween: 60,
-                    centeredSlides: true,
-                }
-            }
-        });
-
-        // Add bullet style
-        const style = document.createElement('style');
-        style.innerHTML = `
-            .fabrication-pagination .swiper-pagination-bullet-active,
-            .projects-pagination .swiper-pagination-bullet-active {
-                background-color: #C76E00 !important;
-                width: 12px !important;
-                border-radius: 6px !important;
-            }
-        `;
-        document.head.appendChild(style);
       });
     </script>
     <script>
@@ -2751,6 +2668,53 @@
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    // ── Swiper Initialization ──────────────────────────────────────────────
+    const fabricationSlider = document.querySelector(".fabrication-slider");
+    if (fabricationSlider) {
+      const fabricationRoot = fabricationSlider.closest(".group") || document;
+      const fabricationNextEl = fabricationRoot.querySelector(".fabrication-next");
+      const fabricationPrevEl = fabricationRoot.querySelector(".fabrication-prev");
+      const fabricationPaginationEl = fabricationRoot.querySelector(".fabrication-pagination");
+
+      new Swiper(".fabrication-slider", {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+          el: fabricationPaginationEl,
+          clickable: true,
+          renderBullet: function (index, className) {
+            return (
+              '<span class="' +
+              className +
+              ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
+            );
+          },
+        },
+        navigation: {
+          nextEl: fabricationNextEl,
+          prevEl: fabricationPrevEl,
+        },
+        breakpoints: {
+          768: {
+            spaceBetween: 40,
+          },
+          1280: {
+            spaceBetween: 80,
+          },
+        },
+        on: {
+          init: function () {
+            setTimeout(() => {
+              if (typeof AOS !== "undefined") AOS.refresh();
+            }, 500);
+          },
+        },
+      });
+    }
+
+    // ── Lightbox Logic ─────────────────────────────────────────────────────
     const lightbox = document.getElementById("fabrication-lightbox");
     const lightboxImage = document.getElementById("fabrication-lightbox-image");
     const closeButton = document.getElementById("fabrication-lightbox-close");
@@ -2812,6 +2776,59 @@
         closeLightbox();
       }
     });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.querySelector(".projects-slider")) {
+      new Swiper(".projects-slider", {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+          el: ".projects-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return (
+              '<span class="' +
+              className +
+              ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
+            );
+          },
+        },
+        navigation: {
+          nextEl: ".projects-next",
+          prevEl: ".projects-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            centeredSlides: false,
+          },
+          1024: {
+            slidesPerView: 2,
+            slidesOffsetBefore: 0,
+            spaceBetween: 60,
+            centeredSlides: true,
+          },
+          1440: {
+            slidesPerView: 2.1,
+            spaceBetween: 80,
+            centeredSlides: true,
+          },
+        },
+        on: {
+          init: function () {
+            setTimeout(() => {
+              if (typeof AOS !== "undefined") AOS.refresh();
+            }, 500);
+          },
+        },
+      });
+    }
   });
 </script>
 

@@ -18,10 +18,10 @@
     <style>
   /* ── Product Main Swiper: Mobile Dots Pagination ─────────────────────── */
   .product-main-pagination .swiper-pagination-bullet {
-    width: 6px;
-    height: 6px;
-    background: white;
-    opacity: 0.5;
+    width: 8px;
+    height: 8px;
+    background: rgba(199, 110, 0, 0.3);
+    opacity: 1;
     margin: 0 !important;
     border-radius: 9999px;
     transition: all 0.3s ease;
@@ -29,9 +29,7 @@
     flex-shrink: 0;
   }
   .product-main-pagination .swiper-pagination-bullet-active {
-    width: 10px;
     background: #C76E00;
-    opacity: 1;
   }
 </style>
 
@@ -802,8 +800,7 @@
           >
           <span class="mx-1">/</span>
           <span class="text-primary font-semibold border-primary"
-            >PHỤ KIỆN
-                NGÓI</span
+            >PHỤ KIỆN NGÓI</span
           >
         </p>
         <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/breadcrumb.html uid=fbcaa7d9 -->
@@ -815,8 +812,7 @@
       </div>
 
       <!-- Product Detail Container -->
-      <section
-        class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-0 lg:pb-24 pt-0 md:pt-4"
+      <section class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-0 lg:pb-24 pt-0 md:pt-4"
       >
         
         <!-- Left: Images -->
@@ -849,12 +845,11 @@
               </div>
             </div>
         
-            <!-- Mobile Dots Pagination (Exact Figma Dimensions) -->
-            <div class="md:hidden absolute bottom-[13px] left-1/2 -translate-x-1/2 z-10">
-              <div
-                class="product-main-pagination h-[17px] px-[21px] bg-[#C76E00]/10 rounded-[17px] flex items-center justify-center gap-[14px]"
-              ></div>
-            </div>
+          </div>
+        
+          <!-- Mobile Dots Pagination -->
+          <div class="md:hidden flex justify-center mt-5">
+            <div class="product-main-pagination flex justify-center gap-3"></div>
           </div>
         
           <!-- Thumbnails (Desktop only) -->
@@ -874,41 +869,27 @@
         
         
         <!-- Right: Info -->
-        <div
-          class="flex flex-col lg:col-span-2 w-[85%] md:w-full mx-auto md:mt-0 pt-[18px] md:pt-0"
-        >
+        <div class="flex flex-col lg:col-span-2 w-[85%] md:w-full mx-auto md:mt-0 pt-[18px] md:pt-0">
           <h2
             class="text-xl md:text-2xl lg:text-[32px] font-semibold text-secondary uppercase !leading-normal pb-1 tracking-tight"
           >
             NGHÊ TRƯỜN CỔ
           </h2>
 
-          <div
-            class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] mt-1 md:mt-0"
-          >
-            <span
-              class="text-[#656663] md:text-primary font-light md:font-normal"
-              >Mã SP:</span
-            >
-            <span class="text-[#656663] md:text-primary font-semibold"
-              >THC 100-GDS</span
-            >
+          <div class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] mt-1 md:mt-0">
+            <span class="text-[#656663] md:text-primary font-light md:font-normal">Mã SP:</span>
+            <span class="text-[#656663] md:text-primary font-semibold">THC 100-GDS</span>
           </div>
 
-          <p
-            class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal mt-0.5 md:mt-0"
-          >
+          <p class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal mt-0.5 md:mt-0">
             675.000 đ/m2
           </p>
 
           <!-- Separator -->
-          <hr
-            class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full hidden md:block"
-          />
+          <hr class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full hidden md:block" />
           <hr class="border-t border-black/10 w-full md:hidden mb-4" />
 
-          <ul
-            class="list-disc pl-5 space-y-0 md:space-y-4 mb-[15px] md:mb-16 text-[#2E2F2A] md:text-primary font-medium text-[14px] md:text-lg lg:text-xl leading-[24px] md:leading-relaxed"
+          <ul class="list-disc pl-5 space-y-0 md:space-y-4 mb-[15px] md:mb-16 text-[#2E2F2A] md:text-primary font-medium text-[14px] md:text-lg lg:text-xl leading-[24px] md:leading-relaxed"
           >
             <li>Timeless beauty to be treasured</li>
             <li>High-quality and classic design, suitable for decoration</li>
@@ -934,9 +915,7 @@
           <!-- Actions -->
           <div class="flex flex-wrap items-center gap-6 mb-12">
             <!-- Quantity -->
-            <div
-              class="flex items-center gap-[16px] md:gap-4 text-[#2E2F2A] md:text-primary pl-0.5 md:pl-0"
-            >
+            <div class="flex items-center gap-[16px] md:gap-4 text-[#2E2F2A] md:text-primary pl-0.5 md:pl-0">
               <button
                 class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors"
               >
@@ -1023,10 +1002,7 @@
             />
           </div>
           <!-- Right List -->
-          <div
-            class="flex flex-col justify-center md:mt-0 mt-8"
-            data-aos="fade-left"
-          >
+          <div class="flex flex-col justify-center md:mt-0 mt-8" data-aos="fade-left">
             <ul
               class="list-disc pl-5 md:pl-16 space-y-0 md:space-y-4 text-black md:text-primary font-light md:font-medium text-[13px] md:text-[20px] leading-[28px] md:leading-relaxed"
             >
@@ -1050,7 +1026,7 @@
         </h2>
 
         <div
-          class="position-locations-scroll flex flex-nowrap md:grid md:grid-cols-2 gap-4 md:gap-x-16 lg:gap-x-24 md:gap-y-12 lg:gap-y-16 xl:w-[70%] mx-auto overflow-x-auto lg:overflow-visible snap-x snap-mandatory pb-4 md:pb-0"
+          class="flex flex-nowrap md:grid md:grid-cols-2 gap-4 md:gap-x-16 lg:gap-x-24 md:gap-y-12 lg:gap-y-16 xl:w-[70%] mx-auto overflow-x-auto lg:overflow-visible snap-x snap-mandatory pb-4 md:pb-0"
           style="scrollbar-width: none"
         >
           <!-- Card 1 -->
@@ -1161,25 +1137,6 @@
               </p>
             </div>
           </div>
-        </div>
-        <!-- Pagination Dots (Mobile only) -->
-        <div class="flex justify-center gap-2 md:hidden mt-4">
-          <button
-            class="position-dot active w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
-            data-index="0"
-          ></button>
-          <button
-            class="position-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
-            data-index="1"
-          ></button>
-          <button
-            class="position-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
-            data-index="2"
-          ></button>
-          <button
-            class="position-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
-            data-index="3"
-          ></button>
         </div>
       </section>
       <!-- DẤU ẤN TRÊN NHỮNG CÔNG TRÌNH SECTION -->
@@ -1307,465 +1264,467 @@
             </div>
           </div>
         </div>
-      </section>      <div class="hidden md:block"><!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
-<!-- ============================================== -->
-<!-- COMPONENT VIDEO HÀNH TRÌNH CHẾ TÁC               -->
-<!-- ============================================== -->
-<!-- GSXD-SECTION:BEGIN file=components/products/journey-video.html tag=section idx=001 uid=d26acfc5 -->
-<section class="w-full mx-auto pb-[30px] md:pb-16 max-w-[1920px]">
-  <!-- Tiêu đề (Có thể ẩn đi nếu tham số hideTitle = true) -->
-  <div class="text-center mb-8 md:mb-16" data-aos="fade-up">
-    <h2 class="text-[20px] md:text-3xl font-semibold text-secondary uppercase">
-      Hành trình chế tác
-    </h2>
-  </div>
-
-  <!-- Khung chứa Video (Tỷ lệ 16:9 - aspect-video) -->
-  <div
-    class="relative w-full aspect-video overflow-hidden cursor-pointer group"
-    data-aos="fade-up"
-    data-aos-delay="200"
-  >
-    <!-- Ảnh Thumbnail đại diện cho video (Khi hover sẽ tối đi) -->
-    <img
-      src="/assets/images/video-placeholder-02.png"
-      alt="Video placeholder"
-      class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300"
-    />
-    
-    <!-- Lớp phủ chứa Nút Play ở giữa màn hình -->
-    <div class="absolute inset-0 flex items-center justify-center">
-      <!-- Vòng tròn mờ (backdrop-blur) của nút Play -->
-      <div
-        class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300"
-      >
-        <!-- Icon tam giác Play -->
-        <svg
-          class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1"
-          fill="currentColor"
-          viewBox="0 0 24 24"
+      </section>
+      
+            <div class="hidden md:block">
+      <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
+      <!-- ============================================== -->
+      <!-- COMPONENT VIDEO HÀNH TRÌNH CHẾ TÁC               -->
+      <!-- ============================================== -->
+      <!-- GSXD-SECTION:BEGIN file=components/products/journey-video.html tag=section idx=001 uid=d26acfc5 -->
+      <section class="w-full mx-auto pb-[30px] md:pb-16 max-w-[1920px]">
+        <!-- Tiêu đề (Có thể ẩn đi nếu tham số hideTitle = true) -->
+        <div class="text-center mb-8 md:mb-16" data-aos="fade-up">
+          <h2 class="text-[20px] md:text-3xl font-semibold text-secondary uppercase">
+            Hành trình chế tác
+          </h2>
+        </div>
+      
+        <!-- Khung chứa Video (Tỷ lệ 16:9 - aspect-video) -->
+        <div
+          class="relative w-full aspect-video overflow-hidden cursor-pointer group"
+          data-aos="fade-up"
+          data-aos-delay="200"
         >
-          <path d="M8 5v14l11-7z"></path>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
-
-
-
-</div>
-      <section
-  class="w-full pb-0 md:pb-16 bg-background-secondary relative "
-  data-aos="fade-up"
->
- 
-  <div class="max-w-[1320px] w-[85%] mx-auto relative z-10">
-    <h2
-      class="text-[20px] md:text-3xl font-semibold text-secondary text-center uppercase mb-5 md:mb-16"
-    >
-      CÓ THỂ BẠN QUAN TÂM
-    </h2>
-
-    <div class="relative">
-      <div
-        class="overflow-x-auto pb-6 custom-recommend-scrollbar mobile-scroll-visible"
-      >
-        <div class="min-w-[900px] md:min-w-[1000px]">
-          <!-- Product Info Row -->
-          <div class="flex gap-0 md:gap-10 mb-4 md:mb-8">
-            <!-- Empty space - Hidden on Mobile -->
+          <!-- Ảnh Thumbnail đại diện cho video (Khi hover sẽ tối đi) -->
+          <img
+            src="/assets/images/video-placeholder-02.png"
+            alt="Video placeholder"
+            class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300"
+          />
+          
+          <!-- Lớp phủ chứa Nút Play ở giữa màn hình -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <!-- Vòng tròn mờ (backdrop-blur) của nút Play -->
             <div
-              class="hidden md:block w-[140px] shrink-0 sticky left-0 bg-background-secondary z-10"
-            ></div>
-
-            <div class="flex-grow flex gap-4 md:gap-10">
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
+              class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300"
+            >
+              <!-- Icon tam giác Play -->
+              <svg
+                class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1"
+                fill="currentColor"
+                viewBox="0 0 24 24"
               >
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="w-full group"
-                >
-                  <div
-                    class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
-                  >
-                    <img
-                      src="/assets/images/gach-co-work-2.jpg"
-                      alt="Ngói Âm Dương 27 Nâu Đỏ"
-                      class="object-cover w-full h-full"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x400/eee/999?text=Product'
-                      "
-                    />
-                    <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="text-[#004B8D] hover:text-secondary transition-colors"
-                >
-                  <h3
-                    class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
-                </a>
-                <button
-                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
-                >
-                  Thêm vào giỏ
-                </button>
-              </div>
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
-              >
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="w-full group"
-                >
-                  <div
-                    class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
-                  >
-                    <img
-                      src="/assets/images/gach-co-work-2.jpg"
-                      alt="Ngói Âm Dương 27 Nâu Đỏ"
-                      class="object-cover w-full h-full"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x400/eee/999?text=Product'
-                      "
-                    />
-                    <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="text-[#004B8D] hover:text-secondary transition-colors"
-                >
-                  <h3
-                    class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
-                </a>
-                <button
-                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
-                >
-                  Thêm vào giỏ
-                </button>
-              </div>
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
-              >
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="w-full group"
-                >
-                  <div
-                    class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
-                  >
-                    <img
-                      src="/assets/images/gach-co-work-2.jpg"
-                      alt="Ngói Âm Dương 27 Nâu Đỏ"
-                      class="object-cover w-full h-full"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x400/eee/999?text=Product'
-                      "
-                    />
-                    <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="text-[#004B8D] hover:text-secondary transition-colors"
-                >
-                  <h3
-                    class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
-                </a>
-                <button
-                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
-                >
-                  Thêm vào giỏ
-                </button>
-              </div>
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
-              >
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="w-full group"
-                >
-                  <div
-                    class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
-                  >
-                    <img
-                      src="/assets/images/gach-co-work-2.jpg"
-                      alt="Ngói Âm Dương 27 Nâu Đỏ"
-                      class="object-cover w-full h-full"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x400/eee/999?text=Product'
-                      "
-                    />
-                    <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="text-[#004B8D] hover:text-secondary transition-colors"
-                >
-                  <h3
-                    class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
-                </a>
-                <button
-                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
-                >
-                  Thêm vào giỏ
-                </button>
-              </div>
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
-              >
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="w-full group"
-                >
-                  <div
-                    class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
-                  >
-                    <img
-                      src="/assets/images/gach-co-work-2.jpg"
-                      alt="Ngói Âm Dương 27 Nâu Đỏ"
-                      class="object-cover w-full h-full"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x400/eee/999?text=Product'
-                      "
-                    />
-                    <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="text-[#004B8D] hover:text-secondary transition-colors"
-                >
-                  <h3
-                    class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
-                </a>
-                <button
-                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
-                >
-                  Thêm vào giỏ
-                </button>
-              </div>
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
             </div>
           </div>
-
-          <!-- Comparison Table -->
-          <div class="flex flex-col border-t border-black/10">
-            <!-- Price Row -->
-            <div class="flex gap-0 md:gap-10 group mobile-compare-row">
-              <div
-                class="hidden md:flex w-[140px] shrink-0 text-base font-bold text-primary items-start sticky left-0 bg-background-secondary z-10"
-              >
-                <span class="compare-cell-text">Giá</span>
-              </div>
-              <div class="flex-grow flex md:gap-10 items-start">
-                <div
-                  class="md:hidden w-0 h-full shrink-0 sticky left-0 z-20 overflow-visible"
-                >
-                  <span class="mobile-compare-label">Giá</span>
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  675.000 đ/m²
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  675.000 đ/m²
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  675.000 đ/m²
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  675.000 đ/m²
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  675.000 đ/m²
-                </div>
-              </div>
-            </div>
-            <!-- Color Row -->
+        </div>
+      </section>
+      <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
+      
+      
+      
+      </div>
+      <section
+        class="w-full pb-0 md:pb-16 bg-background-secondary relative "
+        data-aos="fade-up"
+      >
+       
+        <div class="max-w-[1320px] w-[85%] mx-auto relative z-10">
+          <h2
+            class="text-[20px] md:text-3xl font-semibold text-secondary text-center uppercase mb-5 md:mb-16"
+          >
+            CÓ THỂ BẠN QUAN TÂM
+          </h2>
+      
+          <div class="relative">
             <div
-              class="flex gap-0 md:gap-10 border-t border-black/10 group mobile-compare-row"
+              class="overflow-x-auto pb-6 custom-recommend-scrollbar mobile-scroll-visible"
             >
-              <div
-                class="hidden md:flex w-[140px] shrink-0 text-base font-bold text-primary items-start sticky left-0 bg-background-secondary z-10"
-              >
-                <span class="compare-cell-text">Màu sắc</span>
-              </div>
-              <div class="flex-grow flex md:gap-10 items-start">
-                <div
-                  class="md:hidden w-0 h-full shrink-0 sticky left-0 z-20 overflow-visible"
-                >
-                  <span class="mobile-compare-label">Màu sắc</span>
+              <div class="min-w-[900px] md:min-w-[1000px]">
+                <!-- Product Info Row -->
+                <div class="flex gap-0 md:gap-10 mb-4 md:mb-8">
+                  <!-- Empty space - Hidden on Mobile -->
+                  <div
+                    class="hidden md:block w-[140px] shrink-0 sticky left-0 bg-background-secondary z-10"
+                  ></div>
+      
+                  <div class="flex-grow flex gap-4 md:gap-10">
+                    <div
+                      class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
+                    >
+                      <a
+                        href="/products/ngoi-am-duong/detail.html"
+                        class="w-full group"
+                      >
+                        <div
+                          class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
+                        >
+                          <img
+                            src="/assets/images/gach-co-work-2.jpg"
+                            alt="Ngói Âm Dương 27 Nâu Đỏ"
+                            class="object-cover w-full h-full"
+                            onerror="
+                              this.src =
+                                'https://placehold.co/400x400/eee/999?text=Product'
+                            "
+                          />
+                          <div class="product-overlay">
+                            <img src="/assets/images/eye.svg" alt="Search" />
+                            <span>Xem chi tiết</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a
+                        href="/products/ngoi-am-duong/detail.html"
+                        class="text-[#004B8D] hover:text-secondary transition-colors"
+                      >
+                        <h3
+                          class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
+                        >
+                          Ngói Âm Dương 27 Nâu Đỏ
+                        </h3>
+                      </a>
+                      <button
+                        class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
+                      >
+                        Thêm vào giỏ
+                      </button>
+                    </div>
+                    <div
+                      class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
+                    >
+                      <a
+                        href="/products/ngoi-am-duong/detail.html"
+                        class="w-full group"
+                      >
+                        <div
+                          class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
+                        >
+                          <img
+                            src="/assets/images/gach-co-work-2.jpg"
+                            alt="Ngói Âm Dương 27 Nâu Đỏ"
+                            class="object-cover w-full h-full"
+                            onerror="
+                              this.src =
+                                'https://placehold.co/400x400/eee/999?text=Product'
+                            "
+                          />
+                          <div class="product-overlay">
+                            <img src="/assets/images/eye.svg" alt="Search" />
+                            <span>Xem chi tiết</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a
+                        href="/products/ngoi-am-duong/detail.html"
+                        class="text-[#004B8D] hover:text-secondary transition-colors"
+                      >
+                        <h3
+                          class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
+                        >
+                          Ngói Âm Dương 27 Nâu Đỏ
+                        </h3>
+                      </a>
+                      <button
+                        class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
+                      >
+                        Thêm vào giỏ
+                      </button>
+                    </div>
+                    <div
+                      class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
+                    >
+                      <a
+                        href="/products/ngoi-am-duong/detail.html"
+                        class="w-full group"
+                      >
+                        <div
+                          class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
+                        >
+                          <img
+                            src="/assets/images/gach-co-work-2.jpg"
+                            alt="Ngói Âm Dương 27 Nâu Đỏ"
+                            class="object-cover w-full h-full"
+                            onerror="
+                              this.src =
+                                'https://placehold.co/400x400/eee/999?text=Product'
+                            "
+                          />
+                          <div class="product-overlay">
+                            <img src="/assets/images/eye.svg" alt="Search" />
+                            <span>Xem chi tiết</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a
+                        href="/products/ngoi-am-duong/detail.html"
+                        class="text-[#004B8D] hover:text-secondary transition-colors"
+                      >
+                        <h3
+                          class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
+                        >
+                          Ngói Âm Dương 27 Nâu Đỏ
+                        </h3>
+                      </a>
+                      <button
+                        class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
+                      >
+                        Thêm vào giỏ
+                      </button>
+                    </div>
+                    <div
+                      class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
+                    >
+                      <a
+                        href="/products/ngoi-am-duong/detail.html"
+                        class="w-full group"
+                      >
+                        <div
+                          class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
+                        >
+                          <img
+                            src="/assets/images/gach-co-work-2.jpg"
+                            alt="Ngói Âm Dương 27 Nâu Đỏ"
+                            class="object-cover w-full h-full"
+                            onerror="
+                              this.src =
+                                'https://placehold.co/400x400/eee/999?text=Product'
+                            "
+                          />
+                          <div class="product-overlay">
+                            <img src="/assets/images/eye.svg" alt="Search" />
+                            <span>Xem chi tiết</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a
+                        href="/products/ngoi-am-duong/detail.html"
+                        class="text-[#004B8D] hover:text-secondary transition-colors"
+                      >
+                        <h3
+                          class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
+                        >
+                          Ngói Âm Dương 27 Nâu Đỏ
+                        </h3>
+                      </a>
+                      <button
+                        class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
+                      >
+                        Thêm vào giỏ
+                      </button>
+                    </div>
+                    <div
+                      class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
+                    >
+                      <a
+                        href="/products/ngoi-am-duong/detail.html"
+                        class="w-full group"
+                      >
+                        <div
+                          class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
+                        >
+                          <img
+                            src="/assets/images/gach-co-work-2.jpg"
+                            alt="Ngói Âm Dương 27 Nâu Đỏ"
+                            class="object-cover w-full h-full"
+                            onerror="
+                              this.src =
+                                'https://placehold.co/400x400/eee/999?text=Product'
+                            "
+                          />
+                          <div class="product-overlay">
+                            <img src="/assets/images/eye.svg" alt="Search" />
+                            <span>Xem chi tiết</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a
+                        href="/products/ngoi-am-duong/detail.html"
+                        class="text-[#004B8D] hover:text-secondary transition-colors"
+                      >
+                        <h3
+                          class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
+                        >
+                          Ngói Âm Dương 27 Nâu Đỏ
+                        </h3>
+                      </a>
+                      <button
+                        class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
+                      >
+                        Thêm vào giỏ
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  Nâu đỏ
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  Nâu đỏ
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  Nâu đỏ
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  Nâu đỏ
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  Nâu đỏ
-                </div>
-              </div>
-            </div>
-            <!-- Size Row -->
-            <div
-              class="flex md:gap-10 border-y border-black/10 group mobile-compare-row"
-            >
-              <div
-                class="hidden md:flex w-[140px] shrink-0 text-base font-bold text-primary items-start sticky left-0 bg-background-secondary z-10"
-              >
-                <span class="compare-cell-text">Kích thước</span>
-              </div>
-              <div class="flex-grow flex md:gap-10 items-start">
-                <div
-                  class="md:hidden w-0 h-full shrink-0 sticky left-0 z-20 overflow-visible"
-                >
-                  <span class="mobile-compare-label">Kích thước</span>
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
-                >
-                  L280 x W280 x H54mm
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
-                >
-                  L280 x W280 x H54mm
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
-                >
-                  L280 x W280 x H54mm
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
-                >
-                  L280 x W280 x H54mm
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
-                >
-                  L280 x W280 x H54mm
+      
+                <!-- Comparison Table -->
+                <div class="flex flex-col border-t border-black/10">
+                  <!-- Price Row -->
+                  <div class="flex gap-0 md:gap-10 group mobile-compare-row">
+                    <div
+                      class="hidden md:flex w-[140px] shrink-0 text-base font-bold text-primary items-start sticky left-0 bg-background-secondary z-10"
+                    >
+                      <span class="compare-cell-text">Giá</span>
+                    </div>
+                    <div class="flex-grow flex md:gap-10 items-start">
+                      <div
+                        class="md:hidden w-0 h-full shrink-0 sticky left-0 z-20 overflow-visible"
+                      >
+                        <span class="mobile-compare-label">Giá</span>
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                      >
+                        675.000 đ/m²
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                      >
+                        675.000 đ/m²
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                      >
+                        675.000 đ/m²
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                      >
+                        675.000 đ/m²
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                      >
+                        675.000 đ/m²
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Color Row -->
+                  <div
+                    class="flex gap-0 md:gap-10 border-t border-black/10 group mobile-compare-row"
+                  >
+                    <div
+                      class="hidden md:flex w-[140px] shrink-0 text-base font-bold text-primary items-start sticky left-0 bg-background-secondary z-10"
+                    >
+                      <span class="compare-cell-text">Màu sắc</span>
+                    </div>
+                    <div class="flex-grow flex md:gap-10 items-start">
+                      <div
+                        class="md:hidden w-0 h-full shrink-0 sticky left-0 z-20 overflow-visible"
+                      >
+                        <span class="mobile-compare-label">Màu sắc</span>
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                      >
+                        Nâu đỏ
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                      >
+                        Nâu đỏ
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                      >
+                        Nâu đỏ
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                      >
+                        Nâu đỏ
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
+                      >
+                        Nâu đỏ
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Size Row -->
+                  <div
+                    class="flex md:gap-10 border-y border-black/10 group mobile-compare-row"
+                  >
+                    <div
+                      class="hidden md:flex w-[140px] shrink-0 text-base font-bold text-primary items-start sticky left-0 bg-background-secondary z-10"
+                    >
+                      <span class="compare-cell-text">Kích thước</span>
+                    </div>
+                    <div class="flex-grow flex md:gap-10 items-start">
+                      <div
+                        class="md:hidden w-0 h-full shrink-0 sticky left-0 z-20 overflow-visible"
+                      >
+                        <span class="mobile-compare-label">Kích thước</span>
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
+                      >
+                        L280 x W280 x H54mm
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
+                      >
+                        L280 x W280 x H54mm
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
+                      >
+                        L280 x W280 x H54mm
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
+                      >
+                        L280 x W280 x H54mm
+                      </div>
+                      <div
+                        class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
+                      >
+                        L280 x W280 x H54mm
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
- <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
-<!-- FAQ 2 Section Partial -->
-<!-- GSXD-SECTION:BEGIN file=components/products/faq2.html tag=section idx=001 uid=5216d5e2 -->
-<section
-  class="w-full pb-0 md:pb-8 lg:pb-10 pt-8 md:pt-14 overflow-hidden"
->
-  <div
-    class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 lg:gap-16 items-center"
-  >
-    <!-- Left: Image -->
-    <div class="w-full aspect-square" data-aos="fade-right">
-      <img
-        src="/assets/images/faq2.png"
-        alt="FAQ Image"
-        class="w-full h-full object-cover"
-      />
-    </div>
-
-    <!-- Right: Content -->
-    <div class="flex flex-col items-start" data-aos="fade-left">
-      <p
-        class="text-[#262626] text-[14px] md:text-base font-extrabold uppercase tracking-[0.1em] leading-[20px] md:leading-normal mb-2.5 md:mb-8"
+      </section>
+      <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
+      <!-- FAQ 2 Section Partial -->
+      <!-- GSXD-SECTION:BEGIN file=components/products/faq2.html tag=section idx=001 uid=5216d5e2 -->
+      <section
+        class="w-full pb-0 md:pb-8 lg:pb-10 pt-8 md:pt-14 overflow-hidden"
       >
-        Bạn có thắc mắc?
-      </p>
-      <h2 class="text-[#2E2F2A] md:text-primary text-[24px] md:text-3xl lg:text-4xl font-normal md:font-semibold leading-[37.5px] md:leading-tight mb-5 md:mb-0">
-        Xem các câu hỏi thường gặp
-      </h2>
-      <p class="text-[#262626]/70 text-[14px] md:text-base font-normal leading-[22.75px] md:leading-relaxed mb-5 md:mb-10">
-        Khám phá danh sách các câu hỏi thường gặp và câu trả lời của chúng tôi.
-      </p>
-      <a
-        href="/faq/"
-        class="inline-block border-0 md:border md:border-black/40 px-0 md:px-5 py-0 md:py-2 text-[#262626] text-[16px] md:text-xs lg:text-sm font-semibold md:font-normal leading-none md:leading-normal hover:text-secondary md:hover:bg-secondary md:hover:text-white md:hover:border-secondary transition-all"
-      >
-        (FAQ) Câu hỏi thường gặp
-      </a>
-    </div>
-  </div>
-</section>
-<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
-
-
-
-
+        <div
+          class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 lg:gap-16 items-center"
+        >
+          <!-- Left: Image -->
+          <div class="w-full aspect-square" data-aos="fade-right">
+            <img
+              src="/assets/images/faq2.png"
+              alt="FAQ Image"
+              class="w-full h-full object-cover"
+            />
+          </div>
+      
+          <!-- Right: Content -->
+          <div class="flex flex-col items-start" data-aos="fade-left">
+            <p
+              class="text-[#262626] text-[14px] md:text-base font-extrabold uppercase tracking-[0.1em] leading-[20px] md:leading-normal mb-2.5 md:mb-8"
+            >
+              Bạn có thắc mắc?
+            </p>
+            <h2 class="text-[#2E2F2A] md:text-primary text-[24px] md:text-3xl lg:text-4xl font-normal md:font-semibold leading-[37.5px] md:leading-tight mb-5 md:mb-0">
+              Xem các câu hỏi thường gặp
+            </h2>
+            <p class="text-[#262626]/70 text-[14px] md:text-base font-normal leading-[22.75px] md:leading-relaxed mb-5 md:mb-10">
+              Khám phá danh sách các câu hỏi thường gặp và câu trả lời của chúng tôi.
+            </p>
+            <a
+              href="/faq/"
+              class="inline-block border-0 md:border md:border-black/40 px-0 md:px-5 py-0 md:py-2 text-[#262626] text-[16px] md:text-xs lg:text-sm font-semibold md:font-normal leading-none md:leading-normal hover:text-secondary md:hover:bg-secondary md:hover:text-white md:hover:border-secondary transition-all"
+            >
+              (FAQ) Câu hỏi thường gặp
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
+      
+      
+      
     </main>
 
     <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
@@ -2077,32 +2036,6 @@
         // Initialize AOS
         AOS.init({ duration: 800, once: true, offset: 100 });
 
-        const productThumbSwiperEl = document.querySelector(
-          ".product-thumb-swiper",
-        );
-        const productThumbSwiper = productThumbSwiperEl
-          ? new Swiper(productThumbSwiperEl, {
-              spaceBetween: 20,
-              slidesPerView: 7,
-              freeMode: true,
-              watchSlidesProgress: true,
-            })
-          : null;
-
-        new Swiper(".product-main-swiper", {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          pagination: {
-            el: ".product-main-pagination",
-            clickable: true,
-          },
-          thumbs: productThumbSwiper
-            ? {
-                swiper: productThumbSwiper,
-              }
-            : undefined,
-        });
-
         // Refresh AOS when all assets (like images) finish loading
         window.addEventListener("load", () => {
           setTimeout(() => {
@@ -2115,116 +2048,8 @@
             AOS.refresh();
           }, 1500);
         });
-
-        // Initialize Works/Projects Slider if present
-        new Swiper(".projects-slider", {
-          slidesPerView: 1.2,
-          spaceBetween: 20,
-          centeredSlides: true,
-          loop: true,
-          pagination: {
-            el: ".projects-pagination",
-            clickable: true,
-            renderBullet: function (index, className) {
-              return (
-                '<span class="' +
-                className +
-                ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
-              );
-            },
-          },
-          navigation: {
-            nextEl: ".projects-next",
-            prevEl: ".projects-prev",
-          },
-          breakpoints: {
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-              centeredSlides: false,
-            },
-            1024: {
-              slidesPerView: 2,
-              spaceBetween: 60,
-              centeredSlides: true,
-            },
-          },
-          on: {
-            init: function () {
-              setTimeout(() => {
-                if (typeof AOS !== "undefined") AOS.refresh();
-              }, 500);
-            },
-          },
-        });
-
-        // Add bullet style
-        const style = document.createElement("style");
-        style.innerHTML = `
-            .product-main-pagination .swiper-pagination-bullet {
-                width: 6px !important;
-                height: 6px !important;
-                background: white !important;
-                opacity: 0.5 !important;
-                margin: 0 !important;
-                border-radius: 9999px !important;
-                transition: all 0.3s ease !important;
-            }
-            .product-main-pagination .swiper-pagination-bullet-active {
-                width: 10px !important;
-                background: #C76E00 !important;
-                opacity: 1 !important;
-            }
-            .projects-pagination .swiper-pagination-bullet-active {
-                background-color: #C76E00 !important;
-                width: 12px !important;
-                border-radius: 6px !important;
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Position locations scroll dots handler
-        const positionLocationsScroll = document.querySelector(
-          ".position-locations-scroll",
-        );
-        const positionDots = document.querySelectorAll(".position-dot");
-
-        if (positionLocationsScroll && positionDots.length) {
-          // Update dots on scroll
-          positionLocationsScroll.addEventListener("scroll", () => {
-            const scrollLeft = positionLocationsScroll.scrollLeft;
-            const containerWidth = positionLocationsScroll.offsetWidth;
-            const currentIndex = Math.round(scrollLeft / containerWidth);
-
-            positionDots.forEach((dot, index) => {
-              dot.classList.toggle("active", index === currentIndex);
-            });
-          });
-
-          // Click handler for dots to scroll to card
-          positionDots.forEach((dot) => {
-            dot.addEventListener("click", () => {
-              const index = parseInt(dot.dataset.index);
-              const targetScroll = index * positionLocationsScroll.offsetWidth;
-              positionLocationsScroll.scrollTo({
-                left: targetScroll,
-                behavior: "smooth",
-              });
-            });
-          });
-        }
       });
     </script>
-    <!-- Pagination Dots Style -->
-    <style>
-      .position-dot {
-        background-color: rgba(199, 110, 0, 0.3);
-      }
-      .position-dot.active {
-        background-color: #c76e00;
-        width: 8px;
-      }
-    </style>
     <script>
   document.addEventListener("DOMContentLoaded", () => {
     // 0. Sticky header scroll effect (home page only)
@@ -2382,5 +2207,59 @@
   })();
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.querySelector(".projects-slider")) {
+      new Swiper(".projects-slider", {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+          el: ".projects-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return (
+              '<span class="' +
+              className +
+              ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
+            );
+          },
+        },
+        navigation: {
+          nextEl: ".projects-next",
+          prevEl: ".projects-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            centeredSlides: false,
+          },
+          1024: {
+            slidesPerView: 2,
+            slidesOffsetBefore: 0,
+            spaceBetween: 60,
+            centeredSlides: true,
+          },
+          1440: {
+            slidesPerView: 2.1,
+            spaceBetween: 80,
+            centeredSlides: true,
+          },
+        },
+        on: {
+          init: function () {
+            setTimeout(() => {
+              if (typeof AOS !== "undefined") AOS.refresh();
+            }, 500);
+          },
+        },
+      });
+    }
+  });
+</script>
+
   </body>
 </html>
+

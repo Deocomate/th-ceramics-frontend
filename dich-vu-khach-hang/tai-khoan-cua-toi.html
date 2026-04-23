@@ -697,10 +697,8 @@
   <main class="bg-background-secondary min-h-screen">
     <div class="w-[85%] max-w-[1320px] mx-auto">
 <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-khoan-cua-toi.html include=dich-vu-khach-hang/partials/customer-service/breadcrumb idx=002 uid=fae266fc -->
-<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=dich-vu-khach-hang/partials/customer-service/breadcrumb.html uid=ffb5a30b -->
-<div class="py-12">
-  <!-- GSXD-ELEMENT:BEGIN file=dich-vu-khach-hang/partials/customer-service/breadcrumb.html tag=nav idx=001 uid=29ed7595 -->
-  <nav class="flex text-sm text-primary gap-4 items-center">
+<div class="py-10 lg:py-12">
+  <nav class="flex text-sm text-primary gap-2 lg:gap-4 items-center">
     <a href="/" class="hover:text-secondary transition-colors font-medium">Trang chủ</a>
     <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -709,7 +707,7 @@
     <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <span class="text-primary">Tài khoản của tôi</span>
+    <span class="text-primary font-normal underline decoration-primary underline-offset-4">Tài khoản của tôi</span>
   </nav>
 </div>
 <!-- GSXD-DEBUG:END type=LAYOUT file=dich-vu-khach-hang/partials/customer-service/breadcrumb.html uid=ffb5a30b -->
@@ -722,57 +720,79 @@
 <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=dich-vu-khach-hang/partials/customer-service/sidebar.html uid=5c3fd405 -->
 <!-- GSXD-ELEMENT:BEGIN file=dich-vu-khach-hang/partials/customer-service/sidebar.html tag=aside idx=001 uid=b1274b15 -->
 <aside class="w-full lg:w-[320px] shrink-0">
-  <h2 class="text-lg lg:text-xl mb-8 text-primary">Dịch vụ khách hàng</h2>
-  <!-- GSXD-ELEMENT:BEGIN file=dich-vu-khach-hang/partials/customer-service/sidebar.html tag=nav idx=001 uid=3817869e -->
-  <nav class="flex flex-col border-t border-gray-300 text-sm">
-    <a href="/dich-vu-khach-hang/trang-thai-don-hang.html" 
-       class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
-       Trạng thái đơn hàng
-    </a>
-    <a href="/dich-vu-khach-hang/tai-khoan-cua-toi.html" 
-       class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary decoration-primary underline underline-offset-4">
-       Tài khoản của tôi
-    </a>
-    <a href="/dich-vu-khach-hang/tai-catalog.html" 
-       class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
-       Tải Catalog
-    </a>
-    <a href="/dich-vu-khach-hang/quy-trinh-dat-hang.html" 
-       class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
-       Quy trình đặt hàng
-    </a>
-    <a href="/dich-vu-khach-hang/huong-dan-thi-cong.html" 
-       class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
-       Hướng dẫn thi công
-    </a>
-    <a href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html" 
-       class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
-       Chính sách vận chuyển
-    </a>
-    <a href="/dich-vu-khach-hang/chinh-sach-doi-tra.html" 
-       class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
-       Chính sách đổi trả
-    </a>
-    <a href="/dich-vu-khach-hang/bao-mat-thong-tin.html" 
-       class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
-       Bảo mật thông tin
-    </a>
-    <a href="/faq/index.html" 
-       class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
-       FAQ
-    </a>
-  </nav>
+  <!-- Mobile Toggle Header (Visible only on mobile) -->
+  <div id="mobile-sidebar-toggle" 
+       class="lg:hidden flex items-center gap-[10px] pl-4 pr-10 pb-4 pt-6 bg-white cursor-pointer">
+    <svg id="mobile-sidebar-chevron" style="transform: rotate(90deg)" class="transition-transform duration-300" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 3L9 7L5 11" stroke="#2E2F2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <h2 class="text-[18px] text-primary font-normal font-archivo">Dịch vụ khách hàng</h2>
+  </div>
+
+  <!-- Sidebar Content (Desktop: always visible, Mobile: expanded by default) -->
+  <div id="sidebar-content" 
+       class="lg:block bg-white lg:bg-transparent shadow-[0px_4px_4px_rgba(0,0,0,0.15)] lg:shadow-none px-10 lg:px-0">
+    <h2 class="hidden lg:block text-lg lg:text-xl mb-8 text-primary">Dịch vụ khách hàng</h2>
+    
+    <nav class="flex flex-col lg:border-t border-gray-300 text-sm">
+      <!-- First 5 items -->
+      <div id="sidebar-items-initial" class="flex flex-col">
+        <a href="/dich-vu-khach-hang/trang-thai-don-hang.html" 
+           class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+           Trạng thái đơn hàng
+        </a>
+        <a href="/dich-vu-khach-hang/tai-khoan-cua-toi.html" 
+           class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary decoration-primary underline underline-offset-4">
+           Tài khoản của tôi
+        </a>
+        <a href="/dich-vu-khach-hang/tai-catalog.html" 
+           class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+           Tải Catalog
+        </a>
+        <a href="/dich-vu-khach-hang/quy-trinh-dat-hang.html" 
+           class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+           Quy trình đặt hàng
+        </a>
+        <a href="/dich-vu-khach-hang/huong-dan-thi-cong.html" 
+           class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+           Hướng dẫn thi công
+        </a>
+      </div>
+
+      <!-- More Toggle (Mobile only, centered and at bottom of initial 5) -->
+      <div id="mobile-more-toggle" class="lg:hidden flex justify-center py-5 cursor-pointer">
+        <img src="/assets/images/plus-circle.svg" alt="More" class="w-[22px] h-[22px]">
+      </div>
+
+      <!-- Remaining items -->
+      <div id="sidebar-items-more" class="hidden lg:flex flex-col w-full">
+        <a href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html" 
+           class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+           Chính sách vận chuyển
+        </a>
+        <a href="/dich-vu-khach-hang/chinh-sach-doi-tra.html" 
+           class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+           Chính sách đổi trả
+        </a>
+        <a href="/dich-vu-khach-hang/bao-mat-thong-tin.html" 
+           class="py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+           Bảo mật thông tin
+        </a>
+        <a href="/faq/index.html" 
+           class="mb-6 lg:mb-0 py-4 border-b border-gray-300 transition-colors hover:underline font-bold text-primary">
+           FAQ
+        </a>
+      </div>
+    </nav>
+  </div>
 </aside>
-<!-- GSXD-DEBUG:END type=LAYOUT file=dich-vu-khach-hang/partials/customer-service/sidebar.html uid=5c3fd405 -->
-
-
 
 <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-khoan-cua-toi.html include=dich-vu-khach-hang/partials/customer-service/account-content idx=004 uid=ff133bbf -->
 <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=dich-vu-khach-hang/partials/customer-service/account-content.html uid=e3e9dd23 -->
 <div class="flex-1 lg:pl-12">
   <h1 class="text-3xl lg:text-[36px] font-arima font-medium text-primary mb-10 mt-[-6px]">Tài khoản của tôi</h1>
 
-  <div class="bg-[#FEF9F5] border border-gray-300 rounded-md shadow-lg py-6 lg:py-8 px-12 lg:px-16">
+  <div class="bg-[#F8F3EF] border border-gray-300 rounded-md shadow-lg py-6 lg:py-8 px-12 lg:px-16">
     <h2 class="text-center text-secondary font-bold text-lg lg:text-xl uppercase tracking-wider mb-6">Hồ sơ cá nhân</h2>
 
     <!-- GSXD-ELEMENT:BEGIN file=dich-vu-khach-hang/partials/customer-service/account-content.html tag=form idx=001 uid=97e7d866 -->
@@ -844,118 +864,117 @@
 
 
       </div>
-<!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-khoan-cua-toi.html include=components/faq/faq-contact idx=005 uid=31fb5ad8 -->
-<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/faq/faq-contact.html uid=0e27522c -->
-<!-- FAQ Contact Section Partial -->
-<!-- GSXD-SECTION:BEGIN file=components/faq/faq-contact.html tag=section idx=001 uid=3fc7b7c0 -->
-<section
-  class="pt-16 lg:pt-24 pb-[70px] md:pb-32 lg:pb-48 bg-background-secondary overflow-hidden"
->
-  <div
-    class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-5 gap-12 lg:gap-24 items-center"
-  >
-    <!-- Image -->
-    <a
-      href="/contact/"
-      class="block w-full aspect-square md:aspect-[10/9] md:h-[380px] md:w-[420px] md:col-span-2"
-      data-aos="fade-right"
-    >
-      <img
-        src="/assets/images/faq-contact.png"
-        alt="FAQ Contact"
-        class="w-full h-full object-cover shadow-xl group"
-      />
-    </a>
-
-    <!-- Content -->
-    <div class="flex flex-col gap-6 md:col-span-3" data-aos="fade-left">
-      <div>
-        <p class="text-xs md:text-base font-bold text-primary uppercase mb-6">
-          Bạn còn câu hỏi?
-        </p>
-        <h2
-          class="text-3xl md:text-[40px] font-arima text-primary leading-tight mb-2"
+    </div>
+      <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/faq/faq-contact.html uid=0e27522c -->
+      <!-- FAQ Contact Section Partial -->
+      <!-- GSXD-SECTION:BEGIN file=components/faq/faq-contact.html tag=section idx=001 uid=3fc7b7c0 -->
+      <section
+        class="pt-16 lg:pt-24 pb-[70px] md:pb-32 lg:pb-48 bg-background-secondary overflow-hidden"
+      >
+        <div
+          class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-24 items-center"
         >
-          Chúng tôi sẵn sàng hỗ trợ
-        </h2>
-      </div>
-
-      <div class="space-y-2 text-sm md:text-base text-primary">
-        <p class="text-primary mb-4 font-medium">
-          Thứ 2 - Chủ nhật<span class="mx-2">|</span>9AM - 5PM
-        </p>
-
-        <div class="flex items-center gap-2 group">
-          <div class="text-secondary">
+          <!-- Image -->
+          <a
+            href="/contact/"
+            class="block w-full aspect-square md:aspect-[10/9] md:h-[380px] md:w-[420px] md:col-span-2"
+            data-aos="fade-right"
+          >
             <img
-              src="/assets/images/phone.svg"
-              alt="Phone Icon"
-              class="w-4 h-4"
+              src="/assets/images/faq-contact.png"
+              alt="FAQ Contact"
+              class="w-full h-full object-cover shadow-xl group"
             />
-          </div>
-          <a
-            href="tel:0966558808"
-            class="hover:text-secondary transition-colors text-primary"
-            >0966 55 8808</a
-          >
-        </div>
-
-        <div class="flex items-center gap-2 group">
-          <div class="text-secondary">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-              />
-            </svg>
-          </div>
-          <a
-            href="mailto:gshaithanh@gmail.com"
-            class="hover:text-secondary transition-colors text-primary"
-            >gshaithanh@gmail.com</a
-          >
-        </div>
-
-        <div class="flex items-start gap-2 group">
-          <div class="text-secondary mt-1">
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path
-                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-              />
-            </svg>
-          </div>
-          <div class="text-primary leading-relaxed">
-            <p class="text-sm md:text-base text-primary">
-              Tại
-              <a
-                href="https://maps.app.goo.gl/5HRZ796Qq714sPcCA"
-                target="_blank"
-                class="text-secondary underline font-bold"
-                >Gốm sứ Thanh Hải</a
+          </a>
+      
+          <!-- Content -->
+          <div class="flex flex-col gap-6 md:col-span-3" data-aos="fade-left">
+            <div>
+              <p class="text-xs md:text-base font-bold text-primary uppercase mb-6">
+                Bạn còn câu hỏi?
+              </p>
+              <h2
+                class="text-3xl md:text-[40px] font-arima text-primary leading-tight mb-2"
               >
-            </p>
-            <p class="text-sm md:text-base text-primary">
-              18 Giang Cao, Bát Tràng, Gia Lâm, Hà Nội
-            </p>
+                Chúng tôi sẵn sàng hỗ trợ
+              </h2>
+            </div>
+      
+            <div class="space-y-2 text-sm md:text-base text-primary">
+              <p class="text-primary mb-4 font-medium">
+                Thứ 2 - Chủ nhật<span class="mx-2">|</span>9AM - 5PM
+              </p>
+      
+              <div class="flex items-center gap-2 group">
+                <div class="text-secondary">
+                  <img
+                    src="/assets/images/phone.svg"
+                    alt="Phone Icon"
+                    class="w-4 h-4"
+                  />
+                </div>
+                <a
+                  href="tel:0966558808"
+                  class="hover:text-secondary transition-colors text-primary"
+                  >0966 55 8808</a
+                >
+              </div>
+      
+              <div class="flex items-center gap-2 group">
+                <div class="text-secondary">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    />
+                  </svg>
+                </div>
+                <a
+                  href="mailto:gshaithanh@gmail.com"
+                  class="hover:text-secondary transition-colors text-primary"
+                  >gshaithanh@gmail.com</a
+                >
+              </div>
+      
+              <div class="flex items-start gap-2 group">
+                <div class="text-secondary mt-1">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                    />
+                  </svg>
+                </div>
+                <div class="text-primary leading-relaxed">
+                  <p class="text-sm md:text-base text-primary">
+                    Tại
+                    <a
+                      href="https://maps.app.goo.gl/5HRZ796Qq714sPcCA"
+                      target="_blank"
+                      class="text-secondary underline font-bold"
+                      >Gốm sứ Thanh Hải</a
+                    >
+                  </p>
+                  <p class="text-sm md:text-base text-primary">
+                    18 Giang Cao, Bát Tràng, Gia Lâm, Hà Nội
+                  </p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="mt-8">
+              <a
+                href="/contact/"
+                class="inline-block px-12 py-3 border border-black/20 text-primary font-bold text-xs md:text-sm tracking-widest hover:bg-secondary hover:text-white hover:border-secondary transition-all uppercase"
+              >
+                Liên hệ
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="mt-8">
-        <a
-          href="/contact/"
-          class="inline-block px-12 py-3 border border-black/20 text-primary font-bold text-xs md:text-sm tracking-widest hover:bg-secondary hover:text-white hover:border-secondary transition-all uppercase"
-        >
-          Liên hệ
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- GSXD-DEBUG:END type=LAYOUT file=components/faq/faq-contact.html uid=0e27522c -->
-
-
-
-    </div>
+      </section>
+      <!-- GSXD-DEBUG:END type=LAYOUT file=components/faq/faq-contact.html uid=0e27522c -->
+      
+      
+      
   </main>
 <!-- GSXD-PARTIAL:BEGIN file=dich-vu-khach-hang/tai-khoan-cua-toi.html include=components/footer idx=006 uid=5d0ecc8c -->
 <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
@@ -1458,6 +1477,40 @@
       "mobile-spct-submenu",
       "mobile-spct-icon",
     );
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('mobile-sidebar-toggle');
+    const content = document.getElementById('sidebar-content');
+    const chevron = document.getElementById('mobile-sidebar-chevron');
+    const moreToggle = document.getElementById('mobile-more-toggle');
+    const moreItems = document.getElementById('sidebar-items-more');
+
+    if (toggle && content && chevron) {
+      toggle.addEventListener('click', () => {
+        const isHidden = content.classList.contains('hidden');
+        if (isHidden) {
+          content.classList.remove('hidden');
+          chevron.style.transform = 'rotate(90deg)';
+        } else {
+          content.classList.add('hidden');
+          chevron.style.transform = 'rotate(0deg)';
+          // Reset "more" section when closing
+          if (moreItems && moreToggle) {
+            moreItems.classList.add('hidden');
+            moreToggle.classList.remove('hidden');
+          }
+        }
+      });
+    }
+
+      moreToggle.addEventListener('click', () => {
+        moreItems.classList.remove('hidden');
+        moreItems.classList.add('flex');
+        moreToggle.classList.add('hidden');
+      });
   });
 </script>
 

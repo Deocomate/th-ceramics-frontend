@@ -725,7 +725,7 @@
 
   <!-- Right Half: Text Content -->
   <div
-    class="w-full lg:w-1/2 flex items-center justify-center p-8 md:p-16 lg:p-24 bg-white"
+    class="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-24 bg-white"
     data-aos="fade-left"
   >
     <div class="max-w-md flex flex-col items-start gap-6">
@@ -770,8 +770,8 @@
 </section>
 <!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/detail-hero.html uid=d7e91f2a -->
  <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/detail-content.html uid=f2c3a8d1 -->
-<section class="pt-10 md:py-32 bg-neutral-2">
-  <div class="w-[85%] max-w-[1000px] mx-auto flex flex-col mb-10">
+<div class="py-16 lg:py-24 bg-neutral-2">
+  <div class="w-[85%] max-w-[1000px] mx-auto flex flex-col mb-10 lg:mb-16">
     <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/detail-content-overview.html uid=b4d2e7f3 -->
     <!-- Top Row: Text left, Image right -->
     <div
@@ -785,12 +785,12 @@
           Câu Chuyện Dự Án
         </p>
         <h2
-          class="text-3xl md:text-4xl font-arima font-medium text-primary mb-4 md:mb-6 leading-tight"
+          class="text-[30px] lg:text-[40px] font-arima font-medium text-primary mb-4 md:mb-6 leading-tight"
         >
           Kiến trúc bền vững với gốm sứ
         </h2>
         <p
-          class="text-[14px] md:w-[95%] text-primary/80 leading-[1.8] text-left md:text-justify font-light md:font-normal"
+          class="text-[15px] md:w-[95%] text-primary/80 leading-[1.8] text-left md:text-justify font-light md:font-normal"
         >
           Thanh Hải Plaza được xây dựng với mục tiêu tạo nên một biểu tượng kiến
           trúc xanh tại Hà Nội. Toàn bộ mặt ngoài tòa nhà sử dụng các loại gạch gốm
@@ -798,7 +798,7 @@
           dài trong 50+ năm.
         </p>
         <p
-          class="text-[14px] md:w-[95%] text-primary/80 leading-[1.8] text-left md:text-justify font-light md:font-normal mt-4"
+          class="text-[15px] md:w-[95%] text-primary/80 leading-[1.8] text-left md:text-justify font-light md:font-normal mt-4"
         >
           Quá trình lựa chọn từng loại gạch, từng chi tiết trang trí mất gần một năm
           để đạt được sự hoàn hảo. Đội ngũ kiến trúc sư đã kỳ công phối hợp các sản
@@ -818,7 +818,7 @@
     
     <!-- Middle Row: Image left, Details right -->
     <div
-      class="flex flex-col md:flex-row gap-10 md:gap-24 items-start md:items-center mt-10 md:mt-20"
+      class="flex flex-col md:flex-row gap-10 md:gap-24 items-start md:items-center mt-12 lg:mt-24"
       data-aos="fade-up"
     >
       <div class="w-full md:w-1/2">
@@ -865,7 +865,7 @@
     </div>
     
     <!-- Bottom Row: Full width Image -->
-    <div class="w-full mx-auto mt-10 md:mt-20" data-aos="fade-up">
+    <div class="w-full mx-auto mt-12 lg:mt-24" data-aos="fade-up">
       <img
         src="/assets/images/factory-03.png"
         alt="Project Full View"
@@ -877,19 +877,23 @@
   </div>
   <!-- Tệp: projects/partials/detail-gallery.html -->
 <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/detail-gallery.html uid=c5a1f8e2 -->
-<section class="py-10 md:py-32 bg-white">
-  <div class="w-full max-w-[1320px] mx-auto px-6 md:px-8">
+<div class="py-16 lg:py-24 bg-white">
+  <div class="w-[85%] max-w-[1320px] mx-auto">
     <!-- Section Title -->
-    <div class="mb-16 md:mb-24" data-aos="fade-up">
+    <div class="mb-10 lg:mb-16" data-aos="fade-up">
       <p
         class="text-[12px] font-bold text-primary opacity-60 uppercase tracking-widest mb-4"
       >
         Bộ Sưu Tập Hình Ảnh
       </p>
-      <h2 class="text-3xl md:text-4xl font-arima font-medium text-primary mb-6">
+      <h2
+        class="text-[30px] lg:text-[40px] font-arima font-medium text-primary mb-6"
+      >
         Không gian đa chiều
       </h2>
-      <p class="max-w-2xl text-base text-primary/80 leading-relaxed font-light">
+      <p
+        class="max-w-2xl text-[15px] text-primary/80 leading-relaxed font-light"
+      >
         Từ mặt tiền kiến trúc, không gian sảnh đến chi tiết trang trí nội thất,
         mỗi góc của Thanh Hải Plaza đều được thiết kế để phản ánh sự tinh tế và
         bền vững.
@@ -897,35 +901,92 @@
     </div>
 
     <!-- Desktop Grid Gallery (Chỉ hiển thị trên md trở lên) -->
-    <div class="hidden md:grid grid-cols-4 grid-rows-2 gap-4 h-[500px] lg:h-[600px]" data-aos="fade-up">
+    <div
+      class="hidden md:grid grid-cols-4 grid-rows-2 gap-4 h-[500px] lg:h-[600px]"
+      data-aos="fade-up"
+    >
       <!-- Slide 1 (Ảnh To Nhất) -->
-      <div class="col-span-2 row-span-2 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
-        <a href="/assets/images/factory-03.png" class="glightbox h-full w-full block" data-gallery="project-gallery-desktop">
-          <img src="/assets/images/factory-03.png" alt="Gallery 1" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+      <div
+        class="col-span-2 row-span-2 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+      >
+        <a
+          href="/assets/images/factory-03.png"
+          class="glightbox h-full w-full block"
+          data-gallery="project-gallery-desktop"
+        >
+          <img
+            src="/assets/images/factory-03.png"
+            alt="Gallery 1"
+            onerror="this.src = '/assets/images/factory-01.jpg'"
+            class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+          />
         </a>
       </div>
       <!-- Slide 2 -->
-      <div class="col-span-1 row-span-1 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
-        <a href="/assets/images/factory-04.jpg" class="glightbox h-full w-full block" data-gallery="project-gallery-desktop">
-          <img src="/assets/images/factory-04.jpg" alt="Gallery 2" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+      <div
+        class="col-span-1 row-span-1 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+      >
+        <a
+          href="/assets/images/factory-04.jpg"
+          class="glightbox h-full w-full block"
+          data-gallery="project-gallery-desktop"
+        >
+          <img
+            src="/assets/images/factory-04.jpg"
+            alt="Gallery 2"
+            onerror="this.src = '/assets/images/factory-01.jpg'"
+            class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+          />
         </a>
       </div>
       <!-- Slide 3 -->
-      <div class="col-span-1 row-span-1 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
-        <a href="/assets/images/factory-01.jpg" class="glightbox h-full w-full block" data-gallery="project-gallery-desktop">
-          <img src="/assets/images/factory-01.jpg" alt="Gallery 3" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+      <div
+        class="col-span-1 row-span-1 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+      >
+        <a
+          href="/assets/images/factory-01.jpg"
+          class="glightbox h-full w-full block"
+          data-gallery="project-gallery-desktop"
+        >
+          <img
+            src="/assets/images/factory-01.jpg"
+            alt="Gallery 3"
+            class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+          />
         </a>
       </div>
       <!-- Slide 4 -->
-      <div class="col-span-1 row-span-1 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
-        <a href="/assets/images/factory-03.png" class="glightbox h-full w-full block" data-gallery="project-gallery-desktop">
-          <img src="/assets/images/factory-03.png" alt="Gallery 4" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+      <div
+        class="col-span-1 row-span-1 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+      >
+        <a
+          href="/assets/images/factory-03.png"
+          class="glightbox h-full w-full block"
+          data-gallery="project-gallery-desktop"
+        >
+          <img
+            src="/assets/images/factory-03.png"
+            alt="Gallery 4"
+            onerror="this.src = '/assets/images/factory-01.jpg'"
+            class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+          />
         </a>
       </div>
       <!-- Slide 5 -->
-      <div class="col-span-1 row-span-1 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
-        <a href="/assets/images/factory-04.jpg" class="glightbox h-full w-full block" data-gallery="project-gallery-desktop">
-          <img src="/assets/images/factory-04.jpg" alt="Gallery 5" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+      <div
+        class="col-span-1 row-span-1 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+      >
+        <a
+          href="/assets/images/factory-04.jpg"
+          class="glightbox h-full w-full block"
+          data-gallery="project-gallery-desktop"
+        >
+          <img
+            src="/assets/images/factory-04.jpg"
+            alt="Gallery 5"
+            onerror="this.src = '/assets/images/factory-01.jpg'"
+            class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+          />
         </a>
       </div>
     </div>
@@ -936,62 +997,121 @@
         <div class="swiper-wrapper pb-10">
           <!-- Slide 1 -->
           <div class="swiper-slide h-[300px]">
-            <div class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
-              <a href="/assets/images/factory-03.png" class="glightbox h-full w-full block" data-gallery="project-gallery-mobile">
-                <img src="/assets/images/factory-03.png" alt="Gallery 1" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+            <div
+              class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+            >
+              <a
+                href="/assets/images/factory-03.png"
+                class="glightbox h-full w-full block"
+                data-gallery="project-gallery-mobile"
+              >
+                <img
+                  src="/assets/images/factory-03.png"
+                  alt="Gallery 1"
+                  onerror="this.src = '/assets/images/factory-01.jpg'"
+                  class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                />
               </a>
             </div>
           </div>
           <!-- Slide 2 -->
           <div class="swiper-slide h-[300px]">
-            <div class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
-              <a href="/assets/images/factory-04.jpg" class="glightbox h-full w-full block" data-gallery="project-gallery-mobile">
-                <img src="/assets/images/factory-04.jpg" alt="Gallery 2" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+            <div
+              class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+            >
+              <a
+                href="/assets/images/factory-04.jpg"
+                class="glightbox h-full w-full block"
+                data-gallery="project-gallery-mobile"
+              >
+                <img
+                  src="/assets/images/factory-04.jpg"
+                  alt="Gallery 2"
+                  onerror="this.src = '/assets/images/factory-01.jpg'"
+                  class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                />
               </a>
             </div>
           </div>
           <!-- Slide 3 -->
           <div class="swiper-slide h-[300px]">
-            <div class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
-              <a href="/assets/images/factory-01.jpg" class="glightbox h-full w-full block" data-gallery="project-gallery-mobile">
-                <img src="/assets/images/factory-01.jpg" alt="Gallery 3" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+            <div
+              class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+            >
+              <a
+                href="/assets/images/factory-01.jpg"
+                class="glightbox h-full w-full block"
+                data-gallery="project-gallery-mobile"
+              >
+                <img
+                  src="/assets/images/factory-01.jpg"
+                  alt="Gallery 3"
+                  class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                />
               </a>
             </div>
           </div>
           <!-- Slide 4 -->
           <div class="swiper-slide h-[300px]">
-            <div class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
-              <a href="/assets/images/factory-03.png" class="glightbox h-full w-full block" data-gallery="project-gallery-mobile">
-                <img src="/assets/images/factory-03.png" alt="Gallery 4" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+            <div
+              class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+            >
+              <a
+                href="/assets/images/factory-03.png"
+                class="glightbox h-full w-full block"
+                data-gallery="project-gallery-mobile"
+              >
+                <img
+                  src="/assets/images/factory-03.png"
+                  alt="Gallery 4"
+                  onerror="this.src = '/assets/images/factory-01.jpg'"
+                  class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                />
               </a>
             </div>
           </div>
           <!-- Slide 5 -->
           <div class="swiper-slide h-[300px]">
-            <div class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
-              <a href="/assets/images/factory-04.jpg" class="glightbox h-full w-full block" data-gallery="project-gallery-mobile">
-                <img src="/assets/images/factory-04.jpg" alt="Gallery 5" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+            <div
+              class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer"
+            >
+              <a
+                href="/assets/images/factory-04.jpg"
+                class="glightbox h-full w-full block"
+                data-gallery="project-gallery-mobile"
+              >
+                <img
+                  src="/assets/images/factory-04.jpg"
+                  alt="Gallery 5"
+                  onerror="this.src = '/assets/images/factory-01.jpg'"
+                  class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
+                />
               </a>
             </div>
           </div>
         </div>
         <!-- Pagination Dots -->
-        <div class="swiper-pagination projects-pagination flex justify-center !bottom-0 !mt-2"></div>
+        <div
+          class="swiper-pagination projects-pagination flex justify-center !bottom-0 !mt-2"
+        ></div>
       </div>
     </div>
   </div>
-</section>
-<!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/detail-gallery.html uid=c5a1f8e2 --> <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/detail-specs.html uid=e7a3b9c4 -->
-<section class="py-20 md:py-32 bg-neutral-2">
+</div>
+<!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/detail-gallery.html uid=c5a1f8e2 -->
+ <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/detail-specs.html uid=e7a3b9c4 -->
+<div class="py-16 lg:py-24 bg-neutral-2">
   <div class="w-[85%] max-w-[1000px] mx-auto">
     <!-- Section Header -->
-    <div class="mb-16 md:mb-24" data-aos="fade-up">
+    <div class="mb-10 lg:mb-16" data-aos="fade-up">
       <p
         class="text-[12px] font-bold text-primary opacity-60 uppercase tracking-widest mb-4"
       >
         Vật Liệu & Công Nghệ
       </p>
-      <h2 class="text-3xl md:text-4xl font-arima font-medium text-primary mb-6">
+      <h2
+        class="text-[30px] lg:text-[40px] font-arima font-medium text-primary mb-6"
+      >
         Chi tiết kỹ thuật công trình
       </h2>
     </div>
@@ -1007,7 +1127,7 @@
             >
               Hệ Thống Mặt Dán
             </h3>
-            <p class="text-base text-primary/80 leading-relaxed font-light">
+            <p class="text-[15px] text-primary/80 leading-relaxed font-light">
               Mặt dán tòa nhà được sử dụng các loại gạch gốm sứ cao cấp từ Bát
               Tràng, với độ chịu nước cao, chống thấm nước tối ưu. Các gạch được
               sắp xếp theo mẫu hình học độc đáo, tạo nên hiệu ứng thị giác nổi
@@ -1021,7 +1141,7 @@
             >
               Hệ Thống Thông Gió
             </h3>
-            <p class="text-base text-primary/80 leading-relaxed font-light">
+            <p class="text-[15px] text-primary/80 leading-relaxed font-light">
               Sử dụng gạch thông gió 300×300 mm, đảm bảo không khí lưu thông tự
               nhiên, giảm chi phí năng lượng điều hòa. Thiết kế thông gió thông
               minh cân bằng ánh sáng tự nhiên và độ riêng tư.
@@ -1034,7 +1154,7 @@
             >
               Nội Thất Trang Trí
             </h3>
-            <p class="text-base text-primary/80 leading-relaxed font-light">
+            <p class="text-[15px] text-primary/80 leading-relaxed font-light">
               Các chi tiết trang trí nội thất bao gồm ngói thơm, linh vật phong
               thủy, và gạch trang trí truyền thống, mang lại không gian ấm cúng
               đầy nhân văn.
@@ -1115,26 +1235,30 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 <!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/detail-specs.html uid=e7a3b9c4 -->
 
-</section>
+</div>
 <!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/detail-content.html uid=f2c3a8d1 -->
 
       <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/detail-related.html uid=f8b2c9d3 -->
-      <section class="py-20 md:py-32 bg-white">
-        <div class="w-full max-w-[1320px] mx-auto px-6 md:px-8">
+      <section class="py-16 lg:py-24 bg-white">
+        <div class="w-[85%] max-w-[1320px] mx-auto">
           <!-- Section Header -->
-          <div class="mb-16 md:mb-24" data-aos="fade-up">
+          <div class="mb-10 lg:mb-16" data-aos="fade-up">
             <p
               class="text-[12px] font-bold text-primary opacity-60 uppercase tracking-widest mb-4"
             >
               Khám Phá Thêm
             </p>
-            <h2 class="text-3xl md:text-4xl font-arima font-medium text-primary mb-6">
+            <h2
+              class="text-[30px] lg:text-[40px] font-arima font-medium text-primary mb-6"
+            >
               Dự án liên quan
             </h2>
-            <p class="max-w-2xl text-base text-primary/80 leading-relaxed font-light">
+            <p
+              class="max-w-2xl text-[15px] text-primary/80 leading-relaxed font-light"
+            >
               Những công trình khác sử dụng các sản phẩm gốm sứ Thanh Hải, mang lại
               cảm hứng thiết kế độc đáo.
             </p>
@@ -1267,63 +1391,62 @@
         </div>
       </section>
       <!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/detail-related.html uid=f8b2c9d3 -->
-      <div class="pb-8">
-        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
-        <!-- FAQ 2 Section Partial -->
-        <!-- GSXD-SECTION:BEGIN file=components/products/faq2.html tag=section idx=001 uid=5216d5e2 -->
-        <section
-          class="w-full pb-0 md:pb-8 lg:pb-10 pt-8 md:pt-14 overflow-hidden"
-        >
-          <div
-            class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 lg:gap-16 items-center"
-          >
-            <!-- Left: Image -->
-            <div class="w-full aspect-square" data-aos="fade-right">
-              <img
-                src="/assets/images/faq2.png"
-                alt="FAQ Image"
-                class="w-full h-full object-cover"
-              />
-            </div>
-        
-            <!-- Right: Content -->
-            <div class="flex flex-col items-start" data-aos="fade-left">
-              <p
-                class="text-[#262626] text-[14px] md:text-base font-extrabold uppercase tracking-[0.1em] leading-[20px] md:leading-normal mb-2.5 md:mb-8"
-              >
-                Bạn có thắc mắc?
-              </p>
-              <h2 class="text-[#2E2F2A] md:text-primary text-[24px] md:text-3xl lg:text-4xl font-normal md:font-semibold leading-[37.5px] md:leading-tight mb-5 md:mb-0">
-                Xem các câu hỏi thường gặp
-              </h2>
-              <p class="text-[#262626]/70 text-[14px] md:text-base font-normal leading-[22.75px] md:leading-relaxed mb-5 md:mb-10">
-                Khám phá danh sách các câu hỏi thường gặp và câu trả lời của chúng tôi.
-              </p>
-              <a
-                href="/faq/"
-                class="inline-block border-0 md:border md:border-black/40 px-0 md:px-5 py-0 md:py-2 text-[#262626] text-[16px] md:text-xs lg:text-sm font-semibold md:font-normal leading-none md:leading-normal hover:text-secondary md:hover:bg-secondary md:hover:text-white md:hover:border-secondary transition-all"
-              >
-                (FAQ) Câu hỏi thường gặp
-              </a>
-            </div>
-          </div>
-        </section>
-        <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
-        
-        
-        
-      </div>
+      <div class="py-16 lg:py-24"><!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
+<!-- FAQ 2 Section Partial -->
+<!-- GSXD-SECTION:BEGIN file=components/products/faq2.html tag=section idx=001 uid=5216d5e2 -->
+<section
+  class="w-full pb-0 md:pb-8 lg:pb-10 pt-8 md:pt-14 overflow-hidden"
+>
+  <div
+    class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 lg:gap-16 items-center"
+  >
+    <!-- Left: Image -->
+    <div class="w-full aspect-square" data-aos="fade-right">
+      <img
+        src="/assets/images/faq2.png"
+        alt="FAQ Image"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- Right: Content -->
+    <div class="flex flex-col items-start" data-aos="fade-left">
+      <p
+        class="text-[#262626] text-[14px] md:text-base font-extrabold uppercase tracking-[0.1em] leading-[20px] md:leading-normal mb-2.5 md:mb-8"
+      >
+        Bạn có thắc mắc?
+      </p>
+      <h2 class="text-[#2E2F2A] md:text-primary text-[24px] md:text-3xl lg:text-4xl font-normal md:font-semibold leading-[37.5px] md:leading-tight mb-5 md:mb-0">
+        Xem các câu hỏi thường gặp
+      </h2>
+      <p class="text-[#262626]/70 text-[14px] md:text-base font-normal leading-[22.75px] md:leading-relaxed mb-5 md:mb-10">
+        Khám phá danh sách các câu hỏi thường gặp và câu trả lời của chúng tôi.
+      </p>
+      <a
+        href="/faq/"
+        class="inline-block border-0 md:border md:border-black/40 px-0 md:px-5 py-0 md:py-2 text-[#262626] text-[16px] md:text-xs lg:text-sm font-semibold md:font-normal leading-none md:leading-normal hover:text-secondary md:hover:bg-secondary md:hover:text-white md:hover:border-secondary transition-all"
+      >
+        (FAQ) Câu hỏi thường gặp
+      </a>
+    </div>
+  </div>
+</section>
+<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
+
+
+
+</div>
       <!-- CTA Section -->
-      <section class="py-20 md:py-32 bg-primary text-white">
+      <section class="py-16 lg:py-24 bg-primary text-white">
         <div class="w-[85%] max-w-[1000px] mx-auto text-center">
           <h2
-            class="text-3xl md:text-5xl font-arima font-medium mb-6"
+            class="text-[30px] lg:text-[40px] font-arima font-medium mb-10 lg:mb-16"
             data-aos="fade-up"
           >
             Bạn có dự án tương tự?
           </h2>
           <p
-            class="text-lg opacity-90 mb-10 max-w-2xl mx-auto font-light"
+            class="text-[15px] opacity-90 mb-10 lg:mb-16 max-w-2xl mx-auto font-light leading-relaxed"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -1688,8 +1811,8 @@
             640: {
               slidesPerView: 2.15,
               spaceBetween: 20,
-            }
-          }
+            },
+          },
         });
       }
     </script>
