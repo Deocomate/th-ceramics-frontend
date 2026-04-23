@@ -1266,7 +1266,7 @@
             <img
               src="/assets/images/gtt-process.svg"
               alt="Công đoạn chế tác"
-              class="w-full max-w-[95%] h-auto relative z-10 drop-shadow-sm"
+              class="w-full md:max-w-[95%] h-auto relative z-10 drop-shadow-sm scale-[1.1]"
             />
           </div>
         </div>
@@ -1686,13 +1686,28 @@
           </div>
         </div>
 
-        <div class="mt-4 md:mt-6 flex justify-end" data-aos="fade-up">
-          <a
-            href="/projects/"
-            class="font-archivo text-sm md:text-base font-medium uppercase tracking-[0.08em] text-secondary transition-opacity duration-300 hover:opacity-70"
-          >
-            Xem thêm
-          </a>
+        <!-- Pagination Dots -->
+        <div class="flex justify-center gap-2 mt-6 md:hidden">
+          <button
+            class="project-dot active w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="0"
+          ></button>
+          <button
+            class="project-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="1"
+          ></button>
+          <button
+            class="project-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="2"
+          ></button>
+          <button
+            class="project-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="3"
+          ></button>
+          <button
+            class="project-dot w-2 h-2 rounded-full transition-all duration-300 cursor-pointer"
+            data-index="4"
+          ></button>
         </div>
       </section>
 
@@ -1747,7 +1762,8 @@
               <button
                 class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
               >
-                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+                <span
+                  class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
                   >Showroom của Gốm sứ Thanh Hải ở đâu?</span
                 >
                 <!-- Icon Mũi tên Dropdown -->
@@ -1792,7 +1808,8 @@
               <button
                 class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
               >
-                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+                <span
+                  class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
                   >Tôi có thể đặt màu sắc và mẫu mã theo yêu cầu riêng không?</span
                 >
                 <span
@@ -1829,7 +1846,8 @@
               <button
                 class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
               >
-                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+                <span
+                  class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
                   >Tôi có thể tham quan xưởng sản xuất hay không?</span
                 >
                 <span
@@ -1866,7 +1884,8 @@
               <button
                 class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
               >
-                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+                <span
+                  class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
                   >Chi phí vận chuyển và phạm vi giao hàng như thế nào?</span
                 >
                 <span
@@ -1903,7 +1922,8 @@
               <button
                 class="faq-button w-full flex justify-between items-center text-left font-bold text-textPrimary hover:text-secondary transition-colors focus:outline-none"
               >
-                <span class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
+                <span
+                  class="text-[14px] leading-[21px] md:text-[18px] md:leading-normal pr-4"
                   >Đặc tính thủ công của ngói âm dương cần lưu ý gì?</span
                 >
                 <span
@@ -1946,10 +1966,6 @@
         </div>
         
         <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/faq-content.html uid=1e3c4970 -->
-        
-        
-        
-        
       </section>
     </main>
     <!-- GSXD-PARTIAL:BEGIN file=products/gach-trang-tri/index.html include=components/footer idx=006 uid=6e9190c9 -->
@@ -2212,7 +2228,7 @@
       </div>
     
       <div
-        class="md:hidden fixed right-4 bottom-4 z-[60] flex flex-col items-center gap-3"
+        class="md:hidden fixed right-3 bottom-20 sm:right-4 sm:bottom-24 z-[60] flex flex-col items-center gap-3"
         aria-label="Hành động nhanh"
       >
         <button
@@ -2254,9 +2270,6 @@
       </div>
     </footer>
     <!-- GSXD-DEBUG:END type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
-    
-    
-    
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -2298,7 +2311,7 @@
         var finalSlideCount = wrapperEl.children.length;
         var initialSlide = finalSlideCount > 2 ? 2 : 0;
 
-        new Swiper(projectShowcaseEl, {
+        var projectShowcaseSwiper = new Swiper(projectShowcaseEl, {
           slidesPerView: "auto",
           slidesPerGroup: 1,
           centeredSlides: true,
@@ -2345,6 +2358,26 @@
             },
           },
         });
+
+        // Project showcase dots handler
+        var projectDots = document.querySelectorAll(".project-dot");
+        if (projectDots.length) {
+          projectShowcaseSwiper.on("slideChange", function () {
+            // Get the actual original slide index (accounting for cloned slides)
+            var realIndex = projectShowcaseSwiper.realIndex || 0;
+            var dotIndex = realIndex % originalSlides.length;
+            projectDots.forEach((dot, index) => {
+              dot.classList.toggle("active", index === dotIndex);
+            });
+          });
+
+          projectDots.forEach((dot) => {
+            dot.addEventListener("click", () => {
+              var index = parseInt(dot.dataset.index);
+              projectShowcaseSwiper.slideToLoop(index);
+            });
+          });
+        }
       });
     </script>
     <script>
@@ -2376,6 +2409,16 @@
         window.addEventListener("resize", initArtValueSwiper);
       });
     </script>
+    <!-- Project Dots Style -->
+    <style>
+      .project-dot {
+        background-color: rgba(199, 110, 0, 0.3);
+      }
+      .project-dot.active {
+        background-color: #c76e00;
+        width: 8px;
+      }
+    </style>
     <script>
   document.addEventListener("DOMContentLoaded", () => {
     // 0. Sticky header scroll effect (home page only)

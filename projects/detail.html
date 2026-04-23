@@ -1,106 +1,33 @@
+<!-- Tệp: projects/detail.html -->
 <!doctype html>
-<html lang="vi">
+<!-- GSXD-DEBUG:BEGIN type=PAGE file=projects/detail.html uid=a9f2e6b1 -->
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ngói Bò Nóc - Thanh Hải Ceramics</title>
+    <title>Chi tiết dự án - Thanh Hải Ceramics</title>
+    <meta
+      name="description"
+      content="Khám phá chi tiết công trình Thanh Hải Plaza - một biểu tượng kiến trúc bền vững với gốm sứ cao cấp."
+    />
     <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap");
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <style>
-  /* ── Product Main Swiper: Mobile Dots Pagination ─────────────────────── */
-  .product-main-pagination .swiper-pagination-bullet {
-    width: 6px;
-    height: 6px;
-    background: white;
-    opacity: 0.5;
-    margin: 0 !important;
-    border-radius: 9999px;
-    transition: all 0.3s ease;
-    display: inline-block;
-    flex-shrink: 0;
-  }
-  .product-main-pagination .swiper-pagination-bullet-active {
-    width: 10px;
-    background: #C76E00;
-    opacity: 1;
-  }
-</style>
-
-<style>
-  .value-image-item {
-    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .value-image-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
-  }
-
-  .value-image-item:hover,
-  .value-image-item.active {
-    z-index: 20;
-    width: 110px !important;
-  }
-
-  @media (min-width: 768px) {
-    .value-image-item:hover,
-    .value-image-item.active {
-      width: 240px !important;
-    }
-  }
-</style>
-
-  <style>
-    /* Native scrollbar hidden - JS scroll indicator handles display */
-
-    .compare-cell-text {
-      margin-top: 27px;
-      margin-bottom: 7px;
-      padding-left: 0;
-      text-align: left;
-      text-indent: 0;
-    }
-
-    .mobile-compare-label {
-      position: absolute;
-      top: 5px;
-      left: 0;
-      color: #2e2f2a;
-      font-size: 12px;
-      font-family: Archivo, sans-serif;
-      font-weight: 700;
-      line-height: 21px;
-      word-wrap: break-word;
-      white-space: nowrap;
-    }
-
-    @media (min-width: 768px) {
-      .mobile-compare-row {
-        height: auto;
-      }
-    }
-  </style>
-  
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    
     <script type="module" crossorigin src="/assets/js/app.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/css/main.css">
   </head>
   <body
-    data-page="products"
-    class="min-h-screen flex flex-col bg-background-secondary"
+    data-page="project-detail"
+    class="min-h-screen flex flex-col bg-background-secondary overflow-x-hidden"
   >
     <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/header.html uid=0505a17c -->
     <!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=header idx=001 uid=038b0028 -->
@@ -778,1014 +705,652 @@
     
     
     
-
-    <main class="flex-grow bg-background-secondary pb-14 md:pb-20">
-      <!-- Top Banner for Detail -->
-      <section class="relative w-full hidden md:block">
-        <div
-          class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]"
-        >
-          <img
-            src="/assets/images/pk-banner.png"
-            alt="Phụ Kiện Ngói"
-            class="w-full h-full object-cover"
-          />
-          <div
-            class="absolute inset-0 flex flex-col items-center pt-[5%] md:pt-[5%] lg:pt-[5%]"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div
-              class="text-center text-white px-4 w-[85%] max-w-[1320px] mx-auto"
-            >
-              <h1
-                class="font-sans text-[26px] md:text-4xl lg:text-[44px] font-bold uppercase mb-2 md:mb-6 drop-shadow-md"
-              >
-                PHỤ KIỆN NGÓI
-              </h1>
-              <p
-                class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-none tracking-wide drop-shadow-sm text-white/95"
-              >
-                Nâng niu nét chạm trổ, sắt son cùng thời gian
-              </p>
-              <p
-                class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-none tracking-wide drop-shadow-sm text-white/95"
-              >
-                Phụ kiện Thanh Hải: Điểm nhấn tâm linh, hoàn thiện dáng hình
-                kiến trúc Việt
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sub Breadcrumb -->
-      <div class="hidden md:block w-[85%] max-w-[1320px] mx-auto py-8">
-        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/breadcrumb.html uid=fbcaa7d9 -->
-        <!-- GSXD-BLOCK:BEGIN file=components/products/breadcrumb.html tag=p idx=001 uid=a6ea24f9 -->
-        <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
-          <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
-          <span class="mx-1">/</span>
-          <a href="/products/phu-kien-ngoi/" class="hover:text-secondary transition-colors"
-            >Sản phẩm</a
-          >
-          <span class="mx-1">/</span>
-          <span class="text-primary font-semibold border-primary"
-            >PHỤ KIỆN
-                NGÓI</span
-          >
-        </p>
-        <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/breadcrumb.html uid=fbcaa7d9 -->
-        
-        
-        
-        
-        <hr class="border-t border-black/10 mt-4 w-full" />
-      </div>
-
-      <!-- Product Detail Container -->
-      <section
-        class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-0 md:pb-10 lg:pb-24 pt-0 md:pt-4"
-      >
-        
-        <!-- Left: Images -->
-        <div class="flex flex-col md:gap-5 lg:col-span-3">
-          <!-- Main Image Swiper -->
-          <div
-            class="w-full aspect-square bg-white md:shadow-lg relative overflow-hidden group swiper product-main-swiper"
-          >
-            <div class="swiper-wrapper">
-              <div class="swiper-slide w-full h-full">
-                <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 1" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
-              </div>
-              <div class="swiper-slide w-full h-full">
-                <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 2" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
-              </div>
-              <div class="swiper-slide w-full h-full">
-                <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 3" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
-              </div>
-              <div class="swiper-slide w-full h-full">
-                <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 4" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
-              </div>
-              <div class="swiper-slide w-full h-full">
-                <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 5" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
-              </div>
-              <div class="swiper-slide w-full h-full">
-                <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 6" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
-              </div>
-              <div class="swiper-slide w-full h-full">
-                <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 7" class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
-              </div>
-            </div>
-        
-            <!-- Mobile Dots Pagination (Exact Figma Dimensions) -->
-            <div class="md:hidden absolute bottom-[13px] left-1/2 -translate-x-1/2 z-10">
-              <div
-                class="product-main-pagination h-[17px] px-[21px] bg-[#C76E00]/10 rounded-[17px] flex items-center justify-center gap-[14px]"
-              ></div>
-            </div>
-          </div>
-        
-          <!-- Thumbnails (Desktop only) -->
-          <div class="hidden md:block w-full mt-2 overflow-hidden swiper product-thumb-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-              <div class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity"></div>
-              <div class="swiper-slide aspect-square bg-gradient-to-r from-[#5C2321] to-[#EFE4DE] cursor-pointer opacity-90 relative"></div>
-            </div>
-          </div>
-        </div>
-        
-        
-        
-        <!-- Right: Info -->
-        <div
-          class="flex flex-col lg:col-span-2 w-[85%] md:w-full mx-auto md:mt-0 pt-[18px] md:pt-0"
-        >
-          <h2
-            class="text-xl md:text-2xl lg:text-[32px] font-semibold text-secondary uppercase !leading-normal pb-1 tracking-tight"
-          >
-            Ngói bò nóc chữ vạn
-          </h2>
-
-          <div
-            class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] mt-1 md:mt-0"
-          >
-            <span
-              class="text-[#656663] md:text-primary font-light md:font-normal"
-              >Mã SP:</span
-            >
-            <span class="text-[#656663] md:text-primary font-semibold"
-              >THC 100-GDS</span
-            >
-          </div>
-
-          <p
-            class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal mt-0.5 md:mt-0"
-          >
-            675.000 đ/m2
-          </p>
-
-          <!-- Separator -->
-          <hr
-            class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full hidden md:block"
-          />
-          <hr class="border-t border-black/10 w-full md:hidden mb-4" />
-
-          <ul
-            class="list-disc pl-5 space-y-0 md:space-y-4 mb-[15px] md:mb-16 text-[#2E2F2A] md:text-primary font-medium text-[14px] md:text-lg lg:text-xl leading-[24px] md:leading-relaxed"
-          >
-            <li>Timeless beauty to be treasured</li>
-            <li>High-quality and classic design, suitable for decoration</li>
-            <li>Beginner friendly and improves intelligence</li>
-          </ul>
-
-          <!-- Variants -->
-          <div
-            class="flex flex-wrap gap-3.5 md:gap-4 mb-6 md:mb-16 w-full xl:w-[95%]"
-          >
-            <button
-              class="w-[54%] md:w-auto md:min-w-[240px] border border-black/20 text-primary uppercase text-[10px] md:text-[13px] font-medium md:py-3 py-2 px-1 text-center hover:border-black/50 hover:bg-black/5 transition-all outline-none flex items-center justify-center leading-tight"
-            >
-              COMBO NGÓI + PHỤ KIỆN CỠ NHỎ
-            </button>
-            <button
-              class="flex-1 md:w-auto md:min-w-[200px] border border-black/20 text-primary uppercase text-[10px] md:text-[13px] font-medium md:py-3 py-2 px-1 text-center hover:border-black/50 hover:bg-black/5 transition-all outline-none flex items-center justify-center leading-tight"
-            >
-              NGÓI BÒ CHỮ VẠN CỠ NHỎ
-            </button>
-            <button
-              class="w-[54%] md:w-auto md:min-w-[240px] border border-black/20 text-primary uppercase text-[10px] md:text-[13px] font-medium md:py-3 py-2 px-1 text-center hover:border-black/50 hover:bg-black/5 transition-all outline-none flex items-center justify-center leading-tight"
-            >
-              COMBO NGÓI + PHỤ KIỆN CỠ LỚN
-            </button>
-            <button
-              class="flex-1 md:w-auto md:min-w-[200px] border border-black/20 text-primary uppercase text-[10px] md:text-[13px] font-medium md:py-3 py-2 px-1 text-center hover:border-black/50 hover:bg-black/5 transition-all outline-none flex items-center justify-center leading-tight"
-            >
-              NGÓI BÒ CHỮ VẠN CỠ LỚN
-            </button>
-          </div>
-
-          <!-- Actions -->
-          <div class="flex flex-wrap items-center gap-6 mb-12">
-            <!-- Quantity -->
-            <div
-              class="flex items-center gap-[16px] md:gap-4 text-[#2E2F2A] md:text-primary pl-0.5 md:pl-0"
-            >
-              <button
-                class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors"
-              >
-                -
-              </button>
-              <div
-                class="w-12 h-12 flex items-center justify-center rounded-full text-[16px] md:text-base font-normal shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:shadow-sm outline outline-1 outline-black/40 outline-offset-[-1px] md:outline-none md:border md:border-black/40 bg-transparent"
-              >
-                1
-              </div>
-              <button
-                class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors"
-              >
-                +
-              </button>
-            </div>
-
-            <!-- Add to cart -->
-            <button
-              class="w-full md:w-auto bg-[#C16A00] hover:bg-secondary text-[#EFE4DE] px-8 md:px-12 py-4 font-semibold md:transition-colors md:shadow-md rounded-[2px] flex items-center justify-center text-[14px] md:text-sm tracking-[0.28px] md:tracking-normal md:ml-4"
-            >
-              THÊM VÀO GIỎ HÀNG
-            </button>
-          </div>
-
-          <!-- Contacts -->
-          <div class="hidden md:flex flex-col gap-5 mt-2">
-            <!-- Hotline -->
-            <div class="flex items-center gap-5">
-              <div
-                class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10"
-              >
-                <img
-                  src="/assets/images/phone-call.svg"
-                  alt="Phone Call"
-                  class="w-6 h-6"
-                />
-              </div>
-              <div>
-                <p class="text-base text-secondary">Đặt hàng ngay</p>
-                <p class="text-secondary font-semibold text-lg md:text-xl">
-                  Hotline: 0966 55 8808
-                </p>
-              </div>
-            </div>
-            <!-- Zalo -->
-            <div class="flex items-center gap-5">
-              <div
-                class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10"
-              >
-                <img
-                  src="/assets/images/zalo.png"
-                  alt="Zalo"
-                  class="w-[80%] h-[80%] object-cover"
-                />
-              </div>
-              <div>
-                <p class="text-secondary font-semibold text-lg md:text-xl">
-                  Chat với chúng tôi
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Product Description Section -->
-      <section
-        class="w-[85%] max-w-[1320px] mx-auto pb-16 lg:pb-24 pt-0 md:pt-4"
-      >
-        <!-- Section Title -->
-        <div class="text-center mb-8 md:mb-16" data-aos="fade-up">
-          <h3
-            class="text-[20px] md:text-3xl font-semibold text-secondary uppercase drop-shadow-sm"
-          >
-            Mô tả sản phẩm
-          </h3>
-        </div>
-
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center"
-        >
-          <!-- Left Image -->
-          <div class="flex items-center justify-center" data-aos="fade-right">
-            <img
-              src="/assets/images/gach-bat-size-1.png"
-              alt="Mô tả kích thước"
-              class="w-full max-w-[550px] object-contain"
-            />
-          </div>
-          <!-- Right List -->
-          <div class="flex flex-col justify-center" data-aos="fade-left">
-            <ul
-              class="list-disc pl-5 md:pl-16 space-y-3 md:space-y-4 text-primary font-medium text-[15px] md:text-[20px] leading-relaxed"
-            >
-              <li>Timeless beauty to be treasured</li>
-              <li>High-quality and classic design, suitable for decoration</li>
-              <li>Beginner friendly and improves intelligence</li>
-              <li>Timeless beauty to be treasured</li>
-              <li>High-quality and classic design, suitable for decoration</li>
-              <li>Beginner friendly and improves intelligence</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- DẤU ẤN TRÊN NHỮNG CÔNG TRÌNH SECTION -->
+    <main class="flex-grow">
+      <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/detail-hero.html uid=d7e91f2a -->
 <section
-  class="w-full pb-8 md:pb-16 bg-background-secondary overflow-hidden"
-  data-aos="fade-up"
+  class="w-full flex flex-col-reverse lg:flex-row min-h-[500px] md:h-[60vh] lg:h-[70vh] bg-neutral-2 overflow-hidden"
 >
-  <div class="max-w-[1920px] mx-auto mt-1">
-    <h2
-      class="text-[20px] md:text-3xl font-semibold text-secondary text-center uppercase mb-8 md:mb-20"
-    >
-      DẤU ẤN TRÊN NHỮNG CÔNG TRÌNH
-    </h2>
+  <!-- Left Half: Image -->
+  <div
+    class="w-full lg:w-1/2 h-[400px] lg:h-full relative overflow-hidden"
+    data-aos="fade-right"
+  >
+    <img
+      src="/assets/images/factory-03.png"
+      alt="Project Hero"
+      class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+      onerror="this.src = '/assets/images/factory-01.jpg'"
+    />
+  </div>
 
-    <div class="relative px-4 md:px-0">
-      <!-- Swiper Container -->
-      <div class="swiper projects-slider overflow-visible">
-        <div class="swiper-wrapper">
+  <!-- Right Half: Text Content -->
+  <div
+    class="w-full lg:w-1/2 flex items-center justify-center p-8 md:p-16 lg:p-24 bg-white"
+    data-aos="fade-left"
+  >
+    <div class="max-w-md flex flex-col items-start gap-6">
+      <div>
+        <p
+          class="text-[12px] font-bold text-primary opacity-60 uppercase tracking-widest mb-3"
+        >
+          Dự Án Nổi Bật
+        </p>
+        <h1
+          class="text-3xl md:text-5xl xl:text-4xl font-arima text-primary leading-tight tracking-wide"
+        >
+          Tòa nhà văn phòng Thanh Hải Plaza
+        </h1>
+      </div>
+      <p
+        class="text-base text-primary opacity-80 leading-relaxed text-left font-light"
+      >
+        Một công trình kiến trúc độc đáo kết hợp gốm sứ truyền thống với thiết
+        kế hiện đại, tạo nên không gian làm việc sang trọng và bền vững.
+      </p>
+      <div class="flex gap-8 pt-4 text-sm">
+        <div>
+          <p
+            class="font-bold text-primary uppercase mb-1 text-[11px] opacity-60"
+          >
+            Địa điểm
+          </p>
+          <p class="text-primary font-arima text-lg">Hà Nội</p>
+        </div>
+        <div>
+          <p
+            class="font-bold text-primary uppercase mb-1 text-[11px] opacity-60"
+          >
+            Năm
+          </p>
+          <p class="text-primary font-arima text-lg">2023</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/detail-hero.html uid=d7e91f2a -->
+ <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/detail-content.html uid=f2c3a8d1 -->
+<section class="pt-10 md:py-32 bg-neutral-2">
+  <div class="w-[85%] max-w-[1000px] mx-auto flex flex-col mb-10">
+    <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/detail-content-overview.html uid=b4d2e7f3 -->
+    <!-- Top Row: Text left, Image right -->
+    <div
+      class="flex flex-col md:flex-row gap-10 md:gap-24 items-start"
+      data-aos="fade-up"
+    >
+      <div class="w-full md:w-1/2 flex flex-col pt-0 md:pt-6">
+        <p
+          class="text-[12px] font-bold text-primary opacity-60 uppercase tracking-widest mb-4"
+        >
+          Câu Chuyện Dự Án
+        </p>
+        <h2
+          class="text-3xl md:text-4xl font-arima font-medium text-primary mb-4 md:mb-6 leading-tight"
+        >
+          Kiến trúc bền vững với gốm sứ
+        </h2>
+        <p
+          class="text-[14px] md:w-[95%] text-primary/80 leading-[1.8] text-left md:text-justify font-light md:font-normal"
+        >
+          Thanh Hải Plaza được xây dựng với mục tiêu tạo nên một biểu tượng kiến
+          trúc xanh tại Hà Nội. Toàn bộ mặt ngoài tòa nhà sử dụng các loại gạch gốm
+          sứ độc đáo, không chỉ mang lại vẻ ngoài nổi bật mà còn đảm bảo độ bền lâu
+          dài trong 50+ năm.
+        </p>
+        <p
+          class="text-[14px] md:w-[95%] text-primary/80 leading-[1.8] text-left md:text-justify font-light md:font-normal mt-4"
+        >
+          Quá trình lựa chọn từng loại gạch, từng chi tiết trang trí mất gần một năm
+          để đạt được sự hoàn hảo. Đội ngũ kiến trúc sư đã kỳ công phối hợp các sản
+          phẩm gốm sứ cao cấp với thiết kế hiện đại, tạo nên không gian làm việc vừa
+          sang trọng vừa thân thiện với môi trường.
+        </p>
+      </div>
+      <div class="w-full md:w-1/2">
+        <img
+          src="/assets/images/factory-04.jpg"
+          alt="Project Detail"
+          class="w-full h-auto object-cover"
+          onerror="this.src = '/assets/images/factory-01.jpg'"
+        />
+      </div>
+    </div>
+    
+    <!-- Middle Row: Image left, Details right -->
+    <div
+      class="flex flex-col md:flex-row gap-10 md:gap-24 items-start md:items-center mt-10 md:mt-20"
+      data-aos="fade-up"
+    >
+      <div class="w-full md:w-1/2">
+        <img
+          src="/assets/images/factory-01.jpg"
+          alt="Project Process"
+          class="w-full h-auto object-cover border border-black/5"
+        />
+      </div>
+      <div class="w-full md:w-1/2 flex flex-col gap-6 md:pl-4">
+        <div class="flex flex-col gap-2">
+          <span
+            class="text-[12px] font-extrabold text-primary uppercase tracking-widest opacity-60"
+            >Kiến Trúc Sư</span
+          >
+          <p class="text-lg md:text-xl font-arima text-primary">
+            Công ty AIA Architecture
+          </p>
+        </div>
+        <div class="flex flex-col gap-2">
+          <span
+            class="text-[12px] font-extrabold text-primary uppercase tracking-widest opacity-60"
+            >Tổng Diện Tích</span
+          >
+          <p class="text-lg md:text-xl font-arima text-primary">85,000 m²</p>
+        </div>
+        <div class="flex flex-col gap-2">
+          <span
+            class="text-[12px] font-extrabold text-primary uppercase tracking-widest opacity-60"
+            >Phong Cách</span
+          >
+          <p class="text-lg md:text-xl font-arima text-primary">
+            Modern Minimalism
+          </p>
+        </div>
+        <div class="flex flex-col gap-2">
+          <span
+            class="text-[12px] font-extrabold text-primary uppercase tracking-widest opacity-60"
+            >Tổng Kinh Phí</span
+          >
+          <p class="text-lg md:text-xl font-arima text-primary">450 Tỷ VNĐ</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom Row: Full width Image -->
+    <div class="w-full mx-auto mt-10 md:mt-20" data-aos="fade-up">
+      <img
+        src="/assets/images/factory-03.png"
+        alt="Project Full View"
+        class="w-full h-auto object-cover"
+        onerror="this.src = '/assets/images/factory-01.jpg'"
+      />
+    </div>
+    <!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/detail-content-overview.html uid=b4d2e7f3 -->
+  </div>
+  <!-- Tệp: projects/partials/detail-gallery.html -->
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/detail-gallery.html uid=c5a1f8e2 -->
+<section class="py-10 md:py-32 bg-white">
+  <div class="w-full max-w-[1320px] mx-auto px-6 md:px-8">
+    <!-- Section Title -->
+    <div class="mb-16 md:mb-24" data-aos="fade-up">
+      <p
+        class="text-[12px] font-bold text-primary opacity-60 uppercase tracking-widest mb-4"
+      >
+        Bộ Sưu Tập Hình Ảnh
+      </p>
+      <h2 class="text-3xl md:text-4xl font-arima font-medium text-primary mb-6">
+        Không gian đa chiều
+      </h2>
+      <p class="max-w-2xl text-base text-primary/80 leading-relaxed font-light">
+        Từ mặt tiền kiến trúc, không gian sảnh đến chi tiết trang trí nội thất,
+        mỗi góc của Thanh Hải Plaza đều được thiết kế để phản ánh sự tinh tế và
+        bền vững.
+      </p>
+    </div>
+
+    <!-- Desktop Grid Gallery (Chỉ hiển thị trên md trở lên) -->
+    <div class="hidden md:grid grid-cols-4 grid-rows-2 gap-4 h-[500px] lg:h-[600px]" data-aos="fade-up">
+      <!-- Slide 1 (Ảnh To Nhất) -->
+      <div class="col-span-2 row-span-2 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+        <a href="/assets/images/factory-03.png" class="glightbox h-full w-full block" data-gallery="project-gallery-desktop">
+          <img src="/assets/images/factory-03.png" alt="Gallery 1" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+        </a>
+      </div>
+      <!-- Slide 2 -->
+      <div class="col-span-1 row-span-1 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+        <a href="/assets/images/factory-04.jpg" class="glightbox h-full w-full block" data-gallery="project-gallery-desktop">
+          <img src="/assets/images/factory-04.jpg" alt="Gallery 2" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+        </a>
+      </div>
+      <!-- Slide 3 -->
+      <div class="col-span-1 row-span-1 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+        <a href="/assets/images/factory-01.jpg" class="glightbox h-full w-full block" data-gallery="project-gallery-desktop">
+          <img src="/assets/images/factory-01.jpg" alt="Gallery 3" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+        </a>
+      </div>
+      <!-- Slide 4 -->
+      <div class="col-span-1 row-span-1 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+        <a href="/assets/images/factory-03.png" class="glightbox h-full w-full block" data-gallery="project-gallery-desktop">
+          <img src="/assets/images/factory-03.png" alt="Gallery 4" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+        </a>
+      </div>
+      <!-- Slide 5 -->
+      <div class="col-span-1 row-span-1 h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+        <a href="/assets/images/factory-04.jpg" class="glightbox h-full w-full block" data-gallery="project-gallery-desktop">
+          <img src="/assets/images/factory-04.jpg" alt="Gallery 5" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Swiper Gallery (Chỉ hiển thị trên mobile dưới md) -->
+    <div class="md:hidden block" data-aos="fade-up">
+      <div class="swiper detail-gallery-swiper relative">
+        <div class="swiper-wrapper pb-10">
           <!-- Slide 1 -->
-          <div class="swiper-slide transition-all duration-500">
-            <div
-              class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl"
-            >
-              <img
-                src="/assets/images/gach-co-work-1.jpg"
-                alt="Dấu ấn trên những công trình"
-                class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
-              />
+          <div class="swiper-slide h-[300px]">
+            <div class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+              <a href="/assets/images/factory-03.png" class="glightbox h-full w-full block" data-gallery="project-gallery-mobile">
+                <img src="/assets/images/factory-03.png" alt="Gallery 1" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+              </a>
             </div>
           </div>
           <!-- Slide 2 -->
-          <div class="swiper-slide transition-all duration-500">
-            <div
-              class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl"
-            >
-              <img
-                src="/assets/images/trang-tri-slide-01.jpg"
-                alt="Dấu ấn trên những công trình"
-                class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
-              />
+          <div class="swiper-slide h-[300px]">
+            <div class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+              <a href="/assets/images/factory-04.jpg" class="glightbox h-full w-full block" data-gallery="project-gallery-mobile">
+                <img src="/assets/images/factory-04.jpg" alt="Gallery 2" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+              </a>
             </div>
           </div>
           <!-- Slide 3 -->
-          <div class="swiper-slide transition-all duration-500">
-            <div
-              class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl"
-            >
-              <img
-                src="/assets/images/gach-co-work-2.jpg"
-                alt="Dấu ấn trên những công trình"
-                class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
-              />
+          <div class="swiper-slide h-[300px]">
+            <div class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+              <a href="/assets/images/factory-01.jpg" class="glightbox h-full w-full block" data-gallery="project-gallery-mobile">
+                <img src="/assets/images/factory-01.jpg" alt="Gallery 3" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+              </a>
             </div>
           </div>
           <!-- Slide 4 -->
-          <div class="swiper-slide transition-all duration-500">
-            <div
-              class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl"
-            >
-              <img
-                src="/assets/images/gach-co-work-1.jpg"
-                alt="Dấu ấn trên những công trình"
-                class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
-              />
+          <div class="swiper-slide h-[300px]">
+            <div class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+              <a href="/assets/images/factory-03.png" class="glightbox h-full w-full block" data-gallery="project-gallery-mobile">
+                <img src="/assets/images/factory-03.png" alt="Gallery 4" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+              </a>
             </div>
           </div>
           <!-- Slide 5 -->
-          <div class="swiper-slide transition-all duration-500">
-            <div
-              class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl"
+          <div class="swiper-slide h-[300px]">
+            <div class="h-full overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+              <a href="/assets/images/factory-04.jpg" class="glightbox h-full w-full block" data-gallery="project-gallery-mobile">
+                <img src="/assets/images/factory-04.jpg" alt="Gallery 5" onerror="this.src = '/assets/images/factory-01.jpg'" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Pagination Dots -->
+        <div class="swiper-pagination projects-pagination flex justify-center !bottom-0 !mt-2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/detail-gallery.html uid=c5a1f8e2 --> <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/detail-specs.html uid=e7a3b9c4 -->
+<section class="py-20 md:py-32 bg-neutral-2">
+  <div class="w-[85%] max-w-[1000px] mx-auto">
+    <!-- Section Header -->
+    <div class="mb-16 md:mb-24" data-aos="fade-up">
+      <p
+        class="text-[12px] font-bold text-primary opacity-60 uppercase tracking-widest mb-4"
+      >
+        Vật Liệu & Công Nghệ
+      </p>
+      <h2 class="text-3xl md:text-4xl font-arima font-medium text-primary mb-6">
+        Chi tiết kỹ thuật công trình
+      </h2>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="grid md:grid-cols-2 gap-12 md:gap-16">
+      <!-- Column 1: Text Content -->
+      <div data-aos="fade-right">
+        <div class="space-y-8">
+          <div>
+            <h3
+              class="text-lg md:text-xl font-arima text-primary mb-3 font-medium"
             >
+              Hệ Thống Mặt Dán
+            </h3>
+            <p class="text-base text-primary/80 leading-relaxed font-light">
+              Mặt dán tòa nhà được sử dụng các loại gạch gốm sứ cao cấp từ Bát
+              Tràng, với độ chịu nước cao, chống thấm nước tối ưu. Các gạch được
+              sắp xếp theo mẫu hình học độc đáo, tạo nên hiệu ứng thị giác nổi
+              bật.
+            </p>
+          </div>
+
+          <div>
+            <h3
+              class="text-lg md:text-xl font-arima text-primary mb-3 font-medium"
+            >
+              Hệ Thống Thông Gió
+            </h3>
+            <p class="text-base text-primary/80 leading-relaxed font-light">
+              Sử dụng gạch thông gió 300×300 mm, đảm bảo không khí lưu thông tự
+              nhiên, giảm chi phí năng lượng điều hòa. Thiết kế thông gió thông
+              minh cân bằng ánh sáng tự nhiên và độ riêng tư.
+            </p>
+          </div>
+
+          <div>
+            <h3
+              class="text-lg md:text-xl font-arima text-primary mb-3 font-medium"
+            >
+              Nội Thất Trang Trí
+            </h3>
+            <p class="text-base text-primary/80 leading-relaxed font-light">
+              Các chi tiết trang trí nội thất bao gồm ngói thơm, linh vật phong
+              thủy, và gạch trang trí truyền thống, mang lại không gian ấm cúng
+              đầy nhân văn.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Specifications Grid -->
+      <div data-aos="fade-left">
+        <div class="space-y-6">
+          <!-- Spec Item 1 -->
+          <div class="border-l-4 border-[#C76E00] pl-6 py-2">
+            <p
+              class="text-[12px] font-extrabold text-primary uppercase tracking-widest opacity-60 mb-2"
+            >
+              Loại Gạch Chính
+            </p>
+            <p class="text-lg md:text-xl font-arima text-primary">
+              Gạch Cổ Bát Tràng Premium
+            </p>
+          </div>
+
+          <!-- Spec Item 2 -->
+          <div class="border-l-4 border-[#C76E00] pl-6 py-2">
+            <p
+              class="text-[12px] font-extrabold text-primary uppercase tracking-widest opacity-60 mb-2"
+            >
+              Số Lượng Gạch
+            </p>
+            <p class="text-lg md:text-xl font-arima text-primary">
+              2.5 Triệu Viên
+            </p>
+          </div>
+
+          <!-- Spec Item 3 -->
+          <div class="border-l-4 border-[#C76E00] pl-6 py-2">
+            <p
+              class="text-[12px] font-extrabold text-primary uppercase tracking-widest opacity-60 mb-2"
+            >
+              Thời Gian Thi Công
+            </p>
+            <p class="text-lg md:text-xl font-arima text-primary">18 Tháng</p>
+          </div>
+
+          <!-- Spec Item 4 -->
+          <div class="border-l-4 border-[#C76E00] pl-6 py-2">
+            <p
+              class="text-[12px] font-extrabold text-primary uppercase tracking-widest opacity-60 mb-2"
+            >
+              Nhà Thầu Chính
+            </p>
+            <p class="text-lg md:text-xl font-arima text-primary">
+              Công Ty XYZ Construction
+            </p>
+          </div>
+
+          <!-- Spec Item 5 -->
+          <div class="border-l-4 border-[#C76E00] pl-6 py-2">
+            <p
+              class="text-[12px] font-extrabold text-primary uppercase tracking-widest opacity-60 mb-2"
+            >
+              Chứng Chỉ Bền Vững
+            </p>
+            <p class="text-lg md:text-xl font-arima text-primary">LEED Gold</p>
+          </div>
+
+          <!-- Spec Item 6 -->
+          <div class="border-l-4 border-[#C76E00] pl-6 py-2">
+            <p
+              class="text-[12px] font-extrabold text-primary uppercase tracking-widest opacity-60 mb-2"
+            >
+              Bảo Hành
+            </p>
+            <p class="text-lg md:text-xl font-arima text-primary">50 Năm</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/detail-specs.html uid=e7a3b9c4 -->
+
+</section>
+<!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/detail-content.html uid=f2c3a8d1 -->
+
+      <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/detail-related.html uid=f8b2c9d3 -->
+      <section class="py-20 md:py-32 bg-white">
+        <div class="w-full max-w-[1320px] mx-auto px-6 md:px-8">
+          <!-- Section Header -->
+          <div class="mb-16 md:mb-24" data-aos="fade-up">
+            <p
+              class="text-[12px] font-bold text-primary opacity-60 uppercase tracking-widest mb-4"
+            >
+              Khám Phá Thêm
+            </p>
+            <h2 class="text-3xl md:text-4xl font-arima font-medium text-primary mb-6">
+              Dự án liên quan
+            </h2>
+            <p class="max-w-2xl text-base text-primary/80 leading-relaxed font-light">
+              Những công trình khác sử dụng các sản phẩm gốm sứ Thanh Hải, mang lại
+              cảm hứng thiết kế độc đáo.
+            </p>
+          </div>
+      
+          <!-- Related Projects Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            data-aos="fade-up"
+          >
+            <!-- Project Card 1 -->
+            <div class="group cursor-pointer">
+              <div
+                class="h-[300px] md:h-[350px] overflow-hidden rounded-lg shadow-md mb-6 relative"
+              >
+                <img
+                  src="/assets/images/factory-01.jpg"
+                  alt="Related Project 1"
+                  class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                >
+                  <a
+                    href="/projects/detail-2.html"
+                    class="bg-white text-primary px-8 py-3 rounded-full font-medium text-sm hover:bg-[#C76E00] hover:text-white transition-all"
+                  >
+                    Xem Chi Tiết
+                  </a>
+                </div>
+              </div>
+              <a href="/projects/detail-2.html" class="block">
+                <p
+                  class="text-[12px] font-bold text-primary opacity-60 uppercase tracking-widest mb-2"
+                >
+                  Dự Án Thương Mại
+                </p>
+                <h3
+                  class="text-xl font-arima text-primary mb-3 group-hover:text-[#C76E00] transition-colors"
+                >
+                  The Emerald Center
+                </h3>
+                <p class="text-sm text-primary/70 leading-relaxed font-light">
+                  Trung tâm thương mại cao cấp sử dụng gạch trang trí độc đáo, tạo nên
+                  một không gian mua sắm sang trọng.
+                </p>
+              </a>
+            </div>
+      
+            <!-- Project Card 2 -->
+            <div class="group cursor-pointer">
+              <div
+                class="h-[300px] md:h-[350px] overflow-hidden rounded-lg shadow-md mb-6 relative"
+              >
+                <img
+                  src="/assets/images/factory-03.png"
+                  alt="Related Project 2"
+                  onerror="this.src = '/assets/images/factory-01.jpg'"
+                  class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                >
+                  <a
+                    href="/projects/detail-3.html"
+                    class="bg-white text-primary px-8 py-3 rounded-full font-medium text-sm hover:bg-[#C76E00] hover:text-white transition-all"
+                  >
+                    Xem Chi Tiết
+                  </a>
+                </div>
+              </div>
+              <a href="/projects/detail-3.html" class="block">
+                <p
+                  class="text-[12px] font-bold text-primary opacity-60 uppercase tracking-widest mb-2"
+                >
+                  Dự Án Nhà Ở
+                </p>
+                <h3
+                  class="text-xl font-arima text-primary mb-3 group-hover:text-[#C76E00] transition-colors"
+                >
+                  Harmony Residential
+                </h3>
+                <p class="text-sm text-primary/70 leading-relaxed font-light">
+                  Khu căn hộ cao cấp với thiết kế nội thất sử dụng ngói thơm và gạch
+                  thông gió truyền thống.
+                </p>
+              </a>
+            </div>
+      
+            <!-- Project Card 3 -->
+            <div class="group cursor-pointer">
+              <div
+                class="h-[300px] md:h-[350px] overflow-hidden rounded-lg shadow-md mb-6 relative"
+              >
+                <img
+                  src="/assets/images/factory-03.png"
+                  alt="Related Project 3"
+                  onerror="this.src = '/assets/images/factory-01.jpg'"
+                  class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                />
+                <div
+                  class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                >
+                  <a
+                    href="/projects/detail-4.html"
+                    class="bg-white text-primary px-8 py-3 rounded-full font-medium text-sm hover:bg-[#C76E00] hover:text-white transition-all"
+                  >
+                    Xem Chi Tiết
+                  </a>
+                </div>
+              </div>
+              <a href="/projects/detail-4.html" class="block">
+                <p
+                  class="text-[12px] font-bold text-primary opacity-60 uppercase tracking-widest mb-2"
+                >
+                  Dự Án Văn Hóa
+                </p>
+                <h3
+                  class="text-xl font-arima text-primary mb-3 group-hover:text-[#C76E00] transition-colors"
+                >
+                  Heritage Museum
+                </h3>
+                <p class="text-sm text-primary/70 leading-relaxed font-light">
+                  Bảo tàng kết hợp kiến trúc truyền thống với các sản phẩm gốm sứ thủ
+                  công độc đáo.
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/detail-related.html uid=f8b2c9d3 -->
+      <div class="pb-8">
+        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
+        <!-- FAQ 2 Section Partial -->
+        <!-- GSXD-SECTION:BEGIN file=components/products/faq2.html tag=section idx=001 uid=5216d5e2 -->
+        <section
+          class="w-full pb-0 md:pb-8 lg:pb-10 pt-8 md:pt-14 overflow-hidden"
+        >
+          <div
+            class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 lg:gap-16 items-center"
+          >
+            <!-- Left: Image -->
+            <div class="w-full aspect-square" data-aos="fade-right">
               <img
-                src="/assets/images/gach-co-work-2.jpg"
-                alt="Dấu ấn trên những công trình"
-                class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                src="/assets/images/faq2.png"
+                alt="FAQ Image"
+                class="w-full h-full object-cover"
               />
             </div>
+        
+            <!-- Right: Content -->
+            <div class="flex flex-col items-start" data-aos="fade-left">
+              <p
+                class="text-[#262626] text-[14px] md:text-base font-extrabold uppercase tracking-[0.1em] leading-[20px] md:leading-normal mb-2.5 md:mb-8"
+              >
+                Bạn có thắc mắc?
+              </p>
+              <h2 class="text-[#2E2F2A] md:text-primary text-[24px] md:text-3xl lg:text-4xl font-normal md:font-semibold leading-[37.5px] md:leading-tight mb-5 md:mb-0">
+                Xem các câu hỏi thường gặp
+              </h2>
+              <p class="text-[#262626]/70 text-[14px] md:text-base font-normal leading-[22.75px] md:leading-relaxed mb-5 md:mb-10">
+                Khám phá danh sách các câu hỏi thường gặp và câu trả lời của chúng tôi.
+              </p>
+              <a
+                href="/faq/"
+                class="inline-block border-0 md:border md:border-black/40 px-0 md:px-5 py-0 md:py-2 text-[#262626] text-[16px] md:text-xs lg:text-sm font-semibold md:font-normal leading-none md:leading-normal hover:text-secondary md:hover:bg-secondary md:hover:text-white md:hover:border-secondary transition-all"
+              >
+                (FAQ) Câu hỏi thường gặp
+              </a>
+            </div>
           </div>
-        </div>
+        </section>
+        <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
+        
+        
+        
       </div>
-
-      <!-- Pagination dots -->
-      <div
-        class="projects-pagination mt-10 md:mt-12 hidden md:flex justify-center gap-3"
-      ></div>
-
-      <!-- Navigation Buttons -->
-      <div
-        class="projects-prev absolute left-2 md:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
-      >
-        <div class="-rotate-45">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+      <!-- CTA Section -->
+      <section class="py-20 md:py-32 bg-primary text-white">
+        <div class="w-[85%] max-w-[1000px] mx-auto text-center">
+          <h2
+            class="text-3xl md:text-5xl font-arima font-medium mb-6"
+            data-aos="fade-up"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 19l-7-7 7-7"
-            ></path>
-          </svg>
-        </div>
-      </div>
-      <div
-        class="projects-next absolute right-2 md:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
-      >
-        <div class="-rotate-45">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+            Bạn có dự án tương tự?
+          </h2>
+          <p
+            class="text-lg opacity-90 mb-10 max-w-2xl mx-auto font-light"
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
-            ></path>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/outstanding-value.html uid=1c9ccb99 -->
-<!-- ============================================== -->
-<!-- COMPONENT GIÁ TRỊ VƯỢT TRỘI                      -->
-<!-- (Component tương tác: Hover hình nhỏ để đối title/text lớn) -->
-<!-- ============================================== -->
-<!-- GSXD-SECTION:BEGIN file=components/products/outstanding-value.html tag=section idx=001 uid=7aa435ff -->
-<section class="w-full relative pb-8 md:pb-16" data-aos="fade-up">
-  <!-- Section Title (Tiêu đề trên cùng) -->
-  <div class="text-center mb-8 md:mb-12">
-    <h2 class="text-[20px] md:text-3xl font-semibold text-secondary uppercase">
-      Giá trị vượt trội
-    </h2>
-  </div>
-
-  <!-- Background Image Container (Khung chứa hình nền lớn và toàn bộ nội dung tương tác) -->
-  <div
-    class="relative w-full overflow-hidden flex flex-col min-h-[511px] md:min-h-[900px]"
-  >
-    <!-- Background Image (Hình nền toàn màn hình của khối) -->
-    <img
-      src="/assets/images/gia-tri-vuot-troi.png"
-      alt="Giá trị vượt trội nền"
-      class="absolute inset-0 w-full h-full object-cover z-0"
-    />
-    <!-- Overlay Gradient mờ (chỉ xuất hiện trên mobile) giúp che bớt nền, làm nổi bật text -->
-    <div
-      class="absolute inset-0 z-[1] md:hidden bg-[linear-gradient(92deg,rgba(255,255,255,0)_0%,rgba(116,44,44,0.54)_55%,rgba(116,44,44,0.60)_84%),rgba(186,113,113,0.34)]"
-    ></div>
-
-    <!-- Text Content (Nội dung văn bản thay đổi linh hoạt theo hình được chọn) -->
-    <div
-      class="relative z-10 container mx-auto px-6 lg:px-[140px] flex-grow flex flex-col items-end justify-start md:justify-center text-end text-white pt-[44px] md:pt-32"
-    >
-      <!-- Tiêu đề thay đổi động (id="value-title") -->
-      <h3
-        id="value-title"
-        class="text-[20px] leading-[32px] md:text-3xl font-semibold mb-[5px] md:mb-10 tracking-[0.6px] md:tracking-wide drop-shadow-md transition-all duration-500"
-      >
-        CỐT ĐẤT LUYỆN LỬA
-      </h3>
-      
-      <!-- Khối mô tả thay đổi động (id="value-description") -->
-      <div class="w-full max-w-[383px] md:max-w-none md:shadow-none">
-        <p
-          id="value-description"
-          class="font-charm text-[16px] leading-[28px] md:text-[32px]/relaxed max-w-[383px] md:max-w-5xl tracking-[1.1px] md:tracking-wider transition-all duration-500"
-        >
-          Được tôi luyện ở nhiệt độ 1300°C tạo nên cốt gốm đanh chắc, thách thức
-          mọi khắc nghiệt từ sương muối đến bão giông. Đây là sự đầu tư một lần
-          cho giá trị truyền đời, chẳng ngại dấu vết thời gian
-        </p>
-      </div>
-    </div>
-
-    <!-- Khối 4 Hình ảnh Nhỏ (Các thẻ hình tương tác ở góc trái dưới) -->
-    <div
-      class="absolute top-[261px] left-0 z-10 w-full md:relative md:top-auto md:left-auto mb-0 md:mb-16 md:px-0 max-w-[1920px] mx-auto"
-    >
-      <div
-        class="flex flex-row justify-center md:justify-start gap-2 md:gap-5 items-end translate-y-0 md:translate-y-[20px] px-2 md:px-0"
-      >
-        <!-- Item 1 (Được active mặc định ban đầu) -->
-        <div
-          class="value-image-item active aspect-[19/33] w-[80px] md:w-[200px] flex-shrink-0 shadow-lg"
-          data-title="CỐT ĐẤT LUYỆN LỬA"
-          data-description="Được tôi luyện ở nhiệt độ 1300°C tạo nên cốt gốm đanh chắc, thách thức mọi khắc nghiệt từ sương muối đến bão giông. Đây là sự đầu tư một lần cho giá trị truyền đời, chẳng ngại dấu vết thời gian"
-        >
-          <img
-            src="/assets/images/value-01.png"
-            alt="Value 1"
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <!-- Item 2 -->
-        <div
-          class="value-image-item aspect-[19/33] w-[80px] md:w-[200px] flex-shrink-0 shadow-lg"
-          data-title="KIẾN TRÚC TRƯỜNG TỒN"
-          data-description="Vẻ đẹp truyền thống kết hợp cùng công nghệ sản xuất hiện đại, tạo nên mái nhà vững chãi, che chở vạn vật qua bao thăng trầm, mang lại sự bình yên và hưng thịnh cho gia chủ."
-        >
-          <img
-            src="/assets/images/value-02.png"
-            alt="Value 2"
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <!-- Item 3 -->
-        <div
-          class="value-image-item aspect-[19/33] w-[80px] md:w-[200px] flex-shrink-0 shadow-lg"
-          data-title="NGHỆ THUẬT GỐM SỨ"
-          data-description="Từng viên ngói là một tác phẩm nghệ thuật, kết tinh từ bàn tay khéo léo của các nghệ nhân làng gốm Bát Tràng, mang trong mình tâm hồn và sức sống di sản Việt."
-        >
-          <img
-            src="/assets/images/value-03.png"
-            alt="Value 3"
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <!-- Item 4 -->
-        <div
-          class="value-image-item aspect-[19/33] w-[80px] md:w-[200px] flex-shrink-0 shadow-lg"
-          data-title="SẮC MEN ĐỘC BẢN"
-          data-description="Lớp men hỏa biến biến ảo trong lò nung, tạo nên những sắc thái màu đặc trưng không viên nào giống viên nào, tạo nên dấu ấn riêng biệt cho ngôi nhà của bạn."
-        >
-          <img
-            src="/assets/images/value-04.png"
-            alt="Value 4"
-            class="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/outstanding-value.html uid=1c9ccb99 -->
-
-
-
- <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
-<!-- ============================================== -->
-<!-- COMPONENT VIDEO HÀNH TRÌNH CHẾ TÁC               -->
-<!-- ============================================== -->
-<!-- GSXD-SECTION:BEGIN file=components/products/journey-video.html tag=section idx=001 uid=d26acfc5 -->
-<section class="w-full mx-auto pb-[30px] md:pb-16 max-w-[1920px]">
-  <!-- Tiêu đề (Có thể ẩn đi nếu tham số hideTitle = true) -->
-  <div class="text-center mb-8 md:mb-16" data-aos="fade-up">
-    <h2 class="text-[20px] md:text-3xl font-semibold text-secondary uppercase">
-      Hành trình chế tác
-    </h2>
-  </div>
-
-  <!-- Khung chứa Video (Tỷ lệ 16:9 - aspect-video) -->
-  <div
-    class="relative w-full aspect-video overflow-hidden cursor-pointer group"
-    data-aos="fade-up"
-    data-aos-delay="200"
-  >
-    <!-- Ảnh Thumbnail đại diện cho video (Khi hover sẽ tối đi) -->
-    <img
-      src="/assets/images/video-placeholder-02.png"
-      alt="Video placeholder"
-      class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300"
-    />
-    
-    <!-- Lớp phủ chứa Nút Play ở giữa màn hình -->
-    <div class="absolute inset-0 flex items-center justify-center">
-      <!-- Vòng tròn mờ (backdrop-blur) của nút Play -->
-      <div
-        class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300"
-      >
-        <!-- Icon tam giác Play -->
-        <svg
-          class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path d="M8 5v14l11-7z"></path>
-        </svg>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
-
-
-
- <section
-  class="w-full pb-0 md:pb-16 bg-background-secondary relative "
-  data-aos="fade-up"
->
- 
-  <div class="max-w-[1320px] w-[85%] mx-auto relative z-10">
-    <h2
-      class="text-[20px] md:text-3xl font-semibold text-secondary text-center uppercase mb-5 md:mb-16"
-    >
-      CÓ THỂ BẠN QUAN TÂM
-    </h2>
-
-    <div class="relative">
-      <div
-        class="overflow-x-auto pb-6 custom-recommend-scrollbar mobile-scroll-visible"
-      >
-        <div class="min-w-[900px] md:min-w-[1000px]">
-          <!-- Product Info Row -->
-          <div class="flex gap-0 md:gap-10 mb-4 md:mb-8">
-            <!-- Empty space - Hidden on Mobile -->
-            <div
-              class="hidden md:block w-[140px] shrink-0 sticky left-0 bg-background-secondary z-10"
-            ></div>
-
-            <div class="flex-grow flex gap-4 md:gap-10">
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
-              >
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="w-full group"
-                >
-                  <div
-                    class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
-                  >
-                    <img
-                      src="/assets/images/gach-co-work-2.jpg"
-                      alt="Ngói Âm Dương 27 Nâu Đỏ"
-                      class="object-cover w-full h-full"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x400/eee/999?text=Product'
-                      "
-                    />
-                    <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="text-[#004B8D] hover:text-secondary transition-colors"
-                >
-                  <h3
-                    class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
-                </a>
-                <button
-                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
-                >
-                  Thêm vào giỏ
-                </button>
-              </div>
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
-              >
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="w-full group"
-                >
-                  <div
-                    class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
-                  >
-                    <img
-                      src="/assets/images/gach-co-work-2.jpg"
-                      alt="Ngói Âm Dương 27 Nâu Đỏ"
-                      class="object-cover w-full h-full"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x400/eee/999?text=Product'
-                      "
-                    />
-                    <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="text-[#004B8D] hover:text-secondary transition-colors"
-                >
-                  <h3
-                    class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
-                </a>
-                <button
-                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
-                >
-                  Thêm vào giỏ
-                </button>
-              </div>
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
-              >
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="w-full group"
-                >
-                  <div
-                    class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
-                  >
-                    <img
-                      src="/assets/images/gach-co-work-2.jpg"
-                      alt="Ngói Âm Dương 27 Nâu Đỏ"
-                      class="object-cover w-full h-full"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x400/eee/999?text=Product'
-                      "
-                    />
-                    <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="text-[#004B8D] hover:text-secondary transition-colors"
-                >
-                  <h3
-                    class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
-                </a>
-                <button
-                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
-                >
-                  Thêm vào giỏ
-                </button>
-              </div>
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
-              >
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="w-full group"
-                >
-                  <div
-                    class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
-                  >
-                    <img
-                      src="/assets/images/gach-co-work-2.jpg"
-                      alt="Ngói Âm Dương 27 Nâu Đỏ"
-                      class="object-cover w-full h-full"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x400/eee/999?text=Product'
-                      "
-                    />
-                    <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="text-[#004B8D] hover:text-secondary transition-colors"
-                >
-                  <h3
-                    class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
-                </a>
-                <button
-                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
-                >
-                  Thêm vào giỏ
-                </button>
-              </div>
-              <div
-                class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
-              >
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="w-full group"
-                >
-                  <div
-                    class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
-                  >
-                    <img
-                      src="/assets/images/gach-co-work-2.jpg"
-                      alt="Ngói Âm Dương 27 Nâu Đỏ"
-                      class="object-cover w-full h-full"
-                      onerror="
-                        this.src =
-                          'https://placehold.co/400x400/eee/999?text=Product'
-                      "
-                    />
-                    <div class="product-overlay">
-                      <img src="/assets/images/eye.svg" alt="Search" />
-                      <span>Xem chi tiết</span>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="/products/ngoi-am-duong/detail.html"
-                  class="text-[#004B8D] hover:text-secondary transition-colors"
-                >
-                  <h3
-                    class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
-                  >
-                    Ngói Âm Dương 27 Nâu Đỏ
-                  </h3>
-                </a>
-                <button
-                  class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
-                >
-                  Thêm vào giỏ
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Comparison Table -->
-          <div class="flex flex-col border-t border-black/10">
-            <!-- Price Row -->
-            <div class="flex gap-0 md:gap-10 group mobile-compare-row">
-              <div
-                class="hidden md:flex w-[140px] shrink-0 text-base font-bold text-primary items-start sticky left-0 bg-background-secondary z-10"
-              >
-                <span class="compare-cell-text">Giá</span>
-              </div>
-              <div class="flex-grow flex md:gap-10 items-start">
-                <div
-                  class="md:hidden w-0 h-full shrink-0 sticky left-0 z-20 overflow-visible"
-                >
-                  <span class="mobile-compare-label">Giá</span>
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  675.000 đ/m²
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  675.000 đ/m²
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  675.000 đ/m²
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  675.000 đ/m²
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  675.000 đ/m²
-                </div>
-              </div>
-            </div>
-            <!-- Color Row -->
-            <div
-              class="flex gap-0 md:gap-10 border-t border-black/10 group mobile-compare-row"
+            Hãy liên hệ với chúng tôi để tư vấn về các giải pháp gốm sứ cao cấp
+            cho công trình của bạn.
+          </p>
+          <div
+            class="flex flex-col md:flex-row gap-4 justify-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <a
+              href="/contact/"
+              class="px-10 py-4 bg-white text-primary font-bold rounded-lg hover:bg-neutral-1 transition-all"
             >
-              <div
-                class="hidden md:flex w-[140px] shrink-0 text-base font-bold text-primary items-start sticky left-0 bg-background-secondary z-10"
-              >
-                <span class="compare-cell-text">Màu sắc</span>
-              </div>
-              <div class="flex-grow flex md:gap-10 items-start">
-                <div
-                  class="md:hidden w-0 h-full shrink-0 sticky left-0 z-20 overflow-visible"
-                >
-                  <span class="mobile-compare-label">Màu sắc</span>
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  Nâu đỏ
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  Nâu đỏ
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  Nâu đỏ
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  Nâu đỏ
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4"
-                >
-                  Nâu đỏ
-                </div>
-              </div>
-            </div>
-            <!-- Size Row -->
-            <div
-              class="flex md:gap-10 border-y border-black/10 group mobile-compare-row"
+              Liên Hệ Tư Vấn
+            </a>
+            <a
+              href="/dich-vu-khach-hang/quy-trinh-dat-hang.html"
+              class="px-10 py-4 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-primary transition-all"
             >
-              <div
-                class="hidden md:flex w-[140px] shrink-0 text-base font-bold text-primary items-start sticky left-0 bg-background-secondary z-10"
-              >
-                <span class="compare-cell-text">Kích thước</span>
-              </div>
-              <div class="flex-grow flex md:gap-10 items-start">
-                <div
-                  class="md:hidden w-0 h-full shrink-0 sticky left-0 z-20 overflow-visible"
-                >
-                  <span class="mobile-compare-label">Kích thước</span>
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
-                >
-                  L280 x W280 x H54mm
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
-                >
-                  L280 x W280 x H54mm
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
-                >
-                  L280 x W280 x H54mm
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
-                >
-                  L280 x W280 x H54mm
-                </div>
-                <div
-                  class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4"
-                >
-                  L280 x W280 x H54mm
-                </div>
-              </div>
-            </div>
+              Xem Quy Trình
+            </a>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
- <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
-<!-- FAQ 2 Section Partial -->
-<!-- GSXD-SECTION:BEGIN file=components/products/faq2.html tag=section idx=001 uid=5216d5e2 -->
-<section
-  class="w-full pb-0 md:pb-8 lg:pb-10 pt-8 md:pt-14 overflow-hidden"
->
-  <div
-    class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 lg:gap-16 items-center"
-  >
-    <!-- Left: Image -->
-    <div class="w-full aspect-square" data-aos="fade-right">
-      <img
-        src="/assets/images/faq2.png"
-        alt="FAQ Image"
-        class="w-full h-full object-cover"
-      />
-    </div>
-
-    <!-- Right: Content -->
-    <div class="flex flex-col items-start" data-aos="fade-left">
-      <p
-        class="text-[#262626] text-[14px] md:text-base font-extrabold uppercase tracking-[0.1em] leading-[20px] md:leading-normal mb-2.5 md:mb-8"
-      >
-        Bạn có thắc mắc?
-      </p>
-      <h2 class="text-[#2E2F2A] md:text-primary text-[24px] md:text-3xl lg:text-4xl font-normal md:font-semibold leading-[37.5px] md:leading-tight mb-5 md:mb-0">
-        Xem các câu hỏi thường gặp
-      </h2>
-      <p class="text-[#262626]/70 text-[14px] md:text-base font-normal leading-[22.75px] md:leading-relaxed mb-5 md:mb-10">
-        Khám phá danh sách các câu hỏi thường gặp và câu trả lời của chúng tôi.
-      </p>
-      <a
-        href="/faq/"
-        class="inline-block border-0 md:border md:border-black/40 px-0 md:px-5 py-0 md:py-2 text-[#262626] text-[16px] md:text-xs lg:text-sm font-semibold md:font-normal leading-none md:leading-normal hover:text-secondary md:hover:bg-secondary md:hover:text-white md:hover:border-secondary transition-all"
-      >
-        (FAQ) Câu hỏi thường gặp
-      </a>
-    </div>
-  </div>
-</section>
-<!-- GSXD-DEBUG:END type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
-
-
-
-
+      </section>
     </main>
-
     <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
     <!-- GSXD-ELEMENT:BEGIN file=components/footer.html tag=footer idx=001 uid=540a3f40 -->
     <footer class="bg-[#262723] text-white">
@@ -2086,121 +1651,47 @@
         </a>
       </div>
     </footer>
-    <!-- GSXD-DEBUG:END type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- GSXD-DEBUG:END type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Initialize AOS
-        AOS.init({ duration: 800, once: true, offset: 100 });
-
-        const productThumbSwiperEl = document.querySelector(
-          ".product-thumb-swiper",
-        );
-        const productThumbSwiper = productThumbSwiperEl
-          ? new Swiper(productThumbSwiperEl, {
-              spaceBetween: 20,
-              slidesPerView: 7,
-              freeMode: true,
-              watchSlidesProgress: true,
-            })
-          : null;
-
-        new Swiper(".product-main-swiper", {
-          slidesPerView: 1,
-          spaceBetween: 0,
-          pagination: {
-            el: ".product-main-pagination",
-            clickable: true,
-          },
-          thumbs: productThumbSwiper
-            ? {
-                swiper: productThumbSwiper,
-              }
-            : undefined,
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+      });
+      if (typeof GLightbox !== "undefined") {
+        document.querySelectorAll(".glightbox").forEach((anchor) => {
+          const image = anchor.querySelector("img");
+          if (image) {
+            anchor.setAttribute("href", image.currentSrc || image.src);
+          }
         });
-
-        // Refresh AOS when all assets (like images) finish loading
-        window.addEventListener("load", () => {
-          setTimeout(() => {
-            AOS.refresh();
-          }, 100);
-          setTimeout(() => {
-            AOS.refresh();
-          }, 500);
-          setTimeout(() => {
-            AOS.refresh();
-          }, 1500);
-        });
-
-        // Initialize Works/Projects Slider if present
-        new Swiper(".projects-slider", {
-          slidesPerView: 1.2,
-          spaceBetween: 20,
-          centeredSlides: true,
+        GLightbox({
+          touchNavigation: true,
           loop: true,
+          autoplayVideos: true,
+        });
+      }
+
+      // Khởi tạo Swiper cho Gallery trên Mobile
+      if (typeof Swiper !== "undefined") {
+        new Swiper(".detail-gallery-swiper", {
+          slidesPerView: 1.15,
+          spaceBetween: 16,
           pagination: {
             el: ".projects-pagination",
             clickable: true,
-            renderBullet: function (index, className) {
-              return (
-                '<span class="' +
-                className +
-                ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
-              );
-            },
-          },
-          navigation: {
-            nextEl: ".projects-next",
-            prevEl: ".projects-prev",
           },
           breakpoints: {
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-              centeredSlides: false,
-            },
-            1024: {
-              slidesPerView: 2,
-              spaceBetween: 60,
-              centeredSlides: true,
-            },
-          },
-          on: {
-            init: function () {
-              setTimeout(() => {
-                if (typeof AOS !== "undefined") AOS.refresh();
-              }, 500);
-            },
-          },
+            640: {
+              slidesPerView: 2.15,
+              spaceBetween: 20,
+            }
+          }
         });
-
-        // Add bullet style
-        const style = document.createElement("style");
-        style.innerHTML = `
-            .product-main-pagination .swiper-pagination-bullet {
-                width: 6px !important;
-                height: 6px !important;
-                background: white !important;
-                opacity: 0.5 !important;
-                margin: 0 !important;
-                border-radius: 9999px !important;
-                transition: all 0.3s ease !important;
-            }
-            .product-main-pagination .swiper-pagination-bullet-active {
-                width: 10px !important;
-                background: #C76E00 !important;
-                opacity: 1 !important;
-            }
-            .projects-pagination .swiper-pagination-bullet-active {
-                background-color: #C76E00 !important;
-                width: 12px !important;
-                border-radius: 6px !important;
-            }
-        `;
-        document.head.appendChild(style);
-      });
+      }
     </script>
     <script>
   document.addEventListener("DOMContentLoaded", () => {
@@ -2335,80 +1826,6 @@
   });
 </script>
 
-<script>
-  // ── Product Image Swiper Initialization ─────────────────────────────────
-  (function () {
-    var thumbSwiper = new Swiper(".product-thumb-swiper", {
-      spaceBetween: 20,
-      slidesPerView: 7,
-      freeMode: true,
-      watchSlidesProgress: true,
-    });
-
-    new Swiper(".product-main-swiper", {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      pagination: {
-        el: ".product-main-pagination",
-        clickable: true,
-      },
-      thumbs: {
-        swiper: thumbSwiper,
-      },
-    });
-  })();
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const valueSection = document
-      .querySelector("#value-title")
-      ?.closest("section");
-    if (!valueSection) return;
-
-    const valueImages = Array.from(
-      valueSection.querySelectorAll(".value-image-item"),
-    );
-    const valueTitle = valueSection.querySelector("#value-title");
-    const valueDescription = valueSection.querySelector("#value-description");
-
-    if (!valueImages.length || !valueTitle || !valueDescription) return;
-
-    const updateValueSection = (img) => {
-      if (img.classList.contains("active")) return;
-
-      valueImages.forEach((item) => item.classList.remove("active"));
-      img.classList.add("active");
-
-      valueTitle.style.opacity = "0";
-      valueDescription.style.opacity = "0";
-      valueTitle.style.transform = "translateY(10px)";
-      valueDescription.style.transform = "translateY(10px)";
-
-      window.setTimeout(() => {
-        valueTitle.textContent = img.dataset.title || "";
-        valueDescription.textContent = img.dataset.description || "";
-
-        valueTitle.style.opacity = "1";
-        valueDescription.style.opacity = "1";
-        valueTitle.style.transform = "translateY(0)";
-        valueDescription.style.transform = "translateY(0)";
-      }, 300);
-    };
-
-    valueImages.forEach((img) => {
-      img.addEventListener("mouseenter", () => {
-        if (window.innerWidth >= 1024) {
-          updateValueSection(img);
-        }
-      });
-
-      img.addEventListener("click", () => {
-        updateValueSection(img);
-      });
-    });
-  });
-</script>
-
   </body>
 </html>
+<!-- GSXD-DEBUG:END type=PAGE file=projects/detail.html uid=a9f2e6b1 -->
