@@ -265,7 +265,9 @@ const initMobileScrollIndicators = () => {
       const scrollRatio = scroller.scrollLeft / maxScrollLeft;
       const thumbLeft = scrollRatio * (trackWidth - thumbWidth);
       thumb.style.width = thumbWidth + "px";
-      thumb.style.left = thumbLeft + "px";
+      if (!thumb.classList.contains("is-dragging")) {
+        thumb.style.left = thumbLeft + "px";
+      }
     };
     let scrollFrame = null;
     scroller.addEventListener("scroll", () => {
@@ -277,6 +279,52 @@ const initMobileScrollIndicators = () => {
     }, { passive: true });
     window.addEventListener("resize", updateThumb);
     requestAnimationFrame(updateThumb);
+    let isDragging = false;
+    let startX;
+    let startScrollLeft;
+    const onMouseMove = (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const trackWidth = track.clientWidth;
+      const thumbWidth = thumb.clientWidth;
+      const maxScrollLeft = scroller.scrollWidth - scroller.clientWidth;
+      const deltaX = e.pageX - startX;
+      const scrollRatio = deltaX / (trackWidth - thumbWidth);
+      scroller.scrollLeft = startScrollLeft + scrollRatio * maxScrollLeft;
+      const newThumbLeft = scroller.scrollLeft / maxScrollLeft * (trackWidth - thumbWidth);
+      thumb.style.left = newThumbLeft + "px";
+    };
+    const onMouseUp = () => {
+      if (!isDragging) return;
+      isDragging = false;
+      thumb.style.transition = "";
+      thumb.classList.remove("is-dragging");
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("mouseup", onMouseUp);
+    };
+    thumb.addEventListener("mousedown", (e) => {
+      e.preventDefault();
+      isDragging = true;
+      startX = e.pageX;
+      startScrollLeft = scroller.scrollLeft;
+      thumb.style.transition = "none";
+      thumb.classList.add("is-dragging");
+      window.addEventListener("mousemove", onMouseMove);
+      window.addEventListener("mouseup", onMouseUp);
+    });
+    track.addEventListener("click", (e) => {
+      if (e.target === thumb) return;
+      const trackRect = track.getBoundingClientRect();
+      const clickX = e.clientX - trackRect.left;
+      const trackWidth = track.clientWidth;
+      const thumbWidth = thumb.clientWidth;
+      const maxScrollLeft = scroller.scrollWidth - scroller.clientWidth;
+      const scrollRatio = (clickX - thumbWidth / 2) / (trackWidth - thumbWidth);
+      scroller.scrollTo({
+        left: Math.max(0, Math.min(scrollRatio * maxScrollLeft, maxScrollLeft)),
+        behavior: "smooth"
+      });
+    });
   });
 };
 const initSharedScripts = () => {

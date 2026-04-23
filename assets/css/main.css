@@ -1881,10 +1881,6 @@ body {
   height: 488px;
 }
 
-.h-\[4px\]{
-  height: 4px;
-}
-
 .h-\[500px\]{
   height: 500px;
 }
@@ -2233,10 +2229,6 @@ body {
 
 .w-\[48px\]{
   width: 48px;
-}
-
-.w-\[4px\]{
-  width: 4px;
 }
 
 .w-\[50\%\]{
@@ -2991,6 +2983,10 @@ body {
 
 .gap-\[6px\]{
   gap: 6px;
+}
+
+.gap-\[7px\]{
+  gap: 7px;
 }
 
 .gap-x-12{
@@ -5380,6 +5376,13 @@ body {
     margin-bottom: 15px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
+  }
+
+@media (min-width: 768px) {
+    .scroll-indicator-track {
+      height: 8px;
+    }
   }
 
 .scroll-indicator-thumb {
@@ -5390,6 +5393,13 @@ body {
     top: 0;
     left: 0;
     transition: width 0.1s ease, left 0.1s ease;
+    cursor: grab;
+  }
+
+.scroll-indicator-thumb:active,
+  .scroll-indicator-thumb.is-dragging {
+    cursor: grabbing;
+    background: #c76e00;
   }
 
 .catalog-text-vertical {
