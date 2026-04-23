@@ -16,24 +16,6 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <style>
-  /* ── Product Main Swiper: Mobile Dots Pagination ─────────────────────── */
-  .product-main-pagination .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    background: rgba(199, 110, 0, 0.3);
-    opacity: 1;
-    margin: 0 !important;
-    border-radius: 9999px;
-    transition: all 0.3s ease;
-    display: inline-block;
-    flex-shrink: 0;
-  }
-  .product-main-pagination .swiper-pagination-bullet-active {
-    background: #C76E00;
-  }
-</style>
-
-<style>
   .value-image-item {
     transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     cursor: pointer;
@@ -106,8 +88,8 @@
     }
   </style>
   
-    <script type="module" crossorigin src="/assets/js/app.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/css/main.css">
+    <script type="module" crossorigin src="/assets/js/app.js?v=1776937952285"></script>
+    <link rel="stylesheet" crossorigin href="/assets/css/main.css?v=1776937952285">
   </head>
   <body
     data-page="products"
@@ -1119,12 +1101,12 @@
       
             <!-- Pagination dots -->
             <div
-              class="projects-pagination mt-10 md:mt-12 hidden md:flex justify-center gap-3"
+              class="projects-pagination mt-6 md:mt-12 flex justify-center gap-[7px] md:gap-3"
             ></div>
       
             <!-- Navigation Buttons -->
             <div
-              class="projects-prev absolute left-2 md:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
+              class="hidden md:flex projects-prev absolute left-2 md:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
             >
               <div class="-rotate-45">
                 <svg
@@ -1143,7 +1125,7 @@
               </div>
             </div>
             <div
-              class="projects-next absolute right-2 md:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
+              class="projects-next absolute right-2 md:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 hidden md:flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
             >
               <div class="-rotate-45">
                 <svg
@@ -2238,7 +2220,7 @@
             return (
               '<span class="' +
               className +
-              ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
+              ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-[3.5px] inline-block"></span>'
             );
           },
         },

@@ -65,8 +65,8 @@
     }
   </style>
   
-    <script type="module" crossorigin src="/assets/js/app.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/css/main.css">
+    <script type="module" crossorigin src="/assets/js/app.js?v=1776937952285"></script>
+    <link rel="stylesheet" crossorigin href="/assets/css/main.css?v=1776937952285">
   </head>
   <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary">
     <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/header.html uid=0505a17c -->
@@ -1353,7 +1353,7 @@
                 </div>
               </div>
               <div
-                class="swiper-pagination gach-bat-products-pagination product-list-pagination md:!hidden mt-4 relative flex justify-center w-full"
+                class="swiper-pagination gach-bat-products-pagination product-list-pagination md:!hidden mt-10 relative flex justify-center w-full"
               ></div>
             </div>
           </div>
@@ -1844,7 +1844,7 @@
                 </div>
               </div>
               <div
-                class="swiper-pagination gach-that-products-pagination product-list-pagination md:!hidden mt-4 relative flex justify-center w-full"
+                class="swiper-pagination gach-that-products-pagination product-list-pagination md:!hidden mt-10 relative flex justify-center w-full"
               ></div>
             </div>
           </div>
@@ -2318,7 +2318,7 @@
                 </div>
               </div>
               <div
-                class="swiper-pagination gach-the-products-pagination product-list-pagination md:!hidden mt-4 relative flex justify-center w-full"
+                class="swiper-pagination gach-the-products-pagination product-list-pagination md:!hidden mt-10 relative flex justify-center w-full"
               ></div>
             </div>
           </div>
@@ -2452,7 +2452,7 @@
 
       <!-- Navigation Buttons -->
       <div
-        class="fabrication-prev absolute left-2 md:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
+        class="hidden md:flex fabrication-prev absolute left-2 md:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
       >
         <div class="-rotate-45">
           <svg
@@ -2471,7 +2471,7 @@
         </div>
       </div>
       <div
-        class="fabrication-next absolute right-2 md:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
+        class="fabrication-next absolute right-2 md:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 hidden md:flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
       >
         <div class="-rotate-45">
           <svg
@@ -2492,7 +2492,7 @@
 
       <!-- Pagination dots -->
       <div
-        class="fabrication-pagination mt-10 md:mt-12 flex justify-center gap-3"
+        class="fabrication-pagination mt-10 md:mt-12 flex justify-center gap-[7px] md:gap-3"
       ></div>
     </div>
   </div>
@@ -2647,12 +2647,12 @@
       
             <!-- Pagination dots -->
             <div
-              class="projects-pagination mt-10 md:mt-12 hidden md:flex justify-center gap-3"
+              class="projects-pagination mt-6 md:mt-12 flex justify-center gap-[7px] md:gap-3"
             ></div>
       
             <!-- Navigation Buttons -->
             <div
-              class="projects-prev absolute left-2 md:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
+              class="hidden md:flex projects-prev absolute left-2 md:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
             >
               <div class="-rotate-45">
                 <svg
@@ -2671,7 +2671,7 @@
               </div>
             </div>
             <div
-              class="projects-next absolute right-2 md:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
+              class="projects-next absolute right-2 md:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 hidden md:flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
             >
               <div class="-rotate-45">
                 <svg
@@ -3756,9 +3756,13 @@
     const fabricationSlider = document.querySelector(".fabrication-slider");
     if (fabricationSlider) {
       const fabricationRoot = fabricationSlider.closest(".group") || document;
-      const fabricationNextEl = fabricationRoot.querySelector(".fabrication-next");
-      const fabricationPrevEl = fabricationRoot.querySelector(".fabrication-prev");
-      const fabricationPaginationEl = fabricationRoot.querySelector(".fabrication-pagination");
+      const fabricationNextEl =
+        fabricationRoot.querySelector(".fabrication-next");
+      const fabricationPrevEl =
+        fabricationRoot.querySelector(".fabrication-prev");
+      const fabricationPaginationEl = fabricationRoot.querySelector(
+        ".fabrication-pagination",
+      );
 
       new Swiper(".fabrication-slider", {
         slidesPerView: "auto",
@@ -3772,7 +3776,7 @@
             return (
               '<span class="' +
               className +
-              ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
+              ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-[3.5px] inline-block"></span>'
             );
           },
         },
@@ -3878,7 +3882,7 @@
             return (
               '<span class="' +
               className +
-              ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-1.5 inline-block"></span>'
+              ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-[3.5px] inline-block"></span>'
             );
           },
         },
@@ -4029,23 +4033,7 @@
           ".gach-the-products-pagination",
         );
 
-        // Add CSS for active bullets manually if needed or via Swiper class
-        const style = document.createElement("style");
-        style.innerHTML = `
-            .fabrication-pagination .swiper-pagination-bullet-active,
-            .projects-pagination .swiper-pagination-bullet-active,
-            .product-list-pagination .swiper-pagination-bullet-active {
-                background-color: #c76e00 !important;
-                width: 12px !important;
-                border-radius: 6px !important;
-            }
-
-            .product-list-nav-btn.swiper-button-disabled {
-                opacity: 0.35;
-                cursor: not-allowed;
-            }
-        `;
-        document.head.appendChild(style);
+        // Pagination bullet styles are handled globally in main.css
       });
     </script>
     

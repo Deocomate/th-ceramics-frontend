@@ -20,25 +20,7 @@
         scroll-behavior: smooth;
       }
     </style>
-    <style>
-  /* ── Product Main Swiper: Mobile Dots Pagination ─────────────────────── */
-  .product-main-pagination .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
-    background: rgba(199, 110, 0, 0.3);
-    opacity: 1;
-    margin: 0 !important;
-    border-radius: 9999px;
-    transition: all 0.3s ease;
-    display: inline-block;
-    flex-shrink: 0;
-  }
-  .product-main-pagination .swiper-pagination-bullet-active {
-    background: #C76E00;
-  }
-</style>
-
-  <style>
+      <style>
     /* CSS custom cho hiệu ứng chuyển động mượt mà của slider và phóng to ảnh */
     .product-works-swiper .swiper-wrapper {
       display: flex;
@@ -146,8 +128,8 @@
     }
   </style>
   
-    <script type="module" crossorigin src="/assets/js/app.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/css/main.css">
+    <script type="module" crossorigin src="/assets/js/app.js?v=1776937952285"></script>
+    <link rel="stylesheet" crossorigin href="/assets/css/main.css?v=1776937952285">
   </head>
   <body
     data-page="products"
@@ -1093,6 +1075,7 @@
             src="/assets/images/ngoi-am-duong-size.png"
             alt="Đa dạng kích thước ngói âm dương"
             class="h-auto object-contain max-w-none w-[200%] md:w-full"
+            onload="window.dispatchEvent(new Event('resize'))"
           />
         </div>
       </section>
