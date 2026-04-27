@@ -1,1452 +1,1078 @@
-<!doctype html>
 <!-- GSXD-DEBUG:BEGIN type=PAGE file=projects/index.html uid=78af7e27 -->
-<html lang="en">
-  <head>
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=layouts/main.html -->
+<!doctype html>
+<html lang="vi">
+
+<head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Dự án - Thanh Hải Ceramics</title>
-    <meta
-      name="description"
-      content="Khám phá các công trình ấn tượng sử dụng gốm sứ xây dựng Thanh Hải. Sự kết hợp hoàn hảo giữa nghệ thuật truyền thống và kiến trúc hiện đại."
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/assets/images/logo.png"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
-    <link
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
-    />
-    
-  <script type="module" crossorigin src="/assets/js/app-B_hClNSU.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/css/main-C85SJF3v.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title & Meta -->
+    <title>Dự án - Thanh Hải Ceramics
+    </title>
+    <meta name="description" content="Khám phá các công trình ấn tượng sử dụng gốm sứ xây dựng Thanh Hải..." />
+
+    <!-- Global CSS & Fonts -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Style riêng của từng page -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+  <script type="module" crossorigin src="/assets/js/app-CgIap7Er.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/css/app-k-laLtYS.css">
 </head>
-  <body class="min-h-screen flex flex-col bg-background-secondary">
-<!-- GSXD-PARTIAL:BEGIN file=projects/index.html include=components/header idx=001 uid=62fc0222 -->
-<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/header.html uid=0505a17c -->
-<!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=header idx=001 uid=038b0028 -->
-<header
-  id="site-header"
-  class="bg-primary sticky top-0 text-white h-[58px] xl:h-[108px] z-50 transition-all duration-300"
->
-  <div class="hidden xl:block w-[85%] max-w-[1320px] mx-auto h-full">
-    <!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=nav idx=001 uid=a62974be -->
-    <nav class="flex items-center justify-between h-full">
-      <!-- Logo -->
-      <div class="flex-shrink-0 mr-[8%]">
-        <a href="/" class="block">
-          <img
-            src="/assets/images/logo.png"
-            alt="Logo"
-            class="h-[78px] w-[78px]"
-          />
-        </a>
-      </div>
 
-      <!-- Desktop Navigation -->
-      <div
-        class="hidden xl:flex items-center 2xl:gap-10 xl:gap-6 gap-6 flex-1 justify-end mr-8"
-        id="desktop-menu"
-      >
-        <a
-          href="/"
-          class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
-          data-path="/"
-          >trang chủ</a
-        >
-        <a
-          href="/about/"
-          class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
-          data-path="/about/"
-          >về chúng tôi</a
-        >
-        <div class="relative group">
-          <a
-            href="/products/ngoi-am-duong/"
-            class="nav-link flex items-center gap-[5px] whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
-            data-path="/products/"
-          >
-            <span>sản phẩm</span>
-            <svg
-              class="w-[7px] h-[7px]"
-              viewBox="0 0 7 7"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
-                fill="currentColor"
-              />
-            </svg>
-          </a>
-          <!-- Desktop Dropdown -->
-          <div
-            class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary"
-          >
-            <ul class="py-2 flex flex-col">
-              <li>
-                <a
-                  href="/products/ngoi-am-duong/"
-                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/products/ngoi-am-duong/"
-                  >Ngói Âm Dương</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/products/ngoi-hai-van-mieu/"
-                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/products/ngoi-hai-van-mieu/"
-                  >Ngói Hài Văn Miếu</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/products/gach-hoa-thong-gio/"
-                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/products/gach-hoa-thong-gio/"
-                  >Gạch Hoa Thông Gió</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/products/phu-kien-ngoi/"
-                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/products/phu-kien-ngoi/"
-                  >Phụ Kiện Ngói</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/products/gach-trang-tri/"
-                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/products/gach-trang-tri/"
-                  >Gạch Trang Trí</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/products/lan-can-gom-su/"
-                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/products/lan-can-gom-su/"
-                  >Lan Can Gốm Sứ</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/products/gach-co-bat-trang/"
-                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/products/gach-co-bat-trang/"
-                  >Gạch Cổ Bát Tràng</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/products/linh-vat-phong-thuy/"
-                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/products/linh-vat-phong-thuy/"
-                  >Linh Vật Phong Thủy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/products/den-gom-su/"
-                  class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/products/den-gom-su/"
-                  >Đèn Gốm Sứ</a
-                >
-              </li>
-            </ul>
+<!-- Body hoàn toàn TĨNH, không nhận bất kỳ biến nào -->
+
+<body class="min-h-screen flex flex-col font-archivo text-primary">
+
+    <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/header.html uid=0505a17c -->
+    <!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=header idx=001 uid=038b0028 -->
+    <header id="site-header"
+      class="bg-primary sticky top-0 text-white h-[58px] xl:h-[108px] z-50 transition-all duration-300">
+      <div class="hidden xl:block w-[85%] max-w-[1320px] mx-auto h-full">
+        <!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=nav idx=001 uid=a62974be -->
+        <nav class="flex items-center justify-between h-full">
+          <!-- Logo -->
+          <div class="flex-shrink-0 mr-[8%]">
+            <a href="/" class="block">
+              <img src="/assets/images/logo.png" alt="Logo" class="h-[78px] w-[78px]" />
+            </a>
           </div>
-        </div>
-
-        <div class="relative group">
-          <a
-            href="#"
-            class="nav-link flex items-center gap-[5px] whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
-            data-path="/product-details/"
-          >
-            <span>SPCT</span>
-            <svg
-              class="w-[7px] h-[7px]"
-              viewBox="0 0 7 7"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
-                fill="currentColor"
-              />
-            </svg>
-          </a>
-          <!-- Quick access detail pages dropdown -->
-          <div
-            class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary overflow-y-auto max-h-[60vh]"
-          >
-            <ul class="py-2 flex flex-col">
-              <li>
-                <a
-                  href="/product-details/ngoi-am-duong/detail.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/product-details/ngoi-am-duong/detail.html"
-                  >Ngói Âm Dương</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/product-details/gach-co-bat-trang/detail-200x200x50.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/product-details/gach-co-bat-trang/detail-200x200x50.html"
-                  >Gạch Bát 200x200x50</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/product-details/gach-co-bat-trang/detail-220x110x60.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/product-details/gach-co-bat-trang/detail-220x110x60.html"
-                  >Gạch Bát 220x110x60</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/product-details/gach-co-bat-trang/detail-300x100x30.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/product-details/gach-co-bat-trang/detail-300x100x30.html"
-                  >Gạch Bát 300x100x30</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/product-details/gach-co-bat-trang/detail-300x150x60.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/product-details/gach-co-bat-trang/detail-300x150x60.html"
-                  >Gạch Bát 300x150x60</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/product-details/gach-co-bat-trang/detail-300x300x50.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/product-details/gach-co-bat-trang/detail-300x300x50.html"
-                  >Gạch Bát 300x300x50</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/product-details/gach-hoa-thong-gio/detail.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/product-details/gach-hoa-thong-gio/detail.html"
-                  >Gạch hoa thông gió</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/product-details/gach-trang-tri/detail.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/product-details/gach-trang-tri/detail.html"
-                  >Gạch trang trí</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/product-details/linh-vat/detail.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/product-details/linh-vat/detail.html"
-                  >Linh vật phong thủy</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/product-details/ngoi-hai-co/ngoi-hai-co-nau-den.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/product-details/ngoi-hai-co/ngoi-hai-co-nau-den.html"
-                  >Ngói Hài Cổ Nâu Đen</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/product-details/ngoi-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/product-details/ngoi-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
-                  >Ngói Văn Miếu Ghi Ánh Kim</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/product-details/bo-noc-chu-van/bo-noc-chu-van.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/product-details/bo-noc-chu-van/bo-noc-chu-van.html"
-                  >Bò Nóc Chữ Vạn</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html"
-                  class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
-                  data-path="/product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html"
-                  >Ngói Bó Nóc</a
-                >
-              </li>
-            </ul>
+    
+          <!-- Desktop Navigation -->
+          <div class="hidden xl:flex items-center 2xl:gap-10 xl:gap-6 gap-6 flex-1 justify-end mr-8" id="desktop-menu">
+            <a href="/"
+              class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+              data-path="/">trang chủ</a>
+            <a href="/about/"
+              class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+              data-path="/about/">về chúng tôi</a>
+            <div class="relative group">
+              <a href="/products/ngoi-am-duong/"
+                class="nav-link flex items-center gap-[5px] whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+                data-path="/products/">
+                <span>sản phẩm</span>
+                <img src="/assets/images/icon-caret-down.svg" alt="caret" class="w-[7px] h-[7px]" />
+              </a>
+              <!-- Desktop Dropdown -->
+              <div
+                class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary">
+                <ul class="py-2 flex flex-col">
+                  <li>
+                    <a href="/products/ngoi-am-duong/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/ngoi-am-duong/">Ngói Âm Dương</a>
+                  </li>
+                  <li>
+                    <a href="/products/ngoi-hai-van-mieu/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/ngoi-hai-van-mieu/">Ngói Hài Văn Miếu</a>
+                  </li>
+                  <li>
+                    <a href="/products/gach-hoa-thong-gio/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-hoa-thong-gio/">Gạch Hoa Thông Gió</a>
+                  </li>
+                  <li>
+                    <a href="/products/phu-kien-ngoi/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/phu-kien-ngoi/">Phụ Kiện Ngói</a>
+                  </li>
+                  <li>
+                    <a href="/products/gach-trang-tri/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-trang-tri/">Gạch Trang Trí</a>
+                  </li>
+                  <li>
+                    <a href="/products/lan-can-gom-su/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/lan-can-gom-su/">Lan Can Gốm Sứ</a>
+                  </li>
+                  <li>
+                    <a href="/products/gach-co-bat-trang/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-co-bat-trang/">Gạch Cổ Bát Tràng</a>
+                  </li>
+                  <li>
+                    <a href="/products/linh-vat-phong-thuy/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/linh-vat-phong-thuy/">Linh Vật Phong Thủy</a>
+                  </li>
+                  <li>
+                    <a href="/products/den-gom-su/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/den-gom-su/">Đèn Gốm Sứ</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="relative group">
+              <a href="#"
+                class="nav-link flex items-center gap-[5px] whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+                data-path="/product-details/">
+                <span>SPCT</span>
+                <img src="/assets/images/icon-caret-down.svg" alt="caret" class="w-[7px] h-[7px]" />
+              </a>
+              <!-- Quick access detail pages dropdown -->
+              <div
+                class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary overflow-y-auto max-h-[60vh]">
+                <ul class="py-2 flex flex-col">
+                  <li>
+                    <a href="/product-details/ngoi-am-duong.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/ngoi-am-duong.html">Ngói Âm Dương</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/ngoi-hai-co.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/ngoi-hai-co.html">Ngói Hài Cổ</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/ngoi-hai-van-mieu.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/ngoi-hai-van-mieu.html">Ngói Hài Văn Miếu</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/gach-hoa-thong-gio.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/gach-hoa-thong-gio.html">Gạch Hoa Thông Gió</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/gach-trang-tri.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/gach-trang-tri.html">Gạch Trang Trí</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/gach-co-bat-trang.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/gach-co-bat-trang.html">Gạch Cổ Bát Tràng</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/linh-vat.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/linh-vat.html">Linh Vật Phong Thủy</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/bo-noc-chu-van.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/bo-noc-chu-van.html">Bò Nóc Chữ Vạn</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/ngoi-bo-noc.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/ngoi-bo-noc.html">Ngói Bó Nóc</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="/projects/"
+              class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+              data-path="/projects/">Dự án</a>
+            <a href="/factory/"
+              class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+              data-path="/factory/">Xưởng sản xuất</a>
+            <a href="/news/"
+              class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+              data-path="/news/">Tin tức</a>
+            <a href="/contact/"
+              class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+              data-path="/contact/">liên hệ</a>
           </div>
-        </div>
-        <a
-          href="/projects/"
-          class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
-          data-path="/projects/"
-          >Dự án</a
-        >
-        <a
-          href="/factory/"
-          class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
-          data-path="/factory/"
-          >Xưởng sản xuất</a
-        >
-        <a
-          href="/news/"
-          class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
-          data-path="/news/"
-          >Tin tức</a
-        >
-        <a
-          href="/contact/"
-          class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
-          data-path="/contact/"
-          >liên hệ</a
-        >
+    
+          <!-- Desktop Icons -->
+          <div class="hidden xl:flex items-center gap-6">
+            <button class="hover:text-secondary transition-colors" aria-label="Search">
+              <img src="/assets/images/search.svg" alt="search" class="w-5 h-5" />
+            </button>
+            <a href="/cart/gio-hang.html" class="hover:text-secondary transition-colors" aria-label="Cart">
+              <img src="/assets/images/cart-2.svg" alt="cart" class="w-5 h-5" />
+            </a>
+            <a href="/dich-vu-khach-hang/trang-thai-don-hang.html" class="hover:text-secondary transition-colors"
+              aria-label="User">
+              <img src="/assets/images/user.svg" alt="user" class="w-5 h-5" />
+            </a>
+          </div>
+        </nav>
       </div>
-
-      <!-- Desktop Icons -->
-      <div class="hidden xl:flex items-center gap-6">
-        <button
-          class="hover:text-secondary transition-colors"
-          aria-label="Search"
-        >
-          <img src="/assets/images/search.svg" alt="search" class="w-5 h-5" />
-        </button>
-        <a
-          href="/cart/gio-hang.html"
-          class="hover:text-secondary transition-colors"
-          aria-label="Cart"
-        >
-          <img src="/assets/images/cart-2.svg" alt="cart" class="w-5 h-5" />
-        </a>
-        <a
-          href="/dich-vu-khach-hang/trang-thai-don-hang.html"
-          class="hover:text-secondary transition-colors"
-          aria-label="User"
-        >
-          <img src="/assets/images/user.svg" alt="user" class="w-5 h-5" />
-        </a>
-      </div>
-    </nav>
-  </div>
-
-  <!-- Mobile Header -->
-  <div
-    class="xl:hidden h-full bg-[linear-gradient(90deg,_#2F302C_0%,_#262720_100%)]"
-  >
-    <!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=nav idx=002 uid=d604044c -->
-    <nav class="relative flex items-center justify-center h-full">
-      <button
-        id="mobile-menu-button"
-        class="absolute left-[23px] text-white hover:text-secondary transition-colors"
-        aria-label="Toggle menu"
-      >
-        <img
-          src="/assets/images/menu.svg"
-          alt="menu"
-          class="w-[18px] h-[18px]"
-        />
-      </button>
-
-      <a href="/" class="block">
-        <img
-          src="/assets/images/logo.png"
-          alt="Logo"
-          class="h-[44px] w-[44px]"
-        />
-      </a>
-
-      <div class="absolute right-[23px] flex items-center gap-[14px]">
-        <button
-          class="hover:text-secondary transition-colors"
-          aria-label="Search"
-        >
-          <img
-            src="/assets/images/search.svg"
-            alt="search"
-            class="w-[18px] h-[18px]"
-          />
-        </button>
-        <a
-          href="/cart/gio-hang.html"
-          class="hover:text-secondary transition-colors"
-          aria-label="Cart"
-        >
-          <img
-            src="/assets/images/cart-2.svg"
-            alt="cart"
-            class="w-[18px] h-[18px]"
-          />
-        </a>
-        <a
-          href="/dich-vu-khach-hang/trang-thai-don-hang.html"
-          class="hover:text-secondary transition-colors"
-          aria-label="User"
-        >
-          <img
-            src="/assets/images/user.svg"
-            alt="user"
-            class="w-[18px] h-[18px]"
-          />
-        </a>
-      </div>
-    </nav>
-  </div>
-
-  <!-- Mobile Navigation -->
-  <div
-    id="mobile-menu"
-    class="hidden fixed inset-0 bg-primary z-50 overflow-y-auto"
-  >
-    <div
-      class="w-[85%] max-w-[1320px] mx-auto py-6 relative min-h-full flex flex-col"
-    >
-      <div class="flex justify-between items-center mb-8 shrink-0">
-        <a href="/" class="block">
-          <img
-            src="/assets/images/logo.png"
-            alt="Logo"
-            class="h-[90px] w-[90px]"
-          />
-        </a>
-        <div class="flex items-center gap-5">
-          <button
-            class="hover:text-secondary transition-colors"
-            aria-label="Search"
-          >
-            <img src="/assets/images/search.svg" alt="search" class="w-5 h-5" />
+    
+      <!-- Mobile Header -->
+      <div class="xl:hidden h-full bg-[linear-gradient(90deg,_#2F302C_0%,_#262720_100%)]">
+        <!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=nav idx=002 uid=d604044c -->
+        <nav class="relative flex items-center justify-center h-full">
+          <button id="mobile-menu-button" class="absolute left-[23px] text-white hover:text-secondary transition-colors"
+            aria-label="Toggle menu">
+            <img src="/assets/images/menu.svg" alt="menu" class="w-[18px] h-[18px]" />
           </button>
-          <a
-            href="/cart/gio-hang.html"
-            class="hover:text-secondary transition-colors"
-            aria-label="Cart"
-          >
-            <img src="/assets/images/cart-2.svg" alt="cart" class="w-5 h-5" />
+    
+          <a href="/" class="block">
+            <img src="/assets/images/logo.png" alt="Logo" class="h-[44px] w-[44px]" />
           </a>
+    
+          <div class="absolute right-[23px] flex items-center gap-[14px]">
+            <button class="hover:text-secondary transition-colors" aria-label="Search">
+              <img src="/assets/images/search.svg" alt="search" class="w-[18px] h-[18px]" />
+            </button>
+            <a href="/cart/gio-hang.html" class="hover:text-secondary transition-colors" aria-label="Cart">
+              <img src="/assets/images/cart-2.svg" alt="cart" class="w-[18px] h-[18px]" />
+            </a>
+            <a href="/dich-vu-khach-hang/trang-thai-don-hang.html" class="hover:text-secondary transition-colors"
+              aria-label="User">
+              <img src="/assets/images/user.svg" alt="user" class="w-[18px] h-[18px]" />
+            </a>
+          </div>
+        </nav>
+      </div>
+    
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="hidden fixed inset-0 bg-primary z-50 overflow-y-auto">
+        <div class="w-[85%] max-w-[1320px] mx-auto py-6 relative min-h-full flex flex-col">
+          <div class="flex justify-between items-center mb-8 shrink-0">
+            <a href="/" class="block">
+              <img src="/assets/images/logo.png" alt="Logo" class="h-[90px] w-[90px]" />
+            </a>
+            <div class="flex items-center gap-5">
+              <button class="hover:text-secondary transition-colors" aria-label="Search">
+                <img src="/assets/images/search.svg" alt="search" class="w-5 h-5" />
+              </button>
+              <a href="/cart/gio-hang.html" class="hover:text-secondary transition-colors" aria-label="Cart">
+                <img src="/assets/images/cart-2.svg" alt="cart" class="w-5 h-5" />
+              </a>
+              <a href="/dich-vu-khach-hang/trang-thai-don-hang.html" class="hover:text-secondary transition-colors"
+                aria-label="User">
+                <img src="/assets/images/user.svg" alt="user" class="w-5 h-5" />
+              </a>
+              <button id="close-menu-button" class="text-white hover:text-secondary transition-colors">
+                <img src="/assets/images/icon-close.svg" alt="close" class="w-8 h-8" />
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col space-y-6 flex-grow z-10">
+            <a href="/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/">trang chủ</a>
+            <a href="/about/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/about/">về chúng tôi</a>
+            <div class="flex flex-col">
+              <button id="mobile-products-toggle"
+                class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
+                data-path="/products/">
+                <span>sản phẩm</span>
+                <img src="/assets/images/icon-caret-down.svg" alt="caret" id="mobile-products-icon"
+                  class="w-[10px] h-[10px] transition-transform duration-300 transform" />
+              </button>
+              <div id="mobile-products-submenu" class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2">
+                <a href="/products/ngoi-am-duong/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/ngoi-am-duong/">Ngói Âm Dương</a>
+                <a href="/products/ngoi-hai-van-mieu/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/ngoi-hai-van-mieu/">Ngói Hài Văn Miếu</a>
+                <a href="/products/gach-hoa-thong-gio/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/gach-hoa-thong-gio/">Gạch Hoa Thông Gió</a>
+                <a href="/products/phu-kien-ngoi/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/phu-kien-ngoi/">Phụ Kiện Ngói</a>
+                <a href="/products/gach-trang-tri/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/gach-trang-tri/">Gạch Trang Trí</a>
+                <a href="/products/lan-can-gom-su/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/lan-can-gom-su/">Lan Can Gốm Sứ</a>
+                <a href="/products/gach-co-bat-trang/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/gach-co-bat-trang/">Gạch Cổ Bát Tràng</a>
+                <a href="/products/linh-vat-phong-thuy/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/linh-vat-phong-thuy/">Linh vật Phong Thủy</a>
+                <a href="/products/den-gom-su/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/den-gom-su/">Đèn Gốm Sứ</a>
+              </div>
+            </div>
+    
+            <div class="flex flex-col">
+              <button id="mobile-spct-toggle"
+                class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
+                data-path="/product-details/">
+                <span>SPCT</span>
+                <img src="/assets/images/icon-caret-down.svg" alt="caret" id="mobile-spct-icon"
+                  class="w-[10px] h-[10px] transition-transform duration-300 transform" />
+              </button>
+              <!-- Quick access detail pages dropdown MOBILE -->
+              <div id="mobile-spct-submenu" class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2">
+                <a href="/product-details/ngoi-am-duong.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/ngoi-am-duong.html">Ngói Âm Dương</a>
+                <a href="/product-details/ngoi-hai-co.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/ngoi-hai-co.html">Ngói Hài Cổ</a>
+                <a href="/product-details/ngoi-hai-van-mieu.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/ngoi-hai-van-mieu.html">Ngói Hài Văn Miếu</a>
+                <a href="/product-details/gach-hoa-thong-gio.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/gach-hoa-thong-gio.html">Gạch Hoa Thông Gió</a>
+                <a href="/product-details/gach-trang-tri.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/gach-trang-tri.html">Gạch Trang Trí</a>
+                <a href="/product-details/gach-co-bat-trang.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/gach-co-bat-trang.html">Gạch Cổ Bát Tràng</a>
+                <a href="/product-details/linh-vat.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/linh-vat.html">Linh Vật Phong Thủy</a>
+                <a href="/product-details/bo-noc-chu-van.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/bo-noc-chu-van.html">Bò Nóc Chữ Vạn</a>
+                <a href="/product-details/ngoi-bo-noc.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/ngoi-bo-noc.html">Ngói Bó Nóc</a>
+              </div>
+            </div>
+            <a href="/projects/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/projects/">Dự án</a>
+            <a href="/factory/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/factory/">Xưởng sản xuất</a>
+            <a href="/news/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/news/">Tin tức</a>
+            <a href="/contact/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/contact/">liên hệ</a>
+          </div>
+          <img src="/assets/images/background-decorate.svg" alt="background-decorate"
+            class="fixed top-[395px] left-[124px] w-[480px] h-[480px] pointer-events-none opacity-100" />
+        </div>
+      </div>
+    </header>
+    
+    <!-- GSXD-DEBUG:END type=LAYOUT file=components/header.html uid=0505a17c -->
+    <!-- Main Content: Đón toàn bộ biến động (data-page, class nền, v.v...) -->
+    <main 
+        class="flex-grow bg-white">
+        
+        <!-- GSXD-ELEMENT:BEGIN file=projects/index.html tag=main idx=001 uid=9724f38f -->
+        <!-- GSXD-PARTIAL:BEGIN file=projects/index.html include=projects/partials/list idx=002 uid=335a2013 -->
+        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/list.html uid=af6726e4 -->
+        <!-- Projects List Section -->
+        <!-- GSXD-SECTION:BEGIN file=projects/partials/list.html tag=section idx=001 uid=b10aee32 -->
+        <section class="py-16 lg:py-20 bg-background-secondary">
+          <div class="w-[85%] max-w-[1320px] mx-auto">
+        <!-- GSXD-PARTIAL:BEGIN file=projects/partials/list.html include=projects/partials/list-intro idx=001 uid=3a0ae463 -->
+        <!-- Header Text -->
+        <div class="text-center mb-10 md:mb-20 px-4 md:px-0">
+          <p class="text-sm md:text-base font-archivo font-bold text-primary uppercase mb-2.5 md:mb-4">DỰ ÁN</p>
+          <h1 class="text-[30px] leading-[37.5px] md:text-4xl lg:text-5xl md:leading-tight font-arima font-medium text-primary mb-6">
+            Khơi nguồn cảm hứng từ <br class="block md:hidden"/> những công trình
+          </h1>
+          <p class="max-w-4xl mx-auto text-xs/6 md:text-sm/7 text-primary font-archivo">
+            Chào mừng bạn đến với thế giới của những dự án đầy cảm hứng. Tại đây, chúng tôi trình diễn sự kết hợp hoàn hảo giữa <br class="hidden md:inline" />
+            kỹ nghệ gốm sứ truyền thống và tư duy kiến trúc mới. Mỗi danh mục sản phẩm dưới đây là một câu chuyện về <br class="hidden md:inline" />
+            sự tận tâm, mang lại vẻ đẹp độc bản và sự kiên cố cho mọi ngôi nhà.
+          </p>
+        </div><!-- GSXD-PARTIAL:BEGIN file=projects/partials/list.html include=projects/partials/list-filters idx=002 uid=1c395375 -->
+        <!-- Filters -->
+        <div class="mb-10 md:mb-16 flex flex-col items-center md:block" data-aos="fade-up">
+          <!-- Mobile Dropdown -->
+          <div class="md:hidden relative min-w-[184px] h-[32px]">
+            <select class="w-full h-full pl-3 pr-8 border border-[#ACACAC] bg-transparent text-[#565656] text-[14px] font-archivo font-semibold uppercase appearance-none outline-none cursor-pointer">
+              <option value="ngoi-am-duong" selected>NGÓI ÂM DƯƠNG</option>
+              <option value="ngoi-hai">NGÓI HÀI - VĂN MIẾU</option>
+              <option value="gach-thong-gio">GẠCH THÔNG GIÓ</option>
+              <option value="gach-trang-tri">GẠCH TRANG TRÍ</option>
+              <option value="san-pham-khac">SẢN PHẨM KHÁC</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-[#C76E00]">
+              <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.33"/>
+              </svg>
+            </div>
+          </div>
+        
+          <!-- Desktop Links -->
+          <div class="hidden md:flex flex-wrap justify-between items-center gap-6 md:gap-12">
+            <button
+              class="text-base md:text-xl font-archivo font-semibold text-secondary uppercaser relative after:content-[''] after:absolute after:-bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-secondary"
+            >
+              NGÓI ÂM DƯƠNG
+            </button>
+            <button class="text-base md:text-xl font-archivo font-semibold text-primary uppercase hover:text-secondary transition-colors">
+              NGÓI HÀI - VĂN MIẾU
+            </button>
+            <button class="text-base md:text-xl font-archivo font-semibold text-primary uppercase hover:text-secondary transition-colors">
+              GẠCH THÔNG GIÓ
+            </button>
+            <button class="text-base md:text-xl font-archivo font-semibold text-primary uppercase hover:text-secondary transition-colors">
+              GẠCH TRANG TRÍ
+            </button>
+            <button class="text-base md:text-xl font-archivo font-semibold text-primary uppercase hover:text-secondary transition-colors">
+              SẢN PHẨM KHÁC
+            </button>
+          </div>
+        </div><!-- GSXD-PARTIAL:BEGIN file=projects/partials/list.html include=projects/partials/list-grid idx=003 uid=9090874b -->
+        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/list-grid.html uid=fbb6a505 -->
+        <!-- Projects Grid -->
+        <!-- GSXD-BLOCK:BEGIN file=projects/partials/list-grid.html tag=div idx=001 uid=0abd6ff3 -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mb-8 md:mb-20 w-[85%] mx-auto"
+          data-aos="fade-up"
+        >
+          <!-- Project 1 -->
           <a
-            href="/dich-vu-khach-hang/trang-thai-don-hang.html"
-            class="hover:text-secondary transition-colors"
-            aria-label="User"
+            href="/projects/detail.html"
+            class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
           >
-            <img src="/assets/images/user.svg" alt="user" class="w-5 h-5" />
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="/assets/images/trang-tri-slide-01.jpg"
+                alt="Chùa Bái Đính"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-3 text-center bg-white">
+              <h3
+                class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
+              >
+                CHÙA BÁI ĐÍNH
+              </h3>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
+              </p>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
+                nâu đen
+              </p>
+            </div>
           </a>
+        
+          <!-- Project 2 -->
+          <a
+            href="/projects/detail.html"
+            class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="/assets/images/trang-tri-slide-01.jpg"
+                alt="Chùa Bái Đính"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-3 text-center bg-white">
+              <h3
+                class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
+              >
+                CHÙA BÁI ĐÍNH
+              </h3>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
+              </p>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
+                nâu đen
+              </p>
+            </div>
+          </a>
+        
+          <!-- Project 3 -->
+          <a
+            href="/projects/detail.html"
+            class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="/assets/images/trang-tri-slide-01.jpg"
+                alt="Chùa Bái Đính"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-3 text-center bg-white">
+              <h3
+                class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
+              >
+                CHÙA BÁI ĐÍNH
+              </h3>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
+              </p>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
+                nâu đen
+              </p>
+            </div>
+          </a>
+        
+          <!-- Project 4 -->
+          <a
+            href="/projects/detail.html"
+            class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="/assets/images/trang-tri-slide-01.jpg"
+                alt="Chùa Bái Đính"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-3 text-center bg-white">
+              <h3
+                class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
+              >
+                CHÙA BÁI ĐÍNH
+              </h3>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
+              </p>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
+                nâu đen
+              </p>
+            </div>
+          </a>
+        
+          <!-- Project 5 -->
+          <a
+            href="/projects/detail.html"
+            class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="/assets/images/trang-tri-slide-01.jpg"
+                alt="Chùa Bái Đính"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-3 text-center bg-white">
+              <h3
+                class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
+              >
+                CHÙA BÁI ĐÍNH
+              </h3>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
+              </p>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
+                nâu đen
+              </p>
+            </div>
+          </a>
+        
+          <!-- Project 6 -->
+          <a
+            href="/projects/detail.html"
+            class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="/assets/images/trang-tri-slide-01.jpg"
+                alt="Chùa Bái Đính"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-3 text-center bg-white">
+              <h3
+                class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
+              >
+                CHÙA BÁI ĐÍNH
+              </h3>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
+              </p>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
+                nâu đen
+              </p>
+            </div>
+          </a>
+        
+          <!-- Project 7 -->
+          <a
+            href="/projects/detail.html"
+            class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="/assets/images/trang-tri-slide-01.jpg"
+                alt="Chùa Bái Đính"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-3 text-center bg-white">
+              <h3
+                class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
+              >
+                CHÙA BÁI ĐÍNH
+              </h3>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
+              </p>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
+                nâu đen
+              </p>
+            </div>
+          </a>
+        
+          <!-- Project 8 -->
+          <a
+            href="/projects/detail.html"
+            class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="/assets/images/trang-tri-slide-01.jpg"
+                alt="Chùa Bái Đính"
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+            </div>
+            <div class="p-3 text-center bg-white">
+              <h3
+                class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
+              >
+                CHÙA BÁI ĐÍNH
+              </h3>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
+              </p>
+              <p class="text-[15px] text-primary font-archivo font-medium">
+                <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
+                nâu đen
+              </p>
+            </div>
+          </a>
+        </div>
+        <!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/list-grid.html uid=fbb6a505 -->
+        <!-- GSXD-PARTIAL:BEGIN file=projects/partials/list.html include=projects/partials/list-pagination idx=004 uid=ec755bf2 -->
+        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/list-pagination.html uid=4d6a78df -->
+        <!-- Pagination -->
+        <!-- GSXD-BLOCK:BEGIN file=projects/partials/list-pagination.html tag=div idx=001 uid=ee8a55bc -->
+        <div
+          class="flex items-center justify-between gap-8 md:gap-12"
+          data-aos="fade-up"
+        >
           <button
-            id="close-menu-button"
-            class="text-white hover:text-secondary transition-colors"
+            class="text-primary hover:text-secondary transition-colors"
+            aria-label="Previous Page"
           >
             <svg
-              class="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
+              fill="currentColor"
+              class="w-5 h-5"
               viewBox="0 0 24 24"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
+              <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
+            </svg>
+          </button>
+          <div class="flex items-center gap-6">
+            <span
+              class="w-10 h-10 flex items-center justify-center text-sm font-archivo font-bold bg-white text-secondary rounded-full shadow-sm cursor-pointer border border-[#FFFAF3]"
+              >1</span
+            >
+            <span class="text-sm font-archivo font-bold text-primary hover:text-secondary cursor-pointer">2</span>
+            <span class="text-sm font-archivo font-bold text-primary hover:text-secondary cursor-pointer">3</span>
+          </div>
+          <button
+            class="text-primary hover:text-secondary transition-colors"
+            aria-label="Next Page"
+          >
+            <svg
+              fill="currentColor"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
             </svg>
           </button>
         </div>
-      </div>
-      <div class="flex flex-col space-y-6 flex-grow z-10">
-        <a
-          href="/"
-          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-          data-path="/"
-          >trang chủ</a
+        <!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/list-pagination.html uid=4d6a78df -->
+        
+        
+        
+        
+          </div>
+        </section>
+        <!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/list.html uid=af6726e4 -->
+        
+        
+        
+        <!-- GSXD-PARTIAL:BEGIN file=projects/index.html include=projects/partials/catalog-section idx=003 uid=3aed97cc -->
+        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/catalog-section.html uid=a395416c -->
+        <!-- Catalog Section -->
+        <!-- GSXD-SECTION:BEGIN file=projects/partials/catalog-section.html tag=section idx=001 uid=0f060714 -->
+        <section
+          id="catalog-section"
+          class="py-16 lg:py-28 bg-white relative overflow-hidden"
         >
-        <a
-          href="/about/"
-          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-          data-path="/about/"
-          >về chúng tôi</a
+          <!-- Decorative Elements -->
+          <img
+            src="/assets/images/news-decor.svg"
+            alt="Decor Left"
+            class="absolute md:left-0 left-[-5%] top-0 h-full w-auto max-h-[1000px] opacity-15 pointer-events-none"
+          />
+          <img
+            src="/assets/images/gtt-decorate-left.svg"
+            alt="Decor Right"
+            class="absolute -right-[13%] top-0 h-[160%] w-auto max-h-[1000px] opacity-15 pointer-events-none rotate-180"
+          />
+        
+          <div class="container-custom relative z-10 w-[85%] max-w-[1320px] mx-auto">
+            <div class="w-[85%] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+              <!-- Left Content -->
+              <div
+                class="w-full lg:w-5/12"
+                data-aos="fade-right"
+              >
+                <h2 class="text-[36px] leading-[45px] lg:text-[48px] font-arima font-light text-primary lg:leading-tight mb-8 md:mb-4">
+                  Gạch thông<br class="hidden md:block"/>
+                  gió 300x300<br class="hidden md:block"/>
+                  thường
+                </h2>
+                <a
+                  href="#"
+                  class="inline-block px-4 md:px-8 py-2 md:py-3 border border-primary text-[15px] leading-[22.5px] tracking-[0.38px] font-semibold text-primary uppercase hover:bg-primary hover:text-white transition-all duration-300"
+                >
+                  XEM CATALOG
+                </a>
+              </div>
+        
+              <!-- Right Image -->
+              <div
+                class="w-full lg:w-7/12"
+                data-aos="fade-left"
+              >
+                <div class="relative group">
+                  <img
+                    src="/assets/images/news-detail-5.png"
+                    alt="Gạch thông gió"
+                    class="w-full h-auto aspect-[67/45] object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/catalog-section.html uid=a395416c -->
+        
+        
+        
+        
+            </main>
+
+    <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
+    <!-- GSXD-ELEMENT:BEGIN file=components/footer.html tag=footer idx=001 uid=540a3f40 -->
+    <footer class="bg-[#262723] text-white">
+      <!-- Main Footer -->
+      <div class="relative bg-[#262723] overflow-hidden">
+        <img
+          src="/assets/images/footer-image-2.png"
+          alt=""
+          class="hidden lg:block absolute inset-0 w-full h-full object-cover"
+        />
+        <div
+          class="relative w-[85%] max-w-[1320px] mx-auto pt-12 lg:pt-[150px] pb-[60px] lg:whitespace-nowrap"
         >
-        <div class="flex flex-col">
-          <button
-            id="mobile-products-toggle"
-            class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
-            data-path="/products/"
-          >
-            <span>sản phẩm</span>
-            <svg
-              class="w-[10px] h-[10px] transition-transform duration-300 transform"
-              id="mobile-products-icon"
-              viewBox="0 0 7 7"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
           <div
-            id="mobile-products-submenu"
-            class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2"
+            class="grid grid-cols-2 gap-x-2 gap-y-8 lg:grid lg:grid-cols-[200px_455px_195px_370px_200px] lg:gap-0 lg:w-[1420px] lg:justify-start lg:-translate-x-[38px]"
           >
-            <a
-              href="/products/ngoi-am-duong/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/ngoi-am-duong/"
-              >Ngói Âm Dương</a
+            <div
+              class="hidden lg:flex flex-col justify-between items-center gap-6 w-full lg:w-[200px] lg:pr-[45px] shrink-0"
             >
-            <a
-              href="/products/ngoi-hai-van-mieu/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/ngoi-hai-van-mieu/"
-              >Ngói Hài Văn Miếu</a
+              <div>
+                <img
+                  src="/assets/images/logo.png"
+                  alt="Logo"
+                  class="w-[88px] h-[88px]"
+                />
+              </div>
+              <div class="mt-auto lg:pt-16">
+                <a
+                  href="#"
+                  class="inline-block"
+                  aria-label="Đã thông báo Bộ Công Thương"
+                >
+                  <img
+                    src="/assets/images/bo-cong-thuong.png"
+                    alt="Đã thông báo Bộ Công Thương"
+                    class="h-[52px] w-auto"
+                  />
+                </a>
+              </div>
+            </div>
+    
+            <div
+              class="col-span-2 lg:col-span-1 w-full lg:w-[455px] shrink-0 order-1 lg:order-none"
             >
-            <a
-              href="/products/gach-hoa-thong-gio/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/gach-hoa-thong-gio/"
-              >Gạch Hoa Thông Gió</a
+              <div
+                class="text-white text-[15px] leading-[26px] mb-6 tracking-[-0.1px]"
+              >
+                <p class="font-bold uppercase">
+                  CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI<br class="block lg:hidden" />
+                  THANH HẢI
+                </p>
+                <p>18 Phố Gốm – Giang Cao, Bát Tràng, Gia Lâm, Hà Nội</p>
+                <p>0966 55 8808</p>
+                <p>gshaithanh@gmail.com</p>
+              </div>
+    
+              <div class="block lg:hidden mb-8">
+                <a
+                  href="#"
+                  class="inline-block"
+                  aria-label="Đã thông báo Bộ Công Thương"
+                >
+                  <img
+                    src="/assets/images/bo-cong-thuong.png"
+                    alt="Đã thông báo Bộ Công Thương"
+                    class="h-[52px] w-auto"
+                  />
+                </a>
+              </div>
+    
+              <div class="hidden lg:flex items-center gap-[20px] mb-8">
+                <a href="#" aria-label="Facebook">
+                  <img
+                    src="/assets/images/facebook.svg"
+                    alt="Facebook"
+                    class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                </a>
+                <a href="#" aria-label="YouTube">
+                  <img
+                    src="/assets/images/youtube.svg"
+                    alt="YouTube"
+                    class="w-[24px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                </a>
+                <a href="#" aria-label="Pinterest">
+                  <img
+                    src="/assets/images/pinterest.svg"
+                    alt="Pinterest"
+                    class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                </a>
+              </div>
+            </div>
+    
+            <div
+              class="col-span-1 lg:col-span-1 w-full lg:w-[195px] min-w-0 order-2 lg:order-none"
             >
-            <a
-              href="/products/phu-kien-ngoi/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/phu-kien-ngoi/"
-              >Phụ Kiện Ngói</a
+              <h3
+                class="text-white text-[14px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 whitespace-nowrap uppercase"
+              >
+                TỔNG QUAN
+              </h3>
+              <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap">
+                <a
+                  href="/about/"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Về chúng tôi</a
+                ><br />
+                <a
+                  href="/showroom/"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Showroom</a
+                ><br />
+                <a
+                  href="/factory/"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Nhà xưởng</a
+                ><br />
+                <a
+                  href="/contact/"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Liên hệ</a
+                >
+              </div>
+            </div>
+    
+            <div
+              class="col-span-1 lg:col-span-1 w-full lg:w-[200px] min-w-0 order-3 lg:order-none"
             >
-            <a
-              href="/products/gach-trang-tri/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/gach-trang-tri/"
-              >Gạch Trang Trí</a
+              <h3
+                class="text-white text-[16px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 whitespace-nowrap uppercase"
+              >
+                DỊCH VỤ KHÁCH HÀNG
+              </h3>
+              <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap">
+                <a
+                  href="/dich-vu-khach-hang/tai-khoan-cua-toi.html"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Tài khoản</a
+                ><br />
+                <a
+                  href="/dich-vu-khach-hang/quy-trinh-dat-hang.html"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Quy trình đặt hàng</a
+                ><br />
+                <a
+                  href="/dich-vu-khach-hang/huong-dan-thi-cong.html"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Hướng dẫn thi công</a
+                ><br />
+                <a
+                  href="/faq/index.html"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >FAQ</a
+                >
+              </div>
+            </div>
+    
+            <div
+              class="col-span-2 lg:col-span-1 w-full lg:w-[370px] min-w-0 order-4 lg:order-none"
             >
-            <a
-              href="/products/lan-can-gom-su/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/lan-can-gom-su/"
-              >Lan Can Gốm Sứ</a
-            >
-            <a
-              href="/products/gach-co-bat-trang/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/gach-co-bat-trang/"
-              >Gạch Cổ Bát Tràng</a
-            >
-            <a
-              href="/products/linh-vat-phong-thuy/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/linh-vat-phong-thuy/"
-              >Linh vật Phong Thủy</a
-            >
-            <a
-              href="/products/den-gom-su/"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/products/den-gom-su/"
-              >Đèn Gốm Sứ</a
-            >
+              <h3
+                class="text-white text-[14px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 text-start lg:text-center lg:mr-[65px] whitespace-nowrap uppercase"
+              >
+                SẢN PHẨM
+              </h3>
+              <div class="flex gap-[40px] lg:gap-[50px]">
+                <div
+                  class="leading-[30px] lg:leading-[40px] whitespace-nowrap flex-1"
+                >
+                  <a
+                    href="/products/ngoi-am-duong/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Ngói âm dương</a
+                  ><br />
+                  <a
+                    href="/products/ngoi-hai-van-mieu/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Ngói hài văn miếu</a
+                  ><br />
+                  <a
+                    href="/products/phu-kien-ngoi/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Phụ kiện mái</a
+                  ><br />
+                  <a
+                    href="/products/linh-vat-phong-thuy/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Linh vật phong thủy</a
+                  >
+                </div>
+                <div
+                  class="leading-[30px] lg:leading-[40px] whitespace-nowrap flex-1"
+                >
+                  <a
+                    href="/products/gach-hoa-thong-gio/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Gạch thông gió</a
+                  ><br />
+                  <a
+                    href="/products/gach-trang-tri/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Gạch trang trí</a
+                  ><br />
+                  <a
+                    href="/products/lan-can-gom-su/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Lan can gốm sứ</a
+                  ><br />
+                  <a
+                    href="/products/den-gom-su/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Đèn vườn gốm sứ</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="flex flex-col">
-          <button
-            id="mobile-spct-toggle"
-            class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
-            data-path="/product-details/"
-          >
-            <span>SPCT</span>
-            <svg
-              class="w-[10px] h-[10px] transition-transform duration-300 transform"
-              id="mobile-spct-icon"
-              viewBox="0 0 7 7"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+    
+        <div class="relative border-t border-white/20 w-full">
+          <div class="w-[85%] max-w-[1320px] mx-auto py-6">
+            <div
+              class="flex flex-col-reverse md:flex-row justify-between items-center gap-2 md:gap-4"
             >
-              <path
-                d="M6.05225 1.87792L3.50017 3.91959L0.948088 1.87792C0.88826 1.83005 0.819587 1.79442 0.745991 1.77308C0.672395 1.75174 0.595317 1.74511 0.519158 1.75356C0.442998 1.76201 0.369249 1.78538 0.30212 1.82233C0.234992 1.85928 0.175799 1.90909 0.127921 1.96892C0.0800432 2.02875 0.0444182 2.09742 0.0230801 2.17102C0.00174206 2.24462 -0.00489129 2.32169 0.00355885 2.39785C0.012009 2.47401 0.0353771 2.54776 0.072329 2.61489C0.109281 2.68202 0.159093 2.74121 0.218921 2.78909L3.13559 5.12242C3.23905 5.20526 3.36763 5.25039 3.50017 5.25039C3.63271 5.25039 3.76129 5.20526 3.86475 5.12242L6.78142 2.78909C6.90225 2.6924 6.97972 2.55166 6.99678 2.39785C7.01385 2.24404 6.96911 2.08975 6.87242 1.96892C6.82454 1.90909 6.76535 1.85928 6.69822 1.82233C6.63109 1.78538 6.55734 1.76201 6.48118 1.75356C6.32737 1.7365 6.17308 1.78123 6.05225 1.87792Z"
-                fill="currentColor"
-              />
-            </svg>
-          </button>
-          <div
-            id="mobile-spct-submenu"
-            class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2"
-          >
-            <a
-              href="/product-details/ngoi-am-duong/detail.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/product-details/ngoi-am-duong/detail.html"
-              >Ngói Âm Dương</a
-            >
-            <a
-              href="/product-details/gach-co-bat-trang/detail-200x200x50.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/product-details/gach-co-bat-trang/detail-200x200x50.html"
-              >Gạch Bát 200x200x50</a
-            >
-            <a
-              href="/product-details/gach-co-bat-trang/detail-220x110x60.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/product-details/gach-co-bat-trang/detail-220x110x60.html"
-              >Gạch Bát 220x110x60</a
-            >
-            <a
-              href="/product-details/gach-co-bat-trang/detail-300x100x30.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/product-details/gach-co-bat-trang/detail-300x100x30.html"
-              >Gạch Bát 300x100x30</a
-            >
-            <a
-              href="/product-details/gach-co-bat-trang/detail-300x150x60.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/product-details/gach-co-bat-trang/detail-300x150x60.html"
-              >Gạch Bát 300x150x60</a
-            >
-            <a
-              href="/product-details/gach-co-bat-trang/detail-300x300x50.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/product-details/gach-co-bat-trang/detail-300x300x50.html"
-              >Gạch Bát 300x300x50</a
-            >
-            <a
-              href="/product-details/gach-hoa-thong-gio/detail.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/product-details/gach-hoa-thong-gio/detail.html"
-              >Gạch hoa thông gió</a
-            >
-            <a
-              href="/product-details/gach-trang-tri/detail.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/product-details/gach-trang-tri/detail.html"
-              >Gạch trang trí</a
-            >
-            <a
-              href="/product-details/linh-vat/detail.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/product-details/linh-vat/detail.html"
-              >Linh vật phong thủy</a
-            >
-            <a
-              href="/product-details/ngoi-hai-co/ngoi-hai-co-nau-den.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/product-details/ngoi-hai-co/ngoi-hai-co-nau-den.html"
-              >Ngói Hài Cổ Nâu Đen</a
-            >
-            <a
-              href="/product-details/ngoi-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/product-details/ngoi-van-mieu/ngoi-van-mieu-ghi-anh-kim.html"
-              >Ngói Văn Miếu Ghi Ánh Kim</a
-            >
-            <a
-              href="/product-details/bo-noc-chu-van/bo-noc-chu-van.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/product-details/bo-noc-chu-van/bo-noc-chu-van.html"
-              >Bò Nóc Chữ Vạn</a
-            >
-            <a
-              href="/product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html"
-              class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
-              data-path="/product-details/ngoi-bo-noc-chu-van/ngoi-bo-noc.html"
-              >Ngói Bó Nóc</a
-            >
+              <p
+                class="text-[#909090] text-[12px] lg:text-sm leading-[26px] whitespace-nowrap text-center"
+              >
+                Copyright © 2022 . All rights reserved
+              </p>
+              <div
+                class="text-[#909090] text-[12px] lg:text-sm leading-[26px] whitespace-nowrap flex items-center justify-center flex-wrap md:flex-nowrap"
+              >
+                <a
+                  href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html"
+                  class="whitespace-nowrap hover:text-secondary transition-colors"
+                  >Chính sách vận chuyển</a
+                >
+                <span class="text-[14px] mx-2 lg:mx-4">|</span>
+                <a
+                  href="/dich-vu-khach-hang/chinh-sach-doi-tra.html"
+                  class="whitespace-nowrap hover:text-secondary transition-colors"
+                  >Chính sách đổi trả</a
+                >
+                <span class="text-[14px] mx-2 lg:mx-4">|</span>
+                <a
+                  href="/dich-vu-khach-hang/bao-mat-thong-tin.html"
+                  class="whitespace-nowrap hover:text-secondary transition-colors"
+                  >Bảo mật thông tin</a
+                >
+              </div>
+            </div>
           </div>
         </div>
-        <a
-          href="/projects/"
-          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-          data-path="/projects/"
-          >Dự án</a
-        >
-        <a
-          href="/factory/"
-          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-          data-path="/factory/"
-          >Xưởng sản xuất</a
-        >
-        <a
-          href="/news/"
-          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-          data-path="/news/"
-          >Tin tức</a
-        >
-        <a
-          href="/contact/"
-          class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
-          data-path="/contact/"
-          >liên hệ</a
-        >
       </div>
-      <img
-        src="/assets/images/background-decorate.svg"
-        alt="background-decorate"
-        class="fixed top-[395px] left-[124px] w-[480px] h-[480px] pointer-events-none opacity-100"
-      />
-    </div>
-  </div>
-</header>
-
-<!-- GSXD-DEBUG:END type=LAYOUT file=components/header.html uid=0505a17c -->
-
-
-
-
-    <!-- GSXD-ELEMENT:BEGIN file=projects/index.html tag=main idx=001 uid=9724f38f -->
-
-    <main class="flex-grow">
-<!-- GSXD-PARTIAL:BEGIN file=projects/index.html include=projects/partials/list idx=002 uid=335a2013 -->
-<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/list.html uid=af6726e4 -->
-<!-- Projects List Section -->
-<!-- GSXD-SECTION:BEGIN file=projects/partials/list.html tag=section idx=001 uid=b10aee32 -->
-<section class="py-16 lg:py-20 bg-background-secondary">
-  <div class="w-[85%] max-w-[1320px] mx-auto">
-<!-- GSXD-PARTIAL:BEGIN file=projects/partials/list.html include=projects/partials/list-intro idx=001 uid=3a0ae463 -->
-<!-- Header Text -->
-<div class="text-center mb-10 md:mb-20 px-4 md:px-0">
-  <p class="text-sm md:text-base font-archivo font-bold text-primary uppercase mb-2.5 md:mb-4">DỰ ÁN</p>
-  <h1 class="text-[30px] leading-[37.5px] md:text-4xl lg:text-5xl md:leading-tight font-arima font-medium text-primary mb-6">
-    Khơi nguồn cảm hứng từ <br class="block md:hidden"/> những công trình
-  </h1>
-  <p class="max-w-4xl mx-auto text-xs/6 md:text-sm/7 text-primary font-archivo">
-    Chào mừng bạn đến với thế giới của những dự án đầy cảm hứng. Tại đây, chúng tôi trình diễn sự kết hợp hoàn hảo giữa <br class="hidden md:inline" />
-    kỹ nghệ gốm sứ truyền thống và tư duy kiến trúc mới. Mỗi danh mục sản phẩm dưới đây là một câu chuyện về <br class="hidden md:inline" />
-    sự tận tâm, mang lại vẻ đẹp độc bản và sự kiên cố cho mọi ngôi nhà.
-  </p>
-</div><!-- GSXD-PARTIAL:BEGIN file=projects/partials/list.html include=projects/partials/list-filters idx=002 uid=1c395375 -->
-<!-- Filters -->
-<div class="mb-10 md:mb-16 flex flex-col items-center md:block" data-aos="fade-up">
-  <!-- Mobile Dropdown -->
-  <div class="md:hidden relative min-w-[184px] h-[32px]">
-    <select class="w-full h-full pl-3 pr-8 border border-[#ACACAC] bg-transparent text-[#565656] text-[14px] font-archivo font-semibold uppercase appearance-none outline-none cursor-pointer">
-      <option value="ngoi-am-duong" selected>NGÓI ÂM DƯƠNG</option>
-      <option value="ngoi-hai">NGÓI HÀI - VĂN MIẾU</option>
-      <option value="gach-thong-gio">GẠCH THÔNG GIÓ</option>
-      <option value="gach-trang-tri">GẠCH TRANG TRÍ</option>
-      <option value="san-pham-khac">SẢN PHẨM KHÁC</option>
-    </select>
-    <div class="pointer-events-none absolute inset-y-0 right-1 flex items-center px-2 text-[#C76E00]">
-      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.33"/>
-      </svg>
-    </div>
-  </div>
-
-  <!-- Desktop Links -->
-  <div class="hidden md:flex flex-wrap justify-between items-center gap-6 md:gap-12">
-    <button
-      class="text-base md:text-xl font-archivo font-semibold text-secondary uppercaser relative after:content-[''] after:absolute after:-bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-secondary"
-    >
-      NGÓI ÂM DƯƠNG
-    </button>
-    <button class="text-base md:text-xl font-archivo font-semibold text-primary uppercase hover:text-secondary transition-colors">
-      NGÓI HÀI - VĂN MIẾU
-    </button>
-    <button class="text-base md:text-xl font-archivo font-semibold text-primary uppercase hover:text-secondary transition-colors">
-      GẠCH THÔNG GIÓ
-    </button>
-    <button class="text-base md:text-xl font-archivo font-semibold text-primary uppercase hover:text-secondary transition-colors">
-      GẠCH TRANG TRÍ
-    </button>
-    <button class="text-base md:text-xl font-archivo font-semibold text-primary uppercase hover:text-secondary transition-colors">
-      SẢN PHẨM KHÁC
-    </button>
-  </div>
-</div><!-- GSXD-PARTIAL:BEGIN file=projects/partials/list.html include=projects/partials/list-grid idx=003 uid=9090874b -->
-<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/list-grid.html uid=fbb6a505 -->
-<!-- Projects Grid -->
-<!-- GSXD-BLOCK:BEGIN file=projects/partials/list-grid.html tag=div idx=001 uid=0abd6ff3 -->
-<div
-  class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 mb-8 md:mb-20 w-[85%] mx-auto"
-  data-aos="fade-up"
->
-  <!-- Project 1 -->
-  <a
-    href="/projects/detail.html"
-    class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
-  >
-    <div class="aspect-[4/3] overflow-hidden">
-      <img
-        src="/assets/images/trang-tri-slide-01.jpg"
-        alt="Chùa Bái Đính"
-        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-      />
-    </div>
-    <div class="p-3 text-center bg-white">
-      <h3
-        class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
-      >
-        CHÙA BÁI ĐÍNH
-      </h3>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
-      </p>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
-        nâu đen
-      </p>
-    </div>
-  </a>
-
-  <!-- Project 2 -->
-  <a
-    href="/projects/detail.html"
-    class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
-  >
-    <div class="aspect-[4/3] overflow-hidden">
-      <img
-        src="/assets/images/trang-tri-slide-01.jpg"
-        alt="Chùa Bái Đính"
-        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-      />
-    </div>
-    <div class="p-3 text-center bg-white">
-      <h3
-        class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
-      >
-        CHÙA BÁI ĐÍNH
-      </h3>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
-      </p>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
-        nâu đen
-      </p>
-    </div>
-  </a>
-
-  <!-- Project 3 -->
-  <a
-    href="/projects/detail.html"
-    class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
-  >
-    <div class="aspect-[4/3] overflow-hidden">
-      <img
-        src="/assets/images/trang-tri-slide-01.jpg"
-        alt="Chùa Bái Đính"
-        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-      />
-    </div>
-    <div class="p-3 text-center bg-white">
-      <h3
-        class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
-      >
-        CHÙA BÁI ĐÍNH
-      </h3>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
-      </p>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
-        nâu đen
-      </p>
-    </div>
-  </a>
-
-  <!-- Project 4 -->
-  <a
-    href="/projects/detail.html"
-    class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
-  >
-    <div class="aspect-[4/3] overflow-hidden">
-      <img
-        src="/assets/images/trang-tri-slide-01.jpg"
-        alt="Chùa Bái Đính"
-        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-      />
-    </div>
-    <div class="p-3 text-center bg-white">
-      <h3
-        class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
-      >
-        CHÙA BÁI ĐÍNH
-      </h3>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
-      </p>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
-        nâu đen
-      </p>
-    </div>
-  </a>
-
-  <!-- Project 5 -->
-  <a
-    href="/projects/detail.html"
-    class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
-  >
-    <div class="aspect-[4/3] overflow-hidden">
-      <img
-        src="/assets/images/trang-tri-slide-01.jpg"
-        alt="Chùa Bái Đính"
-        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-      />
-    </div>
-    <div class="p-3 text-center bg-white">
-      <h3
-        class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
-      >
-        CHÙA BÁI ĐÍNH
-      </h3>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
-      </p>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
-        nâu đen
-      </p>
-    </div>
-  </a>
-
-  <!-- Project 6 -->
-  <a
-    href="/projects/detail.html"
-    class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
-  >
-    <div class="aspect-[4/3] overflow-hidden">
-      <img
-        src="/assets/images/trang-tri-slide-01.jpg"
-        alt="Chùa Bái Đính"
-        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-      />
-    </div>
-    <div class="p-3 text-center bg-white">
-      <h3
-        class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
-      >
-        CHÙA BÁI ĐÍNH
-      </h3>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
-      </p>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
-        nâu đen
-      </p>
-    </div>
-  </a>
-
-  <!-- Project 7 -->
-  <a
-    href="/projects/detail.html"
-    class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
-  >
-    <div class="aspect-[4/3] overflow-hidden">
-      <img
-        src="/assets/images/trang-tri-slide-01.jpg"
-        alt="Chùa Bái Đính"
-        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-      />
-    </div>
-    <div class="p-3 text-center bg-white">
-      <h3
-        class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
-      >
-        CHÙA BÁI ĐÍNH
-      </h3>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
-      </p>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
-        nâu đen
-      </p>
-    </div>
-  </a>
-
-  <!-- Project 8 -->
-  <a
-    href="/projects/detail.html"
-    class="group block overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-500 bg-white"
-  >
-    <div class="aspect-[4/3] overflow-hidden">
-      <img
-        src="/assets/images/trang-tri-slide-01.jpg"
-        alt="Chùa Bái Đính"
-        class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-      />
-    </div>
-    <div class="p-3 text-center bg-white">
-      <h3
-        class="text-lg md:text-xl font-archivo font-extrabold text-primary mb-2 group-hover:text-secondary transition-colors"
-      >
-        CHÙA BÁI ĐÍNH
-      </h3>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Địa điểm:</span> Ninh Bình
-      </p>
-      <p class="text-[15px] text-primary font-archivo font-medium">
-        <span class="text-primary font-semibold">Sản phẩm:</span> Ngói âm dương
-        nâu đen
-      </p>
-    </div>
-  </a>
-</div>
-<!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/list-grid.html uid=fbb6a505 -->
-<!-- GSXD-PARTIAL:BEGIN file=projects/partials/list.html include=projects/partials/list-pagination idx=004 uid=ec755bf2 -->
-<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/list-pagination.html uid=4d6a78df -->
-<!-- Pagination -->
-<!-- GSXD-BLOCK:BEGIN file=projects/partials/list-pagination.html tag=div idx=001 uid=ee8a55bc -->
-<div
-  class="flex items-center justify-between gap-8 md:gap-12"
-  data-aos="fade-up"
->
-  <button
-    class="text-primary hover:text-secondary transition-colors"
-    aria-label="Previous Page"
-  >
-    <svg
-      fill="currentColor"
-      class="w-5 h-5"
-      viewBox="0 0 24 24"
-    >
-      <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
-    </svg>
-  </button>
-  <div class="flex items-center gap-6">
-    <span
-      class="w-10 h-10 flex items-center justify-center text-sm font-archivo font-bold bg-white text-secondary rounded-full shadow-sm cursor-pointer border border-[#FFFAF3]"
-      >1</span
-    >
-    <span class="text-sm font-archivo font-bold text-primary hover:text-secondary cursor-pointer">2</span>
-    <span class="text-sm font-archivo font-bold text-primary hover:text-secondary cursor-pointer">3</span>
-  </div>
-  <button
-    class="text-primary hover:text-secondary transition-colors"
-    aria-label="Next Page"
-  >
-    <svg
-      fill="currentColor"
-      class="w-5 h-5"
-      viewBox="0 0 24 24"
-    >
-      <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
-    </svg>
-  </button>
-</div>
-<!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/list-pagination.html uid=4d6a78df -->
-
-
-
-
-  </div>
-</section>
-<!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/list.html uid=af6726e4 -->
-
-
-
-<!-- GSXD-PARTIAL:BEGIN file=projects/index.html include=projects/partials/catalog-section idx=003 uid=3aed97cc -->
-<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=projects/partials/catalog-section.html uid=a395416c -->
-<!-- Catalog Section -->
-<!-- GSXD-SECTION:BEGIN file=projects/partials/catalog-section.html tag=section idx=001 uid=0f060714 -->
-<section
-  id="catalog-section"
-  class="py-16 lg:py-28 bg-white relative overflow-hidden"
->
-  <!-- Decorative Elements -->
-  <img
-    src="/assets/images/news-decor.svg"
-    alt="Decor Left"
-    class="absolute md:left-0 left-[-5%] top-0 h-full w-auto max-h-[1000px] opacity-15 pointer-events-none"
-  />
-  <img
-    src="/assets/images/gtt-decorate-left.svg"
-    alt="Decor Right"
-    class="absolute -right-[13%] top-0 h-[160%] w-auto max-h-[1000px] opacity-15 pointer-events-none rotate-180"
-  />
-
-  <div class="container-custom relative z-10 w-[85%] max-w-[1320px] mx-auto">
-    <div class="w-[85%] mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-      <!-- Left Content -->
+    
       <div
-        class="w-full lg:w-5/12"
-        data-aos="fade-right"
+        class="md:hidden fixed right-3 bottom-20 sm:right-4 sm:bottom-24 z-[60] flex flex-col items-center gap-3"
+        aria-label="Hành động nhanh"
       >
-        <h2 class="text-[36px] leading-[45px] lg:text-[48px] font-arima font-light text-primary lg:leading-tight mb-8 md:mb-4">
-          Gạch thông<br class="hidden md:block"/>
-          gió 300x300<br class="hidden md:block"/>
-          thường
-        </h2>
-        <a
-          href="#"
-          class="inline-block px-4 md:px-8 py-2 md:py-3 border border-primary text-[15px] leading-[22.5px] tracking-[0.38px] font-semibold text-primary uppercase hover:bg-primary hover:text-white transition-all duration-300"
+        <button
+          type="button"
+          data-back-to-top
+          aria-label="Lên đầu trang"
+          class="w-12 h-12 rounded-full bg-secondary text-white shadow-lg ring-1 ring-black/10 flex items-center justify-center transition-all duration-300 active:scale-95 opacity-0 translate-y-2 pointer-events-none"
         >
-          XEM CATALOG
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="w-5 h-5"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 15l7-7 7 7"
+            ></path>
+          </svg>
+        </button>
+    
+        <a
+          href="https://zalo.me/0966558808"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Hỗ trợ Zalo"
+          class="w-12 h-12 rounded-full bg-[#EBDDD0] shadow-lg ring-1 ring-black/10 flex items-center justify-center transition-transform duration-300 active:scale-95"
+        >
+          <img
+            src="/assets/images/zalo.png"
+            alt="Zalo"
+            class="w-8 h-8 object-contain"
+          />
         </a>
       </div>
+    </footer>
+    <!-- GSXD-DEBUG:END type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
 
-      <!-- Right Image -->
-      <div
-        class="w-full lg:w-7/12"
-        data-aos="fade-left"
-      >
-        <div class="relative group">
-          <img
-            src="/assets/images/news-detail-5.png"
-            alt="Gạch thông gió"
-            class="w-full h-auto aspect-[67/45] object-cover shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- GSXD-DEBUG:END type=LAYOUT file=projects/partials/catalog-section.html uid=a395416c -->
-
-
-
-    </main>
-<!-- GSXD-PARTIAL:BEGIN file=projects/index.html include=components/footer idx=004 uid=a370b289 -->
-<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
-<!-- GSXD-ELEMENT:BEGIN file=components/footer.html tag=footer idx=001 uid=540a3f40 -->
-<footer class="bg-[#262723] text-white">
-  <!-- Main Footer -->
-  <div class="relative bg-[#262723] overflow-hidden">
-    <img
-      src="/assets/images/footer-image-2.png"
-      alt=""
-      class="hidden lg:block absolute inset-0 w-full h-full object-cover"
-    />
-    <div
-      class="relative w-[85%] max-w-[1320px] mx-auto pt-12 lg:pt-[150px] pb-[60px] lg:whitespace-nowrap"
-    >
-      <div
-        class="grid grid-cols-2 gap-x-2 gap-y-8 lg:grid lg:grid-cols-[200px_455px_195px_370px_200px] lg:gap-0 lg:w-[1420px] lg:justify-start lg:-translate-x-[38px]"
-      >
-        <div
-          class="hidden lg:flex flex-col justify-between items-center gap-6 w-full lg:w-[200px] lg:pr-[45px] shrink-0"
-        >
-          <div>
-            <img
-              src="/assets/images/logo.png"
-              alt="Logo"
-              class="w-[88px] h-[88px]"
-            />
-          </div>
-          <div class="mt-auto lg:pt-16">
-            <a
-              href="#"
-              class="inline-block"
-              aria-label="Đã thông báo Bộ Công Thương"
-            >
-              <img
-                src="/assets/images/bo-cong-thuong.png"
-                alt="Đã thông báo Bộ Công Thương"
-                class="h-[52px] w-auto"
-              />
-            </a>
-          </div>
-        </div>
-
-        <div
-          class="col-span-2 lg:col-span-1 w-full lg:w-[455px] shrink-0 order-1 lg:order-none"
-        >
-          <div
-            class="text-white text-[15px] leading-[26px] mb-6 tracking-[-0.1px]"
-          >
-            <p class="font-bold uppercase">
-              CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI<br class="block lg:hidden" />
-              THANH HẢI
-            </p>
-            <p>18 Phố Gốm – Giang Cao, Bát Tràng, Gia Lâm, Hà Nội</p>
-            <p>0966 55 8808</p>
-            <p>gshaithanh@gmail.com</p>
-          </div>
-
-          <div class="block lg:hidden mb-8">
-            <a
-              href="#"
-              class="inline-block"
-              aria-label="Đã thông báo Bộ Công Thương"
-            >
-              <img
-                src="/assets/images/bo-cong-thuong.png"
-                alt="Đã thông báo Bộ Công Thương"
-                class="h-[52px] w-auto"
-              />
-            </a>
-          </div>
-
-          <div class="hidden lg:flex items-center gap-[20px] mb-8">
-            <a href="#" aria-label="Facebook">
-              <img
-                src="/assets/images/facebook.svg"
-                alt="Facebook"
-                class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
-              />
-            </a>
-            <a href="#" aria-label="YouTube">
-              <img
-                src="/assets/images/youtube.svg"
-                alt="YouTube"
-                class="w-[24px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
-              />
-            </a>
-            <a href="#" aria-label="Pinterest">
-              <img
-                src="/assets/images/pinterest.svg"
-                alt="Pinterest"
-                class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
-              />
-            </a>
-          </div>
-        </div>
-
-        <div
-          class="col-span-1 lg:col-span-1 w-full lg:w-[195px] min-w-0 order-2 lg:order-none"
-        >
-          <h3
-            class="text-white text-[14px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 whitespace-nowrap uppercase"
-          >
-            TỔNG QUAN
-          </h3>
-          <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap">
-            <a
-              href="/about/"
-              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-              >Về chúng tôi</a
-            ><br />
-            <a
-              href="/showroom/"
-              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-              >Showroom</a
-            ><br />
-            <a
-              href="/factory/"
-              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-              >Nhà xưởng</a
-            ><br />
-            <a
-              href="/contact/"
-              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-              >Liên hệ</a
-            >
-          </div>
-        </div>
-
-        <div
-          class="col-span-1 lg:col-span-1 w-full lg:w-[200px] min-w-0 order-3 lg:order-none"
-        >
-          <h3
-            class="text-white text-[16px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 whitespace-nowrap uppercase"
-          >
-            DỊCH VỤ KHÁCH HÀNG
-          </h3>
-          <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap">
-            <a
-              href="/dich-vu-khach-hang/tai-khoan-cua-toi.html"
-              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-              >Tài khoản</a
-            ><br />
-            <a
-              href="/dich-vu-khach-hang/quy-trinh-dat-hang.html"
-              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-              >Quy trình đặt hàng</a
-            ><br />
-            <a
-              href="/dich-vu-khach-hang/huong-dan-thi-cong.html"
-              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-              >Hướng dẫn thi công</a
-            ><br />
-            <a
-              href="/faq/index.html"
-              class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-              >FAQ</a
-            >
-          </div>
-        </div>
-
-        <div
-          class="col-span-2 lg:col-span-1 w-full lg:w-[370px] min-w-0 order-4 lg:order-none"
-        >
-          <h3
-            class="text-white text-[14px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 text-start lg:text-center lg:mr-[65px] whitespace-nowrap uppercase"
-          >
-            SẢN PHẨM
-          </h3>
-          <div class="flex gap-[40px] lg:gap-[50px]">
-            <div
-              class="leading-[30px] lg:leading-[40px] whitespace-nowrap flex-1"
-            >
-              <a
-                href="/products/ngoi-am-duong/"
-                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Ngói âm dương</a
-              ><br />
-              <a
-                href="/products/ngoi-hai-van-mieu/"
-                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Ngói hài văn miếu</a
-              ><br />
-              <a
-                href="/products/phu-kien-ngoi/"
-                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Phụ kiện mái</a
-              ><br />
-              <a
-                href="/products/linh-vat-phong-thuy/"
-                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Linh vật phong thủy</a
-              >
-            </div>
-            <div
-              class="leading-[30px] lg:leading-[40px] whitespace-nowrap flex-1"
-            >
-              <a
-                href="/products/gach-hoa-thong-gio/"
-                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Gạch thông gió</a
-              ><br />
-              <a
-                href="/products/gach-trang-tri/"
-                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Gạch trang trí</a
-              ><br />
-              <a
-                href="/products/lan-can-gom-su/"
-                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Lan can gốm sứ</a
-              ><br />
-              <a
-                href="/products/den-gom-su/"
-                class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
-                >Đèn vườn gốm sứ</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="relative border-t border-white/20 w-full">
-      <div class="w-[85%] max-w-[1320px] mx-auto py-6">
-        <div
-          class="flex flex-col-reverse md:flex-row justify-between items-center gap-2 md:gap-4"
-        >
-          <p
-            class="text-[#909090] text-[12px] lg:text-sm leading-[26px] whitespace-nowrap text-center"
-          >
-            Copyright © 2022 . All rights reserved
-          </p>
-          <div
-            class="text-[#909090] text-[12px] lg:text-sm leading-[26px] whitespace-nowrap flex items-center justify-center flex-wrap md:flex-nowrap"
-          >
-            <a
-              href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html"
-              class="whitespace-nowrap hover:text-secondary transition-colors"
-              >Chính sách vận chuyển</a
-            >
-            <span class="text-[14px] mx-2 lg:mx-4">|</span>
-            <a
-              href="/dich-vu-khach-hang/chinh-sach-doi-tra.html"
-              class="whitespace-nowrap hover:text-secondary transition-colors"
-              >Chính sách đổi trả</a
-            >
-            <span class="text-[14px] mx-2 lg:mx-4">|</span>
-            <a
-              href="/dich-vu-khach-hang/bao-mat-thong-tin.html"
-              class="whitespace-nowrap hover:text-secondary transition-colors"
-              >Bảo mật thông tin</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div
-    class="md:hidden fixed right-3 bottom-20 sm:right-4 sm:bottom-24 z-[60] flex flex-col items-center gap-3"
-    aria-label="Hành động nhanh"
-  >
-    <button
-      type="button"
-      data-back-to-top
-      aria-label="Lên đầu trang"
-      class="w-12 h-12 rounded-full bg-secondary text-white shadow-lg ring-1 ring-black/10 flex items-center justify-center transition-all duration-300 active:scale-95 opacity-0 translate-y-2 pointer-events-none"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        class="w-5 h-5"
-        aria-hidden="true"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M5 15l7-7 7 7"
-        ></path>
-      </svg>
-    </button>
-
-    <a
-      href="https://zalo.me/0966558808"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Hỗ trợ Zalo"
-      class="w-12 h-12 rounded-full bg-[#EBDDD0] shadow-lg ring-1 ring-black/10 flex items-center justify-center transition-transform duration-300 active:scale-95"
-    >
-      <img
-        src="/assets/images/zalo.png"
-        alt="Zalo"
-        class="w-8 h-8 object-contain"
-      />
-    </a>
-  </div>
-</footer>
-<!-- GSXD-DEBUG:END type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
-
+    <!-- Global JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Init Global -->
     <script>
-      AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100,
-      });
-
-      if (typeof GLightbox !== "undefined") {
-        // Use actual rendered img URLs so lightbox works with Vite asset hashing.
-        document.querySelectorAll(".glightbox").forEach((anchor) => {
-          const image = anchor.querySelector("img");
-          if (image) {
-            anchor.setAttribute("href", image.currentSrc || image.src);
-          }
-        });
-
-        GLightbox({
-          touchNavigation: true,
-          loop: true,
-          autoplayVideos: true,
-        });
-      }
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, once: true, offset: 100 });
+        }
     </script>
+
+    <!-- Script riêng của từng page -->
     <script>
   document.addEventListener("DOMContentLoaded", () => {
     // 0. Sticky header scroll effect (home page only)
@@ -1591,10 +1217,27 @@
   })();
 </script>
 
-<!-- GSXD-DEBUG:END type=PAGE file=projects/index.html uid=78af7e27 -->
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  if (typeof GLightbox !== "undefined") {
+    // Use actual rendered img URLs so lightbox works with Vite asset hashing.
+    document.querySelectorAll(".glightbox").forEach((anchor) => {
+      const image = anchor.querySelector("img");
+      if (image) {
+        anchor.setAttribute("href", image.currentSrc || image.src);
+      }
+    });
+
+    GLightbox({
+      touchNavigation: true,
+      loop: true,
+      autoplayVideos: true,
+    });
+  }
+</script>
+
+
 </body>
+
 </html>
-
-
-
-
+<!-- GSXD-DEBUG:END type=LAYOUT file=layouts/main.html --><!-- GSXD-DEBUG:END type=PAGE file=projects/index.html uid=78af7e27 -->

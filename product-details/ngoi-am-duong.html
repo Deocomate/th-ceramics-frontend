@@ -1,0 +1,3410 @@
+<!-- GSXD-DEBUG:BEGIN type=LAYOUT file=layouts/main.html -->
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title & Meta -->
+    <title>Ngói Âm Dương - Thanh Hải Ceramics
+    </title>
+
+    <!-- Global CSS & Fonts -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Style riêng của từng page -->
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap");
+
+    .size-options-scroll {
+        scroll-behavior: smooth;
+    }
+</style>
+
+  <style>
+    /* CSS custom cho hiệu ứng chuyển động mượt mà của slider và phóng to ảnh */
+    .product-works-swiper .swiper-wrapper {
+      display: flex;
+      align-items: flex-end;
+      transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1) !important;
+      will-change: transform;
+    }
+
+    .product-works-swiper .swiper-slide {
+      width: 85vw;
+      aspect-ratio: 4 / 3;
+      opacity: 0.55;
+      overflow: hidden;
+      flex-shrink: 0;
+      cursor: pointer;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      will-change: width, opacity;
+      contain: layout paint;
+      transition:
+        width 1200ms cubic-bezier(0.25, 1, 0.5, 1),
+        opacity 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+    }
+
+    @media (min-width: 1280px) {
+      .product-works-swiper .swiper-slide {
+        opacity: 1;
+        width: 360px;
+      }
+    }
+
+    .product-works-swiper .swiper-slide-active {
+      width: 85vw;
+      opacity: 1;
+      z-index: 2;
+    }
+
+    @media (min-width: 1280px) {
+      .product-works-swiper .swiper-slide-active {
+        width: 720px;
+      }
+    }
+
+    .product-works-swiper .swiper-slide img {
+      transform: translateZ(0) scale(1.1) !important;
+      transition: transform 1200ms cubic-bezier(0.25, 1, 0.5, 1) !important;
+      backface-visibility: hidden;
+      will-change: transform;
+    }
+
+    .product-works-swiper .swiper-slide-active img {
+      transform: translateZ(0) scale(1) !important;
+    }
+
+    /* Hiệu ứng của nội dung text thay đổi */
+    .slide-text-transition {
+      transition-property: opacity, transform !important;
+      transition-duration: 400ms !important;
+      transition-timing-function: ease-in-out !important;
+      will-change: opacity, transform;
+    }
+  </style>
+
+<style>
+  /* Native scrollbar hidden - JS scroll indicator handles display */
+
+  .compare-cell-text {
+    margin-top: 27px;
+    margin-bottom: 7px;
+    padding-left: 0;
+    text-align: left;
+    text-indent: 0;
+  }
+
+  .mobile-compare-label {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    color: #2e2f2a;
+    font-size: 12px;
+    font-family: Archivo, sans-serif;
+    font-weight: 700;
+    line-height: 21px;
+    word-wrap: break-word;
+    white-space: nowrap;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-compare-row {
+      height: auto;
+      align-items: center;
+    }
+    .mobile-compare-row > div {
+      align-items: center;
+    }
+    .compare-cell-text {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+</style>
+
+  <script type="module" crossorigin src="/assets/js/app-CgIap7Er.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/css/app-k-laLtYS.css">
+</head>
+
+<!-- Body hoàn toàn TĨNH, không nhận bất kỳ biến nào -->
+
+<body class="min-h-screen flex flex-col font-archivo text-primary">
+
+    <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/header.html uid=0505a17c -->
+    <!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=header idx=001 uid=038b0028 -->
+    <header id="site-header"
+      class="bg-primary sticky top-0 text-white h-[58px] xl:h-[108px] z-50 transition-all duration-300">
+      <div class="hidden xl:block w-[85%] max-w-[1320px] mx-auto h-full">
+        <!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=nav idx=001 uid=a62974be -->
+        <nav class="flex items-center justify-between h-full">
+          <!-- Logo -->
+          <div class="flex-shrink-0 mr-[8%]">
+            <a href="/" class="block">
+              <img src="/assets/images/logo.png" alt="Logo" class="h-[78px] w-[78px]" />
+            </a>
+          </div>
+    
+          <!-- Desktop Navigation -->
+          <div class="hidden xl:flex items-center 2xl:gap-10 xl:gap-6 gap-6 flex-1 justify-end mr-8" id="desktop-menu">
+            <a href="/"
+              class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+              data-path="/">trang chủ</a>
+            <a href="/about/"
+              class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+              data-path="/about/">về chúng tôi</a>
+            <div class="relative group">
+              <a href="/products/ngoi-am-duong/"
+                class="nav-link flex items-center gap-[5px] whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+                data-path="/products/">
+                <span>sản phẩm</span>
+                <img src="/assets/images/icon-caret-down.svg" alt="caret" class="w-[7px] h-[7px]" />
+              </a>
+              <!-- Desktop Dropdown -->
+              <div
+                class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary">
+                <ul class="py-2 flex flex-col">
+                  <li>
+                    <a href="/products/ngoi-am-duong/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/ngoi-am-duong/">Ngói Âm Dương</a>
+                  </li>
+                  <li>
+                    <a href="/products/ngoi-hai-van-mieu/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/ngoi-hai-van-mieu/">Ngói Hài Văn Miếu</a>
+                  </li>
+                  <li>
+                    <a href="/products/gach-hoa-thong-gio/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-hoa-thong-gio/">Gạch Hoa Thông Gió</a>
+                  </li>
+                  <li>
+                    <a href="/products/phu-kien-ngoi/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/phu-kien-ngoi/">Phụ Kiện Ngói</a>
+                  </li>
+                  <li>
+                    <a href="/products/gach-trang-tri/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-trang-tri/">Gạch Trang Trí</a>
+                  </li>
+                  <li>
+                    <a href="/products/lan-can-gom-su/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/lan-can-gom-su/">Lan Can Gốm Sứ</a>
+                  </li>
+                  <li>
+                    <a href="/products/gach-co-bat-trang/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/gach-co-bat-trang/">Gạch Cổ Bát Tràng</a>
+                  </li>
+                  <li>
+                    <a href="/products/linh-vat-phong-thuy/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/linh-vat-phong-thuy/">Linh Vật Phong Thủy</a>
+                  </li>
+                  <li>
+                    <a href="/products/den-gom-su/"
+                      class="desktop-dropdown-link block px-5 py-3 whitespace-nowrap text-[#212121] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:bg-neutral-1 hover:text-secondary transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/products/den-gom-su/">Đèn Gốm Sứ</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+    
+            <div class="relative group">
+              <a href="#"
+                class="nav-link flex items-center gap-[5px] whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+                data-path="/product-details/">
+                <span>SPCT</span>
+                <img src="/assets/images/icon-caret-down.svg" alt="caret" class="w-[7px] h-[7px]" />
+              </a>
+              <!-- Quick access detail pages dropdown -->
+              <div
+                class="absolute top-full left-0 mt-0 w-[240px] bg-white shadow-xl rounded-b opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 border-t-2 border-secondary overflow-y-auto max-h-[60vh]">
+                <ul class="py-2 flex flex-col">
+                  <li>
+                    <a href="/product-details/ngoi-am-duong.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/ngoi-am-duong.html">Ngói Âm Dương</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/ngoi-hai-co.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/ngoi-hai-co.html">Ngói Hài Cổ</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/ngoi-hai-van-mieu.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/ngoi-hai-van-mieu.html">Ngói Hài Văn Miếu</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/gach-hoa-thong-gio.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/gach-hoa-thong-gio.html">Gạch Hoa Thông Gió</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/gach-trang-tri.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/gach-trang-tri.html">Gạch Trang Trí</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/gach-co-bat-trang.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/gach-co-bat-trang.html">Gạch Cổ Bát Tràng</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/linh-vat.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/linh-vat.html">Linh Vật Phong Thủy</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/bo-noc-chu-van.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/bo-noc-chu-van.html">Bò Nóc Chữ Vạn</a>
+                  </li>
+                  <li>
+                    <a href="/product-details/ngoi-bo-noc.html"
+                      class="desktop-dropdown-link block px-5 py-3 text-xs text-[#212121] hover:bg-neutral-1 hover:text-secondary font-bold uppercase transition-colors border-b border-gray-100 last:border-0"
+                      data-path="/product-details/ngoi-bo-noc.html">Ngói Bó Nóc</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="/projects/"
+              class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+              data-path="/projects/">Dự án</a>
+            <a href="/factory/"
+              class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+              data-path="/factory/">Xưởng sản xuất</a>
+            <a href="/news/"
+              class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+              data-path="/news/">Tin tức</a>
+            <a href="/contact/"
+              class="nav-link whitespace-nowrap shrink-0 text-[#FFFAF3] font-archivo font-bold text-[16px] leading-[18px] uppercase hover:text-secondary transition-colors"
+              data-path="/contact/">liên hệ</a>
+          </div>
+    
+          <!-- Desktop Icons -->
+          <div class="hidden xl:flex items-center gap-6">
+            <button class="hover:text-secondary transition-colors" aria-label="Search">
+              <img src="/assets/images/search.svg" alt="search" class="w-5 h-5" />
+            </button>
+            <a href="/cart/gio-hang.html" class="hover:text-secondary transition-colors" aria-label="Cart">
+              <img src="/assets/images/cart-2.svg" alt="cart" class="w-5 h-5" />
+            </a>
+            <a href="/dich-vu-khach-hang/trang-thai-don-hang.html" class="hover:text-secondary transition-colors"
+              aria-label="User">
+              <img src="/assets/images/user.svg" alt="user" class="w-5 h-5" />
+            </a>
+          </div>
+        </nav>
+      </div>
+    
+      <!-- Mobile Header -->
+      <div class="xl:hidden h-full bg-[linear-gradient(90deg,_#2F302C_0%,_#262720_100%)]">
+        <!-- GSXD-ELEMENT:BEGIN file=components/header.html tag=nav idx=002 uid=d604044c -->
+        <nav class="relative flex items-center justify-center h-full">
+          <button id="mobile-menu-button" class="absolute left-[23px] text-white hover:text-secondary transition-colors"
+            aria-label="Toggle menu">
+            <img src="/assets/images/menu.svg" alt="menu" class="w-[18px] h-[18px]" />
+          </button>
+    
+          <a href="/" class="block">
+            <img src="/assets/images/logo.png" alt="Logo" class="h-[44px] w-[44px]" />
+          </a>
+    
+          <div class="absolute right-[23px] flex items-center gap-[14px]">
+            <button class="hover:text-secondary transition-colors" aria-label="Search">
+              <img src="/assets/images/search.svg" alt="search" class="w-[18px] h-[18px]" />
+            </button>
+            <a href="/cart/gio-hang.html" class="hover:text-secondary transition-colors" aria-label="Cart">
+              <img src="/assets/images/cart-2.svg" alt="cart" class="w-[18px] h-[18px]" />
+            </a>
+            <a href="/dich-vu-khach-hang/trang-thai-don-hang.html" class="hover:text-secondary transition-colors"
+              aria-label="User">
+              <img src="/assets/images/user.svg" alt="user" class="w-[18px] h-[18px]" />
+            </a>
+          </div>
+        </nav>
+      </div>
+    
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="hidden fixed inset-0 bg-primary z-50 overflow-y-auto">
+        <div class="w-[85%] max-w-[1320px] mx-auto py-6 relative min-h-full flex flex-col">
+          <div class="flex justify-between items-center mb-8 shrink-0">
+            <a href="/" class="block">
+              <img src="/assets/images/logo.png" alt="Logo" class="h-[90px] w-[90px]" />
+            </a>
+            <div class="flex items-center gap-5">
+              <button class="hover:text-secondary transition-colors" aria-label="Search">
+                <img src="/assets/images/search.svg" alt="search" class="w-5 h-5" />
+              </button>
+              <a href="/cart/gio-hang.html" class="hover:text-secondary transition-colors" aria-label="Cart">
+                <img src="/assets/images/cart-2.svg" alt="cart" class="w-5 h-5" />
+              </a>
+              <a href="/dich-vu-khach-hang/trang-thai-don-hang.html" class="hover:text-secondary transition-colors"
+                aria-label="User">
+                <img src="/assets/images/user.svg" alt="user" class="w-5 h-5" />
+              </a>
+              <button id="close-menu-button" class="text-white hover:text-secondary transition-colors">
+                <img src="/assets/images/icon-close.svg" alt="close" class="w-8 h-8" />
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col space-y-6 flex-grow z-10">
+            <a href="/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/">trang chủ</a>
+            <a href="/about/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/about/">về chúng tôi</a>
+            <div class="flex flex-col">
+              <button id="mobile-products-toggle"
+                class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
+                data-path="/products/">
+                <span>sản phẩm</span>
+                <img src="/assets/images/icon-caret-down.svg" alt="caret" id="mobile-products-icon"
+                  class="w-[10px] h-[10px] transition-transform duration-300 transform" />
+              </button>
+              <div id="mobile-products-submenu" class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2">
+                <a href="/products/ngoi-am-duong/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/ngoi-am-duong/">Ngói Âm Dương</a>
+                <a href="/products/ngoi-hai-van-mieu/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/ngoi-hai-van-mieu/">Ngói Hài Văn Miếu</a>
+                <a href="/products/gach-hoa-thong-gio/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/gach-hoa-thong-gio/">Gạch Hoa Thông Gió</a>
+                <a href="/products/phu-kien-ngoi/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/phu-kien-ngoi/">Phụ Kiện Ngói</a>
+                <a href="/products/gach-trang-tri/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/gach-trang-tri/">Gạch Trang Trí</a>
+                <a href="/products/lan-can-gom-su/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/lan-can-gom-su/">Lan Can Gốm Sứ</a>
+                <a href="/products/gach-co-bat-trang/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/gach-co-bat-trang/">Gạch Cổ Bát Tràng</a>
+                <a href="/products/linh-vat-phong-thuy/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/linh-vat-phong-thuy/">Linh vật Phong Thủy</a>
+                <a href="/products/den-gom-su/"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/products/den-gom-su/">Đèn Gốm Sứ</a>
+              </div>
+            </div>
+    
+            <div class="flex flex-col">
+              <button id="mobile-spct-toggle"
+                class="mobile-nav-toggle flex items-center gap-[6px] text-white font-semibold text-lg uppercase hover:text-secondary w-full text-left"
+                data-path="/product-details/">
+                <span>SPCT</span>
+                <img src="/assets/images/icon-caret-down.svg" alt="caret" id="mobile-spct-icon"
+                  class="w-[10px] h-[10px] transition-transform duration-300 transform" />
+              </button>
+              <!-- Quick access detail pages dropdown MOBILE -->
+              <div id="mobile-spct-submenu" class="hidden flex-col pl-4 mt-4 space-y-4 border-l-2 border-white/20 ml-2">
+                <a href="/product-details/ngoi-am-duong.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/ngoi-am-duong.html">Ngói Âm Dương</a>
+                <a href="/product-details/ngoi-hai-co.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/ngoi-hai-co.html">Ngói Hài Cổ</a>
+                <a href="/product-details/ngoi-hai-van-mieu.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/ngoi-hai-van-mieu.html">Ngói Hài Văn Miếu</a>
+                <a href="/product-details/gach-hoa-thong-gio.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/gach-hoa-thong-gio.html">Gạch Hoa Thông Gió</a>
+                <a href="/product-details/gach-trang-tri.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/gach-trang-tri.html">Gạch Trang Trí</a>
+                <a href="/product-details/gach-co-bat-trang.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/gach-co-bat-trang.html">Gạch Cổ Bát Tràng</a>
+                <a href="/product-details/linh-vat.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/linh-vat.html">Linh Vật Phong Thủy</a>
+                <a href="/product-details/bo-noc-chu-van.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/bo-noc-chu-van.html">Bò Nóc Chữ Vạn</a>
+                <a href="/product-details/ngoi-bo-noc.html"
+                  class="mobile-nav-link text-white/90 text-sm font-semibold uppercase hover:text-secondary"
+                  data-path="/product-details/ngoi-bo-noc.html">Ngói Bó Nóc</a>
+              </div>
+            </div>
+            <a href="/projects/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/projects/">Dự án</a>
+            <a href="/factory/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/factory/">Xưởng sản xuất</a>
+            <a href="/news/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/news/">Tin tức</a>
+            <a href="/contact/" class="mobile-nav-link text-white font-semibold text-lg uppercase hover:text-secondary"
+              data-path="/contact/">liên hệ</a>
+          </div>
+          <img src="/assets/images/background-decorate.svg" alt="background-decorate"
+            class="fixed top-[395px] left-[124px] w-[480px] h-[480px] pointer-events-none opacity-100" />
+        </div>
+      </div>
+    </header>
+    
+    <!-- GSXD-DEBUG:END type=LAYOUT file=components/header.html uid=0505a17c -->
+    <!-- Main Content: Đón toàn bộ biến động (data-page, class nền, v.v...) -->
+    <main data-page="products" 
+        class="flex-grow bg-background-secondary pb-14 md:pb-20">
+        
+        
+        <!-- Top Banner for Detail -->
+        <section class="hidden md:flex relative w-full h-[180px] md:h-[210px] items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="/assets/images/detail-banner.png" alt="Ngói Âm Dương Banner" class="w-full h-full object-cover" />
+            </div>
+            <div class="relative z-10 text-center text-white px-4 pt-4">
+                <h1 class="text-2xl md:text-3xl font-bold mb-2.5 uppercase">
+                    NGÓI ÂM DƯƠNG
+                </h1>
+                <p class="text-xs md:text-sm text-white/80">
+                    <a href="/" class="hover:text-white transition-colors">Trang chủ</a>
+                    <svg class="w-2.5 h-2.5 inline-block mx-2 fill-current opacity-80" viewBox="0 0 35 35" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.5797 31.4214C11.1695 31.0111 10.9391 30.4548 10.9391 29.8747C10.9391 29.2946 11.1695 28.7383 11.5797 28.3281L22.4078 17.5L11.5797 6.67184C11.1937 6.25726 10.9836 5.70915 10.9936 5.14283C11.0036 4.5765 11.2328 4.03612 11.6331 3.63539C12.0334 3.23465 12.5735 3.0048 13.1399 2.99421C13.7062 2.98361 14.2545 3.1931 14.6695 3.57858L27.046 15.9516C27.4561 16.3618 27.6865 16.9182 27.6865 17.4983C27.6865 18.0783 27.4561 18.6347 27.046 19.0449L14.6729 31.4214C14.2627 31.8315 13.7064 32.0619 13.1263 32.0619C12.5462 32.0619 11.9899 31.8315 11.5797 31.4214Z"
+                            fill="currentColor" />
+                    </svg>
+                    <a href="/products/ngoi-am-duong/" class="hover:text-white transition-colors">Ngói âm dương</a>
+                </p>
+            </div>
+        </section>
+        
+        <!-- Sub Breadcrumb -->
+        <div class="hidden md:block w-[85%] max-w-[1320px] mx-auto py-8">
+            <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/breadcrumb.html uid=fbcaa7d9 -->
+            <!-- GSXD-BLOCK:BEGIN file=components/products/breadcrumb.html tag=p idx=001 uid=a6ea24f9 -->
+            <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
+              <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
+              <span class="mx-1">/</span>
+              <a href="/products/ngoi-am-duong/" class="hover:text-secondary transition-colors"
+                >Sản phẩm</a
+              >
+              <span class="mx-1">/</span>
+              <span class="text-primary font-semibold border-primary"
+                >NGÓI ÂM DƯƠNG</span
+              >
+            </p>
+            <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/breadcrumb.html uid=fbcaa7d9 -->
+            
+            
+            
+            
+            <hr class="border-t border-black/10 mt-4 w-full" />
+        </div>
+        
+        <!-- Product Detail Container -->
+        <!-- Product Detail Container Partial -->
+        <section class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-8 md:pb-10 lg:pb-24 pt-0 md:pt-4">
+          <!-- Left: Images -->
+          <div class="flex flex-col md:gap-5 lg:col-span-3">
+              <!-- Main Image Swiper -->
+              <div class="w-full aspect-square bg-white md:shadow-lg relative overflow-hidden group swiper product-main-swiper">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 1"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 2"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 3"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 4"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 5"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 6"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 7"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                  </div>
+          
+              </div>
+          
+              <!-- Mobile Dots Pagination -->
+              <div class="md:hidden flex justify-center mt-5">
+                  <div class="product-main-pagination flex justify-center gap-[7px]"></div>
+              </div>
+          
+              <!-- Thumbnails (Desktop only) -->
+              <div class="hidden md:block w-full mt-2 overflow-hidden swiper product-thumb-swiper">
+                  <div class="swiper-wrapper">
+                      <div
+                          class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+                      </div>
+                      <div
+                          class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+                      </div>
+                      <div
+                          class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+                      </div>
+                      <div
+                          class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+                      </div>
+                      <div
+                          class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+                      </div>
+                      <div
+                          class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+                      </div>
+                      <div
+                          class="swiper-slide aspect-square bg-gradient-to-r from-[#5C2321] to-[#EFE4DE] cursor-pointer opacity-90 relative">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          
+          
+          <!-- Right: Info -->
+          <div class="flex flex-col lg:col-span-2 w-[85%] md:w-full mx-auto md:mt-0 pt-[18px] md:pt-0">
+            
+            <!-- SKU -->
+            <div class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] order-2 md:order-1 mt-1 md:mt-0">
+              <span class="text-[#656663] md:text-primary font-light md:font-normal">Mã SP:</span>
+              <span class="text-[#656663] md:text-primary font-semibold">THC 100-GDS</span>
+            </div>
+        
+            <!-- Title -->
+            <h1 class="text-[20px] text-[#C76E00] md:text-2xl lg:text-[32px] font-semibold md:text-secondary uppercase leading-[30px] md:!leading-normal mb-0 md:mb-14 pb-0 md:pb-1 tracking-tight order-1 md:order-2">
+              Ngói Âm Dương 27 Xanh <br class="hidden md:block" /> Đồng
+            </h1>
+        
+            <!-- Price -->
+            <p class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal order-3 mt-0.5 md:mt-0">
+              675.000 đ/m²
+            </p>
+        
+            <!-- Separator -->
+            <hr class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full order-4 hidden md:block" />
+            <hr class="border-t border-black/10 w-full order-4 md:hidden mb-4" />
+        
+            <!-- Details List -->
+            <ul class="list-disc pl-5 space-y-0 md:space-y-4 mb-[15px] md:mb-16 text-[#2E2F2A] md:text-primary font-medium text-[14px] md:text-lg lg:text-xl leading-[24px] md:leading-relaxed order-5">
+                <li>Timeless beauty to be treasured</li>
+                <li>High-quality and classic design, suitable for decoration</li>
+                <li>Beginner friendly and improves intelligence</li>
+            </ul>
+        
+            <!-- Optional: Colors Section -->
+        
+            <!-- Optional: Variants Section -->
+        
+            <!-- Actions -->
+            <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-[15px] md:mb-16 order-[7] md:order-[none] w-full">
+              <!-- Quantity -->
+              <div class="flex items-center gap-[16px] md:gap-4 text-[#2E2F2A] md:text-primary pl-0.5 md:pl-0">
+                <button class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors">
+                  -
+                </button>
+                <div class="w-12 h-12 flex items-center justify-center rounded-full text-[16px] md:text-base font-normal shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:shadow-sm outline outline-1 outline-black/40 outline-offset-[-1px] md:outline-none md:border md:border-black/40 bg-transparent">
+                  1
+                </div>
+                <button class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors">
+                  +
+                </button>
+              </div>
+        
+              <!-- Add to cart -->
+              <button class="w-full md:w-auto bg-[#C16A00] hover:bg-secondary text-[#EFE4DE] px-8 py-4 font-semibold md:transition-colors md:shadow-md rounded-[2px] flex items-center justify-center text-[14px] md:text-sm tracking-[0.28px] md:tracking-normal md:ml-4">
+                THÊM VÀO GIỎ HÀNG
+              </button>
+            </div>
+        
+            <!-- Contacts -->
+            <div class="hidden md:flex flex-col gap-5 mt-2 order-[8] md:order-[none]">
+              <!-- Hotline -->
+              <div class="flex items-center gap-5">
+                <div class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10">
+                  <img src="/assets/images/phone-call.svg" alt="Phone Call" class="w-6 h-6" />
+                </div>
+                <div>
+                  <p class="text-base text-secondary">Đặt hàng ngay</p>
+                  <p class="text-secondary font-semibold text-lg md:text-xl">
+                    Hotline: 0966 55 8808
+                  </p>
+                </div>
+              </div>
+              <!-- Zalo -->
+              <div class="flex items-center gap-5">
+                <div class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10">
+                  <img src="/assets/images/zalo.png" alt="Zalo" class="w-[80%] h-[80%] object-cover" />
+                </div>
+                <div>
+                  <p class="text-secondary font-semibold text-lg md:text-xl">
+                    Chat với chúng tôi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
+        <!-- ============================================== -->
+        <!-- COMPONENT VIDEO HÀNH TRÌNH CHẾ TÁC               -->
+        <!-- ============================================== -->
+        <!-- GSXD-SECTION:BEGIN file=components/products/journey-video.html tag=section idx=001 uid=d26acfc5 -->
+        <section class="w-full mx-auto pb-[30px] md:pb-16 max-w-[1920px]">
+          <!-- Tiêu đề (Có thể ẩn đi nếu tham số hideTitle = true) -->
+        
+          <!-- Khung chứa Video (Tỷ lệ 16:9 - aspect-video) -->
+          <div
+            class="relative w-full aspect-video overflow-hidden cursor-pointer group"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <!-- Ảnh Thumbnail đại diện cho video (Khi hover sẽ tối đi) -->
+            <img
+              src="/assets/images/video-placeholder-02.png"
+              alt="Video placeholder"
+              class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300"
+            />
+            
+            <!-- Lớp phủ chứa Nút Play ở giữa màn hình -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <!-- Vòng tròn mờ (backdrop-blur) của nút Play -->
+              <div
+                class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300"
+              >
+                <!-- Icon tam giác Play -->
+                <svg
+                  class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
+        
+        
+        
+        
+        <!-- Flex Container for Mobile Reordering -->
+        <div class="flex flex-col w-full">
+            <!-- Sizes Options Section -->
+            <section class="order-2 md:order-1 w-[85%] max-w-[1320px] mx-auto pb-[40px] md:pb-16 pt-1" data-aos="fade-up">
+                <h2
+                    class="text-[20px] leading-[32px] tracking-[0.6px] md:text-3xl md:leading-normal md:tracking-wide font-semibold text-center text-secondary mb-6 md:mb-12 uppercase break-words">
+                    Bảng kích thước
+                </h2>
+                <div class="size-options-scroll mobile-scroll-visible w-full pb-2 overflow-x-scroll md:overflow-x-hidden">
+                    <img src="/assets/images/ngoi-am-duong-size.png" alt="Đa dạng kích thước ngói âm dương"
+                        class="h-auto object-contain max-w-none w-[200%] md:w-full"
+                        onload="window.dispatchEvent(new Event('resize'))" />
+                </div>
+            </section>
+        
+            <!-- Sections Wrapped in Accordion for Mobile -->
+            <div class="order-1 md:order-2 w-full flex flex-col pt-0 pb-2 md:pb-0">
+                <!-- Product Color Palette Accordion Item -->
+                <div class="md:border-none">
+                    <button class="md:hidden w-full flex justify-between items-center py-[20px] px-[30px]"
+                        onclick="toggleMobileAccordion(this)">
+                        <span class="text-[#2E2F2A] text-[14px] font-bold tracking-tight">Bảng màu</span>
+                        <div
+                            class="chevron w-6 h-6 bg-[#E5E7EB] rounded-full flex justify-center items-center transition-transform duration-300">
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5 5L9 1" stroke="#6B7280" stroke-width="1.33" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content hidden md:block w-full pb-6 md:pb-0 pt-2 md:pt-0">
+                        <!-- Color Palette Section -->
+                        <section class="w-[85%] max-w-[1320px] mx-auto md:mb-16" data-aos="fade-up">
+                          <h2 class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-5 md:mb-12 uppercase">
+                            Ngói Âm Dương
+                          </h2>
+                        
+                          <div class="grid grid-cols-5 md:grid-cols-3 lg:grid-cols-5 gap-x-[17px] gap-y-[25px] md:gap-x-28 md:gap-y-14">
+                              <!-- Default Fallback or Static Content from Ngoi Am Duong if none provided -->
+                              <!-- Row 1 -->
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] overflow-hidden shadow-sm bg-[#FBF9F7]">
+                                  <img src="/assets/images/do-co.png" alt="Đỏ cờ" class="w-full h-full object-cover" />
+                                </div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Đỏ cờ</span>
+                              </div>
+                        
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#A67B5B]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Nâu đỏ</span>
+                              </div>
+                        
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#B22222]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Gấm đỏ</span>
+                              </div>
+                        
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#5D5FEF]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Xanh đồng</span>
+                              </div>
+                        
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#2ECC71]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Xanh ngọc</span>
+                              </div>
+                        
+                              <!-- Row 2 -->
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#CC7A00]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Hổ phách</span>
+                              </div>
+                        
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#009432]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Nâu đen</span>
+                              </div>
+                        
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#D1D1E9]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Sô cô la</span>
+                              </div>
+                        
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#00BFFF]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Xanh ngọc</span>
+                              </div>
+                        
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#FFD700]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Hoàng thổ</span>
+                              </div>
+                        
+                              <!-- Row 3 -->
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#2980B9]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Xanh dương</span>
+                              </div>
+                        
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#4A5D23]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Xanh rêu</span>
+                              </div>
+                        
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#B07D35]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Da lươn</span>
+                              </div>
+                        
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#7F8C8D]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Ghi xám</span>
+                              </div>
+                        
+                              <div class="flex flex-col items-center gap-0 md:gap-4">
+                                <div class="w-full aspect-[3/2] md:aspect-[5/4] rounded-[4px] md:rounded-[22px] shadow-sm bg-[#2C3E50]"></div>
+                                <span class="whitespace-nowrap text-[20px] md:text-3xl lg:text-[40px] text-primary leading-[32px] md:leading-normal" style="font-family: 'Italianno', cursive">Đen nhám</span>
+                              </div>
+                          </div>
+                        </section>
+                    </div>
+                </div>
+                <hr class="mx-[30px] border-t border-black/10 md:hidden" />
+        
+                <!-- Weight Calculator Accordion Item -->
+                <div class="md:border-none">
+                    <button class="md:hidden w-full flex justify-between items-center py-[20px] px-[30px]"
+                        onclick="toggleMobileAccordion(this)">
+                        <span class="text-[#2E2F2A] text-[14px] font-bold tracking-tight">Ước tính khối lượng</span>
+                        <div
+                            class="chevron w-6 h-6 bg-[#E5E7EB] rounded-full flex justify-center items-center transition-transform duration-300">
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5 5L9 1" stroke="#6B7280" stroke-width="1.33" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content hidden md:block w-full pb-6 md:pb-0">
+                        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/weight-calculator.html uid=a5f647f3 -->
+                        <!-- GSXD-SECTION:BEGIN file=components/products/weight-calculator.html tag=section idx=001 uid=58f661f6 -->
+                        <section
+                          class="w-full pb-12 pt-8 lg:pt-16 lg:pb-16 bg-background-secondary"
+                          data-aos="fade-up"
+                          data-weight-calculator
+                        >
+                          <div class="w-[85%] max-w-[1320px] mx-auto">
+                            <!-- Mobile Title above grid -->
+                            <h2 class="text-[20px] font-semibold text-center text-secondary mb-8 uppercase block lg:hidden">
+                              CÁCH TÍNH KHỐI LƯỢNG
+                            </h2>
+                        
+                            <div class="flex flex-col-reverse lg:grid lg:grid-cols-5 gap-8 lg:gap-24 items-start">
+                              <!-- Left: Calculator Form -->
+                              <div class="w-full space-y-4 col-span-1 lg:col-span-3">
+                                <!-- Dropdowns Row -->
+                                <h2
+                                  class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-5 uppercase hidden lg:block"
+                                >
+                                  CÁCH TÍNH KHỐI LƯỢNG
+                                </h2>
+                                <hr class="border-t border-black/10 w-full mb-6 lg:mb-0 block lg:hidden" />
+                                <hr class="border-t border-black/10 mt-4 w-full hidden lg:block" />
+                                <div class="grid grid-cols-2 gap-5 lg:gap-6">
+                                  <div class="relative">
+                                    <select
+                                      id="roof-style"
+                                      class="w-full h-[26px] lg:h-[44px] px-2 lg:px-4 pr-6 lg:pr-10 border border-black/10 rounded-sm bg-transparent text-[10px] lg:text-[13px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
+                                    >
+                                      <option value="" disabled selected>KIỂU MÁI</option>
+                                      <option value="2-slope" data-factor="1.0">
+                                        Mái dốc 2 mặt (Mái chữ A)
+                                      </option>
+                                      <option value="4-slope" data-factor="1.0">
+                                        Mái dốc 4 mặt (Mái bánh ít)
+                                      </option>
+                                      <option value="chong-diem" data-factor="1.0">
+                                        Mái chồng diêm
+                                      </option>
+                                      <option value="dao" data-factor="1.1">Mái đao</option>
+                                    </select>
+                                    <div
+                                      class="absolute right-2 lg:right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+                                    >
+                                      <svg
+                                        class="w-3 h-3 lg:w-4 lg:h-4 text-secondary"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M19 9l-7 7-7-7"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="relative">
+                                    <select
+                                      id="tile-type"
+                                      class="w-full h-[26px] lg:h-[44px] px-2 lg:px-4 pr-6 lg:pr-10 border border-black/10 rounded-sm bg-transparent text-[10px] lg:text-[13px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
+                                    >
+                                      <option value="" disabled selected>LOẠI NGÓI</option>
+                                      <option value="dai" data-am="27" data-duong="27" data-diem="5">
+                                        Ngói Âm Dương cỡ Đại
+                                      </option>
+                                      <option value="trung" data-am="40" data-duong="27" data-diem="5">
+                                        Ngói Âm Dương cỡ Trung
+                                      </option>
+                                      <option value="tieu" data-am="60" data-duong="60" data-diem="5">
+                                        Ngói Âm Dương cỡ Tiểu
+                                      </option>
+                                    </select>
+                                    <div
+                                      class="absolute right-2 lg:right-4 top-1/2 -translate-y-1/2 pointer-events-none"
+                                    >
+                                      <svg
+                                        class="w-3 h-3 lg:w-4 lg:h-4 text-secondary"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                      >
+                                        <path
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="2"
+                                          d="M19 9l-7 7-7-7"
+                                        ></path>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                                <!-- DIỆN TÍCH 1 -->
+                                <div class="flex flex-col lg:flex-row gap-2 lg:gap-4 items-start lg:items-end mb-6 lg:mb-0">
+                                  <!-- Desktop Label -->
+                                  <div class="hidden lg:flex w-full lg:w-[150px] shrink-0 pb-1 flex-col">
+                                    <span class="font-semibold text-primary uppercase text-base">DIỆN TÍCH 1</span>
+                                  </div>
+                                  <!-- Form Row -->
+                                  <div class="flex-1 w-full flex flex-row lg:grid lg:grid-cols-12 gap-2 lg:gap-7 items-end">
+                                    <!-- Select -->
+                                    <div class="w-[111px] md:w-[111px] lg:w-auto shrink-0 col-span-12 lg:col-span-3 flex flex-col justify-end">
+                                      <!-- Mobile Label -->
+                                      <span class="font-semibold text-primary uppercase text-[11px] lg:hidden mb-2 pl-2">DIỆN TÍCH 1</span>
+                                      <div class="relative">
+                                        <select
+                                          class="w-full h-[30px] lg:h-[45px] px-2 lg:px-3 pr-5 lg:pr-6 border border-black/10 rounded-sm bg-transparent text-[9px] lg:text-[11px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
+                                        >
+                                          <option selected>HÌNH CHỮ NHẬT</option>
+                                          <option>HÌNH THANG</option>
+                                        </select>
+                                        <div
+                                          class="absolute right-1 lg:right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary"
+                                        >
+                                          <svg class="w-2.5 h-2.5 lg:w-3 lg:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                    <div class="flex-1 lg:col-span-3 flex flex-col gap-1 lg:gap-2">
+                                      <label class="text-[9px] lg:text-[16px] uppercase font-semibold text-primary text-center tracking-tight leading-none min-h-[16px] lg:min-h-auto">
+                                        CHIỀU DÀI
+                                        <span class="block text-[7px] lg:text-[12px] font-normal italic normal-case text-secondary/70 mt-[2px] lg:mt-1 tracking-normal">Chiều tính diềm mái</span>
+                                      </label>
+                                      <div class="relative">
+                                        <input
+                                          type="text"
+                                          placeholder="00"
+                                          class="w-full h-[30px] lg:h-[45px] p-2 lg:p-3 border border-black/10 rounded-sm bg-transparent text-[12px] lg:text-base text-left pr-4 lg:pr-6 focus:border-secondary outline-none transition-colors"
+                                        />
+                                        <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
+                                      </div>
+                                    </div>
+                        
+                                    <div class="flex-1 lg:col-span-3 flex flex-col gap-1 lg:gap-2">
+                                      <label class="text-[9px] lg:text-[16px] uppercase font-semibold text-primary text-center tracking-tight leading-none min-h-[16px] lg:min-h-auto">
+                                        CHIỀU RỘNG
+                                        <span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>
+                                      </label>
+                                      <div class="relative">
+                                        <input
+                                          type="text"
+                                          placeholder="00"
+                                          class="w-full h-[30px] lg:h-[45px] p-2 lg:p-3 border border-black/10 rounded-sm bg-transparent text-[12px] lg:text-base text-left pr-4 lg:pr-6 focus:border-secondary outline-none transition-colors"
+                                        />
+                                        <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
+                                      </div>
+                                    </div>
+                        
+                                    <div class="flex-1 lg:col-span-3 flex flex-col gap-1 lg:gap-2" style="display: none">
+                                      <label class="text-[9px] lg:text-[16px] uppercase font-semibold text-primary text-center tracking-tight leading-none min-h-[16px] lg:min-h-auto">
+                                        CHIỀU CAO
+                                        <span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>
+                                      </label>
+                                      <div class="relative">
+                                        <input
+                                          type="text"
+                                          placeholder="00"
+                                          class="w-full h-[30px] lg:h-[45px] p-2 lg:p-3 border border-black/10 rounded-sm bg-transparent text-[12px] lg:text-base text-left pr-4 lg:pr-6 focus:border-secondary outline-none transition-colors"
+                                        />
+                                        <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                                <!-- DIỆN TÍCH 2 -->
+                                <div class="flex flex-col lg:flex-row gap-2 lg:gap-4 items-start lg:items-end mb-6 lg:mb-0">
+                                  <!-- Desktop Label -->
+                                  <div class="hidden lg:flex w-full lg:w-[150px] shrink-0 pb-1 flex-col">
+                                    <span class="font-semibold text-primary uppercase text-base">DIỆN TÍCH 2</span>
+                                    <button class="text-[14px] text-secondary underline text-left font-bold w-fit ml-4 mt-1">Loại bỏ</button>
+                                  </div>
+                                  <!-- Form Row -->
+                                  <div class="flex-1 w-full flex flex-row lg:grid lg:grid-cols-12 gap-2 lg:gap-7 items-end">
+                                    <!-- Select -->
+                                    <div class="w-[111px] md:w-[111px] lg:w-auto shrink-0 col-span-12 lg:col-span-3 flex flex-col justify-end">
+                                      <!-- Mobile Label -->
+                                      <div class="flex items-center gap-2 lg:hidden mb-2 pl-2">
+                                        <span class="font-semibold text-primary uppercase text-[11px] leading-tight">DIỆN TÍCH 2</span>
+                                        <button class="text-[8px] text-secondary/70 underline italic font-bold">Loại bỏ</button>
+                                      </div>
+                                      <div class="relative">
+                                        <select
+                                          class="w-full h-[30px] lg:h-[45px] px-2 lg:px-3 pr-5 lg:pr-6 border border-black/10 rounded-sm bg-transparent text-[9px] lg:text-[11px] uppercase appearance-none outline-none focus:border-secondary transition-colors"
+                                        >
+                                          <option>HÌNH CHỮ NHẬT</option>
+                                          <option selected>HÌNH THANG</option>
+                                        </select>
+                                        <div class="absolute right-1 lg:right-3 top-1/2 -translate-y-1/2 pointer-events-none text-secondary">
+                                          <svg class="w-2.5 h-2.5 lg:w-3 lg:h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </div>
+                        
+                                    <div class="flex-1 lg:col-span-3 flex flex-col gap-1 lg:gap-2">
+                                      <label class="text-[9px] lg:text-[16px] uppercase font-semibold text-primary text-center tracking-tight leading-none min-h-[16px] lg:min-h-auto">
+                                        ĐÁY LỚN
+                                        <span class="block text-[7px] lg:text-[12px] font-normal italic normal-case text-secondary/70 mt-[2px] lg:mt-1 tracking-normal">Chiều tính diềm mái</span>
+                                      </label>
+                                      <div class="relative">
+                                        <input
+                                          type="text"
+                                          placeholder="00"
+                                          class="w-full h-[30px] lg:h-[45px] p-2 lg:p-3 border border-black/10 rounded-sm bg-transparent text-[12px] lg:text-base text-left pr-4 lg:pr-6 focus:border-secondary outline-none transition-colors"
+                                        />
+                                        <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
+                                      </div>
+                                    </div>
+                        
+                                    <div class="flex-1 lg:col-span-3 flex flex-col gap-1 lg:gap-2">
+                                      <label class="text-[9px] lg:text-[16px] uppercase font-semibold text-primary text-center tracking-tight leading-none min-h-[16px] lg:min-h-auto">
+                                        ĐÁY BÉ
+                                        <span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>
+                                      </label>
+                                      <div class="relative">
+                                        <input
+                                          type="text"
+                                          placeholder="00"
+                                          class="w-full h-[30px] lg:h-[45px] p-2 lg:p-3 border border-black/10 rounded-sm bg-transparent text-[12px] lg:text-base text-left pr-4 lg:pr-6 focus:border-secondary outline-none transition-colors"
+                                        />
+                                        <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
+                                      </div>
+                                    </div>
+                        
+                                    <div class="flex-1 lg:col-span-3 flex flex-col gap-1 lg:gap-2">
+                                      <label class="text-[9px] lg:text-[16px] uppercase font-semibold text-primary text-center tracking-tight leading-none min-h-[16px] lg:min-h-auto">
+                                        CHIỀU CAO
+                                        <span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>
+                                      </label>
+                                      <div class="relative">
+                                        <input
+                                          type="text"
+                                          placeholder="00"
+                                          class="w-full h-[30px] lg:h-[45px] p-2 lg:p-3 border border-black/10 rounded-sm bg-transparent text-[12px] lg:text-base text-left pr-4 lg:pr-6 focus:border-secondary outline-none transition-colors"
+                                        />
+                                        <span class="absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-primary/40">m</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                                <div class="text-center">
+                                  <button class="text-secondary font-semibold text-sm underline">
+                                    + Thêm diện tích
+                                  </button>
+                                </div>
+                        
+                                <button
+                                  class="w-full py-4 bg-secondary text-white text-sm uppercase tracking-widest rounded-sm shadow-md hover:bg-secondary/90 hover:scale-[1.01] transition-all duration-300"
+                                >
+                                  TÍNH TOÁN KHỐI LƯỢNG
+                                </button>
+                        
+                                <!-- Results -->
+                                <div class="pt-8">
+                                  <div class="grid grid-cols-12 gap-4 pb-4 items-center">
+                                    <div class="col-span-6 md:col-span-5">
+                                      <h4
+                                        class="font-semibold text-primary uppercase text-base tracking-wider"
+                                      >
+                                        KẾT QUẢ
+                                      </h4>
+                                    </div>
+                                    <div class="col-span-3 md:col-span-4 text-center">
+                                      <span class="text-base font-semibold text-primary">Định mức</span>
+                                    </div>
+                                    <div class="col-span-3 md:col-span-3 text-right">
+                                      <span class="text-base font-semibold text-primary">Số lượng</span>
+                                    </div>
+                                  </div>
+                        
+                                  <div class="space-y-4">
+                                    <!-- Ngói âm -->
+                                    <div class="grid grid-cols-12 gap-4 items-center">
+                                      <div class="col-span-3 md:col-span-3">
+                                        <span class="text-primary/80 font-medium text-base"
+                                          >Ngói âm</span
+                                        >
+                                      </div>
+                                      <div class="col-span-3 md:col-span-2 text-right">
+                                        <span class="text-primary/80 font-medium text-base">00 m²</span>
+                                      </div>
+                                      <div class="col-span-3 md:col-span-4 text-center">
+                                        <span class="text-primary/80 font-medium text-base"
+                                          >40 viên/m²</span
+                                        >
+                                      </div>
+                                      <div class="col-span-3 md:col-span-3 text-right">
+                                        <span class="text-primary font-extrabold text-[16px]"
+                                          >00 viên</span
+                                        >
+                                      </div>
+                                    </div>
+                        
+                                    <!-- Ngói dương -->
+                                    <div class="grid grid-cols-12 gap-4 items-center">
+                                      <div class="col-span-3 md:col-span-3">
+                                        <span class="text-primary/80 font-medium text-base"
+                                          >Ngói dương</span
+                                        >
+                                      </div>
+                                      <div class="col-span-3 md:col-span-2 text-right">
+                                        <span class="text-primary/80 font-medium text-base">00 m²</span>
+                                      </div>
+                                      <div class="col-span-3 md:col-span-4 text-center">
+                                        <span class="text-primary/80 font-medium text-base"
+                                          >27 viên/m²</span
+                                        >
+                                      </div>
+                                      <div class="col-span-3 md:col-span-3 text-right">
+                                        <span class="text-primary font-extrabold text-[16px]"
+                                          >00 viên</span
+                                        >
+                                      </div>
+                                    </div>
+                        
+                                    <!-- Diềm -->
+                                    <div class="grid grid-cols-12 gap-4 items-center">
+                                      <div class="col-span-3 md:col-span-3">
+                                        <span class="text-primary/80 font-medium text-base">Diềm</span>
+                                      </div>
+                                      <div class="col-span-3 md:col-span-2 text-right">
+                                        <span class="text-primary/80 font-medium text-base">00 md</span>
+                                      </div>
+                                      <div class="col-span-3 md:col-span-4 text-center">
+                                        <span class="text-primary/80 font-medium text-base"
+                                          >5 cặp/md</span
+                                        >
+                                      </div>
+                                      <div class="col-span-3 md:col-span-3 text-right">
+                                        <span class="text-primary font-extrabold text-[16px]"
+                                          >00 cặp</span
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <hr class="border-black/10 mt-8 mb-8" />
+                                </div>
+                        
+                                <!-- Extras -->
+                                <div class="space-y-6">
+                                  <input type="checkbox" id="extra-loss" class="peer sr-only" />
+                                  <label
+                                    for="extra-loss"
+                                    class="w-fit flex items-center gap-2 cursor-pointer select-none peer-checked:[&_.loss-checkbox-box]:border-secondary peer-checked:[&_.loss-checkbox-box]:bg-secondary peer-checked:[&_.loss-checkbox-icon]:opacity-100 peer-focus-visible:[&_.loss-checkbox-box]:ring-2 peer-focus-visible:[&_.loss-checkbox-box]:ring-secondary/40 peer-focus-visible:[&_.loss-checkbox-box]:ring-offset-1"
+                                  >
+                                    <span
+                                      class="loss-checkbox-box relative flex h-5 w-5 items-center justify-center border border-black/20 rounded-none bg-transparent transition-all"
+                                    >
+                                      <svg
+                                        class="loss-checkbox-icon h-3 w-3 text-white opacity-0 transition-opacity"
+                                        viewBox="0 0 20 20"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2.5"
+                                      >
+                                        <path
+                                          d="M4 10.5L8 14.5L16 6.5"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                        ></path>
+                                      </svg>
+                                    </span>
+                                    <span class="text-[15px] font-medium text-primary/80"
+                                      >Cộng thêm hao hụt</span
+                                    >
+                                    <span class="group relative inline-block ml-1">
+                                      <span
+                                        class="w-5 h-5 rounded-full text-primary border-primary border flex items-center justify-center text-[12px] font-bold"
+                                      >
+                                        ?
+                                      </span>
+                                      <span
+                                        class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-primary text-white text-[12px] rounded-sm opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity shadow-lg z-10 leading-relaxed"
+                                      >
+                                        Tính toán dựa trên độ dốc mái thực tế và hao hụt vận chuyển/thi
+                                        công.
+                                      </span>
+                                    </span>
+                                  </label>
+                        
+                                  <div class="pl-7 space-y-4 hidden peer-checked:block">
+                                    <label class="flex items-center gap-3 cursor-pointer group">
+                                      <div class="relative flex items-center justify-center">
+                                        <input
+                                          type="radio"
+                                          name="loss-rate"
+                                          class="peer appearance-none w-5 h-5 border border-black/30 rounded-full checked:border-primary transition-all cursor-pointer"
+                                          checked
+                                        />
+                                        <div
+                                          class="absolute w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"
+                                        ></div>
+                                      </div>
+                                      <span class="text-[14px] text-primary/70 font-medium"
+                                        >Thêm 15% (Độ dốc mái)</span
+                                      >
+                                    </label>
+                                    <label class="flex items-center gap-3 cursor-pointer group">
+                                      <div class="relative flex items-center justify-center">
+                                        <input
+                                          type="radio"
+                                          name="loss-rate"
+                                          class="peer appearance-none w-5 h-5 border border-black/30 rounded-full checked:border-primary transition-all cursor-pointer"
+                                        />
+                                        <div
+                                          class="absolute w-2.5 h-2.5 rounded-full bg-primary scale-0 peer-checked:scale-100 transition-transform"
+                                        ></div>
+                                      </div>
+                                      <span class="text-[14px] text-primary/70 font-medium"
+                                        >Thêm 20% (Độ dốc mái + hao vỡ)</span
+                                      >
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                        
+                              <!-- Right: Diagrams -->
+                              <div class="flex flex-col gap-12 lg:gap-20 col-span-1 lg:col-span-2">
+                                <img
+                                  src="/assets/images/weight-01.svg"
+                                  alt="Cách đo mái chữ nhật"
+                                  class="w-full h-auto object-contain"
+                                />
+                                <img
+                                  src="/assets/images/weight-02.svg"
+                                  alt="Cách đo mái hình thang"
+                                  class="w-full h-auto object-contain"
+                                />
+                                <img
+                                  src="/assets/images/weight-03.svg"
+                                  alt="Cách đo diện tích mái"
+                                  class="w-full h-auto object-contain"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        
+                        <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/weight-calculator.html uid=a5f647f3 -->
+                        
+                        
+                        
+                    </div>
+                </div>
+                <hr class="mx-[30px] border-t border-black/10 md:hidden" />
+        
+                <!-- Applications Accordion Item -->
+                <div class="md:border-none">
+                    <button class="md:hidden w-full flex justify-between items-center py-[20px] px-[30px]"
+                        onclick="toggleMobileAccordion(this)">
+                        <span class="text-[#2E2F2A] text-[14px] font-bold tracking-tight">Ứng dụng</span>
+                        <div
+                            class="chevron w-6 h-6 bg-[#E5E7EB] rounded-full flex justify-center items-center transition-transform duration-300">
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5 5L9 1" stroke="#6B7280" stroke-width="1.33" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content hidden md:block w-full pb-6 md:pb-0">
+                        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/applications.html uid=f248ca02 -->
+                        <!-- GSXD-SECTION:BEGIN file=components/products/applications.html tag=section idx=001 uid=63c666fd -->
+                        <section class="w-full bg-background-secondary" data-aos="fade-up">
+                          <div class="w-[85%] max-w-[1320px] mx-auto">
+                            <h2
+                              class="text-[20px] md:text-3xl font-bold text-center text-secondary mb-5 md:mb-12 uppercase tracking-[0.6px] leading-[32px] md:tracking-wide w-full flex justify-center"
+                            >
+                              ỨNG DỤNG ĐA DẠNG
+                            </h2>
+                        
+                            <!-- Top: 3 images with absolute labels -->
+                            <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 mb-4 md:mb-12 w-full pb-6 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] md:grid md:grid-cols-3 items-start">
+                              <!-- Item 1 -->
+                              <div class="relative group overflow-hidden shadow-[0px_4px_15px_-3px_rgba(0,0,0,0.1)] w-full md:w-auto shrink-0 snap-center aspect-square md:aspect-auto">
+                                <img
+                                  src="/assets/images/am-duong-detail-01.png"
+                                  alt="Ốp mái"
+                                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div class="absolute bottom-6 left-1/2 -translate-x-1/2">
+                                  <div
+                                    class="border border-white/60 bg-black/20 backdrop-blur-sm px-10 py-2"
+                                  >
+                                    <span
+                                      class="text-white font-semibold text-[14px] leading-[20px] tracking-[2.8px] md:tracking-[0.2em] uppercase whitespace-nowrap"
+                                      >ỐP MÁI</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                        
+                              <!-- Item 2 -->
+                              <div class="relative group overflow-hidden shadow-[0px_4px_15px_-3px_rgba(0,0,0,0.1)] w-full md:w-auto shrink-0 snap-center aspect-square md:aspect-auto">
+                                <img
+                                  src="/assets/images/am-duong-detail-02.png"
+                                  alt="Bờ rào"
+                                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div class="absolute bottom-6 left-1/2 -translate-x-1/2">
+                                  <div
+                                    class="border border-white/60 bg-black/20 backdrop-blur-sm px-10 py-2"
+                                  >
+                                    <span
+                                      class="text-white font-semibold text-[14px] leading-[20px] tracking-[2.8px] md:tracking-[0.2em] uppercase whitespace-nowrap"
+                                      >BỜ RÀO</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                        
+                              <!-- Item 3 -->
+                              <div class="relative group overflow-hidden shadow-[0px_4px_15px_-3px_rgba(0,0,0,0.1)] w-full md:w-auto shrink-0 snap-center aspect-square md:aspect-auto">
+                                <img
+                                  src="/assets/images/am-duong-detail-03.png"
+                                  alt="Trang trí tường"
+                                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div class="absolute bottom-6 left-1/2 -translate-x-1/2">
+                                  <div
+                                    class="border border-white/60 bg-black/20 backdrop-blur-sm px-10 py-2 flex justify-center items-center"
+                                  >
+                                    <span
+                                      class="text-white font-semibold text-[12px] md:text-[14px] leading-[20px] tracking-[1.5px] md:tracking-[0.2em] uppercase whitespace-nowrap text-center"
+                                      >TRANG TRÍ TƯỜNG</span
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        
+                            <!-- Bottom: 5 icons with text -->
+                            <div class="flex justify-between items-start md:grid md:grid-cols-5 gap-2 md:gap-8 overflow-hidden w-full px-2">
+                              <!-- Icon 1 -->
+                              <div class="flex flex-col items-center gap-3 md:gap-6 group cursor-pointer w-[60px] md:w-auto">
+                                <div
+                                  class="w-[44px] h-[44px] md:w-16 md:h-16 flex items-center justify-center"
+                                >
+                                  <img
+                                    src="/assets/images/tu-gia.svg"
+                                    alt="Tư gia"
+                                    class="w-full h-full object-contain"
+                                  />
+                                </div>
+                                <span
+                                  class="text-secondary font-bold text-[10px] md:text-lg md:tracking-wide group-hover:text-primary transition-colors text-center leading-tight whitespace-nowrap md:whitespace-normal"
+                                  >Tư gia</span
+                                >
+                              </div>
+                        
+                              <!-- Icon 2 -->
+                              <div class="flex flex-col items-center gap-3 md:gap-6 group cursor-pointer w-[60px] md:w-auto">
+                                <div
+                                  class="w-[44px] h-[44px] md:w-16 md:h-16 flex items-center justify-center"
+                                >
+                                  <img
+                                    src="/assets/images/den-chua.svg"
+                                    alt="Đền chùa"
+                                    class="w-full h-full object-contain"
+                                  />
+                                </div>
+                                <span
+                                  class="text-secondary font-bold text-[10px] md:text-lg md:tracking-wide group-hover:text-primary transition-colors text-center leading-tight whitespace-nowrap md:whitespace-normal"
+                                  >Đền chùa</span
+                                >
+                              </div>
+                        
+                              <!-- Icon 3 -->
+                              <div class="flex flex-col items-center gap-3 md:gap-6 group cursor-pointer w-[60px] md:w-auto">
+                                <div
+                                  class="w-[44px] h-[44px] md:w-16 md:h-16 flex items-center justify-center"
+                                >
+                                  <img
+                                    src="/assets/images/resort.svg"
+                                    alt="Resort - Khách sạn"
+                                    class="w-full h-full object-contain text-secondary fill-secondary"
+                                  />
+                                </div>
+                                <span
+                                  class="text-secondary font-bold text-[10px] md:text-lg md:tracking-wide group-hover:text-primary transition-colors text-center leading-tight"
+                                  >Resort<br class="md:hidden" /> Khách sạn</span
+                                >
+                              </div>
+                        
+                              <!-- Icon 4 -->
+                              <div class="flex flex-col items-center gap-3 md:gap-6 group cursor-pointer w-[60px] md:w-auto">
+                                <div
+                                  class="w-[44px] h-[44px] md:w-16 md:h-16 flex items-center justify-center"
+                                >
+                                  <img
+                                    src="/assets/images/nha-hang.svg"
+                                    alt="Nhà hàng"
+                                    class="w-full h-full object-contain"
+                                  />
+                                </div>
+                                <span
+                                  class="text-secondary font-bold text-[10px] md:text-lg md:tracking-wide group-hover:text-primary transition-colors text-center leading-tight whitespace-nowrap md:whitespace-normal"
+                                  >Nhà hàng</span
+                                >
+                              </div>
+                        
+                              <!-- Icon 5 -->
+                              <div class="flex flex-col items-center gap-3 md:gap-6 group cursor-pointer w-[60px] md:w-auto">
+                                <div
+                                  class="w-[44px] h-[44px] md:w-16 md:h-16 flex items-center justify-center"
+                                >
+                                  <img
+                                    src="/assets/images/mieu-mo.svg"
+                                    alt="Miếu mộ"
+                                    class="w-full h-full object-contain"
+                                  />
+                                </div>
+                                <span
+                                  class="text-secondary font-bold text-[10px] md:text-lg md:tracking-wide group-hover:text-primary transition-colors text-center leading-tight whitespace-nowrap md:whitespace-normal"
+                                  >Miếu mộ</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/applications.html uid=f248ca02 -->
+                        
+                        
+                        
+                    </div>
+                </div>
+                <hr class="mx-[30px] border-t border-black/10 md:hidden" />
+        
+                <!-- Installation Guide Accordion Item -->
+                <div class="md:border-none">
+                    <button class="md:hidden w-full flex justify-between items-center py-[20px] px-[30px]"
+                        onclick="toggleMobileAccordion(this)">
+                        <span class="text-[#2E2F2A] text-[14px] font-bold tracking-tight">Hướng dẫn lắp đặt</span>
+                        <div
+                            class="chevron w-6 h-6 bg-[#E5E7EB] rounded-full flex justify-center items-center transition-transform duration-300">
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5 5L9 1" stroke="#6B7280" stroke-width="1.33" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="accordion-content hidden md:block w-full pb-6 md:pb-0">
+                        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/installation-guide.html uid=9adbf10c -->
+                        <!-- GSXD-SECTION:BEGIN file=components/products/installation-guide.html tag=section idx=001 uid=43ef4f4a -->
+                        <section
+                          class="w-full pb-4 pt-8 lg:pb-20 lg:pt-20 bg-background-secondary"
+                          data-aos="fade-up"
+                        >
+                          <div class="w-[85%] max-w-[1320px] mx-auto">
+                            <h2
+                              class="text-[20px] md:text-3xl font-semibold text-center text-secondary mb-8 md:mb-12 uppercase"
+                            >
+                              HƯỚNG DẪN LẮP ĐẶT
+                            </h2>
+                        
+                            <!-- Tabs Header -->
+                            <div class="flex justify-center mb-8 md:mb-16">
+                              <div class="flex flex-row-reverse md:flex-row border-b border-black/10 w-full max-w-[600px]">
+                                <button
+                                  class="flex-1 pb-2 md:pb-4 text-[14px] md:text-2xl font-bold md:font-semibold uppercase text-secondary border-b-2 md:border-b-4 border-transparent md:border-secondary transition-all text-right md:text-center font-archivo"
+                                >
+                                  MÁI BÊ TÔNG
+                                </button>
+                                <button
+                                  class="flex-1 pb-2 md:pb-4 text-[14px] md:text-2xl font-bold md:font-semibold uppercase text-secondary border-b-2 md:border-b-4 border-secondary md:border-transparent hover:border-secondary transition-all text-left md:text-center font-archivo"
+                                >
+                                  MÁI GỖ
+                                </button>
+                              </div>
+                            </div>
+                        
+                            <!-- Content Grid -->
+                            <div class="space-y-8 md:space-y-20 relative w-full">
+                              <!-- First Row -->
+                              <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 pb-6 md:pb-0 w-full md:overflow-visible items-stretch md:items-center [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] md:flex-row">
+                                <!-- Step 1 -->
+                                <div
+                                  class="w-full shrink-0 snap-center md:flex-1 md:w-auto bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
+                                >
+                                  <div class="flex h-[56px] md:h-24">
+                                    <div
+                                      class="w-[48px] md:w-16 lg:w-12 shrink-0 flex items-center justify-center bg-white text-secondary font-bold font-advent text-[36px] leading-[40px] md:text-4xl lg:text-[40px] border-b border-r border-secondary"
+                                    >
+                                      1
+                                    </div>
+                                    <div
+                                      class="flex-1 flex items-center px-4 lg:px-8 bg-secondary text-white text-[16px] leading-[25px] md:text-[20px] font-semibold md:leading-tight"
+                                    >
+                                      Chống thấm mái, tóc khô cắt
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="aspect-[6/5] w-full bg-[#f0f0f0] flex items-center justify-center overflow-hidden"
+                                  >
+                                    <img src="/assets/images/installation.png" alt="Installation Step 1" class="w-full h-full object-cover border-t border-secondary" />
+                                  </div>
+                                </div>
+                        
+                                <!-- Arrow -->
+                                <div
+                                  class="hidden md:flex shrink-0 items-center justify-center px-1 lg:px-2"
+                                >
+                                  <div class="flex items-center -space-x-1.5 lg:-space-x-2">
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-4 lg:w-7 h-auto opacity-20"
+                                    />
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-40"
+                                    />
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-70"
+                                    />
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-100"
+                                    />
+                                  </div>
+                                </div>
+                        
+                                <!-- Step 2 -->
+                                <div
+                                  class="w-full shrink-0 snap-center md:flex-1 md:w-auto bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
+                                >
+                                  <div class="flex h-[56px] md:h-24">
+                                    <div
+                                      class="w-[48px] md:w-16 lg:w-12 shrink-0 flex items-center justify-center bg-white text-secondary font-bold font-advent text-[36px] leading-[40px] md:text-4xl lg:text-[40px] border-b border-r border-secondary"
+                                    >
+                                      2
+                                    </div>
+                                    <div
+                                      class="flex-1 flex items-center px-4 lg:px-8 bg-secondary text-white text-[16px] leading-[25px] md:text-[20px] font-semibold md:leading-tight"
+                                    >
+                                      Chống thấm mái, tóc khô cắt
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="aspect-[6/5] w-full bg-[#f0f0f0] flex items-center justify-center overflow-hidden"
+                                  >
+                                    <img src="/assets/images/installation.png" alt="Installation Step 1" class="w-full h-full object-cover border-t border-secondary" />
+                                  </div>
+                                </div>
+                        
+                                <!-- Arrow -->
+                                <div
+                                  class="hidden md:flex shrink-0 items-center justify-center px-1 lg:px-2"
+                                >
+                                  <div class="flex items-center -space-x-1.5 lg:-space-x-2">
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-20"
+                                    />
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-40"
+                                    />
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-70"
+                                    />
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-100"
+                                    />
+                                  </div>
+                                </div>
+                        
+                                <!-- Step 3 -->
+                                <div
+                                  class="w-full shrink-0 snap-center md:flex-1 md:w-auto bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
+                                >
+                                  <div class="flex h-[56px] md:h-24">
+                                    <div
+                                      class="w-[48px] md:w-16 lg:w-12 shrink-0 flex items-center justify-center bg-white text-secondary font-bold font-advent text-[36px] leading-[40px] md:text-4xl lg:text-[40px] border-b border-r border-secondary"
+                                    >
+                                      3
+                                    </div>
+                                    <div
+                                      class="flex-1 flex items-center px-4 lg:px-8 bg-secondary text-white text-[16px] leading-[25px] md:text-[20px] font-semibold md:leading-tight"
+                                    >
+                                      Chống thấm mái, tóc khô cắt
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="aspect-[6/5] w-full bg-[#f0f0f0] flex items-center justify-center overflow-hidden"
+                                  >
+                                    <img src="/assets/images/installation.png" alt="Installation Step 1" class="w-full h-full object-cover border-t border-secondary" />
+                                  </div>
+                                </div>
+                              </div>
+                        
+                              <!-- Second Row -->
+                              <div class="hidden md:flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-4 pb-6 md:pb-0 w-full md:overflow-visible items-stretch md:items-center [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] md:flex-row">
+                                <!-- Step 1 -->
+                                <div
+                                  class="w-full shrink-0 snap-center md:flex-1 md:w-auto bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
+                                >
+                                  <div class="flex h-[56px] md:h-24">
+                                    <div
+                                      class="w-[48px] md:w-16 lg:w-12 shrink-0 flex items-center justify-center bg-white text-secondary font-bold font-advent text-[36px] leading-[40px] md:text-4xl lg:text-[40px] border-b border-r border-secondary"
+                                    >
+                                      1
+                                    </div>
+                                    <div
+                                      class="flex-1 flex items-center px-4 lg:px-8 bg-secondary text-white text-[16px] leading-[25px] md:text-[20px] font-semibold md:leading-tight"
+                                    >
+                                      Chống thấm mái, tóc khô cắt
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="aspect-[6/5] w-full bg-[#f0f0f0] flex items-center justify-center overflow-hidden"
+                                  >
+                                    <img src="/assets/images/installation.png" alt="Installation Step 1" class="w-full h-full object-cover border-t border-secondary" />
+                                  </div>
+                                </div>
+                        
+                                <!-- Arrow -->
+                                <div
+                                  class="hidden md:flex shrink-0 items-center justify-center px-1 lg:px-2"
+                                >
+                                  <div class="flex items-center -space-x-1.5 lg:-space-x-2">
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-20"
+                                    />
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-40"
+                                    />
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-70"
+                                    />
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-100"
+                                    />
+                                  </div>
+                                </div>
+                        
+                                <!-- Step 2 -->
+                                <div
+                                  class="w-full shrink-0 snap-center md:flex-1 md:w-auto bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
+                                >
+                                  <div class="flex h-[56px] md:h-24">
+                                    <div
+                                      class="w-[48px] md:w-16 lg:w-12 shrink-0 flex items-center justify-center bg-white text-secondary font-bold font-advent text-[36px] leading-[40px] md:text-4xl lg:text-[40px] border-b border-r border-secondary"
+                                    >
+                                      2
+                                    </div>
+                                    <div
+                                      class="flex-1 flex items-center px-4 lg:px-8 bg-secondary text-white text-[16px] leading-[25px] md:text-[20px] font-semibold md:leading-tight"
+                                    >
+                                      Chống thấm mái, tóc khô cắt
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="aspect-[6/5] w-full bg-[#f0f0f0] flex items-center justify-center overflow-hidden"
+                                  >
+                                    <img src="/assets/images/installation.png" alt="Installation Step 1" class="w-full h-full object-cover border-t border-secondary" />
+                                  </div>
+                                </div>
+                        
+                                <!-- Arrow -->
+                                <div
+                                  class="hidden md:flex shrink-0 items-center justify-center px-1 lg:px-2"
+                                >
+                                  <div class="flex items-center -space-x-1.5 lg:-space-x-2">
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-20"
+                                    />
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-40"
+                                    />
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-70"
+                                    />
+                                    <img
+                                      src="/assets/images/chevron-right.svg"
+                                      alt="Arrow"
+                                      class="w-5 lg:w-7 h-auto opacity-100"
+                                    />
+                                  </div>
+                                </div>
+                        
+                                <!-- Step 3 -->
+                                <div
+                                  class="w-full shrink-0 snap-center md:flex-1 md:w-auto bg-[#f8f8f8] border border-secondary shadow-sm overflow-hidden"
+                                >
+                                  <div class="flex h-[56px] md:h-24">
+                                    <div
+                                      class="w-[48px] md:w-16 lg:w-12 shrink-0 flex items-center justify-center bg-white text-secondary font-bold font-advent text-[36px] leading-[40px] md:text-4xl lg:text-[40px] border-b border-r border-secondary"
+                                    >
+                                      3
+                                    </div>
+                                    <div
+                                      class="flex-1 flex items-center px-4 lg:px-8 bg-secondary text-white text-[16px] leading-[25px] md:text-[20px] font-semibold md:leading-tight"
+                                    >
+                                      Chống thấm mái, tóc khô cắt
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="aspect-[6/5] w-full bg-[#f0f0f0] flex items-center justify-center overflow-hidden"
+                                  >
+                                    <img src="/assets/images/installation.png" alt="Installation Step 1" class="w-full h-full object-cover border-t border-secondary" />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                        <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/installation-guide.html uid=9adbf10c -->
+                        
+                        
+                        
+                    </div>
+                </div>
+                <hr class="mx-[30px] border-t border-black/10 md:hidden mb-8 md:mb-0" />
+            </div>
+        </div> <!-- End Flex Container for Mobile Reordering -->
+        
+        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/works.html uid=85f5fb0d -->
+        <!-- ============================================== -->
+        <!-- COMPONENT DẤU ẤN CÔNG TRÌNH (WORKS SECTION)      -->
+        <!-- ============================================== -->
+        <!-- GSXD-SECTION:BEGIN file=components/products/works.html tag=section idx=001 uid=82e281f2 -->
+        <section
+          class="w-full bg-background-secondary pb-12 md:pb-16 relative overflow-visible animate-fade-in-up xl:min-h-[760px]"
+          data-aos="fade-up"
+        >
+        
+          <!-- Tiêu đề Section -->
+          <div class="text-center mb-8 md:mb-16">
+            <h2
+              class="text-[20px] md:text-3xl font-semibold text-secondary uppercase drop-shadow-sm"
+            >
+              Dấu ấn trên những công trình
+            </h2>
+          </div>
+        
+          <!-- Main Content Area: Chứa Swiper Carousel và Khối Text -->
+          <div class="relative w-full flex flex-col md:block">
+            <!-- Khung Swiper (Trên mobile hiển thị trên khối Text - Order 1) -->
+            <div
+              class="swiper product-works-swiper w-full pb-[15px] md:pb-10 pr-[20%] order-1"
+            >
+              <div class="swiper-wrapper flex items-end">
+                <!-- Slide 1 -->
+                <div class="swiper-slide product-works-slide overflow-hidden">
+                  <img
+                    src="/assets/images/work-01.jpg"
+                    alt="Chùa Bái Đính"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+        
+                <!-- Slide 2 -->
+                <div class="swiper-slide product-works-slide overflow-hidden">
+                  <img
+                    src="/assets/images/about-01.png"
+                    alt="Thiền Viện Trúc Lâm"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+        
+                <!-- Slide 3 -->
+                <div class="swiper-slide product-works-slide overflow-hidden">
+                  <img
+                    src="/assets/images/work-03.jpg"
+                    alt="Đền Trần"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+        
+                <!-- Slide 4 -->
+                <div class="swiper-slide product-works-slide overflow-hidden">
+                  <img
+                    src="/assets/images/work-01.jpg"
+                    alt="Chùa Bái Đính"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+        
+                <!-- Slide 5 -->
+                <div class="swiper-slide product-works-slide overflow-hidden">
+                  <img
+                    src="/assets/images/about-01.png"
+                    alt="Thiền Viện Trúc Lâm"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+        
+                <!-- Slide 6 -->
+                <div class="swiper-slide product-works-slide overflow-hidden">
+                  <img
+                    src="/assets/images/work-03.jpg"
+                    alt="Đền Trần"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+        
+                <!-- Slide 7 -->
+                <div class="swiper-slide product-works-slide overflow-hidden">
+                  <img
+                    src="/assets/images/work-01.jpg"
+                    alt="Chùa Bái Đính"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+        
+                <!-- Slide 8 -->
+                <div class="swiper-slide product-works-slide overflow-hidden">
+                  <img
+                    src="/assets/images/about-01.png"
+                    alt="Thiền Viện Trúc Lâm"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+        
+                <!-- Slide 9 -->
+                <div class="swiper-slide product-works-slide overflow-hidden">
+                  <img
+                    src="/assets/images/work-03.jpg"
+                    alt="Đền Trần"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+        
+                <!-- Slide 10 -->
+                <div class="swiper-slide product-works-slide overflow-hidden">
+                  <img
+                    src="/assets/images/work-01.jpg"
+                    alt="Chùa Bái Đính"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+        
+                <!-- Slide 11 -->
+                <div class="swiper-slide product-works-slide overflow-hidden">
+                  <img
+                    src="/assets/images/about-01.png"
+                    alt="Thiền Viện Trúc Lâm"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+        
+                <!-- Slide 12 -->
+                <div class="swiper-slide product-works-slide overflow-hidden">
+                  <img
+                    src="/assets/images/work-03.jpg"
+                    alt="Đền Trần"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+        
+            <!-- Khối Text thay đổi tùy theo Slide hiển thị (Trên desktop được đưa lên góc trên) -->
+            <div
+              class="w-full px-4 relative xl:absolute xl:inset-x-0 xl:top-0 xl:pointer-events-none z-10 order-2"
+            >
+              <div
+                class="xl:absolute xl:top-0 xl:right-[max(1rem,calc(60%-808px))] w-full xl:max-w-[400px] bg-transparent pt-8 pointer-events-auto"
+              >
+                <!-- Tên dự án -->
+                <div
+                  class="flex justify-between items-start pb-4 border-b border-black/10 xl:border-none"
+                >
+                  <h3
+                    id="slide-title"
+                    class="text-base font-bold uppercase tracking-wide slide-text-transition"
+                  >
+                    CHÙA BÁI ĐÍNH
+                  </h3>
+                </div>
+        
+                <!-- Chi tiết Địa điểm và Sản phẩm -->
+                <div
+                  class="space-y-3 text-[15px] mt-[13px] mb-[15px] md:mt-8 md:mb-12 slide-text-transition"
+                  id="slide-meta"
+                >
+                  <p>
+                    <span class="font-bold">Địa điểm:</span>
+                    <span id="slide-location">Ninh Bình</span>
+                  </p>
+                  <p>
+                    <span class="font-bold">Sản phẩm:</span>
+                    <span id="slide-product">Ngói âm dương nâu đen</span>
+                  </p>
+                </div>
+        
+                <!-- Nút Xem chi tiết dự án -->
+                <a
+                  href="#"
+                  id="slide-link"
+                  class="font-bold text-black border-b-[1.5px] border-black inline-block hover:text-secondary hover:border-secondary tracking-[0.05em] text-[13px] slide-text-transition"
+                  >See more</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/works.html uid=85f5fb0d -->
+        
+        
+        
+        <section
+          class="w-full pb-0 md:pb-16 bg-background-secondary relative "
+          data-aos="fade-up"
+        >
+        
+          <div class="max-w-[1320px] w-[85%] mx-auto relative z-10">
+            <h2
+              class="text-[20px] md:text-3xl font-semibold text-secondary text-center uppercase mb-5 md:mb-16"
+            >
+              CÓ THỂ BẠN QUAN TÂM
+            </h2>
+        
+            <div class="relative">
+              <div
+                class="overflow-x-auto pb-6 custom-recommend-scrollbar mobile-scroll-visible"
+              >
+                <div class="min-w-[900px] md:min-w-[1000px] w-max">
+                  <!-- Product Info Row -->
+                  <div class="flex gap-0 md:gap-10 mb-4 md:mb-8">
+                    <!-- Empty space - Hidden on Mobile -->
+                    <div
+                      class="hidden md:block w-[140px] shrink-0 sticky left-0 bg-background-secondary z-10"
+                    ></div>
+        
+                    <div class="flex-grow flex gap-4 md:gap-10">
+                      <div
+                        class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
+                      >
+                        <a
+                          href="/products/ngoi-am-duong/detail.html"
+                          class="w-full group"
+                        >
+                          <div
+                            class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
+                          >
+                            <img
+                              src="/assets/images/gach-co-work-2.jpg"
+                              alt="Ngói Âm Dương 27 Nâu Đỏ"
+                              class="object-cover w-full h-full"
+                              onerror="
+                                this.src =
+                                  'https://placehold.co/400x400/eee/999?text=Product'
+                              "
+                            />
+                            <div class="product-overlay">
+                              <img src="/assets/images/eye.svg" alt="Search" />
+                              <span>Xem chi tiết</span>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          href="/products/ngoi-am-duong/detail.html"
+                          class="text-[#004B8D] hover:text-secondary transition-colors"
+                        >
+                          <h3
+                            class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
+                          >
+                            Ngói Âm Dương 27 Nâu Đỏ
+                          </h3>
+                        </a>
+                        <button
+                          class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
+                        >
+                          Thêm vào giỏ
+                        </button>
+                      </div>
+                      <div
+                        class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
+                      >
+                        <a
+                          href="/products/ngoi-am-duong/detail.html"
+                          class="w-full group"
+                        >
+                          <div
+                            class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
+                          >
+                            <img
+                              src="/assets/images/gach-co-work-2.jpg"
+                              alt="Ngói Âm Dương 27 Nâu Đỏ"
+                              class="object-cover w-full h-full"
+                              onerror="
+                                this.src =
+                                  'https://placehold.co/400x400/eee/999?text=Product'
+                              "
+                            />
+                            <div class="product-overlay">
+                              <img src="/assets/images/eye.svg" alt="Search" />
+                              <span>Xem chi tiết</span>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          href="/products/ngoi-am-duong/detail.html"
+                          class="text-[#004B8D] hover:text-secondary transition-colors"
+                        >
+                          <h3
+                            class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
+                          >
+                            Ngói Âm Dương 27 Nâu Đỏ
+                          </h3>
+                        </a>
+                        <button
+                          class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
+                        >
+                          Thêm vào giỏ
+                        </button>
+                      </div>
+                      <div
+                        class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
+                      >
+                        <a
+                          href="/products/ngoi-am-duong/detail.html"
+                          class="w-full group"
+                        >
+                          <div
+                            class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
+                          >
+                            <img
+                              src="/assets/images/gach-co-work-2.jpg"
+                              alt="Ngói Âm Dương 27 Nâu Đỏ"
+                              class="object-cover w-full h-full"
+                              onerror="
+                                this.src =
+                                  'https://placehold.co/400x400/eee/999?text=Product'
+                              "
+                            />
+                            <div class="product-overlay">
+                              <img src="/assets/images/eye.svg" alt="Search" />
+                              <span>Xem chi tiết</span>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          href="/products/ngoi-am-duong/detail.html"
+                          class="text-[#004B8D] hover:text-secondary transition-colors"
+                        >
+                          <h3
+                            class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
+                          >
+                            Ngói Âm Dương 27 Nâu Đỏ
+                          </h3>
+                        </a>
+                        <button
+                          class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
+                        >
+                          Thêm vào giỏ
+                        </button>
+                      </div>
+                      <div
+                        class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
+                      >
+                        <a
+                          href="/products/ngoi-am-duong/detail.html"
+                          class="w-full group"
+                        >
+                          <div
+                            class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
+                          >
+                            <img
+                              src="/assets/images/gach-co-work-2.jpg"
+                              alt="Ngói Âm Dương 27 Nâu Đỏ"
+                              class="object-cover w-full h-full"
+                              onerror="
+                                this.src =
+                                  'https://placehold.co/400x400/eee/999?text=Product'
+                              "
+                            />
+                            <div class="product-overlay">
+                              <img src="/assets/images/eye.svg" alt="Search" />
+                              <span>Xem chi tiết</span>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          href="/products/ngoi-am-duong/detail.html"
+                          class="text-[#004B8D] hover:text-secondary transition-colors"
+                        >
+                          <h3
+                            class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
+                          >
+                            Ngói Âm Dương 27 Nâu Đỏ
+                          </h3>
+                        </a>
+                        <button
+                          class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
+                        >
+                          Thêm vào giỏ
+                        </button>
+                      </div>
+                      <div
+                        class="w-[175px] md:w-[220px] shrink-0 flex flex-col items-start"
+                      >
+                        <a
+                          href="/products/ngoi-am-duong/detail.html"
+                          class="w-full group"
+                        >
+                          <div
+                            class="product-card relative aspect-square w-full mb-2 md:mb-4 bg-gray-100 rounded-sm overflow-hidden"
+                          >
+                            <img
+                              src="/assets/images/gach-co-work-2.jpg"
+                              alt="Ngói Âm Dương 27 Nâu Đỏ"
+                              class="object-cover w-full h-full"
+                              onerror="
+                                this.src =
+                                  'https://placehold.co/400x400/eee/999?text=Product'
+                              "
+                            />
+                            <div class="product-overlay">
+                              <img src="/assets/images/eye.svg" alt="Search" />
+                              <span>Xem chi tiết</span>
+                            </div>
+                          </div>
+                        </a>
+                        <a
+                          href="/products/ngoi-am-duong/detail.html"
+                          class="text-[#004B8D] hover:text-secondary transition-colors"
+                        >
+                          <h3
+                            class="font-bold text-[12px] md:text-base leading-snug h-6 md:h-12 overflow-hidden mb-0 md:mb-2"
+                          >
+                            Ngói Âm Dương 27 Nâu Đỏ
+                          </h3>
+                        </a>
+                        <button
+                          class="border border-secondary text-secondary text-[9px] md:text-[13px] font-bold py-1 md:py-2 px-4 md:px-6 rounded-full hover:bg-secondary hover:text-white transition-all whitespace-nowrap"
+                        >
+                          Thêm vào giỏ
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <!-- Comparison Table -->
+                  <div class="flex flex-col border-t border-black/10">
+                    <!-- Price Row -->
+                    <div class="flex gap-0 md:gap-10 group mobile-compare-row">
+                      <div
+                        class="hidden md:flex w-[140px] shrink-0 text-base font-bold text-primary items-start sticky left-0 bg-background-secondary z-10"
+                      >
+                        <span class="compare-cell-text">Giá</span>
+                      </div>
+                      <div class="flex-grow flex md:gap-10 items-start">
+                        <div
+                          class="md:hidden w-0 h-full shrink-0 sticky left-0 z-20 overflow-visible"
+                        >
+                          <span class="mobile-compare-label">Giá</span>
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
+                        >
+                          675.000 đ/m²
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
+                        >
+                          675.000 đ/m²
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
+                        >
+                          675.000 đ/m²
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
+                        >
+                          675.000 đ/m²
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
+                        >
+                          675.000 đ/m²
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Color Row -->
+                    <div
+                      class="flex gap-0 md:gap-10 border-t border-black/10 group mobile-compare-row"
+                    >
+                      <div
+                        class="hidden md:flex w-[140px] shrink-0 text-base font-bold text-primary items-start sticky left-0 bg-background-secondary z-10"
+                      >
+                        <span class="compare-cell-text">Màu sắc</span>
+                      </div>
+                      <div class="flex-grow flex md:gap-10 items-start">
+                        <div
+                          class="md:hidden w-0 h-full shrink-0 sticky left-0 z-20 overflow-visible"
+                        >
+                          <span class="mobile-compare-label">Màu sắc</span>
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
+                        >
+                          Nâu đỏ
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
+                        >
+                          Nâu đỏ
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
+                        >
+                          Nâu đỏ
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
+                        >
+                          Nâu đỏ
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 mr-4 md:mr-auto"
+                        >
+                          Nâu đỏ
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Size Row -->
+                    <div
+                      class="flex md:gap-10 border-y border-black/10 group mobile-compare-row"
+                    >
+                      <div
+                        class="hidden md:flex w-[140px] shrink-0 text-base font-bold text-primary items-start sticky left-0 bg-background-secondary z-10"
+                      >
+                        <span class="compare-cell-text">Kích thước</span>
+                      </div>
+                      <div class="flex-grow flex md:gap-10 items-start">
+                        <div
+                          class="md:hidden w-0 h-full shrink-0 sticky left-0 z-20 overflow-visible"
+                        >
+                          <span class="mobile-compare-label">Kích thước</span>
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4 md:mr-auto"
+                        >
+                          L280 x W280 x H54mm
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4 md:mr-auto"
+                        >
+                          L280 x W280 x H54mm
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4 md:mr-auto"
+                        >
+                          L280 x W280 x H54mm
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4 md:mr-auto"
+                        >
+                          L280 x W280 x H54mm
+                        </div>
+                        <div
+                          class="compare-cell-text w-[175px] md:w-[220px] shrink-0 text-[12px] md:text-base text-primary/80 leading-relaxed mr-4 md:mr-auto"
+                        >
+                          L280 x W280 x H54mm
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
+        <!-- FAQ 2 Section Partial -->
+        <!-- GSXD-SECTION:BEGIN file=components/products/faq2.html tag=section idx=001 uid=5216d5e2 -->
+        <section class="w-full pb-0 md:pb-8 lg:pb-10 md:pt-14 overflow-hidden">
+          <div
+            class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 lg:gap-16 items-center"
+          >
+            <!-- Left: Image -->
+            <div class="w-full aspect-square" data-aos="fade-right">
+              <img
+                src="/assets/images/faq2.png"
+                alt="FAQ Image"
+                class="w-full h-full object-cover"
+              />
+            </div>
+        
+            <!-- Right: Content -->
+            <div class="flex flex-col items-start" data-aos="fade-left">
+              <p
+                class="text-[#262626] text-[14px] md:text-base font-extrabold uppercase tracking-[0.1em] leading-[20px] md:leading-normal mb-2.5 md:mb-8"
+              >
+                Bạn có thắc mắc?
+              </p>
+              <h2
+                class="text-[#2E2F2A] md:text-primary text-[24px] md:text-3xl lg:text-4xl font-normal md:font-semibold leading-[37.5px] md:leading-tight mb-5 md:mb-0"
+              >
+                Xem các câu hỏi thường gặp
+              </h2>
+              <p
+                class="text-[#262626]/70 text-[14px] md:text-base font-normal leading-[22.75px] md:leading-relaxed mb-5 md:mb-10"
+              >
+                Khám phá danh sách các câu hỏi thường gặp và câu trả lời của chúng tôi.
+              </p>
+              <a
+                href="/faq/"
+                class="inline-block border-0 md:border md:border-black/40 px-0 md:px-5 py-0 md:py-2 text-[#262626] text-[16px] md:text-xs lg:text-sm font-semibold md:font-normal leading-none md:leading-normal hover:text-secondary md:hover:bg-secondary md:hover:text-white md:hover:border-secondary transition-all"
+              >
+                (FAQ) Câu hỏi thường gặp
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
+        
+        
+    </main>
+
+    <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
+    <!-- GSXD-ELEMENT:BEGIN file=components/footer.html tag=footer idx=001 uid=540a3f40 -->
+    <footer class="bg-[#262723] text-white">
+      <!-- Main Footer -->
+      <div class="relative bg-[#262723] overflow-hidden">
+        <img
+          src="/assets/images/footer-image-2.png"
+          alt=""
+          class="hidden lg:block absolute inset-0 w-full h-full object-cover"
+        />
+        <div
+          class="relative w-[85%] max-w-[1320px] mx-auto pt-12 lg:pt-[150px] pb-[60px] lg:whitespace-nowrap"
+        >
+          <div
+            class="grid grid-cols-2 gap-x-2 gap-y-8 lg:grid lg:grid-cols-[200px_455px_195px_370px_200px] lg:gap-0 lg:w-[1420px] lg:justify-start lg:-translate-x-[38px]"
+          >
+            <div
+              class="hidden lg:flex flex-col justify-between items-center gap-6 w-full lg:w-[200px] lg:pr-[45px] shrink-0"
+            >
+              <div>
+                <img
+                  src="/assets/images/logo.png"
+                  alt="Logo"
+                  class="w-[88px] h-[88px]"
+                />
+              </div>
+              <div class="mt-auto lg:pt-16">
+                <a
+                  href="#"
+                  class="inline-block"
+                  aria-label="Đã thông báo Bộ Công Thương"
+                >
+                  <img
+                    src="/assets/images/bo-cong-thuong.png"
+                    alt="Đã thông báo Bộ Công Thương"
+                    class="h-[52px] w-auto"
+                  />
+                </a>
+              </div>
+            </div>
+    
+            <div
+              class="col-span-2 lg:col-span-1 w-full lg:w-[455px] shrink-0 order-1 lg:order-none"
+            >
+              <div
+                class="text-white text-[15px] leading-[26px] mb-6 tracking-[-0.1px]"
+              >
+                <p class="font-bold uppercase">
+                  CÔNG TY TNHH SẢN XUẤT VÀ THƯƠNG MẠI<br class="block lg:hidden" />
+                  THANH HẢI
+                </p>
+                <p>18 Phố Gốm – Giang Cao, Bát Tràng, Gia Lâm, Hà Nội</p>
+                <p>0966 55 8808</p>
+                <p>gshaithanh@gmail.com</p>
+              </div>
+    
+              <div class="block lg:hidden mb-8">
+                <a
+                  href="#"
+                  class="inline-block"
+                  aria-label="Đã thông báo Bộ Công Thương"
+                >
+                  <img
+                    src="/assets/images/bo-cong-thuong.png"
+                    alt="Đã thông báo Bộ Công Thương"
+                    class="h-[52px] w-auto"
+                  />
+                </a>
+              </div>
+    
+              <div class="hidden lg:flex items-center gap-[20px] mb-8">
+                <a href="#" aria-label="Facebook">
+                  <img
+                    src="/assets/images/facebook.svg"
+                    alt="Facebook"
+                    class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                </a>
+                <a href="#" aria-label="YouTube">
+                  <img
+                    src="/assets/images/youtube.svg"
+                    alt="YouTube"
+                    class="w-[24px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                </a>
+                <a href="#" aria-label="Pinterest">
+                  <img
+                    src="/assets/images/pinterest.svg"
+                    alt="Pinterest"
+                    class="w-[18px] h-[18px] opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                </a>
+              </div>
+            </div>
+    
+            <div
+              class="col-span-1 lg:col-span-1 w-full lg:w-[195px] min-w-0 order-2 lg:order-none"
+            >
+              <h3
+                class="text-white text-[14px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 whitespace-nowrap uppercase"
+              >
+                TỔNG QUAN
+              </h3>
+              <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap">
+                <a
+                  href="/about/"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Về chúng tôi</a
+                ><br />
+                <a
+                  href="/showroom/"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Showroom</a
+                ><br />
+                <a
+                  href="/factory/"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Nhà xưởng</a
+                ><br />
+                <a
+                  href="/contact/"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Liên hệ</a
+                >
+              </div>
+            </div>
+    
+            <div
+              class="col-span-1 lg:col-span-1 w-full lg:w-[200px] min-w-0 order-3 lg:order-none"
+            >
+              <h3
+                class="text-white text-[16px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 whitespace-nowrap uppercase"
+              >
+                DỊCH VỤ KHÁCH HÀNG
+              </h3>
+              <div class="leading-[30px] lg:leading-[40px] whitespace-nowrap">
+                <a
+                  href="/dich-vu-khach-hang/tai-khoan-cua-toi.html"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Tài khoản</a
+                ><br />
+                <a
+                  href="/dich-vu-khach-hang/quy-trinh-dat-hang.html"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Quy trình đặt hàng</a
+                ><br />
+                <a
+                  href="/dich-vu-khach-hang/huong-dan-thi-cong.html"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >Hướng dẫn thi công</a
+                ><br />
+                <a
+                  href="/faq/index.html"
+                  class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                  >FAQ</a
+                >
+              </div>
+            </div>
+    
+            <div
+              class="col-span-2 lg:col-span-1 w-full lg:w-[370px] min-w-0 order-4 lg:order-none"
+            >
+              <h3
+                class="text-white text-[14px] lg:text-base font-semibold leading-[26px] tracking-[-0.1px] mb-4 lg:mb-6 text-start lg:text-center lg:mr-[65px] whitespace-nowrap uppercase"
+              >
+                SẢN PHẨM
+              </h3>
+              <div class="flex gap-[40px] lg:gap-[50px]">
+                <div
+                  class="leading-[30px] lg:leading-[40px] whitespace-nowrap flex-1"
+                >
+                  <a
+                    href="/products/ngoi-am-duong/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Ngói âm dương</a
+                  ><br />
+                  <a
+                    href="/products/ngoi-hai-van-mieu/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Ngói hài văn miếu</a
+                  ><br />
+                  <a
+                    href="/products/phu-kien-ngoi/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Phụ kiện mái</a
+                  ><br />
+                  <a
+                    href="/products/linh-vat-phong-thuy/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Linh vật phong thủy</a
+                  >
+                </div>
+                <div
+                  class="leading-[30px] lg:leading-[40px] whitespace-nowrap flex-1"
+                >
+                  <a
+                    href="/products/gach-hoa-thong-gio/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Gạch thông gió</a
+                  ><br />
+                  <a
+                    href="/products/gach-trang-tri/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Gạch trang trí</a
+                  ><br />
+                  <a
+                    href="/products/lan-can-gom-su/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Lan can gốm sứ</a
+                  ><br />
+                  <a
+                    href="/products/den-gom-su/"
+                    class="text-white text-[12px] lg:text-base font-normal tracking-[-0.2px] whitespace-nowrap hover:text-secondary transition-colors"
+                    >Đèn vườn gốm sứ</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="relative border-t border-white/20 w-full">
+          <div class="w-[85%] max-w-[1320px] mx-auto py-6">
+            <div
+              class="flex flex-col-reverse md:flex-row justify-between items-center gap-2 md:gap-4"
+            >
+              <p
+                class="text-[#909090] text-[12px] lg:text-sm leading-[26px] whitespace-nowrap text-center"
+              >
+                Copyright © 2022 . All rights reserved
+              </p>
+              <div
+                class="text-[#909090] text-[12px] lg:text-sm leading-[26px] whitespace-nowrap flex items-center justify-center flex-wrap md:flex-nowrap"
+              >
+                <a
+                  href="/dich-vu-khach-hang/chinh-sach-van-chuyen.html"
+                  class="whitespace-nowrap hover:text-secondary transition-colors"
+                  >Chính sách vận chuyển</a
+                >
+                <span class="text-[14px] mx-2 lg:mx-4">|</span>
+                <a
+                  href="/dich-vu-khach-hang/chinh-sach-doi-tra.html"
+                  class="whitespace-nowrap hover:text-secondary transition-colors"
+                  >Chính sách đổi trả</a
+                >
+                <span class="text-[14px] mx-2 lg:mx-4">|</span>
+                <a
+                  href="/dich-vu-khach-hang/bao-mat-thong-tin.html"
+                  class="whitespace-nowrap hover:text-secondary transition-colors"
+                  >Bảo mật thông tin</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div
+        class="md:hidden fixed right-3 bottom-20 sm:right-4 sm:bottom-24 z-[60] flex flex-col items-center gap-3"
+        aria-label="Hành động nhanh"
+      >
+        <button
+          type="button"
+          data-back-to-top
+          aria-label="Lên đầu trang"
+          class="w-12 h-12 rounded-full bg-secondary text-white shadow-lg ring-1 ring-black/10 flex items-center justify-center transition-all duration-300 active:scale-95 opacity-0 translate-y-2 pointer-events-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="w-5 h-5"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 15l7-7 7 7"
+            ></path>
+          </svg>
+        </button>
+    
+        <a
+          href="https://zalo.me/0966558808"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Hỗ trợ Zalo"
+          class="w-12 h-12 rounded-full bg-[#EBDDD0] shadow-lg ring-1 ring-black/10 flex items-center justify-center transition-transform duration-300 active:scale-95"
+        >
+          <img
+            src="/assets/images/zalo.png"
+            alt="Zalo"
+            class="w-8 h-8 object-contain"
+          />
+        </a>
+      </div>
+    </footer>
+    <!-- GSXD-DEBUG:END type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
+
+    <!-- Global JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Init Global -->
+    <script>
+        if (typeof AOS !== 'undefined') {
+            AOS.init({ duration: 800, once: true, offset: 100 });
+        }
+    </script>
+
+    <!-- Script riêng của từng page -->
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 0. Sticky header scroll effect (home page only)
+    const siteHeader = document.getElementById("site-header");
+    if (siteHeader && siteHeader.classList.contains("fixed")) {
+      const onScroll = () => {
+        if (window.scrollY > 20) {
+          siteHeader.classList.remove("bg-opacity-60");
+          siteHeader.classList.add("bg-opacity-100", "shadow-md");
+        } else {
+          siteHeader.classList.add("bg-opacity-60");
+          siteHeader.classList.remove("bg-opacity-100", "shadow-md");
+        }
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    }
+
+    // 1. Highlight Active Link
+    const currentPath = window.location.pathname;
+
+    // Normalize path (ensure trailing slash for comparison if needed, or matched exactly)
+    // Simple matching:
+    const desktopLinks = document.querySelectorAll(".nav-link");
+    const desktopDropdownLinks = document.querySelectorAll(
+      ".desktop-dropdown-link",
+    );
+    const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+    const mobileProductsToggle = document.getElementById(
+      "mobile-products-toggle",
+    );
+    const mobileSpctToggle = document.getElementById("mobile-spct-toggle");
+
+    const setActive = (link) => {
+      if (link.classList.contains("nav-link")) {
+        // Desktop: Remove default light text and add underline
+        link.classList.remove("text-[#FFFAF3]");
+        link.classList.add("underline", "underline-offset-8", "decoration-2");
+      } else if (
+        link.classList.contains("mobile-nav-link") ||
+        link.classList.contains("mobile-nav-toggle")
+      ) {
+        // Mobile: Remove default white text
+        link.classList.remove("text-white", "text-white/90");
+      } else if (link.classList.contains("desktop-dropdown-link")) {
+        // Desktop Dropdown: Remove hover text color if any, but specifically remove black text
+        link.classList.remove("text-[#212121]");
+      }
+
+      // Add Active styling - Orange text
+      link.classList.add("text-secondary");
+    };
+
+    [
+      ...desktopLinks,
+      ...desktopDropdownLinks,
+      ...mobileLinks,
+      mobileProductsToggle,
+      mobileSpctToggle,
+    ]
+      .filter(Boolean)
+      .forEach((link) => {
+        const linkPath = link.getAttribute("data-path");
+        if (
+          currentPath === linkPath ||
+          (currentPath === "/index.html" && linkPath === "/") ||
+          (linkPath !== "/" && currentPath.startsWith(linkPath))
+        ) {
+          setActive(link);
+        }
+      });
+
+    // 2. Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById("mobile-menu-button");
+    const closeMenuBtn = document.getElementById("close-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    const toggleMenu = () => {
+      mobileMenu.classList.toggle("hidden");
+      // Prevent body scroll when menu is open
+      if (!mobileMenu.classList.contains("hidden")) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+    };
+
+    mobileMenuBtn?.addEventListener("click", toggleMenu);
+    closeMenuBtn?.addEventListener("click", toggleMenu);
+
+    // Close menu when clicking a link
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (!mobileMenu.classList.contains("hidden")) toggleMenu();
+      });
+    });
+
+    // 3. Mobile Products/SPCT Submenu Toggle
+    const bindMobileSubmenuToggle = (toggleButton, submenuId, iconId) => {
+      if (!toggleButton) return;
+
+      toggleButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        const submenu = document.getElementById(submenuId);
+        const icon = document.getElementById(iconId);
+
+        if (!submenu) return;
+
+        if (submenu.classList.contains("hidden")) {
+          submenu.classList.remove("hidden");
+          submenu.classList.add("flex");
+          if (icon) icon.classList.add("rotate-180");
+        } else {
+          submenu.classList.add("hidden");
+          submenu.classList.remove("flex");
+          if (icon) icon.classList.remove("rotate-180");
+        }
+      });
+    };
+
+    bindMobileSubmenuToggle(
+      mobileProductsToggle,
+      "mobile-products-submenu",
+      "mobile-products-icon",
+    );
+    bindMobileSubmenuToggle(
+      mobileSpctToggle,
+      "mobile-spct-submenu",
+      "mobile-spct-icon",
+    );
+  });
+
+  // Auto-detect home route and apply fixed transparent header
+  (function () {
+    const header = document.getElementById("site-header");
+    if (!header) return;
+    const isHome = window.location.pathname === "/" || window.location.pathname === "/index.html";
+    if (isHome) {
+      header.classList.remove("sticky");
+      header.classList.add("fixed", "top-0", "left-0", "right-0", "bg-opacity-60");
+    }
+  })();
+</script>
+
+<script>
+    // ── Product Image Swiper Initialization ─────────────────────────────────
+    (function () {
+        var thumbSwiper = new Swiper(".product-thumb-swiper", {
+            spaceBetween: 20,
+            slidesPerView: 7,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        new Swiper(".product-main-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            pagination: {
+                el: ".product-main-pagination",
+                clickable: true,
+            },
+            thumbs: {
+                swiper: thumbSwiper,
+            },
+        });
+    })();
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const calculatorSection = document.querySelector(
+      "[data-weight-calculator]",
+    );
+    if (!calculatorSection) return;
+
+    const roofStyleSelect = calculatorSection.querySelector("#roof-style");
+    const tileTypeSelect = calculatorSection.querySelector("#tile-type");
+    const areasContainer = calculatorSection.querySelector(
+      ".space-y-4.col-span-1.lg\\:col-span-3",
+    );
+
+    if (!areasContainer || !roofStyleSelect || !tileTypeSelect) return;
+
+    const allInitialBlocks = Array.from(areasContainer.children).filter(
+      (el) =>
+        el.classList.contains("flex") &&
+        el.querySelector("span")?.textContent.includes("DIỆN TÍCH"),
+    );
+
+    const masterTemplate = (
+      allInitialBlocks.find((block) => {
+        const removeBtn = block.querySelector("button.underline");
+        return removeBtn && removeBtn.textContent.includes("Loại bỏ");
+      }) || allInitialBlocks[allInitialBlocks.length - 1]
+    )?.cloneNode(true);
+
+    const buttons = areasContainer.querySelectorAll("button");
+    const addAreaBtn = Array.from(buttons).find((btn) =>
+      btn.textContent.includes("+ Thêm diện tích"),
+    );
+    const calculateBtn = Array.from(buttons).find((btn) =>
+      btn.textContent.includes("TÍNH TOÁN KHỐI LƯỢNG"),
+    );
+
+    const resultRows = calculatorSection.querySelectorAll(
+      ".pt-8 .space-y-4 > .grid.grid-cols-12",
+    );
+    const resultTilesAm = resultRows[0];
+    const resultTilesDuong = resultRows[1];
+    const resultDiem = resultRows[2];
+
+    const extraLossCheckbox = calculatorSection.querySelector("#extra-loss");
+    const lossRadios = Array.from(
+      calculatorSection.querySelectorAll('input[name="loss-rate"]'),
+    );
+
+    const vnFormatter = new Intl.NumberFormat("vi-VN");
+    const format = (num) => vnFormatter.format(num);
+
+    const getAreaBlocks = () =>
+      Array.from(areasContainer.children).filter(
+        (el) =>
+          el.classList.contains("flex") &&
+          Array.from(el.querySelectorAll("span")).some((span) =>
+            /DIỆN\s*TÍCH/i.test(span.textContent || "")
+          )
+      );
+
+    const getAreaTitles = (block) =>
+      Array.from(block.querySelectorAll("span")).filter((span) =>
+        /DIỆN\s*TÍCH/i.test(span.textContent || "")
+      );
+
+    const updateCoeffLabels = () => {
+      const selectedTile = tileTypeSelect.options[tileTypeSelect.selectedIndex];
+
+      if (!selectedTile || selectedTile.value === "") {
+        if (resultTilesAm)
+          resultTilesAm.querySelectorAll("span")[2].textContent = "-- viên/m²";
+        if (resultTilesDuong)
+          resultTilesDuong.querySelectorAll("span")[2].textContent =
+            "-- viên/m²";
+        if (resultDiem)
+          resultDiem.querySelectorAll("span")[2].textContent = "-- cặp/md";
+        return;
+      }
+
+      const amCoeff = Number.parseFloat(selectedTile.dataset.am || "0") || 40;
+      const duongCoeff =
+        Number.parseFloat(selectedTile.dataset.duong || "0") || 27;
+      const diemCoeff =
+        Number.parseFloat(selectedTile.dataset.diem || "0") || 5;
+
+      if (resultTilesAm) {
+        const coeffSpan = resultTilesAm.querySelectorAll("span")[2];
+        if (coeffSpan) coeffSpan.textContent = `${amCoeff} viên/m²`;
+      }
+
+      if (resultTilesDuong) {
+        const coeffSpan = resultTilesDuong.querySelectorAll("span")[2];
+        if (coeffSpan) coeffSpan.textContent = `${duongCoeff} viên/m²`;
+      }
+
+      if (resultDiem) {
+        const coeffSpan = resultDiem.querySelectorAll("span")[2];
+        if (coeffSpan) coeffSpan.textContent = `${diemCoeff} cặp/md`;
+      }
+    };
+
+    const updateResults = () => {
+      let totalS = 0;
+      let totalL = 0;
+
+      getAreaBlocks().forEach((block) => {
+        const select = block.querySelector("select");
+        if (!select) return;
+
+        const inputs = Array.from(block.querySelectorAll("input")).filter(
+          (input) =>
+            input.closest(".relative")?.parentElement.style.display !== "none",
+        );
+
+        const type = select.value || select.options[select.selectedIndex].text;
+        let area = 0;
+        let length = 0;
+
+        if (type.includes("CHỮ NHẬT")) {
+          const dai = Number.parseFloat(inputs[0]?.value || "0") || 0;
+          const rong = Number.parseFloat(inputs[1]?.value || "0") || 0;
+          area = dai * rong;
+          length = dai;
+        } else if (type.includes("THANG")) {
+          const dayLon = Number.parseFloat(inputs[0]?.value || "0") || 0;
+          const dayBe = Number.parseFloat(inputs[1]?.value || "0") || 0;
+          const cao = Number.parseFloat(inputs[2]?.value || "0") || 0;
+          area = ((dayLon + dayBe) * cao) / 2;
+          length = dayLon;
+        }
+
+        totalS += area;
+        totalL += length;
+      });
+
+      let factor = 1;
+      if (extraLossCheckbox?.checked) {
+        const checkedRadio = lossRadios.find((radio) => radio.checked);
+        const label = checkedRadio?.closest("label")?.textContent || "";
+
+        if (label.includes("15%")) factor = 1.15;
+        if (label.includes("20%")) factor = 1.2;
+      }
+
+      const styleFactor =
+        roofStyleSelect.value !== ""
+          ? Number.parseFloat(
+              roofStyleSelect.options[roofStyleSelect.selectedIndex].dataset
+                .factor || "1",
+            ) || 1
+          : 0;
+
+      factor *= styleFactor;
+      updateCoeffLabels();
+
+      const selectedTile = tileTypeSelect.options[tileTypeSelect.selectedIndex];
+      const amCoeff = selectedTile?.value
+        ? Number.parseFloat(selectedTile.dataset.am || "0") || 0
+        : 0;
+      const duongCoeff = selectedTile?.value
+        ? Number.parseFloat(selectedTile.dataset.duong || "0") || 0
+        : 0;
+      const diemCoeff = selectedTile?.value
+        ? Number.parseFloat(selectedTile.dataset.diem || "0") || 0
+        : 0;
+
+      const ngoiAm = Math.ceil(totalS * amCoeff * factor);
+      const ngoiDuong = Math.ceil(totalS * duongCoeff * factor);
+      const diem = Math.ceil(totalL * diemCoeff * factor);
+
+      if (resultTilesAm) {
+        resultTilesAm.querySelectorAll("span")[1].textContent =
+          `${format(totalS)} m²`;
+        resultTilesAm.querySelectorAll("span")[3].textContent =
+          `${format(ngoiAm)} viên`;
+      }
+
+      if (resultTilesDuong) {
+        resultTilesDuong.querySelectorAll("span")[1].textContent =
+          `${format(totalS)} m²`;
+        resultTilesDuong.querySelectorAll("span")[3].textContent =
+          `${format(ngoiDuong)} viên`;
+      }
+
+      if (resultDiem) {
+        resultDiem.querySelectorAll("span")[1].textContent =
+          `${format(totalL)} md`;
+        resultDiem.querySelectorAll("span")[3].textContent =
+          `${format(diem)} cặp`;
+      }
+    };
+
+    const handleTypeChange = (block) => {
+      const select = block.querySelector("select");
+      const inputGrid = block.querySelector(".lg\\:grid-cols-12") || block.querySelector(".flex-1.w-full");
+      if (!select || !inputGrid) return;
+
+      const type = select.value || select.options[select.selectedIndex].text;
+      const inputWrappers = Array.from(inputGrid.children);
+
+      if (type.includes("CHỮ NHẬT")) {
+        const label1 = inputWrappers[1]?.querySelector("label");
+        if (label1) {
+          label1.innerHTML =
+            'CHIỀU DÀI\n<span class="block text-[7px] lg:text-[12px] font-normal italic normal-case text-secondary/70 mt-[2px] lg:mt-1 tracking-normal">Chiều tính diềm mái</span>';
+        }
+
+        inputWrappers[1]?.classList.replace("col-span-4", "col-span-6");
+
+        const label2 = inputWrappers[2]?.querySelector("label");
+        if (label2) {
+          label2.innerHTML =
+            'CHIỀU RỘNG\n<span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>';
+        }
+
+        inputWrappers[2]?.classList.replace("col-span-4", "col-span-6");
+        if (inputWrappers[3]) inputWrappers[3].style.display = "none";
+      } else if (type.includes("THANG")) {
+        const label1 = inputWrappers[1]?.querySelector("label");
+        if (label1) {
+          label1.innerHTML =
+            'ĐÁY LỚN\n<span class="block text-[7px] lg:text-[12px] font-normal italic normal-case text-secondary/70 mt-[2px] lg:mt-1 tracking-normal">Chiều tính diềm mái</span>';
+        }
+
+        inputWrappers[1]?.classList.replace("col-span-6", "col-span-4");
+
+        const label2 = inputWrappers[2]?.querySelector("label");
+        if (label2) {
+          label2.innerHTML =
+            'ĐÁY BÉ\n<span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>';
+        }
+
+        inputWrappers[2]?.classList.replace("col-span-6", "col-span-4");
+
+        if (inputWrappers[3]) {
+          inputWrappers[3].style.removeProperty("display");
+          inputWrappers[3]?.classList.replace("col-span-6", "col-span-4");
+
+          const label3 = inputWrappers[3].querySelector("label");
+          if (label3) {
+            label3.innerHTML =
+              'CHIỀU CAO\n<span class="block text-[7px] lg:text-[12px] opacity-0 mt-[2px] lg:mt-1 tracking-normal">_</span>';
+          }
+        }
+      }
+
+      [inputWrappers[1], inputWrappers[2], inputWrappers[3]].forEach(
+        (wrapper) => {
+          const label = wrapper?.querySelector("label");
+          if (!label) return;
+          label.classList.add(
+            "flex",
+            "flex-col",
+            "items-center",
+            "justify-end",
+            "lg:h-[44px]"
+          );
+        },
+      );
+    };
+
+    const renumberAreas = () => {
+      getAreaBlocks().forEach((block, index) => {
+        const titleSpans = getAreaTitles(block);
+        titleSpans.forEach((span) => {
+          span.textContent = `DIỆN TÍCH ${index + 1}`;
+        });
+      });
+    };
+
+    const setupListeners = (block) => {
+      const select = block.querySelector("select");
+
+      if (select) {
+        select.addEventListener("change", () => handleTypeChange(block));
+        handleTypeChange(block);
+      }
+
+      const removeBtns = block.querySelectorAll("button.underline");
+      removeBtns.forEach((removeBtn) => {
+        if (removeBtn && removeBtn.textContent.includes("Loại bỏ")) {
+          removeBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+            block.remove();
+            renumberAreas();
+            updateResults();
+          });
+        }
+      });
+    };
+
+    const addArea = () => {
+      if (!masterTemplate) return;
+
+      const newBlock = masterTemplate.cloneNode(true);
+      newBlock.querySelectorAll("input").forEach((input) => {
+        input.value = "";
+      });
+
+      const triggerDiv = addAreaBtn?.parentElement;
+      if (!triggerDiv) return;
+
+      triggerDiv.before(newBlock);
+      renumberAreas();
+      setupListeners(newBlock);
+    };
+
+    getAreaBlocks().forEach(setupListeners);
+
+    addAreaBtn?.addEventListener("click", (event) => {
+      event.preventDefault();
+      addArea();
+    });
+
+    calculateBtn?.addEventListener("click", (event) => {
+      event.preventDefault();
+      updateResults();
+    });
+
+    extraLossCheckbox?.addEventListener("change", updateResults);
+    lossRadios.forEach((radio) =>
+      radio.addEventListener("change", updateResults),
+    );
+
+    const checkButtonState = () => {
+      if (!calculateBtn) return;
+
+      const isStyleSelected = roofStyleSelect.value !== "";
+      const isTileSelected = tileTypeSelect.value !== "";
+
+      calculateBtn.disabled = !(isStyleSelected && isTileSelected);
+      calculateBtn.classList.toggle("opacity-50", calculateBtn.disabled);
+      calculateBtn.classList.toggle(
+        "cursor-not-allowed",
+        calculateBtn.disabled,
+      );
+    };
+
+    roofStyleSelect.addEventListener("change", checkButtonState);
+    tileTypeSelect.addEventListener("change", () => {
+      updateCoeffLabels();
+      checkButtonState();
+    });
+
+    checkButtonState();
+    updateResults();
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var swiperEl = document.querySelector(".product-works-swiper");
+    if (!swiperEl) return;
+
+    var slideData = [
+      {
+        title: "CHÙA BÁI ĐÍNH",
+        location: "Ninh Bình",
+        product: "Ngói âm dương nâu đen",
+        link: "#baidinh",
+      },
+      {
+        title: "THIỀN VIỆN TRÚC LÂM",
+        location: "Sapa",
+        product: "Ngói âm dương tráng men",
+        link: "#truclam",
+      },
+      {
+        title: "ĐỀN TRẦN",
+        location: "Nam Định",
+        product: "Ngói âm dương cổ",
+        link: "#dentran",
+      },
+      {
+        title: "CHÙA BÁI ĐÍNH",
+        location: "Ninh Bình",
+        product: "Ngói âm dương nâu đen",
+        link: "#baidinh",
+      },
+      {
+        title: "THIỀN VIỆN TRÚC LÂM",
+        location: "Sapa",
+        product: "Ngói âm dương tráng men",
+        link: "#truclam",
+      },
+      {
+        title: "ĐỀN TRẦN",
+        location: "Nam Định",
+        product: "Ngói âm dương cổ",
+        link: "#dentran",
+      },
+      {
+        title: "CHÙA BÁI ĐÍNH",
+        location: "Ninh Bình",
+        product: "Ngói âm dương nâu đen",
+        link: "#baidinh",
+      },
+      {
+        title: "THIỀN VIỆN TRÚC LÂM",
+        location: "Sapa",
+        product: "Ngói âm dương tráng men",
+        link: "#truclam",
+      },
+      {
+        title: "ĐỀN TRẦN",
+        location: "Nam Định",
+        product: "Ngói âm dương cổ",
+        link: "#dentran",
+      },
+      {
+        title: "CHÙA BÁI ĐÍNH",
+        location: "Ninh Bình",
+        product: "Ngói âm dương nâu đen",
+        link: "#baidinh",
+      },
+      {
+        title: "THIỀN VIỆN TRÚC LÂM",
+        location: "Sapa",
+        product: "Ngói âm dương tráng men",
+        link: "#truclam",
+      },
+      {
+        title: "ĐỀN TRẦN",
+        location: "Nam Định",
+        product: "Ngói âm dương cổ",
+        link: "#dentran",
+      },
+    ];
+
+    var titleEl = document.getElementById("slide-title");
+    var locationEl = document.getElementById("slide-location");
+    var productEl = document.getElementById("slide-product");
+    var linkEl = document.getElementById("slide-link");
+    var metaEl = document.getElementById("slide-meta");
+    var textRevealTimeout;
+
+    var productWorksSwiper = new Swiper(".product-works-swiper", {
+      slidesPerView: "auto",
+      centeredSlides: true,
+      slideToClickedSlide: true,
+      watchSlidesProgress: true,
+      spaceBetween: 32,
+      // Tăng thời gian chuyển slide lên 1.2 giây để chuyển động thật êm ái
+      speed: 1200,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+    });
+
+    // Hàm thiết lập hiệu ứng mờ/hiện và trượt chữ
+    function setTextVisibility(isVisible) {
+      var opacity = isVisible ? "1" : "0";
+      var transform = isVisible ? "translateY(0)" : "translateY(12px)";
+
+      if (titleEl) {
+        titleEl.style.opacity = opacity;
+        titleEl.style.transform = transform;
+      }
+      if (metaEl) {
+        metaEl.style.opacity = opacity;
+        metaEl.style.transform = transform;
+      }
+      if (linkEl) {
+        linkEl.style.opacity = opacity;
+        linkEl.style.transform = transform;
+      }
+    }
+
+    // Hàm load dữ liệu mới vào Text
+    function updateTextBlock(index) {
+      var currentData = slideData[index];
+      if (!currentData) return;
+
+      if (titleEl) titleEl.textContent = currentData.title;
+      if (locationEl) locationEl.textContent = currentData.location;
+      if (productEl) productEl.textContent = currentData.product;
+      if (linkEl) linkEl.href = currentData.link;
+    }
+
+    // Setup Text đầu tiên khi mới vô
+    updateTextBlock(productWorksSwiper.realIndex);
+    setTextVisibility(true);
+
+    // Event Swiper mượt mà được tinh gọn hoàn toàn
+    productWorksSwiper.on("slideChange", function (swiper) {
+      // 1. Cho text mờ dần đi ngay lập tức
+      setTextVisibility(false);
+
+      // 2. Clear timeout cũ (Phòng trường hợp khách dùng tay vuốt lướt qua nhiều ảnh 1 lúc)
+      if (textRevealTimeout) clearTimeout(textRevealTimeout);
+
+      // 3. Chờ text cũ mờ đi (400ms khớp với CSS class .slide-text-transition) rồi load data mới lên
+      textRevealTimeout = setTimeout(function () {
+        updateTextBlock(swiper.realIndex);
+
+        requestAnimationFrame(function () {
+          setTextVisibility(true);
+        });
+      }, 400);
+    });
+  });
+</script>
+
+<script>
+    function toggleMobileAccordion(btn) {
+        const content = btn.nextElementSibling;
+        const chevron = btn.querySelector('.chevron');
+        // Toggle visibility
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            chevron.classList.add('rotate-180');
+        } else {
+            content.classList.add('hidden');
+            chevron.classList.remove('rotate-180');
+        }
+    }
+</script>
+
+
+</body>
+
+</html>
+<!-- GSXD-DEBUG:END type=LAYOUT file=layouts/main.html -->

@@ -3042,6 +3042,10 @@ body {
   gap: 16px;
 }
 
+.gap-\[1px\]{
+  gap: 1px;
+}
+
 .gap-\[20px\]{
   gap: 20px;
 }
@@ -3603,6 +3607,11 @@ body {
   background-color: rgb(90 126 70 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#5C2321\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(92 35 33 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#5D5FEF\]{
   --tw-bg-opacity: 1;
   background-color: rgb(93 95 239 / var(--tw-bg-opacity, 1));
@@ -3900,6 +3909,12 @@ body {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
+.from-\[\#5C2321\]{
+  --tw-gradient-from: #5C2321 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(92 35 33 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .from-\[\#C76E00\]{
   --tw-gradient-from: #C76E00 var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(199 110 0 / 0) var(--tw-gradient-to-position);
@@ -3936,6 +3951,10 @@ body {
 
 .to-\[\#E79735\]{
   --tw-gradient-to: #E79735 var(--tw-gradient-to-position);
+}
+
+.to-\[\#EFE4DE\]{
+  --tw-gradient-to: #EFE4DE var(--tw-gradient-to-position);
 }
 
 .to-transparent{
@@ -5665,7 +5684,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  body[data-page="index"] main section h2 {
+  main[data-page="index"] section h2 {
     font-family: "Archivo", sans-serif;
     font-size: 20px;
     font-weight: 700;
@@ -7379,6 +7398,10 @@ body {
     padding: 0.75rem;
   }
 
+  .md\:p-4{
+    padding: 1rem;
+  }
+
   .md\:p-6{
     padding: 1.5rem;
   }
@@ -7894,6 +7917,11 @@ body {
   .md\:\!text-\[\#EFE4DE\]{
     --tw-text-opacity: 1 !important;
     color: rgb(239 228 222 / var(--tw-text-opacity, 1)) !important;
+  }
+
+  .md\:text-\[\#2E2F2A\]{
+    --tw-text-opacity: 1;
+    color: rgb(46 47 42 / var(--tw-text-opacity, 1));
   }
 
   .md\:text-primary{

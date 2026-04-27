@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Title & Meta -->
-    <title>Giỏ hàng - Thanh Hải Ceramics
+    <title>Ngói Bò Nóc - Thanh Hải Ceramics
     </title>
 
     <!-- Global CSS & Fonts -->
@@ -18,6 +18,40 @@
 
     <!-- Style riêng của từng page -->
     <style>
+    @import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Italianno&display=swap");
+</style>
+
+<style>
+  .value-image-item {
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .value-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  .value-image-item:hover,
+  .value-image-item.active {
+    z-index: 20;
+    width: 110px !important;
+  }
+
+  @media (min-width: 768px) {
+    .value-image-item:hover,
+    .value-image-item.active {
+      width: 240px !important;
+    }
+  }
+</style>
+
+<style>
   /* Native scrollbar hidden - JS scroll indicator handles display */
 
   .compare-cell-text {
@@ -391,240 +425,549 @@
     
     <!-- GSXD-DEBUG:END type=LAYOUT file=components/header.html uid=0505a17c -->
     <!-- Main Content: Đón toàn bộ biến động (data-page, class nền, v.v...) -->
-    <main data-page="cart" 
-        class="flex-grow bg-background-secondary min-h-screen pt-12 pb-4 md:pt-10 md:pb-10">
-        <div class="w-[85%] max-w-[1320px] mx-auto pb-12 md:pb-16">
-            <!-- Breadcrumb -->
-            <nav class="flex items-center gap-2 text-sm text-primary mb-8 font-archivo">
-                <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
-                <span>&gt;</span>
-                <span class="text-primary font-medium underline">Giỏ hàng</span>
-            </nav>
+    <main data-page="products" 
+        class="flex-grow bg-background-secondary pb-14 md:pb-20">
         
-            <h1 class="text-[36px] font-arima text-primary mb-8 leading-tight">Giỏ hàng</h1>
         
-            <div class="flex flex-col lg:flex-row gap-8 items-start">
-                <!-- Left: Cart Items -->
-                <div
-                    class="w-full lg:w-2/3 bg-white md:bg-[#FEF9F5] md:border border-gray-300 rounded-md shadow-lg md:shadow-lg p-4 md:p-6 lg:p-10 font-archivo">
-                    <div class="space-y-6 md:space-y-8">
-                        <!-- Item 1 -->
-                        <div class="relative pb-6 md:pt-8 border-b md:border-b-0 md:border-t border-gray-300 last:border-0">
-                            <div class="flex gap-4 md:gap-6">
-                                <div
-                                    class="w-20 h-20 lg:w-28 lg:h-28 flex-shrink-0 border border-gray-300 rounded-md overflow-hidden">
-                                    <img src="/assets/images/ngoi-van-mieu-detail-2.png" alt="Ngói âm dương"
-                                        class="w-full h-full object-contain">
-                                </div>
-                                <div class="flex-1 min-w-0">
-                                    <div class="flex flex-col md:flex-row justify-between gap-2 md:gap-4 h-full">
-                                        <div class="flex flex-col justify-between">
-                                            <div class="space-y-0.5 md:space-y-1">
-                                                <h3
-                                                    class="text-sm md:text-lg lg:text-xl font-bold text-primary md:leading-normal leading-tight">
-                                                    Ngói âm dương nâu đen 27</h3>
-                                                <p class="text-[11px] md:text-[13px] text-primary/40 uppercase">MSP: 46345</p>
-                                                <p class="text-[11px] md:text-[13px] text-primary/40">Phân loại: Nâu đen</p>
-                                                <div class="flex items-center gap-1 md:hidden">
-                                                    <span class="text-[11px] text-primary">Đơn giá:</span>
-                                                    <span class="text-[11px] font-semibold text-primary">70,000</span>
-                                                </div>
-                                                <p class="text-[10px] lg:text-[13px] text-primary/40 hidden md:block">x100</p>
-                                            </div>
-                                            <div class="hidden md:flex items-center gap-4 mt-4 text-[12px] font-bold">
-                                                <button
-                                                    class="text-primary/40 hover:text-secondary transition-colors">Sửa</button>
-                                                <button
-                                                    class="text-primary/40 hover:text-secondary transition-colors">Xóa</button>
-                                            </div>
-                                        </div>
-        
-                                        <div class="hidden md:flex items-start gap-8 mt-4 md:mt-0">
-                                            <div class="space-y-2 text-center md:text-left">
-                                                <p class="text-[10px] lg:text-xs font-bold uppercase text-primary">Đơn giá</p>
-                                                <p class="text-[13px] lg:text-base">70,000</p>
-                                            </div>
-                                            <div class="space-y-2 text-center md:text-left">
-                                                <p class="text-[10px] lg:text-xs font-bold uppercase text-primary">Số lượng</p>
-                                                <div
-                                                    class="flex items-center border border-gray-300 rounded bg-[#FEF9F5] overflow-hidden">
-                                                    <button
-                                                        class="px-2 py-1 text-primary/40 hover:text-secondary hover:bg-gray-100 transition-colors border-r border-gray-300">-</button>
-                                                    <input type="text" value="100"
-                                                        class="w-10 text-center text-sm bg-transparent focus:outline-none">
-                                                    <button
-                                                        class="px-2 py-1 text-primary/40 hover:text-secondary hover:bg-gray-100 transition-colors border-l border-gray-300">+</button>
-                                                </div>
-                                            </div>
-                                            <div class="space-y-2 text-right">
-                                                <p class="text-[10px] lg:text-xs font-bold uppercase text-primary">Tổng</p>
-                                                <p class="text-[13px] lg:text-base font-bold">70,000</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <!-- Mobile Quantity & Actions -->
-                            <div class="flex md:hidden flex-col items-end gap-3 mt-[-55px]">
-                                <div class="flex items-center justify-center rounded overflow-hidden h-[23px] gap-1">
-                                    <button
-                                        class="w-[18px] h-full flex items-center justify-center text-primary/40 text-xl">-</button>
-                                    <input type="text" value="100"
-                                        class="w-10 text-center text-xs bg-[#FEF9F5] border-gray-300 border rounded py-[2px]">
-                                    <button
-                                        class="w-[18px] h-full flex items-center justify-center text-primary/40 text-xl">+</button>
-                                </div>
-                                <div class="flex items-center gap-4 text-xs font-bold">
-                                    <button class="text-primary/40">Sửa</button>
-                                    <button class="text-primary/40">Xóa</button>
-                                </div>
-                            </div>
-        
-                            <!-- Mobile Subtotal -->
-                            <div class="flex md:hidden items-center justify-between mt-4">
-                                <span class="text-[10px] font-bold uppercase text-primary">Tổng</span>
-                                <span class="text-[13px] font-bold text-black">700,000</span>
-                            </div>
-                        </div>
-        
-                        <!-- Item 2 -->
-                        <div class="relative pb-6 md:pt-0 border-b md:border-b-0 border-gray-300 last:border-0">
-                            <div class="flex gap-4 md:gap-6">
-                                <div
-                                    class="w-20 h-20 lg:w-28 lg:h-28 flex-shrink-0 border border-gray-300 rounded-md overflow-hidden">
-                                    <img src="/assets/images/ngoi-van-mieu-detail-2.png" alt="Ngói âm dương"
-                                        class="w-full h-full object-contain">
-                                </div>
-                                <div class="flex-1 min-w-0">
-                                    <div class="flex flex-col md:flex-row justify-between gap-2 md:gap-4 h-full">
-                                        <div class="flex flex-col justify-between">
-                                            <div class="space-y-0.5 md:space-y-1">
-                                                <h3
-                                                    class="text-sm md:text-lg lg:text-xl font-bold text-primary md:leading-normal leading-tight">
-                                                    Ngói âm dương nâu đen 27</h3>
-                                                <p class="text-[11px] md:text-[13px] text-primary/40 uppercase">MSP: 46345</p>
-                                                <p class="text-[11px] md:text-[13px] text-primary/40">Phân loại: Nâu đen</p>
-                                                <div class="flex items-center gap-1 md:hidden">
-                                                    <span class="text-[11px] text-primary">Đơn giá:</span>
-                                                    <span class="text-[11px] font-semibold text-primary">70,000</span>
-                                                </div>
-                                                <p class="text-[10px] lg:text-[13px] text-primary/40 hidden md:block">x100</p>
-                                            </div>
-                                            <div class="hidden md:flex items-center gap-4 mt-4 text-[12px] font-bold">
-                                                <button
-                                                    class="text-primary/40 hover:text-secondary transition-colors">Sửa</button>
-                                                <button
-                                                    class="text-primary/40 hover:text-secondary transition-colors">Xóa</button>
-                                            </div>
-                                        </div>
-        
-                                        <div class="hidden md:flex items-start gap-8 mt-4 md:mt-0">
-                                            <div class="space-y-2 text-center md:text-left">
-                                                <p class="text-[10px] lg:text-xs font-bold uppercase text-primary">Đơn giá</p>
-                                                <p class="text-[13px] lg:text-base">70,000</p>
-                                            </div>
-                                            <div class="space-y-2 text-center md:text-left">
-                                                <p class="text-[10px] lg:text-xs font-bold uppercase text-primary">Số lượng</p>
-                                                <div
-                                                    class="flex items-center border border-gray-300 rounded bg-[#FEF9F5] overflow-hidden">
-                                                    <button
-                                                        class="px-2 py-1 text-primary/40 hover:text-secondary hover:bg-gray-100 transition-colors border-r border-gray-300">-</button>
-                                                    <input type="text" value="100"
-                                                        class="w-10 text-center text-sm bg-transparent focus:outline-none">
-                                                    <button
-                                                        class="px-2 py-1 text-primary/40 hover:text-secondary hover:bg-gray-100 transition-colors border-l border-gray-300">+</button>
-                                                </div>
-                                            </div>
-                                            <div class="space-y-2 text-right">
-                                                <p class="text-[10px] lg:text-xs font-bold uppercase text-primary">Tổng</p>
-                                                <p class="text-[13px] lg:text-base font-bold">70,000</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <!-- Mobile Quantity & Actions -->
-                            <div class="flex md:hidden flex-col items-end gap-3 mt-[-55px]">
-                                <div class="flex items-center justify-center rounded overflow-hidden h-[23px] gap-1">
-                                    <button
-                                        class="w-[18px] h-full flex items-center justify-center text-primary/40 text-xl">-</button>
-                                    <input type="text" value="100"
-                                        class="w-10 text-center text-xs bg-[#FEF9F5] border-gray-300 border rounded py-[2px]">
-                                    <button
-                                        class="w-[18px] h-full flex items-center justify-center text-primary/40 text-xl">+</button>
-                                </div>
-                                <div class="flex items-center gap-4 text-xs font-bold">
-                                    <button class="text-primary/40">Sửa</button>
-                                    <button class="text-primary/40">Xóa</button>
-                                </div>
-                            </div>
-        
-                            <!-- Mobile Subtotal -->
-                            <div class="flex md:hidden items-center justify-between mt-4">
-                                <span class="text-[10px] font-bold uppercase text-primary">Tổng</span>
-                                <span class="text-[13px] font-bold text-black">700,000</span>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <!-- Cart Footer Summary -->
-                    <div class="mt-4 md:mt-8 pt-6 border-t border-gray-300 flex justify-between items-center md:items-start">
-                        <div>
-                            <span class="text-sm lg:text-base font-bold text-primary">Số lượng: 200</span>
-                        </div>
-                        <div class="text-right flex flex-col items-end">
-                            <p class="text-base md:text-sm lg:text-base font-bold text-primary">20,000,000.00</p>
-                            <p class="text-xs lg:text-sm font-bold text-primary leading-tight">VND</p>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Right: Summary & Checkout -->
-                <div class="w-full lg:w-1/3 space-y-6 mb-10 md:mb-0">
-                    <div class="bg-[#FEF9F5] border border-gray-300 rounded-md p-6 md:p-8 font-archivo shadow-lg">
-                        <div class="space-y-6">
-                            <div class="space-y-2">
-                                <p class="text-xs text-black">Nhập mã tại đây</p>
-                                <div class="flex h-[38px]">
-                                    <input type="text" placeholder="Mã ưu đãi"
-                                        class="flex-1 bg-[#FEF9F5] border border-secondary border-r-0 px-4 py-2 text-sm focus:outline-none placeholder:text-gray-400">
-                                    <button
-                                        class="bg-secondary text-white px-6 py-2 text-[12px] font-bold uppercase hover:bg-opacity-90 transition-all">Áp
-                                        dụng</button>
-                                </div>
-                            </div>
-        
-                            <div class="space-y-4 pt-2">
-                                <div class="flex justify-between text-sm">
-                                    <span class="text-primary/60">Giảm giá:</span>
-                                    <span class="text-primary">-0000</span>
-                                </div>
-                                <div class="flex justify-between text-sm">
-                                    <span class="text-primary/60">Thuế:</span>
-                                    <span class="text-primary">0000</span>
-                                </div>
-                                <div class="flex justify-between items-baseline pt-4">
-                                    <p class="text-xl lg:text-2xl font-bold text-primary leading-none">Tổng:</p>
-                                    <div class="text-right">
-                                        <p class="text-xl lg:text-2xl font-bold text-primary leading-none">0000</p>
-                                        <p class="text-[10px] lg:text-xs font-bold text-primary mt-1">VND</p>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="flex justify-center">
-                                <a href="/cart/thanh-toan.html"
-                                    class="inline-block text-center w-full bg-secondary text-white py-4 text-sm font-bold uppercase tracking-wider hover:bg-opacity-90 transition-all mt-2 rounded-sm shadow-sm">
-                                    Thanh toán
-                                </a>
-                            </div>
-                        </div>
+        <!-- Top Banner for Detail -->
+        <section class="relative w-full hidden md:block">
+            <div
+                class="relative w-full aspect-[4/3] md:aspect-[8/6] lg:aspect-auto h-full lg:[clip-path:inset(40px_0_0_0)] lg:-mt-[40px]">
+                <img src="/assets/images/pk-banner.png" alt="Phụ Kiện Ngói" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 flex flex-col items-center pt-[5%] md:pt-[5%] lg:pt-[5%]" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="text-center text-white px-4 w-[85%] max-w-[1320px] mx-auto">
+                        <h1
+                            class="font-sans text-[26px] md:text-4xl lg:text-[44px] font-bold uppercase mb-2 md:mb-6 drop-shadow-md">
+                            PHỤ KIỆN NGÓI
+                        </h1>
+                        <p
+                            class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-none tracking-wide drop-shadow-sm text-white/95">
+                            Nâng niu nét chạm trổ, sắt son cùng thời gian
+                        </p>
+                        <p
+                            class="font-italianno text-xl md:text-[34px] lg:text-[48px] font-light leading-none tracking-wide drop-shadow-sm text-white/95">
+                            Phụ kiện Thanh Hải: Điểm nhấn tâm linh, hoàn thiện dáng hình
+                            kiến trúc Việt
+                        </p>
                     </div>
                 </div>
             </div>
+        </section>
+        
+        <!-- Sub Breadcrumb -->
+        <div class="hidden md:block w-[85%] max-w-[1320px] mx-auto py-8">
+            <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/breadcrumb.html uid=fbcaa7d9 -->
+            <!-- GSXD-BLOCK:BEGIN file=components/products/breadcrumb.html tag=p idx=001 uid=a6ea24f9 -->
+            <p class="font-bold text-primary/60 uppercase text-xs md:text-base">
+              <a href="/" class="hover:text-secondary transition-colors">Trang chủ</a>
+              <span class="mx-1">/</span>
+              <a href="/products/phu-kien-ngoi/" class="hover:text-secondary transition-colors"
+                >Sản phẩm</a
+              >
+              <span class="mx-1">/</span>
+              <span class="text-primary font-semibold border-primary"
+                >PHỤ KIỆN NGÓI</span
+              >
+            </p>
+            <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/breadcrumb.html uid=fbcaa7d9 -->
+            
+            
+            
+            
+            <hr class="border-t border-black/10 mt-4 w-full" />
         </div>
+        
+        <!-- Product Detail Container -->
+        <!-- Product Detail Container Partial -->
+        <section class="w-full md:w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 md:gap-4 lg:gap-6 xl:gap-8 pb-8 md:pb-10 lg:pb-24 pt-0 md:pt-4">
+          <!-- Left: Images -->
+          <div class="flex flex-col md:gap-5 lg:col-span-3">
+              <!-- Main Image Swiper -->
+              <div class="w-full aspect-square bg-white md:shadow-lg relative overflow-hidden group swiper product-main-swiper">
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 1"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 2"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 3"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 4"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 5"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 6"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                      <div class="swiper-slide w-full h-full">
+                          <img src="/assets/images/gach-bat-detail-1.png" alt="Ảnh sản phẩm 7"
+                              class="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110" />
+                      </div>
+                  </div>
+          
+              </div>
+          
+              <!-- Mobile Dots Pagination -->
+              <div class="md:hidden flex justify-center mt-5">
+                  <div class="product-main-pagination flex justify-center gap-[7px]"></div>
+              </div>
+          
+              <!-- Thumbnails (Desktop only) -->
+              <div class="hidden md:block w-full mt-2 overflow-hidden swiper product-thumb-swiper">
+                  <div class="swiper-wrapper">
+                      <div
+                          class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+                      </div>
+                      <div
+                          class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+                      </div>
+                      <div
+                          class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+                      </div>
+                      <div
+                          class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+                      </div>
+                      <div
+                          class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+                      </div>
+                      <div
+                          class="swiper-slide aspect-square bg-[#5C2321] cursor-pointer shadow-sm hover:opacity-80 transition-opacity">
+                      </div>
+                      <div
+                          class="swiper-slide aspect-square bg-gradient-to-r from-[#5C2321] to-[#EFE4DE] cursor-pointer opacity-90 relative">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          
+          
+          
+          <!-- Right: Info -->
+          <div class="flex flex-col lg:col-span-2 w-[85%] md:w-full mx-auto md:mt-0 pt-[18px] md:pt-0">
+            
+            <!-- SKU -->
+            <div class="flex items-center gap-2 md:gap-4 mb-3 md:mb-8 text-[12px] md:text-[16px] order-2 md:order-1 mt-1 md:mt-0">
+              <span class="text-[#656663] md:text-primary font-light md:font-normal">Mã SP:</span>
+              <span class="text-[#656663] md:text-primary font-semibold">THC 100-GDS</span>
+            </div>
+        
+            <!-- Title -->
+            <h1 class="text-[20px] text-[#C76E00] md:text-2xl lg:text-[32px] font-semibold md:text-secondary uppercase leading-[30px] md:!leading-normal mb-0 md:mb-14 pb-0 md:pb-1 tracking-tight order-1 md:order-2">
+              Ngói bò nóc chữ vạn
+            </h1>
+        
+            <!-- Price -->
+            <p class="text-[16px] text-black md:text-2xl md:text-[32px] font-semibold md:text-primary mb-4 md:mb-16 leading-[20px] md:leading-normal order-3 mt-0.5 md:mt-0">
+              675.000 đ/m2
+            </p>
+        
+            <!-- Separator -->
+            <hr class="border-t border-black/10 md:border-black/10 mb-4 md:mb-8 w-full order-4 hidden md:block" />
+            <hr class="border-t border-black/10 w-full order-4 md:hidden mb-4" />
+        
+            <!-- Details List -->
+            <ul class="list-disc pl-5 space-y-0 md:space-y-4 mb-[15px] md:mb-16 text-[#2E2F2A] md:text-primary font-medium text-[14px] md:text-lg lg:text-xl leading-[24px] md:leading-relaxed order-5">
+                <li>Timeless beauty to be treasured</li>
+                <li>High-quality and classic design, suitable for decoration</li>
+                <li>Beginner friendly and improves intelligence</li>
+            </ul>
+        
+            <!-- Optional: Colors Section -->
+        
+            <!-- Optional: Variants Section -->
+            <div class="flex flex-wrap gap-3.5 md:gap-4 mb-6 md:mb-16 w-full xl:w-[95%] order-[6] md:order-[none]">
+              <button class="flex-1 md:w-auto md:min-w-[200px] border border-black/20 text-primary uppercase text-[10px] md:text-[13px] font-medium md:py-3 py-2 px-1 text-center hover:border-black/50 hover:bg-black/5 transition-all outline-none flex items-center justify-center leading-tight">
+                COMBO NGÓI + PHỤ KIỆN
+              </button>
+              <button class="flex-1 md:w-auto md:min-w-[200px] border border-black/20 text-primary uppercase text-[10px] md:text-[13px] font-medium md:py-3 py-2 px-1 text-center hover:border-black/50 hover:bg-black/5 transition-all outline-none flex items-center justify-center leading-tight">
+                NGÓI BÒ CHỮ VẠN
+              </button>
+            </div>
+        
+            <!-- Actions -->
+            <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-[15px] md:mb-16 order-[7] md:order-[none] w-full">
+              <!-- Quantity -->
+              <div class="flex items-center gap-[16px] md:gap-4 text-[#2E2F2A] md:text-primary pl-0.5 md:pl-0">
+                <button class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors">
+                  -
+                </button>
+                <div class="w-12 h-12 flex items-center justify-center rounded-full text-[16px] md:text-base font-normal shadow-[0px_1px_2px_rgba(0,0,0,0.05)] md:shadow-sm outline outline-1 outline-black/40 outline-offset-[-1px] md:outline-none md:border md:border-black/40 bg-transparent">
+                  1
+                </div>
+                <button class="w-6 h-6 flex items-center justify-center text-[20px] md:text-xl focus:outline-none md:hover:text-secondary transition-colors">
+                  +
+                </button>
+              </div>
+        
+              <!-- Add to cart -->
+              <button class="w-full md:w-auto bg-[#C16A00] hover:bg-secondary text-[#EFE4DE] px-8 py-4 font-semibold md:transition-colors md:shadow-md rounded-[2px] flex items-center justify-center text-[14px] md:text-sm tracking-[0.28px] md:tracking-normal md:ml-4">
+                THÊM VÀO GIỎ HÀNG
+              </button>
+            </div>
+        
+            <!-- Contacts -->
+            <div class="hidden md:flex flex-col gap-5 mt-2 order-[8] md:order-[none]">
+              <!-- Hotline -->
+              <div class="flex items-center gap-5">
+                <div class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10">
+                  <img src="/assets/images/phone-call.svg" alt="Phone Call" class="w-6 h-6" />
+                </div>
+                <div>
+                  <p class="text-base text-secondary">Đặt hàng ngay</p>
+                  <p class="text-secondary font-semibold text-lg md:text-xl">
+                    Hotline: 0966 55 8808
+                  </p>
+                </div>
+              </div>
+              <!-- Zalo -->
+              <div class="flex items-center gap-5">
+                <div class="w-[66px] h-[66px] rounded-full bg-[#EBDDD0] flex items-center justify-center text-secondary flex-shrink-0 shadow-sm border border-secondary/10">
+                  <img src="/assets/images/zalo.png" alt="Zalo" class="w-[80%] h-[80%] object-cover" />
+                </div>
+                <div>
+                  <p class="text-secondary font-semibold text-lg md:text-xl">
+                    Chat với chúng tôi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Product Description Section -->
+        <section class="w-[85%] max-w-[1320px] mx-auto pb-16 lg:pb-24 pt-0 md:pt-4">
+            <!-- Section Title -->
+            <div class="text-center mb-8 md:mb-16" data-aos="fade-up">
+                <h3 class="text-[20px] md:text-3xl font-semibold text-secondary uppercase drop-shadow-sm">
+                    Mô tả sản phẩm
+                </h3>
+            </div>
+        
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <!-- Left Image -->
+                <div class="flex items-center justify-center" data-aos="fade-right">
+                    <img src="/assets/images/gach-bat-size-1.png" alt="Mô tả kích thước"
+                        class="w-full max-w-[550px] object-contain" />
+                </div>
+                <!-- Right List -->
+                <div class="flex flex-col justify-center" data-aos="fade-left">
+                    <ul
+                        class="list-disc pl-5 md:pl-16 space-y-3 md:space-y-4 text-primary font-medium text-[15px] md:text-[20px] leading-relaxed">
+                        <li>Timeless beauty to be treasured</li>
+                        <li>High-quality and classic design, suitable for decoration</li>
+                        <li>Beginner friendly and improves intelligence</li>
+                        <li>Timeless beauty to be treasured</li>
+                        <li>High-quality and classic design, suitable for decoration</li>
+                        <li>Beginner friendly and improves intelligence</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- DẤU ẤN TRÊN NHỮNG CÔNG TRÌNH SECTION -->
+        <section
+          class="w-full pb-8 md:pb-16 bg-background-secondary overflow-hidden"
+          data-aos="fade-up"
+        >
+          <div class="max-w-[1920px] mx-auto mt-1">
+            <h2
+              class="text-[20px] md:text-3xl font-semibold text-secondary text-center uppercase mb-8 md:mb-20"
+            >
+              DẤU ẤN TRÊN NHỮNG CÔNG TRÌNH
+            </h2>
+        
+            <div class="relative px-4 md:px-0">
+              <!-- Swiper Container -->
+              <div class="swiper projects-slider overflow-visible">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide transition-all duration-500">
+                    <div
+                      class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl"
+                    >
+                      <img
+                        src="/assets/images/gach-co-work-1.jpg"
+                        alt="Dấu ấn trên những công trình"
+                        class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                      />
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide transition-all duration-500">
+                    <div
+                      class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl"
+                    >
+                      <img
+                        src="/assets/images/trang-tri-slide-01.jpg"
+                        alt="Dấu ấn trên những công trình"
+                        class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                      />
+                    </div>
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="swiper-slide transition-all duration-500">
+                    <div
+                      class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl"
+                    >
+                      <img
+                        src="/assets/images/gach-co-work-2.jpg"
+                        alt="Dấu ấn trên những công trình"
+                        class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                      />
+                    </div>
+                  </div>
+                  <!-- Slide 4 -->
+                  <div class="swiper-slide transition-all duration-500">
+                    <div
+                      class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl"
+                    >
+                      <img
+                        src="/assets/images/gach-co-work-1.jpg"
+                        alt="Dấu ấn trên những công trình"
+                        class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                      />
+                    </div>
+                  </div>
+                  <!-- Slide 5 -->
+                  <div class="swiper-slide transition-all duration-500">
+                    <div
+                      class="aspect-[3/2] md:aspect-[4/3] overflow-hidden rounded-sm shadow-xl"
+                    >
+                      <img
+                        src="/assets/images/gach-co-work-2.jpg"
+                        alt="Dấu ấn trên những công trình"
+                        class="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Pagination dots -->
+              <div
+                class="projects-pagination mt-6 md:mt-12 flex justify-center gap-[7px] md:gap-3"
+              ></div>
+        
+              <!-- Navigation Buttons -->
+              <div
+                class="hidden md:flex projects-prev absolute left-2 md:left-6 lg:left-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
+              >
+                <div class="-rotate-45">
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 19l-7-7 7-7"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="projects-next absolute right-2 md:right-6 lg:right-10 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 bg-secondary rounded rotate-45 hidden md:flex items-center justify-center text-white cursor-pointer hover:bg-secondary/90 shadow-lg transition-all"
+              >
+                <div class="-rotate-45">
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/outstanding-value.html uid=1c9ccb99 -->
+        <!-- ============================================== -->
+        <!-- COMPONENT GIÁ TRỊ VƯỢT TRỘI                      -->
+        <!-- (Component tương tác: Hover hình nhỏ để đối title/text lớn) -->
+        <!-- ============================================== -->
+        <!-- GSXD-SECTION:BEGIN file=components/products/outstanding-value.html tag=section idx=001 uid=7aa435ff -->
+        <section class="w-full relative pb-8 md:pb-16" data-aos="fade-up">
+          <!-- Section Title (Tiêu đề trên cùng) -->
+          <div class="text-center mb-8 md:mb-12">
+            <h2 class="text-[20px] md:text-3xl font-semibold text-secondary uppercase">
+              Giá trị vượt trội
+            </h2>
+          </div>
+        
+          <!-- Background Image Container (Khung chứa hình nền lớn và toàn bộ nội dung tương tác) -->
+          <div
+            class="relative w-full overflow-hidden flex flex-col min-h-[511px] md:min-h-[900px]"
+          >
+            <!-- Background Image (Hình nền toàn màn hình của khối) -->
+            <img
+              src="/assets/images/gia-tri-vuot-troi.png"
+              alt="Giá trị vượt trội nền"
+              class="absolute inset-0 w-full h-full object-cover z-0"
+            />
+            <!-- Overlay Gradient mờ (chỉ xuất hiện trên mobile) giúp che bớt nền, làm nổi bật text -->
+            <div
+              class="absolute inset-0 z-[1] md:hidden bg-[linear-gradient(92deg,rgba(255,255,255,0)_0%,rgba(116,44,44,0.54)_55%,rgba(116,44,44,0.60)_84%),rgba(186,113,113,0.34)]"
+            ></div>
+        
+            <!-- Text Content (Nội dung văn bản thay đổi linh hoạt theo hình được chọn) -->
+            <div
+              class="relative z-10 container mx-auto px-6 lg:px-[140px] flex-grow flex flex-col items-end justify-start md:justify-center text-end text-white pt-[44px] md:pt-32"
+            >
+              <!-- Tiêu đề thay đổi động (id="value-title") -->
+              <h3
+                id="value-title"
+                class="text-[20px] leading-[32px] md:text-3xl font-semibold mb-[5px] md:mb-10 tracking-[0.6px] md:tracking-wide drop-shadow-md transition-all duration-500"
+              >
+                CỐT ĐẤT LUYỆN LỬA
+              </h3>
+              
+              <!-- Khối mô tả thay đổi động (id="value-description") -->
+              <div class="w-full max-w-[383px] md:max-w-none md:shadow-none">
+                <p
+                  id="value-description"
+                  class="font-charm text-[16px] leading-[28px] md:text-[32px]/relaxed max-w-[383px] md:max-w-5xl tracking-[1.1px] md:tracking-wider transition-all duration-500"
+                >
+                  Được tôi luyện ở nhiệt độ 1300°C tạo nên cốt gốm đanh chắc, thách thức
+                  mọi khắc nghiệt từ sương muối đến bão giông. Đây là sự đầu tư một lần
+                  cho giá trị truyền đời, chẳng ngại dấu vết thời gian
+                </p>
+              </div>
+            </div>
+        
+            <!-- Khối 4 Hình ảnh Nhỏ (Các thẻ hình tương tác ở góc trái dưới) -->
+            <div
+              class="absolute top-[261px] left-0 z-10 w-full md:relative md:top-auto md:left-auto mb-0 md:mb-16 md:px-0 max-w-[1920px] mx-auto"
+            >
+              <div
+                class="flex flex-row justify-center md:justify-start gap-2 md:gap-5 items-end translate-y-0 md:translate-y-[20px] px-2 md:px-0"
+              >
+                <!-- Item 1 (Được active mặc định ban đầu) -->
+                <div
+                  class="value-image-item active aspect-[19/33] w-[80px] md:w-[200px] flex-shrink-0 shadow-lg"
+                  data-title="CỐT ĐẤT LUYỆN LỬA"
+                  data-description="Được tôi luyện ở nhiệt độ 1300°C tạo nên cốt gốm đanh chắc, thách thức mọi khắc nghiệt từ sương muối đến bão giông. Đây là sự đầu tư một lần cho giá trị truyền đời, chẳng ngại dấu vết thời gian"
+                >
+                  <img
+                    src="/assets/images/value-01.png"
+                    alt="Value 1"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <!-- Item 2 -->
+                <div
+                  class="value-image-item aspect-[19/33] w-[80px] md:w-[200px] flex-shrink-0 shadow-lg"
+                  data-title="KIẾN TRÚC TRƯỜNG TỒN"
+                  data-description="Vẻ đẹp truyền thống kết hợp cùng công nghệ sản xuất hiện đại, tạo nên mái nhà vững chãi, che chở vạn vật qua bao thăng trầm, mang lại sự bình yên và hưng thịnh cho gia chủ."
+                >
+                  <img
+                    src="/assets/images/value-02.png"
+                    alt="Value 2"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <!-- Item 3 -->
+                <div
+                  class="value-image-item aspect-[19/33] w-[80px] md:w-[200px] flex-shrink-0 shadow-lg"
+                  data-title="NGHỆ THUẬT GỐM SỨ"
+                  data-description="Từng viên ngói là một tác phẩm nghệ thuật, kết tinh từ bàn tay khéo léo của các nghệ nhân làng gốm Bát Tràng, mang trong mình tâm hồn và sức sống di sản Việt."
+                >
+                  <img
+                    src="/assets/images/value-03.png"
+                    alt="Value 3"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <!-- Item 4 -->
+                <div
+                  class="value-image-item aspect-[19/33] w-[80px] md:w-[200px] flex-shrink-0 shadow-lg"
+                  data-title="SẮC MEN ĐỘC BẢN"
+                  data-description="Lớp men hỏa biến biến ảo trong lò nung, tạo nên những sắc thái màu đặc trưng không viên nào giống viên nào, tạo nên dấu ấn riêng biệt cho ngôi nhà của bạn."
+                >
+                  <img
+                    src="/assets/images/value-04.png"
+                    alt="Value 4"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/outstanding-value.html uid=1c9ccb99 -->
+        
+        
+        
+        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
+        <!-- ============================================== -->
+        <!-- COMPONENT VIDEO HÀNH TRÌNH CHẾ TÁC               -->
+        <!-- ============================================== -->
+        <!-- GSXD-SECTION:BEGIN file=components/products/journey-video.html tag=section idx=001 uid=d26acfc5 -->
+        <section class="w-full mx-auto pb-[30px] md:pb-16 max-w-[1920px]">
+          <!-- Tiêu đề (Có thể ẩn đi nếu tham số hideTitle = true) -->
+          <div class="text-center mb-8 md:mb-16" data-aos="fade-up">
+            <h2 class="text-[20px] md:text-3xl font-semibold text-secondary uppercase">
+              Hành trình chế tác
+            </h2>
+          </div>
+        
+          <!-- Khung chứa Video (Tỷ lệ 16:9 - aspect-video) -->
+          <div
+            class="relative w-full aspect-video overflow-hidden cursor-pointer group"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <!-- Ảnh Thumbnail đại diện cho video (Khi hover sẽ tối đi) -->
+            <img
+              src="/assets/images/video-placeholder-02.png"
+              alt="Video placeholder"
+              class="w-full h-full object-cover brightness-80 group-hover:brightness-[0.6] transition-all duration-300"
+            />
+            
+            <!-- Lớp phủ chứa Nút Play ở giữa màn hình -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <!-- Vòng tròn mờ (backdrop-blur) của nút Play -->
+              <div
+                class="w-16 h-16 lg:w-20 lg:h-20 bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/50 transition-all duration-300"
+              >
+                <!-- Icon tam giác Play -->
+                <svg
+                  class="w-8 h-8 lg:w-10 lg:h-10 text-white ml-1"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/journey-video.html uid=14a96ce4 -->
+        
+        
         
         <section
           class="w-full pb-0 md:pb-16 bg-background-secondary relative "
@@ -991,114 +1334,49 @@
             </div>
           </div>
         </section>
-        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/faq/faq-contact.html uid=0e27522c -->
-        <!-- FAQ Contact Section Partial -->
-        <!-- GSXD-SECTION:BEGIN file=components/faq/faq-contact.html tag=section idx=001 uid=3fc7b7c0 -->
-        <section
-          class="pt-16 lg:pt-24 pb-[70px] md:pb-32 lg:pb-48 bg-background-secondary overflow-hidden"
-        >
+        <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
+        <!-- FAQ 2 Section Partial -->
+        <!-- GSXD-SECTION:BEGIN file=components/products/faq2.html tag=section idx=001 uid=5216d5e2 -->
+        <section class="w-full pb-0 md:pb-8 lg:pb-10 md:pt-14 overflow-hidden">
           <div
-            class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-24 items-center"
+            class="w-[85%] max-w-[1320px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 lg:gap-16 items-center"
           >
-            <!-- Image -->
-            <a
-              href="/contact/"
-              class="block w-full aspect-square md:aspect-[10/9] md:h-[380px] md:w-[420px] md:col-span-2"
-              data-aos="fade-right"
-            >
+            <!-- Left: Image -->
+            <div class="w-full aspect-square" data-aos="fade-right">
               <img
-                src="/assets/images/faq-contact.png"
-                alt="FAQ Contact"
-                class="w-full h-full object-cover shadow-xl group"
+                src="/assets/images/faq2.png"
+                alt="FAQ Image"
+                class="w-full h-full object-cover"
               />
-            </a>
+            </div>
         
-            <!-- Content -->
-            <div class="flex flex-col gap-6 md:col-span-3" data-aos="fade-left">
-              <div>
-                <p class="text-xs md:text-base font-bold text-primary uppercase mb-6">
-                  Bạn còn câu hỏi?
-                </p>
-                <h2
-                  class="text-3xl md:text-[40px] font-arima text-primary leading-tight mb-2"
-                >
-                  Chúng tôi sẵn sàng hỗ trợ
-                </h2>
-              </div>
-        
-              <div class="space-y-2 text-sm md:text-base text-primary">
-                <p class="text-primary mb-4 font-medium">
-                  Thứ 2 - Chủ nhật<span class="mx-2">|</span>9AM - 5PM
-                </p>
-        
-                <div class="flex items-center gap-2 group">
-                  <div class="text-secondary">
-                    <img
-                      src="/assets/images/phone.svg"
-                      alt="Phone Icon"
-                      class="w-4 h-4"
-                    />
-                  </div>
-                  <a
-                    href="tel:0966558808"
-                    class="hover:text-secondary transition-colors text-primary"
-                    >0966 55 8808</a
-                  >
-                </div>
-        
-                <div class="flex items-center gap-2 group">
-                  <div class="text-secondary">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path
-                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-                      />
-                    </svg>
-                  </div>
-                  <a
-                    href="mailto:gshaithanh@gmail.com"
-                    class="hover:text-secondary transition-colors text-primary"
-                    >gshaithanh@gmail.com</a
-                  >
-                </div>
-        
-                <div class="flex items-start gap-2 group">
-                  <div class="text-secondary mt-1">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path
-                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-                      />
-                    </svg>
-                  </div>
-                  <div class="text-primary leading-relaxed">
-                    <p class="text-sm md:text-base text-primary">
-                      Tại
-                      <a
-                        href="https://maps.app.goo.gl/5HRZ796Qq714sPcCA"
-                        target="_blank"
-                        class="text-secondary underline font-bold"
-                        >Gốm sứ Thanh Hải</a
-                      >
-                    </p>
-                    <p class="text-sm md:text-base text-primary">
-                      18 Giang Cao, Bát Tràng, Gia Lâm, Hà Nội
-                    </p>
-                  </div>
-                </div>
-              </div>
-        
-              <div class="mt-8">
-                <a
-                  href="/contact/"
-                  class="inline-block px-12 py-3 border border-black/20 text-primary font-bold text-xs md:text-sm tracking-widest hover:bg-secondary hover:text-white hover:border-secondary transition-all uppercase"
-                >
-                  Liên hệ
-                </a>
-              </div>
+            <!-- Right: Content -->
+            <div class="flex flex-col items-start" data-aos="fade-left">
+              <p
+                class="text-[#262626] text-[14px] md:text-base font-extrabold uppercase tracking-[0.1em] leading-[20px] md:leading-normal mb-2.5 md:mb-8"
+              >
+                Bạn có thắc mắc?
+              </p>
+              <h2
+                class="text-[#2E2F2A] md:text-primary text-[24px] md:text-3xl lg:text-4xl font-normal md:font-semibold leading-[37.5px] md:leading-tight mb-5 md:mb-0"
+              >
+                Xem các câu hỏi thường gặp
+              </h2>
+              <p
+                class="text-[#262626]/70 text-[14px] md:text-base font-normal leading-[22.75px] md:leading-relaxed mb-5 md:mb-10"
+              >
+                Khám phá danh sách các câu hỏi thường gặp và câu trả lời của chúng tôi.
+              </p>
+              <a
+                href="/faq/"
+                class="inline-block border-0 md:border md:border-black/40 px-0 md:px-5 py-0 md:py-2 text-[#262626] text-[16px] md:text-xs lg:text-sm font-semibold md:font-normal leading-none md:leading-normal hover:text-secondary md:hover:bg-secondary md:hover:text-white md:hover:border-secondary transition-all"
+              >
+                (FAQ) Câu hỏi thường gặp
+              </a>
             </div>
           </div>
         </section>
-        <!-- GSXD-DEBUG:END type=LAYOUT file=components/faq/faq-contact.html uid=0e27522c -->
-        
+        <!-- GSXD-DEBUG:END type=LAYOUT file=components/products/faq2.html uid=fd1433f3 -->
         
         
     </main>
@@ -1558,6 +1836,149 @@
       header.classList.add("fixed", "top-0", "left-0", "right-0", "bg-opacity-60");
     }
   })();
+</script>
+
+<script>
+    // ── Product Image Swiper Initialization ─────────────────────────────────
+    (function () {
+        var thumbSwiper = new Swiper(".product-thumb-swiper", {
+            spaceBetween: 20,
+            slidesPerView: 7,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        new Swiper(".product-main-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            pagination: {
+                el: ".product-main-pagination",
+                clickable: true,
+            },
+            thumbs: {
+                swiper: thumbSwiper,
+            },
+        });
+    })();
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.querySelector(".projects-slider")) {
+      new Swiper(".projects-slider", {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+          el: ".projects-pagination",
+          clickable: true,
+          renderBullet: function (index, className) {
+            return (
+              '<span class="' +
+              className +
+              ' w-2 h-2 rounded-full bg-secondary/30 transition-all cursor-pointer mx-[3.5px] inline-block"></span>'
+            );
+          },
+        },
+        navigation: {
+          nextEl: ".projects-next",
+          prevEl: ".projects-prev",
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            centeredSlides: false,
+          },
+          1024: {
+            slidesPerView: 2,
+            slidesOffsetBefore: 0,
+            spaceBetween: 60,
+            centeredSlides: true,
+          },
+          1440: {
+            slidesPerView: 2.1,
+            spaceBetween: 80,
+            centeredSlides: true,
+          },
+        },
+        on: {
+          init: function () {
+            setTimeout(() => {
+              if (typeof AOS !== "undefined") AOS.refresh();
+            }, 500);
+          },
+        },
+      });
+    }
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const valueSection = document
+      .querySelector("#value-title")
+      ?.closest("section");
+    if (!valueSection) return;
+
+    const valueImages = Array.from(
+      valueSection.querySelectorAll(".value-image-item"),
+    );
+    const valueTitle = valueSection.querySelector("#value-title");
+    const valueDescription = valueSection.querySelector("#value-description");
+
+    if (!valueImages.length || !valueTitle || !valueDescription) return;
+
+    const updateValueSection = (img) => {
+      if (img.classList.contains("active")) return;
+
+      valueImages.forEach((item) => item.classList.remove("active"));
+      img.classList.add("active");
+
+      valueTitle.style.opacity = "0";
+      valueDescription.style.opacity = "0";
+      valueTitle.style.transform = "translateY(10px)";
+      valueDescription.style.transform = "translateY(10px)";
+
+      window.setTimeout(() => {
+        valueTitle.textContent = img.dataset.title || "";
+        valueDescription.textContent = img.dataset.description || "";
+
+        valueTitle.style.opacity = "1";
+        valueDescription.style.opacity = "1";
+        valueTitle.style.transform = "translateY(0)";
+        valueDescription.style.transform = "translateY(0)";
+      }, 300);
+    };
+
+    valueImages.forEach((img) => {
+      img.addEventListener("mouseenter", () => {
+        if (window.innerWidth >= 1024) {
+          updateValueSection(img);
+        }
+      });
+
+      img.addEventListener("click", () => {
+        updateValueSection(img);
+      });
+    });
+  });
+</script>
+
+<script>
+    // Refresh AOS when all assets (like images) finish loading
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            if (typeof AOS !== 'undefined') AOS.refresh();
+        }, 100);
+        setTimeout(() => {
+            if (typeof AOS !== 'undefined') AOS.refresh();
+        }, 500);
+        setTimeout(() => {
+            if (typeof AOS !== 'undefined') AOS.refresh();
+        }, 1500);
+    });
 </script>
 
 
