@@ -9,9 +9,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-
+    
   <script type="module" crossorigin src="/assets/js/app-B_hClNSU.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/css/main-D1KXOV6y.css">
+  <link rel="stylesheet" crossorigin href="/assets/css/main-C85SJF3v.css">
 </head>
 
 <body data-page="factory" class="bg-background-secondary min-h-screen flex flex-col">
@@ -1391,7 +1391,6 @@
     <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
     <!-- GSXD-ELEMENT:BEGIN file=components/footer.html tag=footer idx=001 uid=540a3f40 -->
     <footer class="bg-[#262723] text-white">
-    
       <!-- Main Footer -->
       <div class="relative bg-[#262723] overflow-hidden">
         <img
@@ -1699,7 +1698,7 @@
             offset: 100,
         });
     </script>
-<script>
+    <script>
   document.addEventListener("DOMContentLoaded", () => {
     // 0. Sticky header scroll effect (home page only)
     const siteHeader = document.getElementById("site-header");
@@ -1830,6 +1829,17 @@
       "mobile-spct-icon",
     );
   });
+
+  // Auto-detect home route and apply fixed transparent header
+  (function () {
+    const header = document.getElementById("site-header");
+    if (!header) return;
+    const isHome = window.location.pathname === "/" || window.location.pathname === "/index.html";
+    if (isHome) {
+      header.classList.remove("sticky");
+      header.classList.add("fixed", "top-0", "left-0", "right-0", "bg-opacity-60");
+    }
+  })();
 </script>
 
 <script>

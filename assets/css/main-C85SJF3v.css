@@ -4248,10 +4248,6 @@ body {
   padding-bottom: 43px;
 }
 
-.pb-\[46px\]{
-  padding-bottom: 46px;
-}
-
 .pb-\[50px\]{
   padding-bottom: 50px;
 }
@@ -4422,10 +4418,6 @@ body {
 
 .pt-\[20px\]{
   padding-top: 20px;
-}
-
-.pt-\[27px\]{
-  padding-top: 27px;
 }
 
 .pt-\[30px\]{
@@ -8408,6 +8400,10 @@ body {
     height: 509px;
   }
 
+  .lg\:h-\[532px\]{
+    height: 532px;
+  }
+
   .lg\:h-\[600px\]{
     height: 600px;
   }
@@ -8446,10 +8442,6 @@ body {
 
   .lg\:min-h-\[500px\]{
     min-height: 500px;
-  }
-
-  .lg\:min-h-\[541px\]{
-    min-height: 541px;
   }
 
   .lg\:min-h-\[600px\]{
@@ -8621,10 +8613,6 @@ body {
     width: fit-content;
   }
 
-  .lg\:w-full{
-    width: 100%;
-  }
-
   .lg\:min-w-\[110px\]{
     min-width: 110px;
   }
@@ -8716,6 +8704,10 @@ body {
     flex-direction: row;
   }
 
+  .lg\:flex-col{
+    flex-direction: column;
+  }
+
   .lg\:items-start{
     align-items: flex-start;
   }
@@ -8734,6 +8726,10 @@ body {
 
   .lg\:justify-end{
     justify-content: flex-end;
+  }
+
+  .lg\:justify-center{
+    justify-content: center;
   }
 
   .lg\:justify-between{
@@ -9007,6 +9003,10 @@ body {
     padding-bottom: 2rem;
   }
 
+  .lg\:pb-0{
+    padding-bottom: 0px;
+  }
+
   .lg\:pb-10{
     padding-bottom: 2.5rem;
   }
@@ -9041,10 +9041,6 @@ body {
 
   .lg\:pb-6{
     padding-bottom: 1.5rem;
-  }
-
-  .lg\:pb-\[72px\]{
-    padding-bottom: 72px;
   }
 
   .lg\:pl-0{
@@ -9107,6 +9103,10 @@ body {
     padding-right: 5%;
   }
 
+  .lg\:pt-0{
+    padding-top: 0px;
+  }
+
   .lg\:pt-12{
     padding-top: 3rem;
   }
@@ -9137,10 +9137,6 @@ body {
 
   .lg\:pt-\[5\%\]{
     padding-top: 5%;
-  }
-
-  .lg\:pt-\[72px\]{
-    padding-top: 72px;
   }
 
   .lg\:text-left{

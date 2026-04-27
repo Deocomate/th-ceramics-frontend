@@ -275,7 +275,7 @@
     </style>
 
     <script type="module" crossorigin src="/assets/js/app-B_hClNSU.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/css/main-D1KXOV6y.css">
+    <link rel="stylesheet" crossorigin href="/assets/css/main-C85SJF3v.css">
   </head>
   <body data-page="products" class="min-h-screen flex flex-col bg-background-secondary page-phu-kien-ngoi">
     <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/header.html uid=0505a17c -->
@@ -3050,7 +3050,6 @@
     <!-- GSXD-DEBUG:BEGIN type=LAYOUT file=components/footer.html uid=fb2e6fbd -->
     <!-- GSXD-ELEMENT:BEGIN file=components/footer.html tag=footer idx=001 uid=540a3f40 -->
     <footer class="bg-[#262723] text-white">
-    
       <!-- Main Footer -->
       <div class="relative bg-[#262723] overflow-hidden">
         <img
@@ -3483,6 +3482,17 @@
       "mobile-spct-icon",
     );
   });
+
+  // Auto-detect home route and apply fixed transparent header
+  (function () {
+    const header = document.getElementById("site-header");
+    if (!header) return;
+    const isHome = window.location.pathname === "/" || window.location.pathname === "/index.html";
+    if (isHome) {
+      header.classList.remove("sticky");
+      header.classList.add("fixed", "top-0", "left-0", "right-0", "bg-opacity-60");
+    }
+  })();
 </script>
 
 <script>
