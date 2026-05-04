@@ -1285,6 +1285,11 @@ body {
   margin-right: 3.5px;
 }
 
+.mx-\[30px\]{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -1840,6 +1845,10 @@ body {
 
 .h-\[160\%\]{
   height: 160%;
+}
+
+.h-\[180px\]{
+  height: 180px;
 }
 
 .h-\[18px\]{
@@ -3721,6 +3730,11 @@ body {
   background-color: rgb(229 229 229 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#E5E7EB\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
+}
+
 .bg-\[\#EBCEC1\]{
   --tw-bg-opacity: 1;
   background-color: rgb(235 206 193 / var(--tw-bg-opacity, 1));
@@ -4067,6 +4081,11 @@ body {
 .px-\[15px\]{
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.px-\[30px\]{
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .px-\[38px\]{
@@ -6404,6 +6423,10 @@ body {
     order: none;
   }
 
+  .md\:order-none{
+    order: 0;
+  }
+
   .md\:col-span-1{
     grid-column: span 1 / span 1;
   }
@@ -6740,6 +6763,10 @@ body {
 
   .md\:h-\[144px\]{
     height: 144px;
+  }
+
+  .md\:h-\[210px\]{
+    height: 210px;
   }
 
   .md\:h-\[260px\]{
